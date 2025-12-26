@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="conditional_incidents">
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement="">
+            <range
+                file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/SecurityManager.kt"
+                startOffset="987"
+                endOffset="1031"/>
+        </fix-replace>
+        <location
+            file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/SecurityManager.kt"
+            line="30"
+            column="5"
+            startOffset="987"
+            endLine="30"
+            endColumn="49"
+            endOffset="1031"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement="">
+            <range
+                file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/encryption/KeyStoreManager.kt"
+                startOffset="6315"
+                endOffset="6359"/>
+        </fix-replace>
+        <location
+            file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/encryption/KeyStoreManager.kt"
+            line="197"
+            column="5"
+            startOffset="6315"
+            endLine="197"
+            endColumn="49"
+            endOffset="6359"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement="">
+            <range
+                file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/encryption/KeyStoreManager.kt"
+                startOffset="7181"
+                endOffset="7225"/>
+        </fix-replace>
+        <location
+            file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/encryption/KeyStoreManager.kt"
+            line="216"
+            column="5"
+            startOffset="7181"
+            endLine="216"
+            endColumn="49"
+            endOffset="7225"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <fix-replace
+            description="Delete @TargetApi"
+            replacement="">
+            <range
+                file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/encryption/KeyStoreManager.kt"
+                startOffset="7506"
+                endOffset="7550"/>
+        </fix-replace>
+        <location
+            file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/encryption/KeyStoreManager.kt"
+            line="226"
+            column="5"
+            startOffset="7506"
+            endLine="226"
+            endColumn="49"
+            endOffset="7550"/>
+        <map>
+            <condition minGE="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+</incidents>

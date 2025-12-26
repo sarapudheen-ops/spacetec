@@ -1,0 +1,434 @@
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 35
+
+This Android Gradle plugin (8.1.4) was tested up to compileSdk = 34.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 35.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 35 is available.
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=35
+to this project's gradle.properties.
+> Task :core:common:checkKotlinGradlePluginConfigurationErrors
+> Task :core:common:preBuild UP-TO-DATE
+> Task :core:common:preDebugBuild UP-TO-DATE
+> Task :core:common:generateDebugResValues UP-TO-DATE
+> Task :core:common:generateDebugResources UP-TO-DATE
+> Task :core:common:packageDebugResources UP-TO-DATE
+> Task :core:common:parseDebugLocalResources UP-TO-DATE
+> Task :core:common:processDebugManifest UP-TO-DATE
+> Task :core:common:generateDebugRFile UP-TO-DATE
+
+> Task :core:common:compileDebugKotlin FAILED
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:1974:50 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:1980:50 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:2027:36 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:2036:36 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:2045:36 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3154:12 Redeclaration: TimeoutException
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3354:77 Unresolved reference: CheckVehicleConditions
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3428:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3429:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3430:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3431:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3432:70 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3443:75 Unresolved reference: CheckVehicleConditions
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3481:23 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3482:23 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3483:23 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3497:52 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3498:51 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3499:53 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3501:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3502:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3503:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3504:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3505:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3506:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3507:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3596:76 Type mismatch: inferred type is Long but Int was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2341:10 Name expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2341:10 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1569:12 Redeclaration: TimeoutException
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1574:14 'operation' hides member of supertype 'SpaceTecException' and needs 'override' modifier
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1589:16 Type mismatch: inferred type is Map<String, Any?> but ErrorMetadata was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1671:13 Cannot find a parameter with this name: timeoutType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1672:13 Cannot find a parameter with this name: timeoutInfo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1681:13 Cannot find a parameter with this name: operation
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1682:13 Cannot find a parameter with this name: phase
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1683:13 Cannot find a parameter with this name: isExtendable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1684:13 Cannot find a parameter with this name: retryRecommended
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1686:13 Cannot find a parameter with this name: isRecoverable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1752:13 Cannot find a parameter with this name: timeoutType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1753:13 Cannot find a parameter with this name: timeoutInfo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1754:13 Cannot find a parameter with this name: operation
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1768:13 Cannot find a parameter with this name: timeoutType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1769:13 Cannot find a parameter with this name: timeoutInfo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1770:13 Cannot find a parameter with this name: operation
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1771:13 Cannot find a parameter with this name: phase
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1772:13 Cannot find a parameter with this name: isExtendable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1773:13 Cannot find a parameter with this name: retryRecommended
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1787:13 Cannot find a parameter with this name: timeoutType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1788:13 Cannot find a parameter with this name: timeoutInfo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1789:13 Cannot find a parameter with this name: operation
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1790:13 Cannot find a parameter with this name: phase
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1791:13 Cannot find a parameter with this name: isExtendable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1792:13 Cannot find a parameter with this name: retryRecommended
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1834:30 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1834:47 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1847:5 Cannot find a parameter with this name: timeoutType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1848:5 Cannot find a parameter with this name: timeoutInfo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1849:5 Cannot find a parameter with this name: operation
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1850:5 Cannot find a parameter with this name: phase
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1851:5 Cannot find a parameter with this name: isExtendable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1852:5 Cannot find a parameter with this name: retryRecommended
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1854:5 Cannot find a parameter with this name: isRecoverable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1856:25 None of the following functions can be called with the arguments supplied: 
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Array<out Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pair: Pair<TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Iterable<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(map: Map<out TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Sequence<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1869:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1869:42 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1900:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1905:28 Unresolved reference: PairDevice
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1934:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1964:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1992:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2013:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2031:28 Unresolved reference: PowerCycleScanner
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2044:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2078:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2173:29 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2188:29 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2205:29 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2235:5 'timeoutType' overrides nothing
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2239:28 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2239:43 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2241:5 'isExtendable' overrides nothing
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2250:5 Cannot find a parameter with this name: timeoutType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2251:5 Cannot find a parameter with this name: timeoutInfo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2252:5 Cannot find a parameter with this name: operation
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2253:5 Cannot find a parameter with this name: phase
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2254:5 Cannot find a parameter with this name: isExtendable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2255:5 Cannot find a parameter with this name: retryRecommended
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2257:5 Cannot find a parameter with this name: isRecoverable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2259:25 None of the following functions can be called with the arguments supplied: 
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Array<out Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pair: Pair<TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Iterable<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(map: Map<out TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Sequence<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2269:23 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2296:44 This declaration needs opt-in. Its usage must be marked with '@kotlin.ExperimentalStdlibApi' or '@OptIn(kotlin.ExperimentalStdlibApi::class)'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2307:23 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2332:44 This declaration needs opt-in. Its usage must be marked with '@kotlin.ExperimentalStdlibApi' or '@OptIn(kotlin.ExperimentalStdlibApi::class)'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1985:36 Expecting '}'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1185:1 Conflicting overloads: public inline fun Int.highByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public inline fun Int.highByte(): Byte defined in com.spacetec.core.common.extensions in file NumberExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1190:1 Conflicting overloads: public inline fun Int.lowByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public inline fun Int.lowByte(): Byte defined in com.spacetec.core.common.extensions in file NumberExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1291:30 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun Byte.toUnsignedInt(): Int defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1390:1 Conflicting overloads: public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1444:1 Conflicting overloads: public fun String.hexToByteArrayOrNull(): ByteArray? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByteArrayOrNull(): ByteArray? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1446:9 Overload resolution ambiguity: 
+public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1458:1 Conflicting overloads: public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1459:17 Overload resolution ambiguity: 
+public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1467:1 Conflicting overloads: public fun String.hexToByteOrNull(): Byte? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByteOrNull(): Byte? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1469:9 Overload resolution ambiguity: 
+public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1483:1 Conflicting overloads: public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1491:1 Conflicting overloads: public fun String.hexToIntOrNull(): Int? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToIntOrNull(): Int? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1493:9 Overload resolution ambiguity: 
+public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1505:1 Conflicting overloads: public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1513:1 Conflicting overloads: public fun String.hexToLongOrNull(): Long? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToLongOrNull(): Long? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1515:9 Overload resolution ambiguity: 
+public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1528:1 Conflicting overloads: public fun String.isValidHex(): Boolean defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.isValidHex(): Boolean defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1545:1 Conflicting overloads: public fun String.isValidHexByte(): Boolean defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.isValidHexByte(): Boolean defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1985:30 This function must return a value of type Int
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:2301:13 Expecting an expression
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1259:42 Cannot access '<init>': it is internal in 'TimeoutCancellationException'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1284:37 Null can not be a value of a non-null type T
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1401:48 Unresolved reference: pow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1404:9 Overload resolution ambiguity: 
+public suspend fun delay(timeMillis: Long): Unit defined in kotlinx.coroutines
+public suspend fun delay(duration: Duration): Unit defined in kotlinx.coroutines
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1418:62 Unresolved reference: pow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1422:9 Overload resolution ambiguity: 
+public suspend fun delay(timeMillis: Long): Unit defined in kotlinx.coroutines
+public suspend fun delay(duration: Duration): Unit defined in kotlinx.coroutines
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1676:13 Cannot use 'T' as reified type parameter. Use a class instead.
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:2000:12 No value passed for parameter 'collector'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1929:54 Expecting an expression
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:263:1 Conflicting overloads: public inline fun Int.highByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public inline fun Int.highByte(): Byte defined in com.spacetec.core.common.extensions in file NumberExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:275:1 Conflicting overloads: public inline fun Int.lowByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public inline fun Int.lowByte(): Byte defined in com.spacetec.core.common.extensions in file NumberExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1038:15 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1050:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1159:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1176:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1182:35 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1294:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1311:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1317:24 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1471:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1478:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1484:24 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1490:24 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1496:25 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1623:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1630:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1636:25 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1642:26 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1717:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1724:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1731:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1737:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1753:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1759:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1773:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1793:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1800:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1806:31 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1901:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1908:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1914:25 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:1939:1 Unclosed comment
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:564:1 Conflicting overloads: public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:597:1 Conflicting overloads: public fun String.hexToByteArrayOrNull(): ByteArray? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByteArrayOrNull(): ByteArray? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:599:9 Overload resolution ambiguity: 
+public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToByteArray(): ByteArray defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:620:1 Conflicting overloads: public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:638:1 Conflicting overloads: public fun String.hexToByteOrNull(): Byte? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToByteOrNull(): Byte? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:640:9 Overload resolution ambiguity: 
+public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToByte(): Byte defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:659:1 Conflicting overloads: public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:670:1 Conflicting overloads: public fun String.hexToIntOrNull(): Int? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToIntOrNull(): Int? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:672:9 Overload resolution ambiguity: 
+public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToInt(): Int defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:690:1 Conflicting overloads: public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:701:1 Conflicting overloads: public fun String.hexToLongOrNull(): Long? defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.hexToLongOrNull(): Long? defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:703:9 Overload resolution ambiguity: 
+public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.hexToLong(): Long defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:727:1 Conflicting overloads: public fun String.isValidHex(): Boolean defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.isValidHex(): Boolean defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:753:1 Conflicting overloads: public fun String.isValidHexByte(): Boolean defined in com.spacetec.core.common.extensions in file ByteExtensions.kt, public fun String.isValidHexByte(): Boolean defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:765:10 Overload resolution ambiguity: 
+public fun String.isValidHex(): Boolean defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+public fun String.isValidHex(): Boolean defined in com.spacetec.core.common.extensions in file StringExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:468:15 There should be no space or comments before '@' in label reference
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:512:70 There should be no space or comments before '@' in label reference
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:109:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:110:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:111:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:112:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:113:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:114:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:115:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:116:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:117:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:118:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:216:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:228:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:370:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:378:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:384:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:387:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:392:49 Unresolved reference: COMMUNICATION_ERROR
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:394:51 Unresolved reference: UNEXPECTED_STATE
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:395:47 Unresolved reference: SECURITY_ERROR
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:396:51 Unresolved reference: OPERATION_CANCELLED
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:482:32 'return' is not allowed here
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:510:83 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun <T> Array<out TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.collections
+public inline fun <T> Array<out TypeVariable(T)>.firstOrNull(predicate: (TypeVariable(T)) -> Boolean): TypeVariable(T)? defined in kotlin.collections
+public fun BooleanArray.firstOrNull(): Boolean? defined in kotlin.collections
+public inline fun BooleanArray.firstOrNull(predicate: (Boolean) -> Boolean): Boolean? defined in kotlin.collections
+public fun ByteArray.firstOrNull(): Byte? defined in kotlin.collections
+public inline fun ByteArray.firstOrNull(predicate: (Byte) -> Boolean): Byte? defined in kotlin.collections
+public fun CharArray.firstOrNull(): Char? defined in kotlin.collections
+public inline fun CharArray.firstOrNull(predicate: (Char) -> Boolean): Char? defined in kotlin.collections
+public fun CharSequence.firstOrNull(): Char? defined in kotlin.text
+public inline fun CharSequence.firstOrNull(predicate: (Char) -> Boolean): Char? defined in kotlin.text
+public fun DoubleArray.firstOrNull(): Double? defined in kotlin.collections
+public inline fun DoubleArray.firstOrNull(predicate: (Double) -> Boolean): Double? defined in kotlin.collections
+public fun FloatArray.firstOrNull(): Float? defined in kotlin.collections
+public inline fun FloatArray.firstOrNull(predicate: (Float) -> Boolean): Float? defined in kotlin.collections
+public fun IntArray.firstOrNull(): Int? defined in kotlin.collections
+public inline fun IntArray.firstOrNull(predicate: (Int) -> Boolean): Int? defined in kotlin.collections
+public fun LongArray.firstOrNull(): Long? defined in kotlin.collections
+public inline fun LongArray.firstOrNull(predicate: (Long) -> Boolean): Long? defined in kotlin.collections
+public fun ShortArray.firstOrNull(): Short? defined in kotlin.collections
+public inline fun ShortArray.firstOrNull(predicate: (Short) -> Boolean): Short? defined in kotlin.collections
+public fun UByteArray.firstOrNull(): UByte? defined in kotlin.collections
+public inline fun UByteArray.firstOrNull(predicate: (UByte) -> Boolean): UByte? defined in kotlin.collections
+public fun UIntArray.firstOrNull(): UInt? defined in kotlin.collections
+public inline fun UIntArray.firstOrNull(predicate: (UInt) -> Boolean): UInt? defined in kotlin.collections
+public fun ULongArray.firstOrNull(): ULong? defined in kotlin.collections
+public inline fun ULongArray.firstOrNull(predicate: (ULong) -> Boolean): ULong? defined in kotlin.collections
+public fun UShortArray.firstOrNull(): UShort? defined in kotlin.collections
+public inline fun UShortArray.firstOrNull(predicate: (UShort) -> Boolean): UShort? defined in kotlin.collections
+public fun <T> Iterable<TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.collections
+public inline fun <T> Iterable<TypeVariable(T)>.firstOrNull(predicate: (TypeVariable(T)) -> Boolean): TypeVariable(T)? defined in kotlin.collections
+public fun <T> List<TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.collections
+public fun CharProgression.firstOrNull(): Char? defined in kotlin.ranges
+public fun IntProgression.firstOrNull(): Int? defined in kotlin.ranges
+public fun LongProgression.firstOrNull(): Long? defined in kotlin.ranges
+public fun UIntProgression.firstOrNull(): UInt? defined in kotlin.ranges
+public fun ULongProgression.firstOrNull(): ULong? defined in kotlin.ranges
+public fun <T> Sequence<TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.sequences
+public inline fun <T> Sequence<TypeVariable(T)>.firstOrNull(predicate: (TypeVariable(T)) -> Boolean): TypeVariable(T)? defined in kotlin.sequences
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:519:52 Type mismatch: inferred type is Flow<Unit> but Flow<T> was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:519:56 Type mismatch: inferred type is Unit but T was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:519:61 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <T> Result<TypeVariable(T)>.getOrThrow(): TypeVariable(T) defined in kotlin
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:521:71 Type mismatch: inferred type is Flow<Unit> but Flow<T> was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:521:75 Type mismatch: inferred type is Unit but T was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:521:80 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <R, T : TypeVariable(R)> Result<TypeVariable(T)>.getOrDefault(defaultValue: TypeVariable(R)): TypeVariable(R) defined in kotlin
+public inline fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.getOrDefault(key: TypeVariable(K), defaultValue: TypeVariable(V)): TypeVariable(V) defined in kotlin.collections
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:542:32 Unresolved reference: pow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:570:5 Suspend functional parameters with default values are not yet supported in inline functions
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:603:86 Illegal usage of inline-parameter 'retryOn' in 'public suspend inline fun <T> retry(maxAttempts: Int = ..., delayMs: Long = ..., crossinline retryOn: (ErrorInfo) -> Boolean = ..., crossinline operation: suspend () -> Result<T>): Result<T> defined in com.spacetec.core.common.result in file Result.kt'. Add 'noinline' modifier to the parameter declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:723:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:723:16 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:726:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:726:16 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:734:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:734:16 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:737:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:737:16 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:825:5 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <T> Flow<TypeVariable(T)>.filter(crossinline predicate: suspend (TypeVariable(T)) -> Boolean): Flow<TypeVariable(T)> defined in kotlinx.coroutines.flow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:825:28 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:828:5 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <T> Flow<TypeVariable(T)>.filter(crossinline predicate: suspend (TypeVariable(T)) -> Boolean): Flow<TypeVariable(T)> defined in kotlinx.coroutines.flow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:828:28 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2393:6 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2397:1 Unclosed comment
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:337:21 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:348:30 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:459:37 Unresolved reference: PooledBuffer
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:460:16 Unresolved reference: ByteBufferPool
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:469:43 Unresolved reference: PooledBuffer
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:470:16 Unresolved reference: ByteBufferPool
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:480:30 Unresolved reference: PooledBuffer
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:481:9 Unresolved reference: ByteBufferPool
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1362:9 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1663:11 Unresolved reference: push
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1676:20 Unresolved reference: pop
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1801:34 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1808:40 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1813:43 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1818:43 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1833:12 Unresolved reference: BufferDebugUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2005:26 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2059:23 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2382:49 Unresolved reference: CANFrame
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2387:16 Unresolved reference: CANFrame
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1834:6 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:389:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:425:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:533:35 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:654:22 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:845:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:888:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1006:35 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1184:22 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1342:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1385:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1531:35 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1719:22 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:2075:6 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:2083:1 Unclosed comment
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:5:17 Unresolved reference: room
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:2180:32 Expecting comma or ')'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:2180:32 Expecting ')'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2155:46 Expecting '}'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2155:46 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:850:13 Public-API inline function cannot access non-public-API 'private final val errors: MutableList<ValidationError> defined in com.spacetec.core.common.utils.ValidationContext'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:875:20 Public-API inline function cannot access non-public-API 'private final val errors: MutableList<ValidationError> defined in com.spacetec.core.common.utils.ValidationContext'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:878:38 Public-API inline function cannot access non-public-API 'private final val errors: MutableList<ValidationError> defined in com.spacetec.core.common.utils.ValidationContext'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1874:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1930:61 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1941:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1958:55 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1959:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1965:22 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1987:57 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1988:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1996:24 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2020:36 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2021:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2023:16 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2032:38 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2033:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2035:16 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2045:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2052:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2065:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2073:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2084:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2102:28 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2102:68 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2113:28 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2113:67 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2129:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2133:33 Unresolved reference: ordinal
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':core:common:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 17s
+7 actionable tasks: 2 executed, 5 up-to-date

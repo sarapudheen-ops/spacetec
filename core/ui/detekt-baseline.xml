@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FunctionNaming:DtcCard.kt$@Composable fun DtcCard( dtc: DtcCode, definition: DtcDefinition?, onClick: () -&gt; Unit, onInfoClick: () -&gt; Unit = {}, modifier: Modifier = Modifier, expanded: Boolean = false )</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Composable private fun DtcExpandedContent( dtc: DtcCode, definition: DtcDefinition?, modifier: Modifier = Modifier )</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Composable private fun EcuChip(ecuAddress: String)</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Composable private fun ExpandedSection( title: String, icon: androidx.compose.ui.graphics.vector.ImageVector, content: @Composable () -&gt; Unit )</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Composable private fun MilIndicator()</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Composable private fun SeverityIcon(severity: DtcSeverity)</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Composable private fun StatusChip(status: DtcStatus)</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Composable private fun SystemChip(system: DtcSystem)</ID>
+    <ID>FunctionNaming:DtcCard.kt$@Preview(showBackground = true) @Composable private fun DtcCardPreview()</ID>
+    <ID>FunctionNaming:Theme.kt$@Composable fun SpaceTecTheme( darkTheme: Boolean = isSystemInDarkTheme(), dynamicColor: Boolean = false, content: @Composable () -&gt; Unit )</ID>
+    <ID>InvalidPackageDeclaration:DtcCard.kt$package com.spacetec.obd.core.ui.component</ID>
+    <ID>InvalidPackageDeclaration:Shape.kt$package com.spacetec.obd.core.ui.theme</ID>
+    <ID>InvalidPackageDeclaration:Theme.kt$package com.spacetec.obd.core.ui.theme</ID>
+    <ID>InvalidPackageDeclaration:Typography.kt$package com.spacetec.obd.core.ui.theme</ID>
+    <ID>LongMethod:DtcCard.kt$@Composable fun DtcCard( dtc: DtcCode, definition: DtcDefinition?, onClick: () -&gt; Unit, onInfoClick: () -&gt; Unit = {}, modifier: Modifier = Modifier, expanded: Boolean = false )</ID>
+    <ID>LongParameterList:DtcCard.kt$( dtc: DtcCode, definition: DtcDefinition?, onClick: () -&gt; Unit, onInfoClick: () -&gt; Unit = {}, modifier: Modifier = Modifier, expanded: Boolean = false )</ID>
+    <ID>MagicNumber:DtcCard.kt$3</ID>
+    <ID>MagicNumber:Theme.kt$0xFF001D36</ID>
+    <ID>MagicNumber:Theme.kt$0xFF002204</ID>
+    <ID>MagicNumber:Theme.kt$0xFF003258</ID>
+    <ID>MagicNumber:Theme.kt$0xFF00390A</ID>
+    <ID>MagicNumber:Theme.kt$0xFF00497D</ID>
+    <ID>MagicNumber:Theme.kt$0xFF005312</ID>
+    <ID>MagicNumber:Theme.kt$0xFF1565C0</ID>
+    <ID>MagicNumber:Theme.kt$0xFF1A1C1E</ID>
+    <ID>MagicNumber:Theme.kt$0xFF2E7D32</ID>
+    <ID>MagicNumber:Theme.kt$0xFF341100</ID>
+    <ID>MagicNumber:Theme.kt$0xFF410002</ID>
+    <ID>MagicNumber:Theme.kt$0xFF43474E</ID>
+    <ID>MagicNumber:Theme.kt$0xFF552000</ID>
+    <ID>MagicNumber:Theme.kt$0xFF690005</ID>
+    <ID>MagicNumber:Theme.kt$0xFF73777F</ID>
+    <ID>MagicNumber:Theme.kt$0xFF793100</ID>
+    <ID>MagicNumber:Theme.kt$0xFF8CD987</ID>
+    <ID>MagicNumber:Theme.kt$0xFF8D9199</ID>
+    <ID>MagicNumber:Theme.kt$0xFF93000A</ID>
+    <ID>MagicNumber:Theme.kt$0xFF9ECAFF</ID>
+    <ID>MagicNumber:Theme.kt$0xFFB8F5B0</ID>
+    <ID>MagicNumber:Theme.kt$0xFFBA1A1A</ID>
+    <ID>MagicNumber:Theme.kt$0xFFC3C6CF</ID>
+    <ID>MagicNumber:Theme.kt$0xFFD1E4FF</ID>
+    <ID>MagicNumber:Theme.kt$0xFFDFE2EB</ID>
+    <ID>MagicNumber:Theme.kt$0xFFE2E2E6</ID>
+    <ID>MagicNumber:Theme.kt$0xFFE65100</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFDFCFF</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFFB4AB</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFFB599</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFFDAD6</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFFDBCF</ID>
+    <ID>MagicNumber:Theme.kt$0xFFFFFFFF</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF00838F</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF1565C0</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF1976D2</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF4CAF50</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF558B2F</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF7B1FA2</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF8BC34A</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFF9E9E9E</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFBBDEFB</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFD32F2F</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFF44336</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFF57C00</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFFBC02D</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFFF5722</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFFF9800</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFFFC107</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFFFCDD2</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFFFE0B2</ID>
+    <ID>MagicNumber:Theme.kt$SpaceTecColors$0xFFFFF9C4</ID>
+    <ID>NewLineAtEndOfFile:DtcCard.kt$com.spacetec.obd.core.ui.component.DtcCard.kt</ID>
+    <ID>NewLineAtEndOfFile:Shape.kt$com.spacetec.obd.core.ui.theme.Shape.kt</ID>
+    <ID>NewLineAtEndOfFile:Theme.kt$com.spacetec.obd.core.ui.theme.Theme.kt</ID>
+    <ID>NewLineAtEndOfFile:Typography.kt$com.spacetec.obd.core.ui.theme.Typography.kt</ID>
+    <ID>UnusedPrivateMember:DtcCard.kt$@Preview(showBackground = true) @Composable private fun DtcCardPreview()</ID>
+  </CurrentIssues>
+</SmellBaseline>

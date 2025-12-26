@@ -1,0 +1,754 @@
+WARNING: We recommend using a newer Android Gradle plugin to use compileSdk = 35
+
+This Android Gradle plugin (8.1.4) was tested up to compileSdk = 34.
+
+You are strongly encouraged to update your project to use a newer
+Android Gradle plugin that has been tested with compileSdk = 35.
+
+If you are already using the latest version of the Android Gradle plugin,
+you may need to wait until a newer version with support for compileSdk = 35 is available.
+
+To suppress this warning, add/update
+    android.suppressUnsupportedCompileSdk=35
+to this project's gradle.properties.
+> Task :core:common:checkKotlinGradlePluginConfigurationErrors
+> Task :core:common:preBuild UP-TO-DATE
+> Task :core:common:preDebugBuild UP-TO-DATE
+> Task :core:common:generateDebugResValues UP-TO-DATE
+> Task :core:common:generateDebugResources UP-TO-DATE
+> Task :core:common:packageDebugResources UP-TO-DATE
+> Task :core:common:parseDebugLocalResources UP-TO-DATE
+> Task :core:common:processDebugManifest UP-TO-DATE
+> Task :core:common:generateDebugRFile UP-TO-DATE
+
+> Task :core:common:compileDebugKotlin
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:1974:50 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:1980:50 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:2027:36 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:2036:36 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:2045:36 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3354:77 Unresolved reference: CheckVehicleConditions
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3428:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3429:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3430:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3431:35 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3432:70 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3443:75 Unresolved reference: CheckVehicleConditions
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3481:23 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3482:23 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3483:23 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3497:52 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3498:51 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3499:53 Unresolved reference: Keys
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3501:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3502:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3503:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3504:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3505:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3506:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3507:9 Val cannot be reassigned
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/SpaceTecException.kt:3596:76 Type mismatch: inferred type is Long but Int was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1:19 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1:20 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1:23 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1:25 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:3:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:3:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:3:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:3:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:4:44 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2346:10 Name expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2346:10 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1583:15 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1583:31 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1585:27 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1585:52 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1588:5 Unresolved reference: SpaceTecException
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1674:20 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public val Char.code: Int defined in kotlin
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1675:23 Unresolved reference: message
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1690:24 Unresolved reference: severity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1691:29 Unresolved reference: isRecoverable
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1692:31 Unresolved reference: recoveryActions
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1693:24 Unresolved reference: metadata
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1694:21 Unresolved reference: cause
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1754:20 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1771:20 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1790:20 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1834:17 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1839:30 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1839:47 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1841:15 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1841:31 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1843:27 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1844:9 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1845:9 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1861:25 None of the following functions can be called with the arguments supplied: 
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Array<out Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pair: Pair<TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Iterable<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(map: Map<out TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Sequence<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1874:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1874:42 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1883:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1884:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1885:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1905:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1908:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1909:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1910:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1911:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1939:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1942:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1943:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1944:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1969:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1972:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1973:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1974:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:1997:26 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2000:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2001:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2002:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2018:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2024:16 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2034:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2035:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2036:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2049:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2056:16 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2067:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2068:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2069:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2083:25 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2095:42 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2095:69 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2098:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2099:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2100:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2178:29 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2193:29 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2210:29 Unresolved reference: ConnectionType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2238:17 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2244:28 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2244:43 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2247:15 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2247:31 Unresolved reference: ErrorSeverity
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2249:27 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2249:52 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2264:25 None of the following functions can be called with the arguments supplied: 
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Array<out Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pair: Pair<TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Iterable<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(map: Map<out TypeVariable(K), TypeVariable(V)>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+public operator fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.plus(pairs: Sequence<Pair<TypeVariable(K), TypeVariable(V)>>): Map<TypeVariable(K), TypeVariable(V)> defined in kotlin.collections
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2274:23 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2282:16 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2296:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2297:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2298:13 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2301:44 This declaration needs opt-in. Its usage must be marked with '@kotlin.ExperimentalStdlibApi' or '@OptIn(kotlin.ExperimentalStdlibApi::class)'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2312:23 Unresolved reference: ProtocolType
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2320:16 Unresolved reference: ErrorCodes
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2333:34 Unresolved reference: RecoveryAction
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/exceptions/TimeoutException.kt:2337:44 This declaration needs opt-in. Its usage must be marked with '@kotlin.ExperimentalStdlibApi' or '@OptIn(kotlin.ExperimentalStdlibApi::class)'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1985:36 Expecting '}'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1291:30 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun Byte.toUnsignedInt(): Int defined in com.spacetec.core.common.extensions in file ByteExtensions.kt
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/ByteExtensions.kt:1985:30 This function must return a value of type Int
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:5:44 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:2302:13 Expecting an expression
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1260:42 Cannot access '<init>': it is internal in 'TimeoutCancellationException'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1285:37 Null can not be a value of a non-null type T
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1402:48 Unresolved reference: pow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1405:9 Overload resolution ambiguity: 
+public suspend fun delay(timeMillis: Long): Unit defined in kotlinx.coroutines
+public suspend fun delay(duration: Duration): Unit defined in kotlinx.coroutines
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1419:62 Unresolved reference: pow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1423:9 Overload resolution ambiguity: 
+public suspend fun delay(timeMillis: Long): Unit defined in kotlinx.coroutines
+public suspend fun delay(duration: Duration): Unit defined in kotlinx.coroutines
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:1677:13 Cannot use 'T' as reified type parameter. Use a class instead.
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/FlowExtensions.kt:2001:12 No value passed for parameter 'collector'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:4:44 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1930:54 Expecting an expression
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1039:15 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1051:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1160:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1177:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1183:35 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1295:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1312:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1318:24 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1472:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1479:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1485:24 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1491:24 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1497:25 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1624:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1631:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1637:25 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1643:26 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1718:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1725:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1732:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1738:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1754:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1760:14 Unresolved reference: isZero
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1774:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1794:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1801:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1807:31 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1902:21 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1909:13 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/NumberExtensions.kt:1915:25 Unresolved reference: roundTo
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:1:19 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:1:20 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:3:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:3:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:3:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:3:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:6:44 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/extensions/StringExtensions.kt:1942:1 Unclosed comment
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:468:15 There should be no space or comments before '@' in label reference
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:512:70 There should be no space or comments before '@' in label reference
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:109:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:110:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:111:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:112:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:113:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:114:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:115:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:116:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:117:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:118:9 JvmField cannot be applied to a property of a value class type
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:216:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:228:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:370:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:378:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:384:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:387:20 '@JvmOverloads' annotation cannot be used on functions mangled by value class rules
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:392:49 Unresolved reference: COMMUNICATION_ERROR
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:394:51 Unresolved reference: UNEXPECTED_STATE
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:395:47 Unresolved reference: SECURITY_ERROR
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:396:51 Unresolved reference: OPERATION_CANCELLED
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:482:32 'return' is not allowed here
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:510:83 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun <T> Array<out TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.collections
+public inline fun <T> Array<out TypeVariable(T)>.firstOrNull(predicate: (TypeVariable(T)) -> Boolean): TypeVariable(T)? defined in kotlin.collections
+public fun BooleanArray.firstOrNull(): Boolean? defined in kotlin.collections
+public inline fun BooleanArray.firstOrNull(predicate: (Boolean) -> Boolean): Boolean? defined in kotlin.collections
+public fun ByteArray.firstOrNull(): Byte? defined in kotlin.collections
+public inline fun ByteArray.firstOrNull(predicate: (Byte) -> Boolean): Byte? defined in kotlin.collections
+public fun CharArray.firstOrNull(): Char? defined in kotlin.collections
+public inline fun CharArray.firstOrNull(predicate: (Char) -> Boolean): Char? defined in kotlin.collections
+public fun CharSequence.firstOrNull(): Char? defined in kotlin.text
+public inline fun CharSequence.firstOrNull(predicate: (Char) -> Boolean): Char? defined in kotlin.text
+public fun DoubleArray.firstOrNull(): Double? defined in kotlin.collections
+public inline fun DoubleArray.firstOrNull(predicate: (Double) -> Boolean): Double? defined in kotlin.collections
+public fun FloatArray.firstOrNull(): Float? defined in kotlin.collections
+public inline fun FloatArray.firstOrNull(predicate: (Float) -> Boolean): Float? defined in kotlin.collections
+public fun IntArray.firstOrNull(): Int? defined in kotlin.collections
+public inline fun IntArray.firstOrNull(predicate: (Int) -> Boolean): Int? defined in kotlin.collections
+public fun LongArray.firstOrNull(): Long? defined in kotlin.collections
+public inline fun LongArray.firstOrNull(predicate: (Long) -> Boolean): Long? defined in kotlin.collections
+public fun ShortArray.firstOrNull(): Short? defined in kotlin.collections
+public inline fun ShortArray.firstOrNull(predicate: (Short) -> Boolean): Short? defined in kotlin.collections
+public fun UByteArray.firstOrNull(): UByte? defined in kotlin.collections
+public inline fun UByteArray.firstOrNull(predicate: (UByte) -> Boolean): UByte? defined in kotlin.collections
+public fun UIntArray.firstOrNull(): UInt? defined in kotlin.collections
+public inline fun UIntArray.firstOrNull(predicate: (UInt) -> Boolean): UInt? defined in kotlin.collections
+public fun ULongArray.firstOrNull(): ULong? defined in kotlin.collections
+public inline fun ULongArray.firstOrNull(predicate: (ULong) -> Boolean): ULong? defined in kotlin.collections
+public fun UShortArray.firstOrNull(): UShort? defined in kotlin.collections
+public inline fun UShortArray.firstOrNull(predicate: (UShort) -> Boolean): UShort? defined in kotlin.collections
+public fun <T> Iterable<TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.collections
+public inline fun <T> Iterable<TypeVariable(T)>.firstOrNull(predicate: (TypeVariable(T)) -> Boolean): TypeVariable(T)? defined in kotlin.collections
+public fun <T> List<TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.collections
+public fun CharProgression.firstOrNull(): Char? defined in kotlin.ranges
+public fun IntProgression.firstOrNull(): Int? defined in kotlin.ranges
+public fun LongProgression.firstOrNull(): Long? defined in kotlin.ranges
+public fun UIntProgression.firstOrNull(): UInt? defined in kotlin.ranges
+public fun ULongProgression.firstOrNull(): ULong? defined in kotlin.ranges
+public fun <T> Sequence<TypeVariable(T)>.firstOrNull(): TypeVariable(T)? defined in kotlin.sequences
+public inline fun <T> Sequence<TypeVariable(T)>.firstOrNull(predicate: (TypeVariable(T)) -> Boolean): TypeVariable(T)? defined in kotlin.sequences
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:519:52 Type mismatch: inferred type is Flow<Unit> but Flow<T> was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:519:56 Type mismatch: inferred type is Unit but T was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:519:61 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <T> Result<TypeVariable(T)>.getOrThrow(): TypeVariable(T) defined in kotlin
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:521:71 Type mismatch: inferred type is Flow<Unit> but Flow<T> was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:521:75 Type mismatch: inferred type is Unit but T was expected
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:521:80 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <R, T : TypeVariable(R)> Result<TypeVariable(T)>.getOrDefault(defaultValue: TypeVariable(R)): TypeVariable(R) defined in kotlin
+public inline fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.getOrDefault(key: TypeVariable(K), defaultValue: TypeVariable(V)): TypeVariable(V) defined in kotlin.collections
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:542:32 Unresolved reference: pow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:570:5 Suspend functional parameters with default values are not yet supported in inline functions
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:603:86 Illegal usage of inline-parameter 'retryOn' in 'public suspend inline fun <T> retry(maxAttempts: Int = ..., delayMs: Long = ..., crossinline retryOn: (ErrorInfo) -> Boolean = ..., crossinline operation: suspend () -> Result<T>): Result<T> defined in com.spacetec.core.common.result in file Result.kt'. Add 'noinline' modifier to the parameter declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:723:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:723:16 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:726:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:726:16 Cannot infer a type for this parameter. Please specify it explicitly.
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:734:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:734:16 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:737:5 Unresolved reference: mapError
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:737:16 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:825:5 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <T> Flow<TypeVariable(T)>.filter(crossinline predicate: suspend (TypeVariable(T)) -> Boolean): Flow<TypeVariable(T)> defined in kotlinx.coroutines.flow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:825:28 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:828:5 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <T> Flow<TypeVariable(T)>.filter(crossinline predicate: suspend (TypeVariable(T)) -> Boolean): Flow<TypeVariable(T)> defined in kotlinx.coroutines.flow
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/result/Result.kt:828:28 Unresolved reference: it
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1:18 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1:19 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1:24 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1:38 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:3:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:3:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:3:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:3:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:6:39 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2396:6 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2400:1 Unclosed comment
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:340:21 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:351:30 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:462:37 Unresolved reference: PooledBuffer
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:463:16 Unresolved reference: ByteBufferPool
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:472:43 Unresolved reference: PooledBuffer
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:473:16 Unresolved reference: ByteBufferPool
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:483:30 Unresolved reference: PooledBuffer
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:484:9 Unresolved reference: ByteBufferPool
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1365:9 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1666:11 Unresolved reference: push
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1679:20 Unresolved reference: pop
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1804:34 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1811:40 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1816:43 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1821:43 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:1836:12 Unresolved reference: BufferDebugUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2008:26 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2062:23 Unresolved reference: HexUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2385:49 Unresolved reference: CANFrame
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ByteBufferUtils.kt:2390:16 Unresolved reference: CANFrame
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:4:39 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1835:6 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:390:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:426:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:534:35 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:655:22 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:846:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:889:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1007:35 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1185:22 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1343:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1386:19 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1532:35 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/CRCCalculator.kt:1720:22 Unresolved reference: CRCUtils
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:1:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:1:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:4:39 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:2076:6 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:2084:1 Unclosed comment
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/DateTimeUtils.kt:6:17 Unresolved reference: room
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:127 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:130 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:138 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:144 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:146 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:150 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:151 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:160 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:162 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:172 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:173 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:179 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:1:185 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:3:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:3:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:3:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:3:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:6:39 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:2183:32 Expecting comma or ')'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/HexUtils.kt:2183:32 Expecting ')'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1:2 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1:3 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1:4 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:1 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:9 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:12 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:13 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:21 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:22 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:26 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:27 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:33 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:34 Expecting a top level declaration
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:4:39 imports are only allowed in the beginning of file
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2156:46 Expecting '}'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2156:46 Missing '}
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:851:13 Public-API inline function cannot access non-public-API 'private final val errors: MutableList<ValidationError> defined in ValidationContext'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:876:20 Public-API inline function cannot access non-public-API 'private final val errors: MutableList<ValidationError> defined in ValidationContext'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:879:38 Public-API inline function cannot access non-public-API 'private final val errors: MutableList<ValidationError> defined in ValidationContext'
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1875:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1931:61 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1942:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1959:55 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1960:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1966:22 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1988:57 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1989:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:1997:24 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2021:36 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2022:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2024:16 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2033:38 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2034:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2036:16 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2046:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2053:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2066:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2074:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2085:13 Unresolved reference: DTCSystem
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2103:28 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2103:68 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2114:28 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2114:67 Unresolved reference: DTCCategory
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2130:26 Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public fun File.normalize(): File defined in kotlin.io
+private fun List<File>.normalize(): List<File> defined in kotlin.io
+private fun FilePathComponents.normalize(): FilePathComponents defined in kotlin.io
+e: file:///home/yungblud/Desktop/SpaceTec/core/common/src/main/java/com/spacetec/core/common/utils/ValidationUtils.kt:2134:33 Unresolved reference: ordinal
+
+> Task :core:common:compileDebugKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':core:common:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':core:common:compileDebugKotlin'.
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:149)
+	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:147)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:135)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:338)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:325)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:304)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:283)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:321)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:304)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:309)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
+	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:250)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:227)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:210)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:193)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:166)
+	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:93)
+	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:57)
+	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:54)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:54)
+	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
+	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
+	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:50)
+	at org.gradle.internal.execution.steps.CreateOutputsStep.execute(CreateOutputsStep.java:28)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.executeDelegateBroadcastingChanges(CaptureStateAfterExecutionStep.java:100)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:72)
+	at org.gradle.internal.execution.steps.CaptureStateAfterExecutionStep.execute(CaptureStateAfterExecutionStep.java:50)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:166)
+	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:70)
+	at org.gradle.internal.Either$Right.fold(Either.java:175)
+	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:59)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:68)
+	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:46)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:25)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:36)
+	at org.gradle.internal.execution.steps.RecordOutputsStep.execute(RecordOutputsStep.java:22)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:91)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:55)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:55)
+	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:37)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:76)
+	at org.gradle.internal.execution.steps.ResolveCachingStateStep.execute(ResolveCachingStateStep.java:37)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:94)
+	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:49)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:71)
+	at org.gradle.internal.execution.steps.CaptureStateBeforeExecutionStep.execute(CaptureStateBeforeExecutionStep.java:45)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.executeWithNonEmptySources(SkipEmptyWorkStep.java:177)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:86)
+	at org.gradle.internal.execution.steps.SkipEmptyWorkStep.execute(SkipEmptyWorkStep.java:53)
+	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:32)
+	at org.gradle.internal.execution.steps.RemoveUntrackedExecutionStateStep.execute(RemoveUntrackedExecutionStateStep.java:21)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.CleanupStaleOutputsStep.execute(CleanupStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.lambda$execute$0(AssignWorkspaceStep.java:32)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:287)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:30)
+	at org.gradle.internal.execution.steps.AssignWorkspaceStep.execute(AssignWorkspaceStep.java:21)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:37)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:27)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:42)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:31)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:64)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:146)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:135)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:338)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:325)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:304)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:49)
+Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
+	at org.jetbrains.kotlin.gradle.tasks.TasksUtilsKt.throwExceptionIfCompilationFailed(tasksUtils.kt:20)
+	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:141)
+	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:73)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:199)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:169)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:249)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:109)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:114)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
+	... 2 more
+
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 11s
+7 actionable tasks: 2 executed, 5 up-to-date

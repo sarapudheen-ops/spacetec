@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="incidents">
+
+    <incident
+        id="SimpleDateFormat"
+        severity="warning"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates.">
+        <location
+            file="${:core:security*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/core/security/violation/SecurityViolationHandler.kt"
+            line="226"
+            column="25"
+            startOffset="7768"
+            endLine="226"
+            endColumn="74"
+            endOffset="7817"/>
+    </incident>
+
+</incidents>

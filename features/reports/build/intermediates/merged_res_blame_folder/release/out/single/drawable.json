@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.spacetec.features.reports-merged_res-61:/drawable/notification_bg.xml",
+        "source": "com.spacetec.features.reports-core-1.12.0-17:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "com.spacetec.features.reports-merged_res-61:/drawable/notification_tile_bg.xml",
+        "source": "com.spacetec.features.reports-core-1.12.0-17:/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "com.spacetec.features.reports-merged_res-61:/drawable/abc_vector_test.xml",
+        "source": "com.spacetec.features.reports-jetified-appcompat-resources-1.6.1-19:/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "com.spacetec.features.reports-merged_res-61:/drawable/notification_icon_background.xml",
+        "source": "com.spacetec.features.reports-core-1.12.0-17:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "com.spacetec.features.reports-merged_res-61:/drawable/notification_bg_low.xml",
+        "source": "com.spacetec.features.reports-core-1.12.0-17:/drawable/notification_bg_low.xml"
+    }
+]

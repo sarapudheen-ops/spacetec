@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/yungblud/Desktop/SpaceTec/j2534/.cxx/Debug/3x1q5d2k/x86_64",
+  "command": "/home/yungblud/android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --sysroot=/home/yungblud/android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dspacetec_j2534_EXPORTS -I/home/yungblud/Desktop/SpaceTec/j2534/src/main/jni -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -std=gnu++17 -o CMakeFiles/spacetec_j2534.dir/j2534_native.cpp.o -c /home/yungblud/Desktop/SpaceTec/j2534/src/main/jni/j2534_native.cpp",
+  "file": "/home/yungblud/Desktop/SpaceTec/j2534/src/main/jni/j2534_native.cpp"
+}
+]

@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.spacetec.obd.dtc-merged_res-61:/drawable-v21/notification_action_background.xml",
+        "source": "com.spacetec.obd.dtc-core-1.12.0-17:/drawable-v21/notification_action_background.xml"
+    }
+]

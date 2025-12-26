@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>MaxLineLength:J1850Protocol.kt$J1850Protocol$class</ID>
+    <ID>UnusedPrivateProperty:J1850Protocol.kt$J1850Protocol$val resp = transport(protocol.toByteArray())</ID>
+    <ID>WildcardImport:J1850Protocol.kt$import com.spacetec.protocol.core.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyKtFile:ChartDataProcessor.kt$.ChartDataProcessor.kt</ID>
+    <ID>EmptyKtFile:ChartGenerator.kt$.ChartGenerator.kt</ID>
+    <ID>EmptyKtFile:ChartScreen.kt$.ChartScreen.kt</ID>
+    <ID>EmptyKtFile:ChartViewModel.kt$.ChartViewModel.kt</ID>
+    <ID>EmptyKtFile:DataRecorder.kt$.DataRecorder.kt</ID>
+    <ID>EmptyKtFile:DataRecordingScreen.kt$.DataRecordingScreen.kt</ID>
+    <ID>EmptyKtFile:DataRecordingViewModel.kt$.DataRecordingViewModel.kt</ID>
+    <ID>EmptyKtFile:LiveDataFeature.kt$.LiveDataFeature.kt</ID>
+    <ID>EmptyKtFile:LiveDataScreen.kt$.LiveDataScreen.kt</ID>
+    <ID>EmptyKtFile:LiveDataUiState.kt$.LiveDataUiState.kt</ID>
+    <ID>EmptyKtFile:LiveDataViewModel.kt$.LiveDataViewModel.kt</ID>
+    <ID>EmptyKtFile:PIDListScreen.kt$.PIDListScreen.kt</ID>
+    <ID>EmptyKtFile:PIDListViewModel.kt$.PIDListViewModel.kt</ID>
+    <ID>EmptyKtFile:PIDSelectionScreen.kt$.PIDSelectionScreen.kt</ID>
+    <ID>EmptyKtFile:PIDSelectionViewModel.kt$.PIDSelectionViewModel.kt</ID>
+    <ID>EmptyKtFile:RecordingService.kt$.RecordingService.kt</ID>
+    <ID>FunctionNaming:LiveDataScreen.kt$@Composable private fun LiveDataItem(data: LiveDataItem)</ID>
+    <ID>FunctionNaming:LiveDataScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun LiveDataScreen( viewModel: LiveDataViewModel = hiltViewModel() )</ID>
+    <ID>ImplicitDefaultLocale:LiveDataViewModel.kt$LiveDataItem$String.format("%.1f", value)</ID>
+    <ID>LongMethod:LiveDataScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun LiveDataScreen( viewModel: LiveDataViewModel = hiltViewModel() )</ID>
+    <ID>LongMethod:LiveDataViewModel.kt$LiveDataViewModel$private fun updateLiveData()</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$10.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$100.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$1000</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$105.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$120.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$20.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$25.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$250.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$3000.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$400.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$60.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$800.0</ID>
+    <ID>MagicNumber:LiveDataViewModel.kt$LiveDataViewModel$85.0</ID>
+    <ID>TooGenericExceptionCaught:LiveDataViewModel.kt$LiveDataViewModel$e: Exception</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import androidx.compose.runtime.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml:2:13-83
+INJECTED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml:2:13-83
+	package
+		INJECTED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml
+	xmlns:android
+		ADDED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml:2:23-81
+uses-sdk
+INJECTED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml reason: use-sdk injection requested
+INJECTED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml
+INJECTED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml
+	android:targetSdkVersion
+		INJECTED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml
+	android:minSdkVersion
+		INJECTED from /home/yungblud/Desktop/SpaceTec/features/maintenance/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest3724735696189084696.xml

@@ -1,0 +1,28 @@
+/home/yungblud/Desktop/SpaceTec/core/logging/src/main/java/com/spacetec/core/logging/SpaceTecLogger.kt:69: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                LogLevel.VERBOSE -> Log.v(fullTag, androidMessage, throwable)
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yungblud/Desktop/SpaceTec/core/logging/src/main/java/com/spacetec/core/logging/SpaceTecLogger.kt:70: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                LogLevel.DEBUG -> Log.d(fullTag, androidMessage, throwable)
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yungblud/Desktop/SpaceTec/core/logging/src/main/java/com/spacetec/core/logging/SpaceTecLogger.kt:71: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                LogLevel.INFO -> Log.i(fullTag, androidMessage, throwable)
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yungblud/Desktop/SpaceTec/core/logging/src/main/java/com/spacetec/core/logging/SpaceTecLogger.kt:72: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                LogLevel.WARN -> Log.w(fullTag, androidMessage, throwable)
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yungblud/Desktop/SpaceTec/core/logging/src/main/java/com/spacetec/core/logging/SpaceTecLogger.kt:73: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                LogLevel.ERROR -> Log.e(fullTag, androidMessage, throwable)
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yungblud/Desktop/SpaceTec/core/logging/src/main/java/com/spacetec/core/logging/SpaceTecLogger.kt:74: Warning: Using 'Log' instead of 'Timber' [LogNotTimber from com.jakewharton.timber:timber:{version}]
+                LogLevel.FATAL -> Log.e(fullTag, androidMessage, throwable)
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "LogNotTimber":
+   Since Timber is included in the project, it is likely that calls to Log
+   should instead be going to Timber.
+
+   Vendor: JakeWharton/timber
+   Identifier: com.jakewharton.timber:timber:{version}
+   Feedback: https://github.com/JakeWharton/timber/issues
+
+0 errors, 6 warnings

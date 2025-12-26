@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable-v21/notification_action_background.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable-v21/notification_action_background.xml"
+    }
+]

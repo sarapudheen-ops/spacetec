@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>InvalidPackageDeclaration:ByteArrayExtensions.kt$package com.spacetec.obd.core.common.extension</ID>
+    <ID>InvalidPackageDeclaration:DispatcherProvider.kt$package com.spacetec.obd.core.common.dispatcher</ID>
+    <ID>InvalidPackageDeclaration:FlowExtensions.kt$package com.spacetec.obd.core.common.extension</ID>
+    <ID>InvalidPackageDeclaration:Result.kt$package com.spacetec.obd.core.common.result</ID>
+    <ID>InvalidPackageDeclaration:SpaceTecError.kt$package com.spacetec.obd.core.common.result</ID>
+    <ID>MagicNumber:ByteArrayExtensions.kt$0x100</ID>
+    <ID>MagicNumber:ByteArrayExtensions.kt$0xFF</ID>
+    <ID>MagicNumber:ByteArrayExtensions.kt$16</ID>
+    <ID>MagicNumber:ByteArrayExtensions.kt$4</ID>
+    <ID>MagicNumber:ByteArrayExtensions.kt$7</ID>
+    <ID>MagicNumber:ByteArrayExtensions.kt$8</ID>
+    <ID>MagicNumber:Extensions.kt$0xFFFF</ID>
+    <ID>MagicNumber:Extensions.kt$0xFFFFFFFFL</ID>
+    <ID>MagicNumber:Extensions.kt$16</ID>
+    <ID>MagicNumber:Extensions.kt$4</ID>
+    <ID>MagicNumber:Extensions.kt$VINUtils$10</ID>
+    <ID>MagicNumber:Extensions.kt$VINUtils$17</ID>
+    <ID>MagicNumber:Extensions.kt$VINUtils$2010</ID>
+    <ID>MagicNumber:Extensions.kt$VINUtils$9</ID>
+    <ID>MagicNumber:NRCConstants.kt$NRCConstants$16</ID>
+    <ID>NewLineAtEndOfFile:ByteArrayExtensions.kt$com.spacetec.obd.core.common.extension.ByteArrayExtensions.kt</ID>
+    <ID>NewLineAtEndOfFile:CommunicationException.kt$com.spacetec.core.common.exceptions.CommunicationException.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionException.kt$com.spacetec.core.common.exceptions.ConnectionException.kt</ID>
+    <ID>NewLineAtEndOfFile:DiagnosticTransport.kt$com.spacetec.core.common.transport.DiagnosticTransport.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowExtensions.kt$com.spacetec.obd.core.common.extension.FlowExtensions.kt</ID>
+    <ID>NewLineAtEndOfFile:NRCConstants.kt$com.spacetec.core.common.NRCConstants.kt</ID>
+    <ID>NewLineAtEndOfFile:OBDConstants.kt$com.spacetec.core.common.constants.OBDConstants.kt</ID>
+    <ID>NewLineAtEndOfFile:ProtocolException.kt$com.spacetec.core.common.exceptions.ProtocolException.kt</ID>
+    <ID>NewLineAtEndOfFile:Result.kt$com.spacetec.obd.core.common.result.Result.kt</ID>
+    <ID>NewLineAtEndOfFile:SpaceTecError.kt$com.spacetec.obd.core.common.result.SpaceTecError.kt</ID>
+    <ID>NewLineAtEndOfFile:SpaceTecException.kt$com.spacetec.core.common.exceptions.SpaceTecException.kt</ID>
+    <ID>NewLineAtEndOfFile:TimeoutException.kt$com.spacetec.core.common.exceptions.TimeoutException.kt</ID>
+    <ID>SwallowedException:ByteArrayExtensions.kt$e: Exception</ID>
+    <ID>SwallowedException:FlowExtensions.kt$e: NoSuchElementException</ID>
+    <ID>TooGenericExceptionCaught:ByteArrayExtensions.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Extensions.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Result.kt$Result.Companion$e: Throwable</ID>
+    <ID>TooManyFunctions:ByteArrayExtensions.kt$com.spacetec.obd.core.common.extension.ByteArrayExtensions.kt</ID>
+    <ID>TooManyFunctions:FlowExtensions.kt$com.spacetec.obd.core.common.extension.FlowExtensions.kt</ID>
+    <ID>TooManyFunctions:Result.kt$Result&lt;out T, out E&gt;</ID>
+    <ID>UseCheckOrError:Result.kt$Result$throw (error as? Throwable ?: IllegalStateException("Result is Failure: $error"))</ID>
+  </CurrentIssues>
+</SmellBaseline>

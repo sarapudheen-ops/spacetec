@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FunctionNaming:DTCClearScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCClearScreen( onBackClick: () -&gt; Unit, viewModel: DTCClearViewModel = viewModel() )</ID>
+    <ID>FunctionNaming:DTCDetailScreen.kt$@Composable private fun DTCDetailContent( dtc: DTCDetail, modifier: Modifier = Modifier )</ID>
+    <ID>FunctionNaming:DTCDetailScreen.kt$@Composable private fun DetailSection( title: String, content: String? = null, items: List&lt;String&gt;? = null )</ID>
+    <ID>FunctionNaming:DTCDetailScreen.kt$@Composable private fun InfoChip(label: String, value: String)</ID>
+    <ID>FunctionNaming:DTCDetailScreen.kt$@Composable private fun SeverityChip(severity: String)</ID>
+    <ID>FunctionNaming:DTCDetailScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCDetailScreen( dtcCode: String, onBackClick: () -&gt; Unit, viewModel: DTCDetailViewModel = viewModel() )</ID>
+    <ID>FunctionNaming:DTCListScreen.kt$@Composable private fun SeverityChip(severity: String)</ID>
+    <ID>FunctionNaming:DTCListScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCListScreen( onDTCClick: (String) -&gt; Unit, onBackClick: () -&gt; Unit, onScanClick: () -&gt; Unit = {}, onClearClick: () -&gt; Unit = {}, viewModel: DTCListViewModel = viewModel() )</ID>
+    <ID>FunctionNaming:DTCListScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable private fun DTCListItem( dtc: DTCListItem, onClick: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:DTCScanScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCScanScreen( onBackClick: () -&gt; Unit, onDTCsFound: (List&lt;String&gt;) -&gt; Unit, viewModel: DTCScanViewModel = viewModel() )</ID>
+    <ID>LongMethod:DTCClearScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCClearScreen( onBackClick: () -&gt; Unit, viewModel: DTCClearViewModel = viewModel() )</ID>
+    <ID>LongMethod:DTCDetailScreen.kt$@Composable private fun DTCDetailContent( dtc: DTCDetail, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:DTCDetailScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCDetailScreen( dtcCode: String, onBackClick: () -&gt; Unit, viewModel: DTCDetailViewModel = viewModel() )</ID>
+    <ID>LongMethod:DTCListScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCListScreen( onDTCClick: (String) -&gt; Unit, onBackClick: () -&gt; Unit, onScanClick: () -&gt; Unit = {}, onClearClick: () -&gt; Unit = {}, viewModel: DTCListViewModel = viewModel() )</ID>
+    <ID>LongMethod:DTCScanScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DTCScanScreen( onBackClick: () -&gt; Unit, onDTCsFound: (List&lt;String&gt;) -&gt; Unit, viewModel: DTCScanViewModel = viewModel() )</ID>
+    <ID>MagicNumber:DTCClearViewModel.kt$DTCClearViewModel$2000</ID>
+    <ID>MagicNumber:DTCClearViewModel.kt$DTCClearViewModel$3000</ID>
+    <ID>MagicNumber:DTCScanViewModel.kt$DTCScanViewModel$1000</ID>
+    <ID>MagicNumber:DTCScanViewModel.kt$DTCScanViewModel$1500</ID>
+    <ID>MagicNumber:DTCScanViewModel.kt$DTCScanViewModel$500</ID>
+    <ID>MaxLineLength:DTCClearScreen.kt$text = "Clearing DTCs will remove all stored diagnostic trouble codes and freeze frame data. This action cannot be undone."</ID>
+    <ID>MaxLineLength:DTCClearScreen.kt$text = "Ready to clear DTCs. Make sure your OBD adapter is connected and the vehicle ignition is on."</ID>
+    <ID>MaxLineLength:DTCClearScreen.kt$text = { Text("Are you sure you want to clear all diagnostic trouble codes? This action cannot be undone.") }</ID>
+    <ID>TooGenericExceptionCaught:DTCClearViewModel.kt$DTCClearViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DTCDetailViewModel.kt$DTCDetailViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DTCListViewModel.kt$DTCListViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DTCScanViewModel.kt$DTCScanViewModel$e: Exception</ID>
+    <ID>UnusedParameter:DTCListScreen.kt$onBackClick: () -&gt; Unit</ID>
+    <ID>WildcardImport:DTCClearScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DTCClearScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DTCClearScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:DTCDetailScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DTCDetailScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DTCDetailScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:DTCListScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DTCListScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DTCListScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:DTCScanScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DTCScanScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DTCScanScreen.kt$import androidx.compose.runtime.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

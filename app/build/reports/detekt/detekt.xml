@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="4.3">
+<file name="/home/yungblud/Desktop/SpaceTec/app/src/main/java/com/obdreader/data/bluetooth/BluetoothManager.kt">
+	<error line="112" column="26" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="121" column="22" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/app/src/main/java/com/obdreader/data/bluetooth/ble/BLEDevice.kt">
+	<error line="63" column="30" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="72" column="26" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/app/src/main/java/com/obdreader/data/bluetooth/ble/BLEConnection.kt">
+	<error line="390" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/app/src/main/java/com/obdreader/data/bluetooth/ble/BLEConnection.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/app/src/main/java/com/obdreader/data/obd/protocol/ELM327Protocol.kt">
+	<error line="366" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/app/src/main/java/com/obdreader/data/obd/protocol/ELM327Protocol.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="110" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="110" column="51" severity="warning" message="Use check() or error() instead of throwing an IllegalStateException." source="detekt.UseCheckOrError" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/app/src/main/kotlin/com/spacetec/obd/ui/screens/ReadinessScreen.kt">
+	<error line="357" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/app/src/main/kotlin/com/spacetec/obd/ui/screens/ReadinessScreen.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/app/src/main/kotlin/com/spacetec/obd/ui/screens/ConnectionScreen.kt">
+	<error line="193" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/app/src/main/kotlin/com/spacetec/obd/ui/screens/ConnectionScreen.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/app/src/main/kotlin/com/spacetec/obd/ui/screens/SettingsScreen.kt">
+	<error line="244" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/app/src/main/kotlin/com/spacetec/obd/ui/screens/SettingsScreen.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+</file>
+</checkstyle>

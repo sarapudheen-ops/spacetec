@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.spacetec.core.logging.LogManagementPropertyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-12-25T22:55:45" hostname="pop-os" time="0.561">
+  <properties/>
+  <testcase name="Property 14 - Log files should be rotated when they exceed size limits while preserving recent data" classname="com.spacetec.core.logging.LogManagementPropertyTest" time="0.226"/>
+  <testcase name="Property 14 - Log analysis should provide meaningful statistics and patterns" classname="com.spacetec.core.logging.LogManagementPropertyTest" time="0.074"/>
+  <testcase name="Property 14 - Log cleanup should remove old files while preserving recent ones" classname="com.spacetec.core.logging.LogManagementPropertyTest" time="0.032"/>
+  <testcase name="Property 14 - Log export should provide complete data in multiple formats" classname="com.spacetec.core.logging.LogManagementPropertyTest" time="0.18"/>
+  <testcase name="Property 14 - Log file information should provide accurate metadata" classname="com.spacetec.core.logging.LogManagementPropertyTest" time="0.046"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Log cleanup failed: StandaloneCoroutine was cancelled
+Log cleanup failed: StandaloneCoroutine was cancelled
+Log cleanup failed: StandaloneCoroutine was cancelled
+]]></system-err>
+</testsuite>

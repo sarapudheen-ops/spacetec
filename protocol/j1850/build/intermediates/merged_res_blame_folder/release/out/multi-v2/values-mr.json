@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.spacetec.obd.protocol.j1850-mergeReleaseResources-21:/values-mr/values-mr.xml",
+            "map": [
+                {
+                    "source": "/home/yungblud/.gradle/caches/transforms-3/d4b799b2cb82619ecfe44f4b45df894a/transformed/core-1.12.0/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,155,259,360,463,565,670,787",
+                        "endColumns": "99,103,100,102,101,104,116,100",
+                        "endOffsets": "150,254,355,458,560,665,782,883"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.spacetec.obd.protocol.j1850-merged_res-23:/values-mr/values-mr.xml",
+            "map": [
+                {
+                    "source": "/home/yungblud/.gradle/caches/transforms-3/d4b799b2cb82619ecfe44f4b45df894a/transformed/core-1.12.0/res/values-mr/values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,155,259,360,463,565,670,787",
+                        "endColumns": "99,103,100,102,101,104,116,100",
+                        "endOffsets": "150,254,355,458,560,665,782,883"
+                    }
+                }
+            ]
+        }
+    ]
+}

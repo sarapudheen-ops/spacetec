@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ImplicitDefaultLocale:UDSProtocol.kt$UDSMessage$String.format("%02X", it)</ID>
+    <ID>ImplicitDefaultLocale:UDSProtocol.kt$UDSProtocol$String.format("%c%02X%02X", dtcType, dtcByte1 and 0x3F, dtcByte2)</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSMessage$16</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x10</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x11</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x14</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x19</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x22</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x27</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x2E</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x31</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x3E</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x3F</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x40</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0x7F</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0xC0</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$0xFF</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$1000</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$16</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$3</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$4</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$500</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$6</ID>
+    <ID>MagicNumber:UDSProtocol.kt$UDSProtocol$8</ID>
+    <ID>MaxLineLength:UDSProtocol.kt$UDSMessage$return "UDSMessage(serviceId=0x${serviceId.toString(16)}, data=${data.joinToString(" ") { String.format("%02X", it) }})"</ID>
+    <ID>MaxLineLength:UDSProtocol.kt$UDSProtocol$Result.failure(ProtocolException("Negative response during key send: ${keyResponse.negativeResponseCode}"))</ID>
+    <ID>MaxLineLength:UDSProtocol.kt$UDSProtocol$return Result.failure(ProtocolException("Negative response during seed request: ${seedResponse.negativeResponseCode}"))</ID>
+    <ID>MaxLineLength:UDSProtocol.kt$UDSProtocol$throw ProtocolException("Invalid service ID in response: expected ${expectedService + 0x40}, got $serviceId")</ID>
+    <ID>NewLineAtEndOfFile:UDSProtocol.kt$com.spacetec.protocol.uds.UDSProtocol.kt</ID>
+    <ID>ReturnCount:UDSProtocol.kt$UDSProtocol$suspend fun securityAccess(level: Int): Result&lt;Boolean&gt;</ID>
+    <ID>SwallowedException:UDSProtocol.kt$UDSProtocol$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:UDSProtocol.kt$UDSProtocol$e: Exception</ID>
+    <ID>TooManyFunctions:UDSProtocol.kt$UDSProtocol : BaseProtocol</ID>
+    <ID>UnusedPrivateProperty:UDSProtocol.kt$UDSProtocol$val requestedService = response[1].toInt() and 0xFF</ID>
+  </CurrentIssues>
+</SmellBaseline>

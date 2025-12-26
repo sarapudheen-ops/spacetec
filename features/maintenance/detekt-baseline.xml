@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyKtFile:MaintenanceFeature.kt$.MaintenanceFeature.kt</ID>
+    <ID>EmptyKtFile:MaintenanceResetScreen.kt$.MaintenanceResetScreen.kt</ID>
+    <ID>EmptyKtFile:MaintenanceResetViewModel.kt$.MaintenanceResetViewModel.kt</ID>
+    <ID>EmptyKtFile:MaintenanceScreen.kt$.MaintenanceScreen.kt</ID>
+    <ID>EmptyKtFile:MaintenanceUiState.kt$.MaintenanceUiState.kt</ID>
+    <ID>EmptyKtFile:MaintenanceViewModel.kt$.MaintenanceViewModel.kt</ID>
+    <ID>EmptyKtFile:ResetServiceIndicatorScreen.kt$.ResetServiceIndicatorScreen.kt</ID>
+    <ID>EmptyKtFile:ResetServiceIndicatorViewModel.kt$.ResetServiceIndicatorViewModel.kt</ID>
+    <ID>EmptyKtFile:ServiceHistoryScreen.kt$.ServiceHistoryScreen.kt</ID>
+    <ID>EmptyKtFile:ServiceHistoryViewModel.kt$.ServiceHistoryViewModel.kt</ID>
+    <ID>EmptyKtFile:ServiceIntervalScreen.kt$.ServiceIntervalScreen.kt</ID>
+    <ID>EmptyKtFile:ServiceIntervalViewModel.kt$.ServiceIntervalViewModel.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

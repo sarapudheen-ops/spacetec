@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ForbiddenComment:DashboardViewModel.kt$DashboardViewModel$// TODO: Implement dashboard</ID>
+    <ID>FunctionNaming:DashboardScreen.kt$@Composable private fun StatusItem( label: String, status: String, isConnected: Boolean )</ID>
+    <ID>FunctionNaming:DashboardScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DashboardScreen( onNavigateToDTCList: () -&gt; Unit = {}, onNavigateToLiveData: () -&gt; Unit = {}, onNavigateToConnection: () -&gt; Unit = {}, onNavigateToReports: () -&gt; Unit = {}, onNavigateToSettings: () -&gt; Unit = {} )</ID>
+    <ID>FunctionNaming:DashboardScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable private fun QuickActionCard( title: String, description: String, icon: androidx.compose.ui.graphics.vector.ImageVector, onClick: () -&gt; Unit, modifier: Modifier = Modifier )</ID>
+    <ID>LongMethod:DashboardScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DashboardScreen( onNavigateToDTCList: () -&gt; Unit = {}, onNavigateToLiveData: () -&gt; Unit = {}, onNavigateToConnection: () -&gt; Unit = {}, onNavigateToReports: () -&gt; Unit = {}, onNavigateToSettings: () -&gt; Unit = {} )</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.runtime.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>LongMethod:SafetyManager.kt$SafetyManager$suspend fun performPreOperationChecks( operation: SafetyCriticalOperation, vehicleStatus: VehicleStatus ): SafetyCheckResult</ID>
+    <ID>LongMethod:SafetyManager.kt$SafetyManager$suspend fun performSessionSafetyChecks( sessionType: SessionType, vehicleStatus: VehicleStatus ): SafetyCheckResult</ID>
+    <ID>MagicNumber:SafetyManager.kt$SafetyManager$10.0</ID>
+    <ID>MagicNumber:SafetyManager.kt$SafetyManager$10.5</ID>
+    <ID>MagicNumber:SafetyManager.kt$SafetyManager$11.0</ID>
+    <ID>MagicNumber:SafetyManager.kt$SafetyManager$11.5</ID>
+    <ID>MagicNumber:SafetyManager.kt$SafetyManager$12.0</ID>
+    <ID>MagicNumber:SafetyManager.kt$SafetyManager$14.5</ID>
+    <ID>MagicNumber:SafetyManager.kt$SafetyManager$5.0</ID>
+    <ID>MaxLineLength:SafetyManager.kt$SafetyManager$"Battery voltage too high (${vehicleStatus.voltage}V) for programming, maximum 14.5V allowed"</ID>
+    <ID>MaxLineLength:SafetyManager.kt$SafetyManager$"Battery voltage too low (${vehicleStatus.voltage}V) for DTC clearing, minimum 10.5V required"</ID>
+    <ID>MaxLineLength:SafetyManager.kt$SafetyManager$"Battery voltage too low (${vehicleStatus.voltage}V) for programming session, minimum 11.5V required"</ID>
+    <ID>MaxLineLength:SafetyManager.kt$SafetyManager$"Battery voltage too low (${vehicleStatus.voltage}V) for programming, minimum 11.0V required"</ID>
+    <ID>MaxLineLength:SafetyManager.kt$SafetyManager$"Battery voltage too low (${vehicleStatus.voltage}V) for session change, minimum 10.0V required"</ID>
+    <ID>MaxLineLength:SafetyManager.kt$SafetyManager$SafetyCriticalOperation.DTC_CLEARING -&gt; sessionType == SessionType.DEFAULT || sessionType == SessionType.EXTENDED</ID>
+    <ID>MaxLineLength:SafetyManager.kt$SafetyManager$SafetyCriticalOperation.ECU_CODING -&gt; sessionType == SessionType.EXTENDED || sessionType == SessionType.PROGRAMMING</ID>
+    <ID>NewLineAtEndOfFile:SafetyManager.kt$com.spacetec.protocol.safety.SafetyManager.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

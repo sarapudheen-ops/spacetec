@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/yungblud/Desktop/SpaceTec/core/datastore"
+    name=":core:datastore"
+    type="LIBRARY"
+    maven="com.spacetec.automotive:datastore:"
+    agpVersion="8.2.2"
+    buildFolder="build"
+    bootClassPath="/home/yungblud/android/sdk/platforms/android-35/android.jar:/home/yungblud/android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-35"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

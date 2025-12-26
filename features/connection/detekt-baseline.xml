@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ForbiddenComment:ConnectionManager.kt$ConnectionManager$// TODO: Implement connection management</ID>
+    <ID>ForbiddenComment:ConnectionViewModel.kt$ConnectionViewModel$// TODO: Implement WiFi scan logic</ID>
+    <ID>FunctionNaming:ConnectionScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ConnectionScreen( onBackClick: () -&gt; Unit, viewModel: ConnectionViewModel = hiltViewModel() )</ID>
+    <ID>LongMethod:ConnectionScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ConnectionScreen( onBackClick: () -&gt; Unit, viewModel: ConnectionViewModel = hiltViewModel() )</ID>
+    <ID>MaxLineLength:ConnectionScreen.kt$"4. Tap 'Scan for BLE Adapters' or 'Scan for Classic Bluetooth Adapters' to find your adapter"</ID>
+    <ID>NewLineAtEndOfFile:ConnectionViewModel.kt$com.spacetec.features.connection.ConnectionViewModel.kt</ID>
+    <ID>TooGenericExceptionCaught:ConnectionViewModel.kt$ConnectionViewModel$e: Exception</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import androidx.compose.runtime.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

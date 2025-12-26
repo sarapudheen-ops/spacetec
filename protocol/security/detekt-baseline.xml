@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>MagicNumber:SecurityManager.kt$SecurityManager$1000L</ID>
+    <ID>MagicNumber:SecurityManager.kt$SecurityManager$16</ID>
+    <ID>MagicNumber:SecurityManager.kt$SecurityManager$30</ID>
+    <ID>MagicNumber:SecurityManager.kt$SecurityManager$32</ID>
+    <ID>MagicNumber:SecurityManager.kt$SecurityManager$60</ID>
+    <ID>NewLineAtEndOfFile:SecurityManager.kt$com.spacetec.protocol.security.SecurityManager.kt</ID>
+    <ID>ReturnCount:SecurityManager.kt$SecurityManager$fun authenticateToken(token: String): Boolean</ID>
+    <ID>ReturnCount:SecurityManager.kt$SecurityManager$fun hasPermission(token: String, permission: SecurityPermission): Boolean</ID>
+    <ID>ReturnCount:SecurityManager.kt$SecurityManager$fun validateSecurity( operation: SecurityPermission, securityContext: SecurityContext, token: String? = null ): SecurityValidationResult</ID>
+    <ID>TooGenericExceptionCaught:SecurityManager.kt$SecurityManager$e: Exception</ID>
+    <ID>TooManyFunctions:SecurityManager.kt$SecurityManager</ID>
+  </CurrentIssues>
+</SmellBaseline>

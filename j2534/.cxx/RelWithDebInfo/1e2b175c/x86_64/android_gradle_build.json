@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/home/yungblud/Desktop/SpaceTec/j2534/src/main/jni/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/yungblud/android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/yungblud/Desktop/SpaceTec/j2534/.cxx/RelWithDebInfo/1e2b175c/x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/yungblud/android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/yungblud/Desktop/SpaceTec/j2534/.cxx/RelWithDebInfo/1e2b175c/x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "spacetec_j2534::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86_64",
+      "artifactName": "spacetec_j2534",
+      "output": "/home/yungblud/Desktop/SpaceTec/j2534/build/intermediates/cxx/RelWithDebInfo/1e2b175c/obj/x86_64/libspacetec_j2534.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/home/yungblud/android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/home/yungblud/android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

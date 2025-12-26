@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:LogManager.kt$LogManager$suspend fun analyzeLogs( startTime: Long? = null, endTime: Long? = null, includeRawData: Boolean = false ): LogAnalysis</ID>
+    <ID>EmptyKtFile:AnalyticsTracker.kt$.AnalyticsTracker.kt</ID>
+    <ID>EmptyKtFile:CrashReporter.kt$.CrashReporter.kt</ID>
+    <ID>InstanceOfCheckForException:FileLogger.kt$FileLogTarget$e is FileNotFoundException</ID>
+    <ID>InstanceOfCheckForException:FileLogger.kt$FileLogTarget$e is SecurityException</ID>
+    <ID>LongMethod:LogManager.kt$LogManager$suspend fun analyzeLogs( startTime: Long? = null, endTime: Long? = null, includeRawData: Boolean = false ): LogAnalysis</ID>
+    <ID>LongParameterList:DiagnosticLogger.kt$DiagnosticLogger$( direction: CommunicationDirection, connectionType: String, connectionId: String, data: ByteArray, protocol: String? = null, metadata: Map&lt;String, Any?&gt; = emptyMap() )</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticLogger$1000</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticLoggerConfig$1024</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$0x41</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$0x4F</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$0x50</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$0x7F</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$100</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$1000</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$3</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$8</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$999</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$DiagnosticUtils$9999</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$RawCommunicationEntry$12</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$RawCommunicationEntry$126</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$RawCommunicationEntry$32</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$RawCommunicationEntry$4</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$RawCommunicationEntry$8</ID>
+    <ID>MagicNumber:DiagnosticLogger.kt$RawCommunicationEntry$9</ID>
+    <ID>MagicNumber:FileLogger.kt$1024</ID>
+    <ID>MagicNumber:FileLogger.kt$FileLoggerConfig$10</ID>
+    <ID>MagicNumber:FileLogger.kt$FileLoggerConfig$1024</ID>
+    <ID>MagicNumber:LogManager.kt$LogManager$10</ID>
+    <ID>MagicNumber:LogManager.kt$LogManager$1000L</ID>
+    <ID>MagicNumber:LogManager.kt$LogManager$3</ID>
+    <ID>MagicNumber:LogManager.kt$LogManager$4</ID>
+    <ID>MagicNumber:LogManager.kt$LogManager$5000</ID>
+    <ID>MagicNumber:LogManager.kt$LogManager$60</ID>
+    <ID>MagicNumber:LogManager.kt$LogManagerConfig$100</ID>
+    <ID>MagicNumber:LogManager.kt$LogManagerConfig$1000</ID>
+    <ID>MagicNumber:LogManager.kt$LogManagerConfig$1024</ID>
+    <ID>MagicNumber:LogManager.kt$LogManagerConfig$24</ID>
+    <ID>MagicNumber:LogManager.kt$LogManagerConfig$60</ID>
+    <ID>MagicNumber:LogManager.kt$LogManagerConfig$7</ID>
+    <ID>MagicNumber:Logger.kt$LogLevel.ERROR$4</ID>
+    <ID>MagicNumber:Logger.kt$LogLevel.FATAL$5</ID>
+    <ID>MagicNumber:Logger.kt$LogLevel.WARN$3</ID>
+    <ID>MaxLineLength:ComprehensiveLoggingPropertyTest.kt$ComprehensiveLoggingPropertyTest$assertTrue("JSON format should contain correlationId", jsonFormat.contains("\"correlationId\":\"$correlationId\""))</ID>
+    <ID>MaxLineLength:ComprehensiveLoggingPropertyTest.kt$ComprehensiveLoggingPropertyTest$assertTrue("Message should be truncated", logEntry.message.length &lt;= maxLength + 20)</ID>
+    <ID>MaxLineLength:ComprehensiveLoggingPropertyTest.kt$ComprehensiveLoggingPropertyTest$fun</ID>
+    <ID>MaxLineLength:LogManagementPropertyTest.kt$LogManagementPropertyTest$assertTrue("Connection failure pattern should have multiple occurrences", connectionFailurePattern.count &gt;= 2)</ID>
+    <ID>MaxLineLength:LogManagementPropertyTest.kt$LogManagementPropertyTest$fun</ID>
+    <ID>MaxLineLength:LogManager.kt$LogManager$affectedConnections = existing.affectedConnections + (entry.context["connectionId"] as? String ?: "unknown")</ID>
+    <ID>MaxLineLength:SpaceTecLogger.kt$SpaceTecLogger$override fun debug(message: String, throwable: Throwable?, context: Map&lt;String, Any?&gt;)</ID>
+    <ID>MaxLineLength:SpaceTecLogger.kt$SpaceTecLogger$override fun error(message: String, throwable: Throwable?, context: Map&lt;String, Any?&gt;)</ID>
+    <ID>MaxLineLength:SpaceTecLogger.kt$SpaceTecLogger$override fun fatal(message: String, throwable: Throwable?, context: Map&lt;String, Any?&gt;)</ID>
+    <ID>MaxLineLength:SpaceTecLogger.kt$SpaceTecLogger$override fun info(message: String, throwable: Throwable?, context: Map&lt;String, Any?&gt;)</ID>
+    <ID>MaxLineLength:SpaceTecLogger.kt$SpaceTecLogger$override fun verbose(message: String, throwable: Throwable?, context: Map&lt;String, Any?&gt;)</ID>
+    <ID>MaxLineLength:SpaceTecLogger.kt$SpaceTecLogger$override fun warn(message: String, throwable: Throwable?, context: Map&lt;String, Any?&gt;)</ID>
+    <ID>MaxLineLength:SpaceTecLogger.kt$SpaceTecLogger$private</ID>
+    <ID>NestedBlockDepth:FileLogger.kt$FileLogTarget$private fun cleanupOldFiles()</ID>
+    <ID>NewLineAtEndOfFile:ComprehensiveLoggingPropertyTest.kt$com.spacetec.core.logging.ComprehensiveLoggingPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:DiagnosticLogger.kt$com.spacetec.core.logging.DiagnosticLogger.kt</ID>
+    <ID>NewLineAtEndOfFile:FileLogger.kt$com.spacetec.core.logging.FileLogger.kt</ID>
+    <ID>NewLineAtEndOfFile:LogManagementPropertyTest.kt$com.spacetec.core.logging.LogManagementPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:LogManager.kt$com.spacetec.core.logging.LogManager.kt</ID>
+    <ID>ReturnCount:LogManager.kt$LogManager$private fun parseLogLine(line: String): LogEntry?</ID>
+    <ID>SwallowedException:LogManager.kt$LogManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:FileLogger.kt$FileLogTarget$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:LogManager.kt$LogManager$e: Exception</ID>
+    <ID>TooManyFunctions:DiagnosticLogger.kt$DiagnosticLogger</ID>
+    <ID>TooManyFunctions:LogManager.kt$LogManager</ID>
+    <ID>TooManyFunctions:Logger.kt$Logger</ID>
+    <ID>TooManyFunctions:SpaceTecLogger.kt$SpaceTecLogger : Logger</ID>
+    <ID>UnusedParameter:DiagnosticLogger.kt$DiagnosticLogger$includeRawData: Boolean = true</ID>
+    <ID>UnusedParameter:LogManager.kt$LogManager$includeAnalysis: Boolean</ID>
+    <ID>UnusedParameter:LogManager.kt$LogManager$includeRawData: Boolean = false</ID>
+    <ID>UnusedParameter:LogManager.kt$LogManager$logFiles: List&lt;File&gt;</ID>
+    <ID>UnusedPrivateProperty:SpaceTecLogger.kt$SpaceTecLogger$private val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS", Locale.getDefault())</ID>
+    <ID>WildcardImport:ComprehensiveLoggingPropertyTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:DiagnosticLogger.kt$import java.io.*</ID>
+    <ID>WildcardImport:FileLogger.kt$import java.io.*</ID>
+    <ID>WildcardImport:LogManagementPropertyTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:LogManager.kt$import java.io.*</ID>
+    <ID>WildcardImport:LogManager.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:LogManager.kt$import kotlinx.coroutines.flow.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

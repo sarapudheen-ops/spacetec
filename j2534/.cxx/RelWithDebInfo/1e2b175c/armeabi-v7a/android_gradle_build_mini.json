@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/home/yungblud/Desktop/SpaceTec/j2534/src/main/jni/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/yungblud/android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/yungblud/Desktop/SpaceTec/j2534/.cxx/RelWithDebInfo/1e2b175c/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/yungblud/android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/yungblud/Desktop/SpaceTec/j2534/.cxx/RelWithDebInfo/1e2b175c/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "spacetec_j2534::@6890427a1f51a3e7e1df": {
+      "artifactName": "spacetec_j2534",
+      "abi": "armeabi-v7a",
+      "output": "/home/yungblud/Desktop/SpaceTec/j2534/build/intermediates/cxx/RelWithDebInfo/1e2b175c/obj/armeabi-v7a/libspacetec_j2534.so",
+      "runtimeFiles": []
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/home/yungblud/android/sdk/cmake/3.22.1/bin/cmake \
+  -H/home/yungblud/Desktop/SpaceTec/j2534/src/main/jni \
+  -DCMAKE_SYSTEM_NAME=Android \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+  -DCMAKE_SYSTEM_VERSION=21 \
+  -DANDROID_PLATFORM=android-21 \
+  -DANDROID_ABI=x86_64 \
+  -DCMAKE_ANDROID_ARCH_ABI=x86_64 \
+  -DANDROID_NDK=/home/yungblud/android/sdk/ndk/25.1.8937393 \
+  -DCMAKE_ANDROID_NDK=/home/yungblud/android/sdk/ndk/25.1.8937393 \
+  -DCMAKE_TOOLCHAIN_FILE=/home/yungblud/android/sdk/ndk/25.1.8937393/build/cmake/android.toolchain.cmake \
+  -DCMAKE_MAKE_PROGRAM=/home/yungblud/android/sdk/cmake/3.22.1/bin/ninja \
+  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/home/yungblud/Desktop/SpaceTec/j2534/build/intermediates/cxx/RelWithDebInfo/1e2b175c/obj/x86_64 \
+  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/home/yungblud/Desktop/SpaceTec/j2534/build/intermediates/cxx/RelWithDebInfo/1e2b175c/obj/x86_64 \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -B/home/yungblud/Desktop/SpaceTec/j2534/.cxx/RelWithDebInfo/1e2b175c/x86_64 \
+  -GNinja

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.2.2">
+
+    <issue
+        id="CannotEnableHidden"
+        severity="Warning"
+        message="Issue `InvalidPackage` was configured with severity `warning` in dtc, but was not enabled (or was disabled) in library common"
+        category="Lint"
+        priority="1"
+        summary="Issue Already Disabled"
+        explanation="Any issues that are specifically disabled in a library cannot be re-enabled in a dependent project. To fix this you need to also enable the issue in the library project.&#xA;&#xA;(This also applies for issues that are off by default; they cannot just be enabled in a dependent project; they must also be enabled in all the libraries the project depends on.)">
+        <location
+            file="/home/yungblud/Desktop/SpaceTec/features/dtc"/>
+    </issue>
+
+    <issue
+        id="CannotEnableHidden"
+        severity="Warning"
+        message="Issue `InvalidPackage` was configured with severity `warning` in dtc, but was not enabled (or was disabled) in library domain"
+        category="Lint"
+        priority="1"
+        summary="Issue Already Disabled"
+        explanation="Any issues that are specifically disabled in a library cannot be re-enabled in a dependent project. To fix this you need to also enable the issue in the library project.&#xA;&#xA;(This also applies for issues that are off by default; they cannot just be enabled in a dependent project; they must also be enabled in all the libraries the project depends on.)">
+        <location
+            file="/home/yungblud/Desktop/SpaceTec/features/dtc"/>
+    </issue>
+
+    <issue
+        id="ModifierParameter"
+        severity="Warning"
+        message="Modifier parameter should be the first optional parameter"
+        category="Correctness"
+        priority="3"
+        summary="Guidelines for Modifier parameters in a Composable function"
+        explanation="The first (or only) Modifier parameter in a Composable function should follow the following rules:&#xA;- Be named `modifier`&#xA;- Have a type of `Modifier`&#xA;- Either have no default value, or have a default value of `Modifier`&#xA;- If optional, be the first optional parameter in the parameter list"
+        errorLine1="    modifier: Modifier = Modifier,"
+        errorLine2="    ~~~~~~~~">
+        <location
+            file="/home/yungblud/Desktop/SpaceTec/core/ui/src/main/kotlin/com/spacetec/automotive/core/ui/component/DtcCard.kt"
+            line="75"
+            column="5"/>
+    </issue>
+
+</issues>

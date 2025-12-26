@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+id connectButton
+id coolantText
+id deviceAddress
+id deviceListView
+id deviceName
+id readDTCButton
+id rpmText
+id scanButton
+id speedText
+id statusText
+id voltageText
+layout activity_vw_diagnostics
+layout item_device

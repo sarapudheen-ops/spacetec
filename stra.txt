@@ -1,0 +1,4669 @@
+Comprehensive AI Prompt for Scanner & Vehicle Connection System
+🎯 PROMPT
+CONTEXT
+You are a Senior Kotlin Developer with 12+ years of experience in automotive diagnostic systems, embedded communication protocols, and Android application architecture. You specialize in:
+
+OBD-II/UDS/CAN protocol implementations (ISO 14229, ISO 15765, ISO 15031, SAE J1979)
+Bluetooth Classic (SPP/RFCOMM) and BLE communication on Android
+ELM327 and STN chipset command protocols
+Clean Architecture with multi-module Android projects
+Kotlin Coroutines and Flows for reactive communication
+State machine design for connection management
+J2534 Pass-Thru API implementation
+Vehicle ECU communication patterns
+You're creating the core scanner connection and vehicle communication system for "SpaceTec," a professional-grade automotive diagnostic application that supports multiple scanner types, protocols, and vehicle brands.
+
+PROJECT CONTEXT
+Application: SpaceTec - Professional Automotive Diagnostic Tool for Android
+
+Architecture: Clean Architecture with Domain-Driven Design
+
+Tech Stack:
+
+Kotlin 1.9.x with Coroutines & Flows
+Android API 26+ (Bluetooth, USB)
+Hilt for Dependency Injection
+Room for local persistence
+StateFlow/SharedFlow for reactive state management
+Files to Generate (in order):
+
+text
+
+1. domain/models/scanner/Scanner.kt           - Scanner domain model
+2. domain/models/vehicle/Vehicle.kt           - Vehicle domain model
+3. scanner/core/ScannerConnection.kt          - Connection abstraction
+4. scanner/core/ScannerManager.kt             - Scanner lifecycle management
+5. scanner/bluetooth/BluetoothConnection.kt   - Bluetooth implementation
+6. scanner/devices/elm327/ELM327Commands.kt   - ELM327 command set
+7. protocol/uds/UDSProtocol.kt                - UDS protocol handler
+8. data/datasource/device/OBDDataSource.kt    - Device data source
+9. data/repository/VehicleRepositoryImpl.kt   - Vehicle repository impl
+10. domain/usecases/connection/ConnectToVehicleUseCase.kt - Connection use case
+MODULE DEPENDENCY GRAPH
+text
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                              APP MODULE                                       │
+│  ┌─────────────────────────────────────────────────────────────────────────┐ │
+│  │                         Dependency Injection                             │ │
+│  │  (ScannerModule.kt, ProtocolModule.kt, RepositoryModule.kt)             │ │
+│  └─────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      │
+                                      ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           DOMAIN MODULE                                       │
+│  ┌───────────────────┐  ┌───────────────────┐  ┌──────────────────────────┐ │
+│  │   models/         │  │   repository/     │  │   usecases/              │ │
+│  │   ├── Scanner.kt  │  │   (interfaces)    │  │   └── connection/        │ │
+│  │   └── Vehicle.kt  │  │                   │  │       └── ConnectTo...   │ │
+│  └───────────────────┘  └───────────────────┘  └──────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      ▲
+                                      │
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                            DATA MODULE                                        │
+│  ┌─────────────────────────────────┐  ┌────────────────────────────────────┐ │
+│  │   repository/                   │  │   datasource/device/               │ │
+│  │   └── VehicleRepositoryImpl.kt  │  │   └── OBDDataSource.kt             │ │
+│  └─────────────────────────────────┘  └────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      ▲
+                                      │
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          SCANNER MODULE                                       │
+│  ┌────────────────────────────┐  ┌─────────────────────────────────────────┐ │
+│  │   core/                    │  │   bluetooth/                            │ │
+│  │   ├── ScannerManager.kt    │  │   └── BluetoothConnection.kt            │ │
+│  │   └── ScannerConnection.kt │  │                                         │ │
+│  └────────────────────────────┘  └─────────────────────────────────────────┘ │
+│  ┌─────────────────────────────────────────────────────────────────────────┐ │
+│  │   devices/elm327/                                                        │ │
+│  │   └── ELM327Commands.kt                                                  │ │
+│  └─────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      ▲
+                                      │
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         PROTOCOL MODULE                                       │
+│  ┌─────────────────────────────────────────────────────────────────────────┐ │
+│  │   uds/                                                                   │ │
+│  │   └── UDSProtocol.kt                                                     │ │
+│  └─────────────────────────────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                      ▲
+                                      │
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       CORE/COMMON MODULE                                      │
+│  (HexUtils, ByteExtensions, Result, Exceptions, Constants)                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+AUTOMOTIVE COMMUNICATION PATTERNS
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SCANNER COMMUNICATION FLOW
+// ═══════════════════════════════════════════════════════════════════════════
+
+// 1. Scanner Discovery & Connection
+// ┌──────────┐    ┌──────────────┐    ┌────────────────┐    ┌─────────────┐
+// │  App UI  │───▶│ScannerManager│───▶│BluetoothConn.  │───▶│ ELM327/OBD  │
+// └──────────┘    └──────────────┘    └────────────────┘    └─────────────┘
+//                        │                    │                     │
+//                        │    Discovery       │    RFCOMM Socket    │
+//                        │◀───────────────────│◀────────────────────│
+//                        │                    │                     │
+//                        │    Connect         │    SPP Profile      │
+//                        │───────────────────▶│────────────────────▶│
+//                        │                    │                     │
+//                        │    Connected       │    "ELM327 v2.1"    │
+//                        │◀───────────────────│◀────────────────────│
+
+// 2. Protocol Initialization
+// ┌──────────────┐    ┌────────────────┐    ┌──────────────┐    ┌──────────┐
+// │OBDDataSource │───▶│ ELM327Commands │───▶│BluetoothConn.│───▶│ Scanner  │
+// └──────────────┘    └────────────────┘    └──────────────┘    └──────────┘
+//        │                    │                    │                  │
+//        │    Initialize      │    "ATZ\r"         │    Reset         │
+//        │───────────────────▶│───────────────────▶│─────────────────▶│
+//        │                    │                    │                  │
+//        │                    │    "ELM327 v2.1"   │                  │
+//        │◀───────────────────│◀───────────────────│◀─────────────────│
+//        │                    │                    │                  │
+//        │    Set Protocol    │    "ATSP0\r"       │    Auto Proto    │
+//        │───────────────────▶│───────────────────▶│─────────────────▶│
+//        │                    │                    │                  │
+//        │    Detect Vehicle  │    "0100\r"        │    OBD Query     │
+//        │───────────────────▶│───────────────────▶│─────────────────▶│
+//        │                    │                    │                  │
+//        │                    │    "41 00 BE 3F..."│    PIDs Supported│
+//        │◀───────────────────│◀───────────────────│◀─────────────────│
+
+// 3. UDS Communication (Enhanced Diagnostics)
+// ┌────────────┐    ┌──────────────┐    ┌────────────────┐    ┌──────────┐
+// │ UseCase    │───▶│ UDSProtocol  │───▶│ OBDDataSource  │───▶│  ECU     │
+// └────────────┘    └──────────────┘    └────────────────┘    └──────────┘
+//       │                  │                    │                   │
+//       │  Read VIN        │                    │                   │
+//       │─────────────────▶│                    │                   │
+//       │                  │  Build UDS Req     │                   │
+//       │                  │  [22 F1 90]        │                   │
+//       │                  │───────────────────▶│                   │
+//       │                  │                    │  Send via ELM327  │
+//       │                  │                    │  "22 F1 90\r"     │
+//       │                  │                    │──────────────────▶│
+//       │                  │                    │                   │
+//       │                  │                    │  [62 F1 90 ...]   │
+//       │                  │                    │◀──────────────────│
+//       │                  │  Parse Response    │                   │
+//       │                  │◀───────────────────│                   │
+//       │  VIN: "WVW..."   │                    │                   │
+//       │◀─────────────────│                    │                   │
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ELM327 COMMAND PATTERNS
+// ═══════════════════════════════════════════════════════════════════════════
+
+// AT Commands (Adapter Configuration)
+// ┌────────────────┬────────────────────────────────────────────────────────┐
+// │ Command        │ Description                                            │
+// ├────────────────┼────────────────────────────────────────────────────────┤
+// │ ATZ            │ Reset adapter                                          │
+// │ ATE0/ATE1      │ Echo off/on                                           │
+// │ ATL0/ATL1      │ Linefeeds off/on                                      │
+// │ ATS0/ATS1      │ Spaces in response off/on                             │
+// │ ATH0/ATH1      │ Headers off/on                                        │
+// │ ATSP0-ATSP9    │ Set protocol (0=auto, 1-9=specific)                   │
+// │ ATTP0-ATTP9    │ Try protocol                                          │
+// │ ATDP           │ Describe current protocol                             │
+// │ ATDPN          │ Describe protocol by number                           │
+// │ ATAT0-ATAT2    │ Adaptive timing off/1/2                               │
+// │ ATST XX        │ Set timeout (XX * 4ms)                                │
+// │ ATSW XX        │ Set wakeup interval                                   │
+// │ ATSH XXX       │ Set header (3 bytes for 11-bit CAN)                   │
+// │ ATSH XXXXXXXX  │ Set header (4 bytes for 29-bit CAN)                   │
+// │ ATFC SH XXX    │ Set flow control header                               │
+// │ ATFC SD XXXX   │ Set flow control data                                 │
+// │ ATFC SM X      │ Set flow control mode                                 │
+// │ ATCEA          │ CAN extended addressing on                            │
+// │ ATCEA XX       │ CAN extended addressing with target                   │
+// │ ATCAF0/ATCAF1  │ CAN auto formatting off/on                            │
+// │ ATCRA XXX      │ Set CAN receive address                               │
+// │ ATCRA          │ Reset CAN receive address                             │
+// │ ATR0/ATR1      │ Responses off/on                                      │
+// │ ATI            │ Print version ID                                       │
+// │ AT@1           │ Print device description                               │
+// │ ATRV           │ Read voltage                                           │
+// │ ATIGN          │ Read ignition status                                   │
+// └────────────────┴────────────────────────────────────────────────────────┘
+
+// Protocol Identifiers (SAE J1850, ISO, CAN)
+// ┌────────────────┬────────────────────────────────────────────────────────┐
+// │ ATSP Value     │ Protocol                                               │
+// ├────────────────┼────────────────────────────────────────────────────────┤
+// │ 0              │ Automatic                                              │
+// │ 1              │ SAE J1850 PWM (41.6 kbaud)                             │
+// │ 2              │ SAE J1850 VPW (10.4 kbaud)                             │
+// │ 3              │ ISO 9141-2 (5 baud init)                               │
+// │ 4              │ ISO 14230-4 KWP (5 baud init)                          │
+// │ 5              │ ISO 14230-4 KWP (fast init)                            │
+// │ 6              │ ISO 15765-4 CAN (11 bit ID, 500 kbaud)                 │
+// │ 7              │ ISO 15765-4 CAN (29 bit ID, 500 kbaud)                 │
+// │ 8              │ ISO 15765-4 CAN (11 bit ID, 250 kbaud)                 │
+// │ 9              │ ISO 15765-4 CAN (29 bit ID, 250 kbaud)                 │
+// │ A              │ SAE J1939 CAN (29 bit ID, 250 kbaud)                   │
+// │ B              │ User1 CAN (11 bit ID, user baud)                       │
+// │ C              │ User2 CAN (11 bit ID, user baud)                       │
+// └────────────────┴────────────────────────────────────────────────────────┘
+
+// OBD-II Service IDs (Modes)
+// ┌────────────────┬────────────────────────────────────────────────────────┐
+// │ Service ID     │ Description                                            │
+// ├────────────────┼────────────────────────────────────────────────────────┤
+// │ 01             │ Show current data (live PIDs)                          │
+// │ 02             │ Show freeze frame data                                 │
+// │ 03             │ Show stored DTCs                                       │
+// │ 04             │ Clear DTCs and stored values                           │
+// │ 05             │ Oxygen sensor monitoring test results                  │
+// │ 06             │ On-board monitoring test results (specific)            │
+// │ 07             │ Show pending DTCs                                      │
+// │ 08             │ Control on-board system                                │
+// │ 09             │ Request vehicle information (VIN, etc.)                │
+// │ 0A             │ Permanent DTCs                                         │
+// └────────────────┴────────────────────────────────────────────────────────┘
+
+// ═══════════════════════════════════════════════════════════════════════════
+// UDS (ISO 14229) SERVICE IDS
+// ═══════════════════════════════════════════════════════════════════════════
+
+// ┌────────────────┬────────────────────────────────────────────────────────┐
+// │ Service ID     │ Description                                            │
+// ├────────────────┼────────────────────────────────────────────────────────┤
+// │ 0x10           │ DiagnosticSessionControl                               │
+// │ 0x11           │ ECUReset                                               │
+// │ 0x14           │ ClearDiagnosticInformation                             │
+// │ 0x19           │ ReadDTCInformation                                     │
+// │ 0x22           │ ReadDataByIdentifier                                   │
+// │ 0x23           │ ReadMemoryByAddress                                    │
+// │ 0x24           │ ReadScalingDataByIdentifier                            │
+// │ 0x27           │ SecurityAccess                                         │
+// │ 0x28           │ CommunicationControl                                   │
+// │ 0x2A           │ ReadDataByPeriodicIdentifier                           │
+// │ 0x2C           │ DynamicallyDefineDataIdentifier                        │
+// │ 0x2E           │ WriteDataByIdentifier                                  │
+// │ 0x2F           │ InputOutputControlByIdentifier                         │
+// │ 0x31           │ RoutineControl                                         │
+// │ 0x34           │ RequestDownload                                        │
+// │ 0x35           │ RequestUpload                                          │
+// │ 0x36           │ TransferData                                           │
+// │ 0x37           │ RequestTransferExit                                    │
+// │ 0x38           │ RequestFileTransfer                                    │
+// │ 0x3D           │ WriteMemoryByAddress                                   │
+// │ 0x3E           │ TesterPresent                                          │
+// │ 0x83           │ AccessTimingParameter                                  │
+// │ 0x84           │ SecuredDataTransmission                                │
+// │ 0x85           │ ControlDTCSetting                                      │
+// │ 0x86           │ ResponseOnEvent                                        │
+// │ 0x87           │ LinkControl                                            │
+// └────────────────┴────────────────────────────────────────────────────────┘
+
+// UDS Negative Response Codes (NRC)
+// ┌────────────────┬────────────────────────────────────────────────────────┐
+// │ NRC            │ Description                                            │
+// ├────────────────┼────────────────────────────────────────────────────────┤
+// │ 0x10           │ GeneralReject                                          │
+// │ 0x11           │ ServiceNotSupported                                    │
+// │ 0x12           │ SubFunctionNotSupported                                │
+// │ 0x13           │ IncorrectMessageLengthOrInvalidFormat                  │
+// │ 0x14           │ ResponseTooLong                                        │
+// │ 0x21           │ BusyRepeatRequest                                      │
+// │ 0x22           │ ConditionsNotCorrect                                   │
+// │ 0x24           │ RequestSequenceError                                   │
+// │ 0x25           │ NoResponseFromSubnetComponent                          │
+// │ 0x26           │ FailurePreventsExecutionOfRequestedAction              │
+// │ 0x31           │ RequestOutOfRange                                      │
+// │ 0x33           │ SecurityAccessDenied                                   │
+// │ 0x35           │ InvalidKey                                             │
+// │ 0x36           │ ExceedNumberOfAttempts                                 │
+// │ 0x37           │ RequiredTimeDelayNotExpired                            │
+// │ 0x70           │ UploadDownloadNotAccepted                              │
+// │ 0x71           │ TransferDataSuspended                                  │
+// │ 0x72           │ GeneralProgrammingFailure                              │
+// │ 0x73           │ WrongBlockSequenceCounter                              │
+// │ 0x78           │ RequestCorrectlyReceivedResponsePending                │
+// │ 0x7E           │ SubFunctionNotSupportedInActiveSession                 │
+// │ 0x7F           │ ServiceNotSupportedInActiveSession                     │
+// └────────────────┴────────────────────────────────────────────────────────┘
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CONNECTION STATE MACHINE
+// ═══════════════════════════════════════════════════════════════════════════
+
+//                              ┌─────────────────┐
+//                              │   DISCONNECTED  │◀──────────────────────┐
+//                              └────────┬────────┘                       │
+//                                       │ connect()                      │
+//                                       ▼                                │
+//                              ┌─────────────────┐                       │
+//                              │   CONNECTING    │───────────────────────┤
+//                              └────────┬────────┘    timeout/error      │
+//                                       │ socket connected               │
+//                                       ▼                                │
+//                              ┌─────────────────┐                       │
+//                              │  INITIALIZING   │───────────────────────┤
+//                              └────────┬────────┘    init failed        │
+//                                       │ ATZ, ATE0, etc.                │
+//                                       ▼                                │
+//                              ┌─────────────────┐                       │
+//                              │PROTOCOL_DETECT  │───────────────────────┤
+//                              └────────┬────────┘    no protocol        │
+//                                       │ ATSP0, 0100                    │
+//                                       ▼                                │
+//                              ┌─────────────────┐                       │
+//                              │   CONNECTED     │◀──────────┐           │
+//                              └────────┬────────┘           │           │
+//                                       │                    │           │
+//                    ┌──────────────────┼──────────────────┐ │           │
+//                    │                  │                  │ │           │
+//                    ▼                  ▼                  ▼ │           │
+//           ┌────────────────┐ ┌────────────────┐ ┌────────────────┐    │
+//           │ COMMUNICATING  │ │    IDLE        │ │    ERROR       │────┘
+//           └────────────────┘ └────────────────┘ └────────────────┘
+//                    │                                     │
+//                    │ disconnect()                        │ recover()
+//                    └─────────────────────────────────────┘
+RELATED EXISTING FILES
+From core/common (Already Implemented):
+
+Kotlin
+
+// core/common/utils/HexUtils.kt
+object HexEncoder {
+    fun encode(bytes: ByteArray): String
+    fun encodeWithSpace(bytes: ByteArray): String
+}
+
+object HexDecoder {
+    fun decode(hex: String): ByteArray
+    fun isValidHex(hex: String): Boolean
+}
+
+// core/common/extensions/ByteExtensions.kt
+fun ByteArray.toHex(): String
+fun ByteArray.toHexSpaced(): String
+fun String.hexToByteArray(): ByteArray
+
+// core/common/result/Result.kt
+sealed class Result<out T> {
+    data class Success<T>(val data: T) : Result<T>()
+    data class Error(val exception: Throwable) : Result<Nothing>()
+    object Loading : Result<Nothing>()
+}
+
+// core/common/exceptions/
+class ConnectionException(message: String, cause: Throwable? = null) : SpaceTecException(message, cause)
+class ProtocolException(message: String, cause: Throwable? = null) : SpaceTecException(message, cause)
+class CommunicationException(message: String, cause: Throwable? = null) : SpaceTecException(message, cause)
+class TimeoutException(message: String) : SpaceTecException(message)
+
+// core/common/constants/OBDConstants.kt
+object OBDConstants {
+    const val DEFAULT_TIMEOUT_MS = 5000L
+    const val OBD_HEADER_7E0 = "7E0"
+    const val OBD_HEADER_7E8 = "7E8"
+    // ... more constants
+}
+
+// core/common/utils/ByteBufferUtils.kt
+// (Full implementation from previous prompt - available for use)
+From protocol/core (Available):
+
+Kotlin
+
+// protocol/core/base/BaseProtocol.kt
+abstract class BaseProtocol {
+    abstract val protocolType: ProtocolType
+    abstract suspend fun initialize(): Result<Unit>
+    abstract suspend fun sendRequest(request: ByteArray): Result<ByteArray>
+    abstract suspend fun close()
+}
+
+// protocol/core/message/DiagnosticMessage.kt
+data class DiagnosticMessage(
+    val serviceId: Int,
+    val data: ByteArray,
+    val timestamp: Long = System.currentTimeMillis()
+)
+FILE SPECIFICATIONS
+FILE 1: Scanner.kt (Domain Model)
+Location: domain/src/main/java/com/spacetec/domain/models/scanner/Scanner.kt
+
+Kotlin
+
+/**
+ * Domain model representing an OBD-II scanner/adapter device.
+ * 
+ * This is a pure domain model with no framework dependencies.
+ * Used across all layers of the application.
+ */
+Requirements:
+
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SCANNER DOMAIN MODEL
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Scanner connection types
+ */
+enum class ScannerConnectionType {
+    BLUETOOTH_CLASSIC,  // SPP/RFCOMM
+    BLUETOOTH_LE,       // BLE GATT
+    WIFI,              // TCP/IP Socket
+    USB                // USB Serial
+}
+
+/**
+ * Scanner device types/chipsets
+ */
+enum class ScannerDeviceType {
+    ELM327,            // Standard ELM327
+    ELM327_CLONE,      // ELM327 clone (limited features)
+    STN1110,           // OBDLink STN1110
+    STN2120,           // OBDLink STN2120
+    OBDLINK_MX,        // OBDLink MX+
+    OBDLINK_EX,        // OBDLink EX
+    OBDLINK_LX,        // OBDLink LX
+    VGATE_ICAR,        // vGate iCar series
+    VEEPEAK,           // Veepeak adapters
+    CARISTA,           // Carista adapter
+    BLUEDRIVER,        // BlueDriver
+    GENERIC            // Unknown/Generic
+}
+
+/**
+ * Protocol capabilities
+ */
+data class ScannerCapabilities(
+    val supportedProtocols: Set<ProtocolType>,
+    val maxBaudRate: Int,
+    val supportsCanFD: Boolean,
+    val supportsJ1939: Boolean,
+    val supportsSecurityAccess: Boolean,
+    val supportsFlashing: Boolean,
+    val hasBattery: Boolean,
+    val hasLED: Boolean,
+    val firmwareVersion: String?
+)
+
+/**
+ * Scanner connection state
+ */
+enum class ScannerState {
+    UNKNOWN,
+    DISCONNECTED,
+    DISCOVERING,
+    CONNECTING,
+    INITIALIZING,
+    DETECTING_PROTOCOL,
+    CONNECTED,
+    COMMUNICATING,
+    ERROR,
+    RECONNECTING
+}
+
+/**
+ * Main Scanner domain model
+ */
+data class Scanner(
+    val id: String,                              // Unique identifier (MAC address, device ID)
+    val name: String,                            // Display name
+    val connectionType: ScannerConnectionType,
+    val deviceType: ScannerDeviceType,
+    val address: String,                         // MAC address, IP:port, USB path
+    val state: ScannerState = ScannerState.DISCONNECTED,
+    val capabilities: ScannerCapabilities? = null,
+    val firmwareVersion: String? = null,
+    val lastConnected: Long? = null,
+    val signalStrength: Int? = null,             // RSSI for Bluetooth
+    val batteryLevel: Int? = null,               // If has battery
+    val isPaired: Boolean = false,
+    val isTrusted: Boolean = false,              // User marked as trusted
+    val metadata: Map<String, String> = emptyMap()
+) {
+    // Computed properties
+    val isConnected: Boolean get() = state == ScannerState.CONNECTED || state == ScannerState.COMMUNICATING
+    val isConnecting: Boolean get() = state == ScannerState.CONNECTING || state == ScannerState.INITIALIZING
+    val canConnect: Boolean get() = state == ScannerState.DISCONNECTED || state == ScannerState.ERROR
+    
+    // Display helpers
+    val displayAddress: String get() = when (connectionType) {
+        ScannerConnectionType.BLUETOOTH_CLASSIC,
+        ScannerConnectionType.BLUETOOTH_LE -> formatMacAddress(address)
+        ScannerConnectionType.WIFI -> address
+        ScannerConnectionType.USB -> "USB: $address"
+    }
+    
+    val deviceTypeDisplayName: String get() = when (deviceType) {
+        ScannerDeviceType.ELM327 -> "ELM327"
+        ScannerDeviceType.STN1110 -> "STN1110"
+        ScannerDeviceType.OBDLINK_MX -> "OBDLink MX+"
+        // ... others
+    }
+}
+
+/**
+ * Scanner info result from device identification
+ */
+data class ScannerInfo(
+    val deviceType: ScannerDeviceType,
+    val firmwareVersion: String,
+    val voltage: Float?,
+    val protocolDescription: String?,
+    val capabilities: ScannerCapabilities
+)
+
+/**
+ * Protocol types supported
+ */
+enum class ProtocolType(val code: Int, val description: String) {
+    AUTO(0, "Automatic"),
+    SAE_J1850_PWM(1, "SAE J1850 PWM"),
+    SAE_J1850_VPW(2, "SAE J1850 VPW"),
+    ISO_9141_2(3, "ISO 9141-2"),
+    ISO_14230_4_KWP_5BAUD(4, "ISO 14230-4 KWP (5 baud init)"),
+    ISO_14230_4_KWP_FAST(5, "ISO 14230-4 KWP (fast init)"),
+    ISO_15765_4_CAN_11BIT_500K(6, "ISO 15765-4 CAN (11 bit ID, 500 kbaud)"),
+    ISO_15765_4_CAN_29BIT_500K(7, "ISO 15765-4 CAN (29 bit ID, 500 kbaud)"),
+    ISO_15765_4_CAN_11BIT_250K(8, "ISO 15765-4 CAN (11 bit ID, 250 kbaud)"),
+    ISO_15765_4_CAN_29BIT_250K(9, "ISO 15765-4 CAN (29 bit ID, 250 kbaud)"),
+    SAE_J1939_CAN(10, "SAE J1939 CAN"),
+    USER_CAN_1(11, "User1 CAN"),
+    USER_CAN_2(12, "User2 CAN"),
+    UNKNOWN(-1, "Unknown")
+}
+
+// Extension functions for Scanner
+fun Scanner.withState(newState: ScannerState): Scanner
+fun Scanner.withCapabilities(capabilities: ScannerCapabilities): Scanner
+FILE 2: Vehicle.kt (Domain Model)
+Location: domain/src/main/java/com/spacetec/domain/models/vehicle/Vehicle.kt
+
+Kotlin
+
+/**
+ * Domain model representing a vehicle being diagnosed.
+ * 
+ * Contains vehicle identification, capabilities, and current state.
+ */
+Requirements:
+
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// VEHICLE DOMAIN MODEL
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Vehicle identification via VIN decoding
+ */
+data class VIN(
+    val raw: String,                    // Raw 17-character VIN
+    val wmi: String,                    // World Manufacturer Identifier (pos 1-3)
+    val vds: String,                    // Vehicle Descriptor Section (pos 4-9)
+    val vis: String,                    // Vehicle Identifier Section (pos 10-17)
+    val checkDigit: Char,               // Check digit (pos 9)
+    val modelYear: Int?,                // Decoded model year
+    val plantCode: Char?,               // Assembly plant
+    val sequenceNumber: String?         // Production sequence
+) {
+    val isValid: Boolean get() = raw.length == 17 && validateCheckDigit()
+    
+    companion object {
+        fun parse(vin: String): VIN?
+        fun isValidFormat(vin: String): Boolean
+    }
+}
+
+/**
+ * Vehicle brand/manufacturer
+ */
+data class VehicleBrand(
+    val id: String,
+    val name: String,
+    val displayName: String,
+    val iconRes: String?,               // Resource name for icon
+    val supportLevel: SupportLevel
+)
+
+enum class SupportLevel {
+    FULL,           // Full manufacturer-level support
+    ENHANCED,       // Enhanced OBD + some manufacturer
+    OBD_ONLY,       // Standard OBD-II only
+    LIMITED,        // Limited support
+    UNKNOWN
+}
+
+/**
+ * Vehicle model information
+ */
+data class VehicleModel(
+    val id: String,
+    val brandId: String,
+    val name: String,
+    val yearStart: Int,
+    val yearEnd: Int?,                  // null = current
+    val variants: List<VehicleVariant>,
+    val platforms: List<String>         // MQB, MLB, etc.
+)
+
+/**
+ * Vehicle variant (engine, transmission combo)
+ */
+data class VehicleVariant(
+    val id: String,
+    val modelId: String,
+    val name: String,
+    val engineCode: String?,
+    val displacement: Float?,           // Liters
+    val fuelType: FuelType,
+    val transmissionType: TransmissionType,
+    val driveType: DriveType
+)
+
+enum class FuelType {
+    GASOLINE, DIESEL, HYBRID, PLUGIN_HYBRID, ELECTRIC, CNG, LPG, HYDROGEN, UNKNOWN
+}
+
+enum class TransmissionType {
+    MANUAL, AUTOMATIC, CVT, DCT, SINGLE_SPEED, UNKNOWN
+}
+
+enum class DriveType {
+    FWD, RWD, AWD, FOUR_WD, UNKNOWN
+}
+
+/**
+ * Vehicle ECU information
+ */
+data class VehicleECU(
+    val address: Int,                   // ECU CAN address
+    val name: String,                   // ECU name (Engine, TCM, ABS, etc.)
+    val type: ECUType,
+    val manufacturer: String?,
+    val partNumber: String?,
+    val softwareVersion: String?,
+    val hardwareVersion: String?,
+    val isResponding: Boolean = true
+)
+
+enum class ECUType {
+    ENGINE,                 // ECM/PCM
+    TRANSMISSION,           // TCM
+    ABS,                    // ABS/ESP
+    AIRBAG,                 // SRS
+    BODY,                   // BCM
+    INSTRUMENT_CLUSTER,     // IC
+    HVAC,                   // Climate control
+    GATEWAY,                // Central gateway
+    TELEMATICS,             // TCU
+    INFOTAINMENT,           // Head unit
+    STEERING,               // EPS
+    PARKING,                // Park assist
+    CAMERA,                 // Camera systems
+    RADAR,                  // Radar sensors
+    IMMOBILIZER,            // IMMO
+    GENERIC
+}
+
+/**
+ * Detected OBD protocol information
+ */
+data class DetectedProtocol(
+    val type: ProtocolType,
+    val description: String,
+    val canId11Bit: Boolean,
+    val baudRate: Int,
+    val headerBytes: Int
+)
+
+/**
+ * Vehicle capabilities detected during connection
+ */
+data class VehicleCapabilities(
+    val supportedPIDs: Set<Int>,                // Mode 01 supported PIDs
+    val supportedDTCTypes: Set<DTCType>,
+    val supportedMonitors: Set<MonitorType>,
+    val supportsFreezeFrame: Boolean,
+    val supportsOxygenSensorTest: Boolean,
+    val supportsComponentTest: Boolean,
+    val supportsVehicleInfo: Boolean,
+    val supportsPermanentDTCs: Boolean,
+    val ecuList: List<VehicleECU>,
+    val detectedProtocol: DetectedProtocol
+)
+
+enum class DTCType {
+    STORED, PENDING, PERMANENT
+}
+
+enum class MonitorType {
+    CATALYST, HEATED_CATALYST, EVAP_SYSTEM, SECONDARY_AIR,
+    AC_REFRIGERANT, OXYGEN_SENSOR, OXYGEN_SENSOR_HEATER,
+    EGR_VVT, MISFIRE, FUEL_SYSTEM, COMPREHENSIVE_COMPONENT
+}
+
+/**
+ * Main Vehicle domain model
+ */
+data class Vehicle(
+    val id: String,                              // Unique ID (UUID or VIN-based)
+    val vin: VIN?,
+    val brand: VehicleBrand?,
+    val model: VehicleModel?,
+    val variant: VehicleVariant?,
+    val year: Int?,
+    val displayName: String,                     // User-friendly name
+    val licensePlate: String?,
+    val mileage: Int?,
+    val lastDiagnosticDate: Long?,
+    val capabilities: VehicleCapabilities?,
+    val ecuList: List<VehicleECU> = emptyList(),
+    val detectedProtocol: DetectedProtocol?,
+    val connectionState: VehicleConnectionState = VehicleConnectionState.DISCONNECTED,
+    val createdAt: Long = System.currentTimeMillis(),
+    val updatedAt: Long = System.currentTimeMillis(),
+    val metadata: Map<String, String> = emptyMap()
+) {
+    // Computed properties
+    val isConnected: Boolean get() = connectionState == VehicleConnectionState.CONNECTED
+    val hasVIN: Boolean get() = vin != null && vin.isValid
+    val isIdentified: Boolean get() = brand != null && model != null
+    
+    val fullDisplayName: String get() = buildString {
+        if (year != null) append("$year ")
+        if (brand != null) append("${brand.displayName} ")
+        if (model != null) append(model.name)
+        if (isEmpty()) append(displayName)
+    }.trim()
+}
+
+enum class VehicleConnectionState {
+    DISCONNECTED,
+    CONNECTING,
+    INITIALIZING,
+    IDENTIFYING,
+    CONNECTED,
+    ERROR
+}
+
+/**
+ * Lightweight vehicle summary for lists
+ */
+data class VehicleSummary(
+    val id: String,
+    val displayName: String,
+    val vin: String?,
+    val brandName: String?,
+    val modelName: String?,
+    val year: Int?,
+    val lastDiagnosticDate: Long?,
+    val hasDTCs: Boolean
+)
+FILE 3: ScannerConnection.kt (Core Abstraction)
+Location: scanner/core/src/main/java/com/spacetec/scanner/core/ScannerConnection.kt
+
+Kotlin
+
+/**
+ * Abstract interface for scanner connections.
+ * 
+ * Defines the contract for all connection types (Bluetooth, WiFi, USB).
+ * Implementations handle physical layer communication.
+ */
+Requirements:
+
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SCANNER CONNECTION INTERFACE
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Connection state with metadata
+ */
+sealed class ConnectionState {
+    object Disconnected : ConnectionState()
+    object Connecting : ConnectionState()
+    data class Connected(val info: ConnectionInfo) : ConnectionState()
+    data class Error(val exception: Throwable, val isRecoverable: Boolean) : ConnectionState()
+    object Reconnecting : ConnectionState()
+    
+    val isConnected: Boolean get() = this is Connected
+    val isConnecting: Boolean get() = this is Connecting || this is Reconnecting
+}
+
+data class ConnectionInfo(
+    val connectedAt: Long = System.currentTimeMillis(),
+    val localAddress: String? = null,
+    val remoteAddress: String,
+    val mtu: Int = 512,
+    val signalStrength: Int? = null
+)
+
+/**
+ * Connection configuration
+ */
+data class ConnectionConfig(
+    val connectionTimeout: Long = 10_000L,
+    val readTimeout: Long = 5_000L,
+    val writeTimeout: Long = 5_000L,
+    val autoReconnect: Boolean = true,
+    val maxReconnectAttempts: Int = 3,
+    val reconnectDelay: Long = 1_000L,
+    val bufferSize: Int = 4096
+)
+
+/**
+ * Abstract scanner connection interface
+ */
+interface ScannerConnection {
+    
+    /** Unique connection identifier */
+    val connectionId: String
+    
+    /** Connection type */
+    val connectionType: ScannerConnectionType
+    
+    /** Current connection state as Flow */
+    val connectionState: StateFlow<ConnectionState>
+    
+    /** Incoming data stream */
+    val incomingData: SharedFlow<ByteArray>
+    
+    /** Check if currently connected */
+    val isConnected: Boolean
+    
+    /**
+     * Establishes connection to the scanner.
+     * 
+     * @param address Device address (MAC, IP:port, USB path)
+     * @param config Connection configuration
+     * @return Result indicating success or failure
+     */
+    suspend fun connect(address: String, config: ConnectionConfig = ConnectionConfig()): Result<ConnectionInfo>
+    
+    /**
+     * Disconnects from the scanner.
+     * 
+     * @param graceful If true, performs graceful shutdown
+     */
+    suspend fun disconnect(graceful: Boolean = true)
+    
+    /**
+     * Sends raw data to the scanner.
+     * 
+     * @param data Bytes to send
+     * @return Result indicating success or number of bytes written
+     */
+    suspend fun write(data: ByteArray): Result<Int>
+    
+    /**
+     * Sends a command string (with terminator).
+     * 
+     * @param command Command string (CR will be appended)
+     * @return Result indicating success
+     */
+    suspend fun sendCommand(command: String): Result<Unit>
+    
+    /**
+     * Reads available data with timeout.
+     * 
+     * @param timeout Read timeout in milliseconds
+     * @return Result with received bytes or error
+     */
+    suspend fun read(timeout: Long = 5000L): Result<ByteArray>
+    
+    /**
+     * Reads until terminator or timeout.
+     * 
+     * @param terminator Terminator byte sequence (default: ">")
+     * @param timeout Read timeout in milliseconds
+     * @return Result with received string
+     */
+    suspend fun readUntil(terminator: String = ">", timeout: Long = 5000L): Result<String>
+    
+    /**
+     * Sends command and waits for response.
+     * 
+     * @param command Command to send
+     * @param timeout Response timeout
+     * @return Result with response string
+     */
+    suspend fun sendAndReceive(command: String, timeout: Long = 5000L): Result<String>
+    
+    /**
+     * Clears input/output buffers.
+     */
+    suspend fun clearBuffers()
+    
+    /**
+     * Gets connection statistics.
+     */
+    fun getStatistics(): ConnectionStatistics
+    
+    /**
+     * Releases all resources.
+     */
+    fun release()
+}
+
+data class ConnectionStatistics(
+    val bytesSent: Long,
+    val bytesReceived: Long,
+    val commandsSent: Int,
+    val responsesReceived: Int,
+    val errors: Int,
+    val averageResponseTime: Long,
+    val lastActivityTime: Long
+)
+
+/**
+ * Base implementation with common functionality
+ */
+abstract class BaseScannerConnection : ScannerConnection {
+    
+    protected val _connectionState = MutableStateFlow<ConnectionState>(ConnectionState.Disconnected)
+    override val connectionState: StateFlow<ConnectionState> = _connectionState.asStateFlow()
+    
+    protected val _incomingData = MutableSharedFlow<ByteArray>(
+        replay = 0,
+        extraBufferCapacity = 64,
+        onBufferOverflow = BufferOverflow.DROP_OLDEST
+    )
+    override val incomingData: SharedFlow<ByteArray> = _incomingData.asSharedFlow()
+    
+    protected val stats = MutableConnectionStatistics()
+    
+    override val isConnected: Boolean 
+        get() = connectionState.value.isConnected
+    
+    override suspend fun sendCommand(command: String): Result<Unit> {
+        val data = "$command\r".toByteArray(Charsets.US_ASCII)
+        return write(data).map { }
+    }
+    
+    override suspend fun sendAndReceive(command: String, timeout: Long): Result<String> {
+        return try {
+            clearBuffers()
+            sendCommand(command).getOrThrow()
+            readUntil(">", timeout)
+        } catch (e: Exception) {
+            Result.Error(CommunicationException("Send/receive failed: ${e.message}", e))
+        }
+    }
+    
+    override fun getStatistics(): ConnectionStatistics = stats.toImmutable()
+    
+    // Abstract methods for subclasses
+    protected abstract suspend fun doConnect(address: String, config: ConnectionConfig): Result<ConnectionInfo>
+    protected abstract suspend fun doDisconnect()
+    protected abstract suspend fun doWrite(data: ByteArray): Int
+    protected abstract suspend fun doRead(buffer: ByteArray, timeout: Long): Int
+}
+
+/**
+ * Mutable statistics tracker
+ */
+class MutableConnectionStatistics {
+    var bytesSent: Long = 0
+    var bytesReceived: Long = 0
+    var commandsSent: Int = 0
+    var responsesReceived: Int = 0
+    var errors: Int = 0
+    var totalResponseTime: Long = 0
+    var responseCount: Int = 0
+    var lastActivityTime: Long = System.currentTimeMillis()
+    
+    fun toImmutable() = ConnectionStatistics(
+        bytesSent = bytesSent,
+        bytesReceived = bytesReceived,
+        commandsSent = commandsSent,
+        responsesReceived = responsesReceived,
+        errors = errors,
+        averageResponseTime = if (responseCount > 0) totalResponseTime / responseCount else 0,
+        lastActivityTime = lastActivityTime
+    )
+    
+    fun recordSent(bytes: Int) {
+        bytesSent += bytes
+        commandsSent++
+        lastActivityTime = System.currentTimeMillis()
+    }
+    
+    fun recordReceived(bytes: Int, responseTime: Long) {
+        bytesReceived += bytes
+        responsesReceived++
+        totalResponseTime += responseTime
+        responseCount++
+        lastActivityTime = System.currentTimeMillis()
+    }
+    
+    fun recordError() {
+        errors++
+        lastActivityTime = System.currentTimeMillis()
+    }
+    
+    fun reset() {
+        bytesSent = 0
+        bytesReceived = 0
+        commandsSent = 0
+        responsesReceived = 0
+        errors = 0
+        totalResponseTime = 0
+        responseCount = 0
+    }
+}
+FILE 4: ScannerManager.kt (Core Manager)
+Location: scanner/core/src/main/java/com/spacetec/scanner/core/ScannerManager.kt
+
+Kotlin
+
+/**
+ * Central manager for scanner lifecycle and operations.
+ * 
+ * Handles discovery, connection, protocol detection, and scanner state management.
+ * Acts as the main entry point for scanner operations.
+ */
+Requirements:
+
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SCANNER MANAGER
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Scanner discovery result
+ */
+data class DiscoveredScanner(
+    val scanner: Scanner,
+    val signalStrength: Int?,
+    val discoveredAt: Long = System.currentTimeMillis()
+)
+
+/**
+ * Discovery options
+ */
+data class DiscoveryOptions(
+    val scanDuration: Long = 10_000L,
+    val connectionTypes: Set<ScannerConnectionType> = setOf(
+        ScannerConnectionType.BLUETOOTH_CLASSIC,
+        ScannerConnectionType.BLUETOOTH_LE
+    ),
+    val filterByName: String? = null,
+    val filterByPrefix: List<String> = listOf("OBD", "ELM", "VLink", "OBDII", "Vgate"),
+    val includeUnknown: Boolean = false
+)
+
+/**
+ * Connection options
+ */
+data class ScannerConnectionOptions(
+    val connectionConfig: ConnectionConfig = ConnectionConfig(),
+    val autoInitialize: Boolean = true,
+    val autoDetectProtocol: Boolean = true,
+    val protocolHint: ProtocolType? = null,
+    val initializationTimeout: Long = 15_000L
+)
+
+/**
+ * Initialization result
+ */
+data class ScannerInitResult(
+    val scanner: Scanner,
+    val scannerInfo: ScannerInfo,
+    val detectedProtocol: DetectedProtocol?,
+    val voltage: Float?
+)
+
+/**
+ * Scanner manager interface
+ */
+interface ScannerManager {
+    
+    /** Currently active scanner */
+    val activeScanner: StateFlow<Scanner?>
+    
+    /** Scanner state changes */
+    val scannerState: StateFlow<ScannerState>
+    
+    /** Discovery results stream */
+    val discoveredScanners: SharedFlow<DiscoveredScanner>
+    
+    /** Whether discovery is active */
+    val isDiscovering: StateFlow<Boolean>
+    
+    /** Error events */
+    val errors: SharedFlow<ScannerError>
+    
+    /**
+     * Starts scanner discovery.
+     * 
+     * @param options Discovery options
+     * @return Flow of discovered scanners
+     */
+    fun startDiscovery(options: DiscoveryOptions = DiscoveryOptions()): Flow<DiscoveredScanner>
+    
+    /**
+     * Stops scanner discovery.
+     */
+    suspend fun stopDiscovery()
+    
+    /**
+     * Gets list of paired/known scanners.
+     */
+    suspend fun getPairedScanners(): List<Scanner>
+    
+    /**
+     * Connects to a scanner.
+     * 
+     * @param scanner Scanner to connect
+     * @param options Connection options
+     * @return Result with initialization data
+     */
+    suspend fun connect(
+        scanner: Scanner,
+        options: ScannerConnectionOptions = ScannerConnectionOptions()
+    ): Result<ScannerInitResult>
+    
+    /**
+     * Connects to scanner by address.
+     */
+    suspend fun connect(
+        address: String,
+        connectionType: ScannerConnectionType,
+        options: ScannerConnectionOptions = ScannerConnectionOptions()
+    ): Result<ScannerInitResult>
+    
+    /**
+     * Disconnects from current scanner.
+     */
+    suspend fun disconnect()
+    
+    /**
+     * Reconnects to current or last scanner.
+     */
+    suspend fun reconnect(): Result<ScannerInitResult>
+    
+    /**
+     * Initializes the connected scanner.
+     * Called automatically if autoInitialize is true.
+     */
+    suspend fun initializeScanner(): Result<ScannerInfo>
+    
+    /**
+     * Detects vehicle protocol.
+     * Called automatically if autoDetectProtocol is true.
+     */
+    suspend fun detectProtocol(): Result<DetectedProtocol>
+    
+    /**
+     * Sets specific protocol.
+     */
+    suspend fun setProtocol(protocol: ProtocolType): Result<Unit>
+    
+    /**
+     * Gets current connection.
+     */
+    fun getConnection(): ScannerConnection?
+    
+    /**
+     * Sends raw command.
+     */
+    suspend fun sendCommand(command: String, timeout: Long = 5000L): Result<String>
+    
+    /**
+     * Sends OBD request.
+     */
+    suspend fun sendOBDRequest(request: ByteArray, timeout: Long = 5000L): Result<ByteArray>
+    
+    /**
+     * Reads battery voltage.
+     */
+    suspend fun readVoltage(): Result<Float>
+    
+    /**
+     * Gets scanner info.
+     */
+    suspend fun getScannerInfo(): Result<ScannerInfo>
+    
+    /**
+     * Releases all resources.
+     */
+    fun release()
+}
+
+/**
+ * Scanner errors
+ */
+sealed class ScannerError(
+    open val message: String,
+    open val cause: Throwable? = null,
+    open val isRecoverable: Boolean = true
+) {
+    data class DiscoveryError(
+        override val message: String,
+        override val cause: Throwable? = null
+    ) : ScannerError(message, cause)
+    
+    data class ConnectionError(
+        override val message: String,
+        override val cause: Throwable? = null,
+        val address: String
+    ) : ScannerError(message, cause)
+    
+    data class InitializationError(
+        override val message: String,
+        override val cause: Throwable? = null
+    ) : ScannerError(message, cause)
+    
+    data class ProtocolError(
+        override val message: String,
+        override val cause: Throwable? = null
+    ) : ScannerError(message, cause)
+    
+    data class CommunicationError(
+        override val message: String,
+        override val cause: Throwable? = null
+    ) : ScannerError(message, cause)
+    
+    data class TimeoutError(
+        override val message: String,
+        val operation: String
+    ) : ScannerError(message, isRecoverable = true)
+}
+
+/**
+ * Scanner manager implementation
+ */
+class ScannerManagerImpl @Inject constructor(
+    private val bluetoothScannerManager: BluetoothScannerManager,
+    private val wifiScannerManager: WiFiScannerManager?,
+    private val usbScannerManager: USBScannerManager?,
+    private val connectionFactory: ScannerConnectionFactory,
+    private val elm327CommandHandler: ELM327CommandHandler,
+    private val scannerPreferences: ScannerPreferencesDataStore,
+    private val dispatchers: CoroutineDispatchers
+) : ScannerManager {
+    
+    // Implementation with:
+    // - State machine for connection lifecycle
+    // - Automatic reconnection logic
+    // - Timeout handling
+    // - Error recovery
+    // - Event emission via Flows
+    
+    // Key methods:
+    // - startDiscovery() - Combines BT/WiFi/USB discovery
+    // - connect() - Establishes connection and initializes
+    // - initializeScanner() - Sends AT commands for setup
+    // - detectProtocol() - Auto-detects vehicle protocol
+    // - sendCommand() - Thread-safe command sending
+}
+
+/**
+ * Factory for creating connections
+ */
+interface ScannerConnectionFactory {
+    fun createConnection(type: ScannerConnectionType): ScannerConnection
+}
+
+/**
+ * Coroutine dispatchers abstraction
+ */
+interface CoroutineDispatchers {
+    val io: CoroutineDispatcher
+    val main: CoroutineDispatcher
+    val default: CoroutineDispatcher
+}
+FILE 5: BluetoothConnection.kt (Bluetooth Implementation)
+Location: scanner/bluetooth/src/main/java/com/spacetec/scanner/bluetooth/BluetoothConnection.kt
+
+Kotlin
+
+/**
+ * Bluetooth Classic (SPP/RFCOMM) connection implementation.
+ * 
+ * Handles Bluetooth socket management, data I/O, and connection lifecycle
+ * for ELM327 and compatible OBD adapters.
+ */
+Requirements:
+
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// BLUETOOTH CONNECTION
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Bluetooth-specific configuration
+ */
+data class BluetoothConnectionConfig(
+    val baseConfig: ConnectionConfig = ConnectionConfig(),
+    val uuid: UUID = SPP_UUID,
+    val secure: Boolean = true,
+    val connectionRetries: Int = 2,
+    val socketTimeout: Int = 30_000
+) {
+    companion object {
+        // Standard SPP UUID
+        val SPP_UUID: UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
+    }
+}
+
+/**
+ * Bluetooth connection implementation
+ */
+class BluetoothConnection(
+    private val context: Context,
+    private val bluetoothAdapter: BluetoothAdapter
+) : BaseScannerConnection() {
+    
+    override val connectionId: String = UUID.randomUUID().toString()
+    override val connectionType = ScannerConnectionType.BLUETOOTH_CLASSIC
+    
+    private var socket: BluetoothSocket? = null
+    private var inputStream: InputStream? = null
+    private var outputStream: OutputStream? = null
+    private var readJob: Job? = null
+    private var device: BluetoothDevice? = null
+    
+    private val readBuffer = ByteArray(4096)
+    private val responseBuffer = StringBuilder()
+    private val responseLock = Mutex()
+    private val writeLock = Mutex()
+    
+    private var btConfig = BluetoothConnectionConfig()
+    
+    /**
+     * Connects to Bluetooth device.
+     */
+    override suspend fun connect(
+        address: String,
+        config: ConnectionConfig
+    ): Result<ConnectionInfo> = withContext(Dispatchers.IO) {
+        try {
+            _connectionState.value = ConnectionState.Connecting
+            
+            // Validate MAC address
+            require(BluetoothAdapter.checkBluetoothAddress(address)) {
+                "Invalid Bluetooth address: $address"
+            }
+            
+            // Get device
+            device = bluetoothAdapter.getRemoteDevice(address)
+            
+            // Create socket with retry logic
+            socket = createSocket(device!!, btConfig)
+            
+            // Connect with timeout
+            withTimeout(config.connectionTimeout) {
+                socket!!.connect()
+            }
+            
+            // Setup streams
+            inputStream = socket!!.inputStream
+            outputStream = socket!!.outputStream
+            
+            // Start read coroutine
+            startReading()
+            
+            val info = ConnectionInfo(
+                remoteAddress = address,
+                localAddress = bluetoothAdapter.address
+            )
+            
+            _connectionState.value = ConnectionState.Connected(info)
+            stats.reset()
+            
+            Result.Success(info)
+            
+        } catch (e: Exception) {
+            val error = when (e) {
+                is IOException -> ConnectionException("Bluetooth connection failed: ${e.message}", e)
+                is TimeoutCancellationException -> TimeoutException("Connection timed out")
+                else -> ConnectionException("Unexpected error: ${e.message}", e)
+            }
+            _connectionState.value = ConnectionState.Error(error, isRecoverable = true)
+            Result.Error(error)
+        }
+    }
+    
+    /**
+     * Creates Bluetooth socket with fallback strategies.
+     */
+    private suspend fun createSocket(
+        device: BluetoothDevice,
+        config: BluetoothConnectionConfig
+    ): BluetoothSocket {
+        // Try secure socket first
+        return try {
+            if (config.secure) {
+                device.createRfcommSocketToServiceRecord(config.uuid)
+            } else {
+                device.createInsecureRfcommSocketToServiceRecord(config.uuid)
+            }
+        } catch (e: IOException) {
+            // Fallback: Use reflection for direct port connection
+            // This works around some device compatibility issues
+            try {
+                val method = device.javaClass.getMethod(
+                    "createRfcommSocket",
+                    Int::class.javaPrimitiveType
+                )
+                method.invoke(device, 1) as BluetoothSocket
+            } catch (e2: Exception) {
+                throw ConnectionException("Failed to create socket: ${e.message}", e)
+            }
+        }
+    }
+    
+    /**
+     * Starts background read coroutine.
+     */
+    private fun startReading() {
+        readJob = CoroutineScope(Dispatchers.IO).launch {
+            try {
+                while (isActive && socket?.isConnected == true) {
+                    val bytesRead = inputStream?.read(readBuffer) ?: -1
+                    if (bytesRead > 0) {
+                        val data = readBuffer.copyOf(bytesRead)
+                        processIncomingData(data)
+                    } else if (bytesRead == -1) {
+                        break  // Stream closed
+                    }
+                }
+            } catch (e: IOException) {
+                if (isActive) {
+                    _connectionState.value = ConnectionState.Error(e, isRecoverable = true)
+                }
+            }
+        }
+    }
+    
+    /**
+     * Processes incoming data.
+     */
+    private suspend fun processIncomingData(data: ByteArray) {
+        stats.recordReceived(data.size, 0)
+        _incomingData.emit(data)
+        
+        // Also append to response buffer
+        responseLock.withLock {
+            responseBuffer.append(String(data, Charsets.US_ASCII))
+        }
+    }
+    
+    /**
+     * Disconnects from device.
+     */
+    override suspend fun disconnect(graceful: Boolean) = withContext(Dispatchers.IO) {
+        readJob?.cancel()
+        readJob = null
+        
+        try {
+            if (graceful) {
+                inputStream?.close()
+                outputStream?.close()
+            }
+            socket?.close()
+        } catch (e: IOException) {
+            // Ignore close errors
+        } finally {
+            inputStream = null
+            outputStream = null
+            socket = null
+            device = null
+            _connectionState.value = ConnectionState.Disconnected
+        }
+    }
+    
+    /**
+     * Writes data to device.
+     */
+    override suspend fun write(data: ByteArray): Result<Int> = writeLock.withLock {
+        withContext(Dispatchers.IO) {
+            try {
+                outputStream?.let { stream ->
+                    stream.write(data)
+                    stream.flush()
+                    stats.recordSent(data.size)
+                    Result.Success(data.size)
+                } ?: Result.Error(ConnectionException("Output stream not available"))
+            } catch (e: IOException) {
+                stats.recordError()
+                Result.Error(CommunicationException("Write failed: ${e.message}", e))
+            }
+        }
+    }
+    
+    /**
+     * Reads available data.
+     */
+    override suspend fun read(timeout: Long): Result<ByteArray> = withContext(Dispatchers.IO) {
+        try {
+            withTimeout(timeout) {
+                val data = mutableListOf<Byte>()
+                val start = System.currentTimeMillis()
+                
+                while (true) {
+                    val available = inputStream?.available() ?: 0
+                    if (available > 0) {
+                        val buffer = ByteArray(available)
+                        val read = inputStream?.read(buffer) ?: 0
+                        data.addAll(buffer.take(read))
+                        break
+                    }
+                    delay(10)
+                }
+                
+                val result = data.toByteArray()
+                stats.recordReceived(result.size, System.currentTimeMillis() - start)
+                Result.Success(result)
+            }
+        } catch (e: TimeoutCancellationException) {
+            Result.Error(TimeoutException("Read timed out"))
+        } catch (e: Exception) {
+            Result.Error(CommunicationException("Read failed: ${e.message}", e))
+        }
+    }
+    
+    /**
+     * Reads until terminator.
+     */
+    override suspend fun readUntil(terminator: String, timeout: Long): Result<String> {
+        return withContext(Dispatchers.IO) {
+            try {
+                withTimeout(timeout) {
+                    val start = System.currentTimeMillis()
+                    
+                    while (true) {
+                        responseLock.withLock {
+                            val content = responseBuffer.toString()
+                            if (content.contains(terminator)) {
+                                val result = content.substringBefore(terminator).trim()
+                                responseBuffer.clear()
+                                stats.recordReceived(
+                                    result.length,
+                                    System.currentTimeMillis() - start
+                                )
+                                return@withTimeout Result.Success(result)
+                            }
+                        }
+                        delay(10)
+                    }
+                    
+                    @Suppress("UNREACHABLE_CODE")
+                    Result.Error(TimeoutException("Terminator not found"))
+                }
+            } catch (e: TimeoutCancellationException) {
+                responseLock.withLock { responseBuffer.clear() }
+                Result.Error(TimeoutException("Read timed out waiting for '$terminator'"))
+            }
+        }
+    }
+    
+    /**
+     * Clears buffers.
+     */
+    override suspend fun clearBuffers() {
+        responseLock.withLock {
+            responseBuffer.clear()
+        }
+        // Drain input stream
+        withContext(Dispatchers.IO) {
+            try {
+                while ((inputStream?.available() ?: 0) > 0) {
+                    inputStream?.skip(inputStream!!.available().toLong())
+                }
+            } catch (e: IOException) {
+                // Ignore
+            }
+        }
+    }
+    
+    /**
+     * Releases resources.
+     */
+    override fun release() {
+        runBlocking {
+            disconnect(graceful = false)
+        }
+    }
+    
+    // Implementation details for doConnect, doDisconnect, doWrite, doRead...
+}
+
+/**
+ * Bluetooth scanner manager for discovery.
+ */
+interface BluetoothScannerManager {
+    val isDiscovering: StateFlow<Boolean>
+    val discoveredDevices: SharedFlow<DiscoveredScanner>
+    
+    suspend fun startDiscovery(options: DiscoveryOptions): Flow<DiscoveredScanner>
+    suspend fun stopDiscovery()
+    suspend fun getPairedDevices(): List<Scanner>
+    fun isBluetoothEnabled(): Boolean
+    suspend fun requestEnableBluetooth(): Boolean
+}
+FILE 6: ELM327Commands.kt (Device Commands)
+Location: scanner/devices/elm327/src/main/java/com/spacetec/scanner/devices/elm327/ELM327Commands.kt
+
+Kotlin
+
+/**
+ * Complete ELM327 command set and response parsing.
+ * 
+ * Provides type-safe command building and response parsing
+ * for ELM327 and compatible chipsets (STN1110, OBDLink, etc.).
+ */
+Requirements:
+
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ELM327 COMMANDS
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * ELM327 AT command definitions
+ */
+object ELM327Commands {
+    
+    // ═══════════ General Commands ═══════════
+    
+    /** Reset device */
+    const val RESET = "ATZ"
+    
+    /** Warm reset (no banner) */
+    const val WARM_RESET = "ATWS"
+    
+    /** Set all to defaults */
+    const val SET_DEFAULTS = "ATD"
+    
+    /** Print version ID */
+    const val GET_VERSION = "ATI"
+    
+    /** Print device description */
+    const val GET_DESCRIPTION = "AT@1"
+    
+    /** Read voltage */
+    const val READ_VOLTAGE = "ATRV"
+    
+    /** Read ignition status */
+    const val READ_IGNITION = "ATIGN"
+    
+    // ═══════════ Echo/Linefeed Control ═══════════
+    
+    /** Echo off */
+    const val ECHO_OFF = "ATE0"
+    
+    /** Echo on */
+    const val ECHO_ON = "ATE1"
+    
+    /** Linefeeds off */
+    const val LINEFEEDS_OFF = "ATL0"
+    
+    /** Linefeeds on */
+    const val LINEFEEDS_ON = "ATL1"
+    
+    /** Spaces in response off */
+    const val SPACES_OFF = "ATS0"
+    
+    /** Spaces in response on */
+    const val SPACES_ON = "ATS1"
+    
+    /** Headers off */
+    const val HEADERS_OFF = "ATH0"
+    
+    /** Headers on */
+    const val HEADERS_ON = "ATH1"
+    
+    // ═══════════ Protocol Selection ═══════════
+    
+    /** Set protocol - auto */
+    const val SET_PROTOCOL_AUTO = "ATSP0"
+    
+    /** Set protocol to specific value (1-9, A-C) */
+    fun setProtocol(protocol: Int): String = "ATSP${protocol.toString(16).uppercase()}"
+    fun setProtocol(protocol: ProtocolType): String = "ATSP${protocol.code.toString(16).uppercase()}"
+    
+    /** Try protocol */
+    fun tryProtocol(protocol: Int): String = "ATTP${protocol.toString(16).uppercase()}"
+    
+    /** Describe current protocol */
+    const val DESCRIBE_PROTOCOL = "ATDP"
+    
+    /** Describe protocol by number */
+    const val DESCRIBE_PROTOCOL_NUMBER = "ATDPN"
+    
+    /** Close current protocol */
+    const val CLOSE_PROTOCOL = "ATPC"
+    
+    // ═══════════ Timeout Control ═══════════
+    
+    /** 
+     * Set timeout (value * 4ms, 00 = default)
+     * Typical values: 32 = 128ms, FF = 1.02s
+     */
+    fun setTimeout(value: Int): String = "ATST${value.toString(16).padStart(2, '0').uppercase()}"
+    
+    /** Adaptive timing off */
+    const val ADAPTIVE_TIMING_OFF = "ATAT0"
+    
+    /** Adaptive timing auto 1 */
+    const val ADAPTIVE_TIMING_AUTO1 = "ATAT1"
+    
+    /** Adaptive timing auto 2 (more aggressive) */
+    const val ADAPTIVE_TIMING_AUTO2 = "ATAT2"
+    
+    /** Set wakeup interval */
+    fun setWakeupInterval(value: Int): String = "ATSW${value.toString(16).padStart(2, '0').uppercase()}"
+    
+    // ═══════════ CAN Commands ═══════════
+    
+    /** Set CAN header (11-bit: 3 hex chars, 29-bit: 8 hex chars) */
+    fun setHeader(header: String): String = "ATSH$header"
+    fun setHeader(id: Int, extended: Boolean = false): String {
+        return if (extended) {
+            "ATSH${id.toString(16).padStart(8, '0').uppercase()}"
+        } else {
+            "ATSH${id.toString(16).padStart(3, '0').uppercase()}"
+        }
+    }
+    
+    /** CAN auto formatting off */
+    const val CAN_AUTO_FORMAT_OFF = "ATCAF0"
+    
+    /** CAN auto formatting on */
+    const val CAN_AUTO_FORMAT_ON = "ATCAF1"
+    
+    /** Set CAN receive filter (address) */
+    fun setReceiveAddress(address: String): String = "ATCRA$address"
+    
+    /** Clear CAN receive filter */
+    const val CLEAR_RECEIVE_ADDRESS = "ATCRA"
+    
+    /** CAN extended addressing on */
+    const val CAN_EXTENDED_ADDR_ON = "ATCEA"
+    
+    /** CAN extended addressing with target */
+    fun setCanExtendedAddr(target: Int): String = "ATCEA${target.toString(16).padStart(2, '0').uppercase()}"
+    
+    /** CAN extended addressing off */
+    const val CAN_EXTENDED_ADDR_OFF = "ATCEA00"
+    
+    /** Set flow control mode (0-5) */
+    fun setFlowControlMode(mode: Int): String = "ATFCSM$mode"
+    
+    /** Set flow control header */
+    fun setFlowControlHeader(header: String): String = "ATFCSH$header"
+    
+    /** Set flow control data */
+    fun setFlowControlData(data: String): String = "ATFCSD$data"
+    
+    // ═══════════ Message Control ═══════════
+    
+    /** Responses off */
+    const val RESPONSES_OFF = "ATR0"
+    
+    /** Responses on */
+    const val RESPONSES_ON = "ATR1"
+    
+    /** Allow long messages (>7 bytes) */
+    const val LONG_MESSAGES_ON = "ATAL"
+    
+    /** Normal message length */
+    const val LONG_MESSAGES_OFF = "ATNL"
+    
+    /** Set CAN receive filter mask */
+    fun setFilterMask(mask: String): String = "ATCM$mask"
+    
+    /** Set CAN receive filter */
+    fun setFilter(filter: String): String = "ATCF$filter"
+    
+    // ═══════════ OBD Commands ═══════════
+    
+    /** Supported PIDs mode 01 (bitmap) */
+    const val SUPPORTED_PIDS_01_20 = "0100"
+    const val SUPPORTED_PIDS_21_40 = "0120"
+    const val SUPPORTED_PIDS_41_60 = "0140"
+    const val SUPPORTED_PIDS_61_80 = "0160"
+    
+    /** Request specific PID */
+    fun requestPID(mode: Int, pid: Int): String {
+        return "${mode.toString(16).padStart(2, '0')}${pid.toString(16).padStart(2, '0')}".uppercase()
+    }
+    
+    /** Read DTCs */
+    const val READ_STORED_DTCS = "03"
+    const val READ_PENDING_DTCS = "07"
+    const val READ_PERMANENT_DTCS = "0A"
+    
+    /** Clear DTCs */
+    const val CLEAR_DTCS = "04"
+    
+    /** Read freeze frame */
+    fun readFreezeFrame(frameNumber: Int, pid: Int): String = 
+        "02${pid.toString(16).padStart(2, '0')}${frameNumber.toString(16).padStart(2, '0')}".uppercase()
+    
+    /** Vehicle info */
+    const val GET_VIN = "0902"
+    const val GET_CALIBRATION_ID = "0904"
+    const val GET_ECU_NAME = "090A"
+    
+    // ═══════════ STN Extended Commands ═══════════
+    
+    /** STN chip identification */
+    const val STN_DEVICE_ID = "STDI"
+    
+    /** STN firmware version */
+    const val STN_FIRMWARE_VERSION = "STFAC"
+    
+    /** STN serial number */
+    const val STN_SERIAL_NUMBER = "STSN"
+    
+    /** STN protocol info */
+    const val STN_PROTOCOL_INFO = "STPX"
+    
+    // ═══════════ Response Patterns ═══════════
+    
+    object ResponsePatterns {
+        val OK = Regex("OK", RegexOption.IGNORE_CASE)
+        val ERROR = Regex("\\?|ERROR|UNABLE TO CONNECT|NO DATA|STOPPED|CAN ERROR", RegexOption.IGNORE_CASE)
+        val SEARCHING = Regex("SEARCHING\\.\\.\\.", RegexOption.IGNORE_CASE)
+        val BUS_INIT = Regex("BUS INIT: (\\.+)|BUS INIT: (OK|ERROR)", RegexOption.IGNORE_CASE)
+        val VOLTAGE = Regex("(\\d+\\.\\d+)V?", RegexOption.IGNORE_CASE)
+        val VERSION = Regex("ELM(\\d+)\\s+v([\\d.]+)", RegexOption.IGNORE_CASE)
+        val STN_VERSION = Regex("STN(\\d+)\\s+v([\\d.]+)", RegexOption.IGNORE_CASE)
+        val PROTOCOL = Regex("(AUTO, )?(\\w.+)", RegexOption.IGNORE_CASE)
+        val HEX_DATA = Regex("([0-9A-Fa-f]{2}\\s?)+")
+        val PROMPT = Regex(">")
+    }
+}
+
+/**
+ * ELM327 command handler for building and parsing commands
+ */
+class ELM327CommandHandler @Inject constructor() {
+    
+    private val commandTimeout = mapOf(
+        ELM327Commands.RESET to 5000L,
+        ELM327Commands.SET_PROTOCOL_AUTO to 10000L,
+        ELM327Commands.CLEAR_DTCS to 5000L
+    )
+    
+    /**
+     * Gets timeout for specific command.
+     */
+    fun getTimeout(command: String): Long {
+        return commandTimeout[command] ?: 2000L
+    }
+    
+    /**
+     * Parses ELM327 version response.
+     */
+    fun parseVersion(response: String): ELM327Version? {
+        // Try ELM pattern
+        ELM327Commands.ResponsePatterns.VERSION.find(response)?.let { match ->
+            return ELM327Version(
+                chipType = "ELM${match.groupValues[1]}",
+                version = match.groupValues[2],
+                isClone = false,
+                isSTN = false
+            )
+        }
+        
+        // Try STN pattern
+        ELM327Commands.ResponsePatterns.STN_VERSION.find(response)?.let { match ->
+            return ELM327Version(
+                chipType = "STN${match.groupValues[1]}",
+                version = match.groupValues[2],
+                isClone = false,
+                isSTN = true
+            )
+        }
+        
+        return null
+    }
+    
+    /**
+     * Parses voltage response.
+     */
+    fun parseVoltage(response: String): Float? {
+        return ELM327Commands.ResponsePatterns.VOLTAGE.find(response)?.let {
+            it.groupValues[1].toFloatOrNull()
+        }
+    }
+    
+    /**
+     * Parses protocol response.
+     */
+    fun parseProtocol(response: String): ProtocolType {
+        val cleanResponse = response.replace("AUTO, ", "").trim().uppercase()
+        
+        return when {
+            cleanResponse.contains("J1850 PWM") -> ProtocolType.SAE_J1850_PWM
+            cleanResponse.contains("J1850 VPW") -> ProtocolType.SAE_J1850_VPW
+            cleanResponse.contains("9141") -> ProtocolType.ISO_9141_2
+            cleanResponse.contains("14230") && cleanResponse.contains("SLOW") -> ProtocolType.ISO_14230_4_KWP_5BAUD
+            cleanResponse.contains("14230") && cleanResponse.contains("FAST") -> ProtocolType.ISO_14230_4_KWP_FAST
+            cleanResponse.contains("CAN") && cleanResponse.contains("11/500") -> ProtocolType.ISO_15765_4_CAN_11BIT_500K
+            cleanResponse.contains("CAN") && cleanResponse.contains("29/500") -> ProtocolType.ISO_15765_4_CAN_29BIT_500K
+            cleanResponse.contains("CAN") && cleanResponse.contains("11/250") -> ProtocolType.ISO_15765_4_CAN_11BIT_250K
+            cleanResponse.contains("CAN") && cleanResponse.contains("29/250") -> ProtocolType.ISO_15765_4_CAN_29BIT_250K
+            cleanResponse.contains("J1939") -> ProtocolType.SAE_J1939_CAN
+            else -> ProtocolType.UNKNOWN
+        }
+    }
+    
+    /**
+     * Parses OBD response to bytes.
+     */
+    fun parseOBDResponse(response: String): Result<ByteArray> {
+        // Check for errors first
+        if (ELM327Commands.ResponsePatterns.ERROR.containsMatchIn(response)) {
+            return Result.Error(ProtocolException("OBD error: $response"))
+        }
+        
+        // Extract hex data
+        val hexParts = response
+            .replace("\r", "")
+            .replace("\n", "")
+            .replace(">", "")
+            .split(" ", "\t")
+            .filter { it.isNotEmpty() && ELM327Commands.ResponsePatterns.HEX_DATA.matches(it) }
+        
+        if (hexParts.isEmpty()) {
+            return Result.Error(ProtocolException("No valid data in response"))
+        }
+        
+        return try {
+            val bytes = hexParts.joinToString("").hexToByteArray()
+            Result.Success(bytes)
+        } catch (e: Exception) {
+            Result.Error(ProtocolException("Failed to parse hex data: ${e.message}"))
+        }
+    }
+    
+    /**
+     * Parses multi-line response (e.g., VIN, multiple ECU responses).
+     */
+    fun parseMultiLineResponse(response: String): List<ByteArray> {
+        return response
+            .split("\r", "\n")
+            .filter { it.isNotBlank() && !it.startsWith(">") }
+            .mapNotNull { line ->
+                parseOBDResponse(line).getOrNull()
+            }
+    }
+    
+    /**
+     * Parses supported PIDs response.
+     */
+    fun parseSupportedPIDs(response: ByteArray, startPID: Int = 0x00): Set<Int> {
+        if (response.size < 6) return emptySet()  // Need at least mode + PID + 4 bytes
+        
+        val pids = mutableSetOf<Int>()
+        val bitmap = response.drop(2).take(4)  // Skip mode and PID echo
+        
+        bitmap.forEachIndexed { byteIndex, byte ->
+            for (bit in 7 downTo 0) {
+                if ((byte.toInt() and (1 shl bit)) != 0) {
+                    val pid = startPID + (byteIndex * 8) + (7 - bit) + 1
+                    pids.add(pid)
+                }
+            }
+        }
+        
+        return pids
+    }
+    
+    /**
+     * Parses DTCs from response.
+     */
+    fun parseDTCs(response: ByteArray): List<String> {
+        if (response.isEmpty()) return emptyList()
+        
+        val dtcs = mutableListOf<String>()
+        var index = if (response[0].toInt() and 0xFF == 0x43) 1 else 0  // Skip mode byte
+        
+        while (index + 1 < response.size) {
+            val byte1 = response[index].toInt() and 0xFF
+            val byte2 = response[index + 1].toInt() and 0xFF
+            
+            if (byte1 == 0x00 && byte2 == 0x00) {
+                index += 2
+                continue
+            }
+            
+            val dtcType = when ((byte1 shr 6) and 0x03) {
+                0 -> 'P'
+                1 -> 'C'
+                2 -> 'B'
+                3 -> 'U'
+                else -> 'P'
+            }
+            
+            val dtcChar2 = (byte1 shr 4) and 0x03
+            val dtcChar3 = byte1 and 0x0F
+            val dtcChar4 = (byte2 shr 4) and 0x0F
+            val dtcChar5 = byte2 and 0x0F
+            
+            val dtc = "$dtcType${dtcChar2}${dtcChar3.toString(16).uppercase()}${dtcChar4.toString(16).uppercase()}${dtcChar5.toString(16).uppercase()}"
+            dtcs.add(dtc)
+            
+            index += 2
+        }
+        
+        return dtcs
+    }
+    
+    /**
+     * Builds initialization command sequence.
+     */
+    fun buildInitSequence(): List<String> = listOf(
+        ELM327Commands.RESET,
+        ELM327Commands.ECHO_OFF,
+        ELM327Commands.LINEFEEDS_OFF,
+        ELM327Commands.SPACES_ON,
+        ELM327Commands.HEADERS_OFF,
+        ELM327Commands.ADAPTIVE_TIMING_AUTO2,
+        ELM327Commands.setTimeout(0x32)  // 200ms timeout
+    )
+    
+    /**
+     * Builds protocol detection sequence.
+     */
+    fun buildProtocolDetectionSequence(): List<Pair<String, Long>> = listOf(
+        ELM327Commands.SET_PROTOCOL_AUTO to 10000L,
+        ELM327Commands.SUPPORTED_PIDS_01_20 to 5000L
+    )
+}
+
+/**
+ * ELM327 version info.
+ */
+data class ELM327Version(
+    val chipType: String,
+    val version: String,
+    val isClone: Boolean,
+    val isSTN: Boolean
+) {
+    val fullVersion: String get() = "$chipType v$version"
+}
+
+/**
+ * OBD response wrapper.
+ */
+data class OBDResponse(
+    val raw: String,
+    val bytes: ByteArray,
+    val mode: Int,
+    val pid: Int?,
+    val data: ByteArray
+) {
+    val isPositive: Boolean get() = mode and 0x40 != 0
+    val responseMode: Int get() = mode and 0x7F
+}
+FILE 7: UDSProtocol.kt (Protocol Handler)
+Location: protocol/uds/src/main/java/com/spacetec/protocol/uds/UDSProtocol.kt
+
+Kotlin
+
+/**
+ * UDS (Unified Diagnostic Services - ISO 14229) protocol implementation.
+ * 
+ * Provides high-level UDS service handling including session management,
+ * security access, and all standard UDS services.
+ */
+Requirements:
+
+Kotlin
+
+// ═══════════════════════════════════════════════════════════════════════════
+// UDS PROTOCOL
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * UDS Service IDs
+ */
+object UDSServiceId {
+    const val DIAGNOSTIC_SESSION_CONTROL = 0x10
+    const val ECU_RESET = 0x11
+    const val CLEAR_DIAGNOSTIC_INFO = 0x14
+    const val READ_DTC_INFO = 0x19
+    const val READ_DATA_BY_ID = 0x22
+    const val READ_MEMORY_BY_ADDRESS = 0x23
+    const val READ_SCALING_DATA_BY_ID = 0x24
+    const val SECURITY_ACCESS = 0x27
+    const val COMMUNICATION_CONTROL = 0x28
+    const val READ_DATA_BY_PERIODIC_ID = 0x2A
+    const val DYNAMICALLY_DEFINE_DATA_ID = 0x2C
+    const val WRITE_DATA_BY_ID = 0x2E
+    const val IO_CONTROL_BY_ID = 0x2F
+    const val ROUTINE_CONTROL = 0x31
+    const val REQUEST_DOWNLOAD = 0x34
+    const val REQUEST_UPLOAD = 0x35
+    const val TRANSFER_DATA = 0x36
+    const val REQUEST_TRANSFER_EXIT = 0x37
+    const val REQUEST_FILE_TRANSFER = 0x38
+    const val WRITE_MEMORY_BY_ADDRESS = 0x3D
+    const val TESTER_PRESENT = 0x3E
+    const val # Comprehensive AI Prompt for Scanner & Vehicle Connection System (Continued)
+
+## FILE 7: UDSProtocol.kt (Protocol Handler) - CONTINUED
+
+Location: `protocol/uds/src/main/java/com/spacetec/protocol/uds/UDSProtocol.kt`
+
+```kotlin
+// ═══════════════════════════════════════════════════════════════════════════
+// UDS PROTOCOL - CONTINUED
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * UDS Service IDs
+ */
+object UDSServiceId {
+    const val DIAGNOSTIC_SESSION_CONTROL = 0x10
+    const val ECU_RESET = 0x11
+    const val CLEAR_DIAGNOSTIC_INFO = 0x14
+    const val READ_DTC_INFO = 0x19
+    const val READ_DATA_BY_ID = 0x22
+    const val READ_MEMORY_BY_ADDRESS = 0x23
+    const val READ_SCALING_DATA_BY_ID = 0x24
+    const val SECURITY_ACCESS = 0x27
+    const val COMMUNICATION_CONTROL = 0x28
+    const val READ_DATA_BY_PERIODIC_ID = 0x2A
+    const val DYNAMICALLY_DEFINE_DATA_ID = 0x2C
+    const val WRITE_DATA_BY_ID = 0x2E
+    const val IO_CONTROL_BY_ID = 0x2F
+    const val ROUTINE_CONTROL = 0x31
+    const val REQUEST_DOWNLOAD = 0x34
+    const val REQUEST_UPLOAD = 0x35
+    const val TRANSFER_DATA = 0x36
+    const val REQUEST_TRANSFER_EXIT = 0x37
+    const val REQUEST_FILE_TRANSFER = 0x38
+    const val WRITE_MEMORY_BY_ADDRESS = 0x3D
+    const val TESTER_PRESENT = 0x3E
+    const val ACCESS_TIMING_PARAMETER = 0x83
+    const val SECURED_DATA_TRANSMISSION = 0x84
+    const val CONTROL_DTC_SETTING = 0x85
+    const val RESPONSE_ON_EVENT = 0x86
+    const val LINK_CONTROL = 0x87
+    
+    const val NEGATIVE_RESPONSE = 0x7F
+    const val POSITIVE_RESPONSE_OFFSET = 0x40
+}
+
+/**
+ * UDS Diagnostic Sessions
+ */
+enum class UDSSession(val id: Int, val description: String) {
+    DEFAULT(0x01, "Default Session"),
+    PROGRAMMING(0x02, "Programming Session"),
+    EXTENDED_DIAGNOSTIC(0x03, "Extended Diagnostic Session"),
+    SAFETY_SYSTEM_DIAGNOSTIC(0x04, "Safety System Diagnostic Session"),
+    // Manufacturer specific: 0x40-0x5F
+    // Vehicle manufacturer specific: 0x60-0x7E
+}
+
+/**
+ * UDS Negative Response Codes
+ */
+enum class UDSNegativeResponseCode(val code: Int, val description: String) {
+    GENERAL_REJECT(0x10, "General Reject"),
+    SERVICE_NOT_SUPPORTED(0x11, "Service Not Supported"),
+    SUB_FUNCTION_NOT_SUPPORTED(0x12, "Sub-Function Not Supported"),
+    INCORRECT_MESSAGE_LENGTH_OR_FORMAT(0x13, "Incorrect Message Length Or Invalid Format"),
+    RESPONSE_TOO_LONG(0x14, "Response Too Long"),
+    BUSY_REPEAT_REQUEST(0x21, "Busy - Repeat Request"),
+    CONDITIONS_NOT_CORRECT(0x22, "Conditions Not Correct"),
+    REQUEST_SEQUENCE_ERROR(0x24, "Request Sequence Error"),
+    NO_RESPONSE_FROM_SUBNET(0x25, "No Response From Subnet Component"),
+    FAILURE_PREVENTS_EXECUTION(0x26, "Failure Prevents Execution Of Requested Action"),
+    REQUEST_OUT_OF_RANGE(0x31, "Request Out Of Range"),
+    SECURITY_ACCESS_DENIED(0x33, "Security Access Denied"),
+    INVALID_KEY(0x35, "Invalid Key"),
+    EXCEED_NUMBER_OF_ATTEMPTS(0x36, "Exceed Number Of Attempts"),
+    REQUIRED_TIME_DELAY_NOT_EXPIRED(0x37, "Required Time Delay Not Expired"),
+    UPLOAD_DOWNLOAD_NOT_ACCEPTED(0x70, "Upload/Download Not Accepted"),
+    TRANSFER_DATA_SUSPENDED(0x71, "Transfer Data Suspended"),
+    GENERAL_PROGRAMMING_FAILURE(0x72, "General Programming Failure"),
+    WRONG_BLOCK_SEQUENCE_COUNTER(0x73, "Wrong Block Sequence Counter"),
+    REQUEST_CORRECTLY_RECEIVED_RESPONSE_PENDING(0x78, "Request Correctly Received - Response Pending"),
+    SUB_FUNCTION_NOT_SUPPORTED_IN_ACTIVE_SESSION(0x7E, "Sub-Function Not Supported In Active Session"),
+    SERVICE_NOT_SUPPORTED_IN_ACTIVE_SESSION(0x7F, "Service Not Supported In Active Session");
+    
+    companion object {
+        fun fromCode(code: Int): UDSNegativeResponseCode? = values().find { it.code == code }
+    }
+}
+
+/**
+ * Standard UDS Data Identifiers (DIDs)
+ */
+object UDSDataIdentifier {
+    // Vehicle Manufacturer Specific (F100-F17F)
+    const val BOOT_SOFTWARE_ID = 0xF180
+    const val APPLICATION_SOFTWARE_ID = 0xF181
+    const val APPLICATION_DATA_ID = 0xF182
+    const val BOOT_SOFTWARE_FINGERPRINT = 0xF183
+    const val APPLICATION_SOFTWARE_FINGERPRINT = 0xF184
+    const val APPLICATION_DATA_FINGERPRINT = 0xF185
+    const val ACTIVE_DIAGNOSTIC_SESSION = 0xF186
+    const val VEHICLE_MANUFACTURER_SPARE_PART_NUMBER = 0xF187
+    const val VEHICLE_MANUFACTURER_ECU_SOFTWARE_NUMBER = 0xF188
+    const val VEHICLE_MANUFACTURER_ECU_SOFTWARE_VERSION = 0xF189
+    const val SYSTEM_SUPPLIER_ID = 0xF18A
+    const val ECU_MANUFACTURING_DATE = 0xF18B
+    const val ECU_SERIAL_NUMBER = 0xF18C
+    const val SUPPORTED_FUNCTIONAL_UNITS = 0xF18D
+    const val VEHICLE_MANUFACTURER_KIT_ASSEMBLY_PART_NUMBER = 0xF18E
+    
+    // VIN
+    const val VIN = 0xF190
+    
+    // System Supplier Specific (F1A0-F1EF)
+    const val SYSTEM_SUPPLIER_ECU_HARDWARE_NUMBER = 0xF191
+    const val SYSTEM_SUPPLIER_ECU_HARDWARE_VERSION = 0xF193
+    const val SYSTEM_SUPPLIER_ECU_SOFTWARE_NUMBER = 0xF194
+    const val SYSTEM_SUPPLIER_ECU_SOFTWARE_VERSION = 0xF195
+    const val EXHAUST_REGULATION_OR_TYPE_APPROVAL_NUMBER = 0xF196
+    const val SYSTEM_NAME_OR_ENGINE_TYPE = 0xF197
+    const val REPAIR_SHOP_CODE_OR_TESTER_SERIAL_NUMBER = 0xF198
+    const val PROGRAMMING_DATE = 0xF199
+    const val CALIBRATION_REPAIR_SHOP_CODE = 0xF19A
+    const val CALIBRATION_DATE = 0xF19B
+    const val CALIBRATION_EQUIPMENT_NUMBER = 0xF19C
+    const val CALIBRATION_EQUIPMENT_VERSION = 0xF19D
+    const val CALIBRATION_VERIFICATION_NUMBER = 0xF19E
+}
+
+/**
+ * UDS Request builder
+ */
+class UDSRequest private constructor(
+    val serviceId: Int,
+    val subFunction: Int?,
+    val data: ByteArray
+) {
+    val suppressPositiveResponse: Boolean = subFunction?.let { (it and 0x80) != 0 } ?: false
+    
+    fun toByteArray(): ByteArray {
+        val size = 1 + (if (subFunction != null) 1 else 0) + data.size
+        val buffer = ByteArray(size)
+        var index = 0
+        
+        buffer[index++] = serviceId.toByte()
+        subFunction?.let { buffer[index++] = it.toByte() }
+        data.copyInto(buffer, index)
+        
+        return buffer
+    }
+    
+    companion object {
+        fun diagnosticSessionControl(session: UDSSession, suppressResponse: Boolean = false): UDSRequest {
+            val subFunc = if (suppressResponse) session.id or 0x80 else session.id
+            return UDSRequest(UDSServiceId.DIAGNOSTIC_SESSION_CONTROL, subFunc, byteArrayOf())
+        }
+        
+        fun ecuReset(resetType: Int, suppressResponse: Boolean = false): UDSRequest {
+            val subFunc = if (suppressResponse) resetType or 0x80 else resetType
+            return UDSRequest(UDSServiceId.ECU_RESET, subFunc, byteArrayOf())
+        }
+        
+        fun securityAccessRequestSeed(level: Int): UDSRequest {
+            return UDSRequest(UDSServiceId.SECURITY_ACCESS, level, byteArrayOf())
+        }
+        
+        fun securityAccessSendKey(level: Int, key: ByteArray): UDSRequest {
+            return UDSRequest(UDSServiceId.SECURITY_ACCESS, level + 1, key)
+        }
+        
+        fun testerPresent(suppressResponse: Boolean = true): UDSRequest {
+            val subFunc = if (suppressResponse) 0x80 else 0x00
+            return UDSRequest(UDSServiceId.TESTER_PRESENT, subFunc, byteArrayOf())
+        }
+        
+        fun readDataByIdentifier(vararg dids: Int): UDSRequest {
+            val data = ByteArray(dids.size * 2)
+            dids.forEachIndexed { index, did ->
+                data[index * 2] = (did shr 8).toByte()
+                data[index * 2 + 1] = (did and 0xFF).toByte()
+            }
+            return UDSRequest(UDSServiceId.READ_DATA_BY_ID, null, data)
+        }
+        
+        fun writeDataByIdentifier(did: Int, value: ByteArray): UDSRequest {
+            val data = ByteArray(2 + value.size)
+            data[0] = (did shr 8).toByte()
+            data[1] = (did and 0xFF).toByte()
+            value.copyInto(data, 2)
+            return UDSRequest(UDSServiceId.WRITE_DATA_BY_ID, null, data)
+        }
+        
+        fun readDTCInformation(subFunction: Int, dtcMask: ByteArray = byteArrayOf()): UDSRequest {
+            return UDSRequest(UDSServiceId.READ_DTC_INFO, subFunction, dtcMask)
+        }
+        
+        fun clearDiagnosticInformation(groupOfDTC: Int = 0xFFFFFF): UDSRequest {
+            val data = byteArrayOf(
+                (groupOfDTC shr 16).toByte(),
+                (groupOfDTC shr 8).toByte(),
+                (groupOfDTC and 0xFF).toByte()
+            )
+            return UDSRequest(UDSServiceId.CLEAR_DIAGNOSTIC_INFO, null, data)
+        }
+        
+        fun routineControl(
+            controlType: Int,  // 0x01=start, 0x02=stop, 0x03=request results
+            routineId: Int,
+            optionRecord: ByteArray = byteArrayOf()
+        ): UDSRequest {
+            val data = ByteArray(2 + optionRecord.size)
+            data[0] = (routineId shr 8).toByte()
+            data[1] = (routineId and 0xFF).toByte()
+            optionRecord.copyInto(data, 2)
+            return UDSRequest(UDSServiceId.ROUTINE_CONTROL, controlType, data)
+        }
+        
+        fun inputOutputControl(
+            did: Int,
+            controlParam: Int,
+            controlState: ByteArray = byteArrayOf()
+        ): UDSRequest {
+            val data = ByteArray(2 + 1 + controlState.size)
+            data[0] = (did shr 8).toByte()
+            data[1] = (did and 0xFF).toByte()
+            data[2] = controlParam.toByte()
+            controlState.copyInto(data, 3)
+            return UDSRequest(UDSServiceId.IO_CONTROL_BY_ID, null, data)
+        }
+        
+        fun readMemoryByAddress(
+            addressLength: Int,
+            sizeLength: Int,
+            address: Long,
+            size: Int
+        ): UDSRequest {
+            val addressAndLengthFormat = ((sizeLength shl 4) or addressLength).toByte()
+            val data = ByteArray(1 + addressLength + sizeLength)
+            data[0] = addressAndLengthFormat
+            
+            for (i in 0 until addressLength) {
+                data[addressLength - i] = (address shr (i * 8)).toByte()
+            }
+            for (i in 0 until sizeLength) {
+                data[1 + addressLength + sizeLength - 1 - i] = (size shr (i * 8)).toByte()
+            }
+            
+            return UDSRequest(UDSServiceId.READ_MEMORY_BY_ADDRESS, null, data)
+        }
+        
+        fun controlDTCSetting(on: Boolean): UDSRequest {
+            val subFunc = if (on) 0x01 else 0x02
+            return UDSRequest(UDSServiceId.CONTROL_DTC_SETTING, subFunc, byteArrayOf())
+        }
+        
+        fun communicationControl(controlType: Int, communicationType: Int): UDSRequest {
+            return UDSRequest(UDSServiceId.COMMUNICATION_CONTROL, controlType, byteArrayOf(communicationType.toByte()))
+        }
+    }
+}
+
+/**
+ * UDS Response parser
+ */
+sealed class UDSResponse {
+    abstract val serviceId: Int
+    abstract val raw: ByteArray
+    
+    data class Positive(
+        override val serviceId: Int,
+        override val raw: ByteArray,
+        val subFunction: Int?,
+        val data: ByteArray
+    ) : UDSResponse() {
+        val responseServiceId: Int get() = serviceId - UDSServiceId.POSITIVE_RESPONSE_OFFSET
+    }
+    
+    data class Negative(
+        override val serviceId: Int,
+        override val raw: ByteArray,
+        val requestedServiceId: Int,
+        val nrc: UDSNegativeResponseCode?,
+        val nrcCode: Int
+    ) : UDSResponse() {
+        val isResponsePending: Boolean get() = nrc == UDSNegativeResponseCode.REQUEST_CORRECTLY_RECEIVED_RESPONSE_PENDING
+    }
+    
+    data class Timeout(
+        override val serviceId: Int,
+        override val raw: ByteArray = byteArrayOf()
+    ) : UDSResponse()
+    
+    companion object {
+        fun parse(data: ByteArray): UDSResponse {
+            if (data.isEmpty()) {
+                return Timeout(0)
+            }
+            
+            val serviceId = data[0].toInt() and 0xFF
+            
+            return when {
+                serviceId == UDSServiceId.NEGATIVE_RESPONSE && data.size >= 3 -> {
+                    val requestedService = data[1].toInt() and 0xFF
+                    val nrcCode = data[2].toInt() and 0xFF
+                    Negative(
+                        serviceId = serviceId,
+                        raw = data,
+                        requestedServiceId = requestedService,
+                        nrc = UDSNegativeResponseCode.fromCode(nrcCode),
+                        nrcCode = nrcCode
+                    )
+                }
+                serviceId > UDSServiceId.POSITIVE_RESPONSE_OFFSET -> {
+                    Positive(
+                        serviceId = serviceId,
+                        raw = data,
+                        subFunction = if (data.size > 1) data[1].toInt() and 0xFF else null,
+                        data = if (data.size > 1) data.copyOfRange(1, data.size) else byteArrayOf()
+                    )
+                }
+                else -> {
+                    Timeout(serviceId, data)
+                }
+            }
+        }
+    }
+}
+
+/**
+ * UDS Protocol handler
+ */
+interface UDSProtocol {
+    
+    /** Current diagnostic session */
+    val currentSession: StateFlow<UDSSession>
+    
+    /** Security access state */
+    val isSecurityUnlocked: StateFlow<Boolean>
+    
+    /** ECU address being communicated with */
+    var targetAddress: Int
+    
+    /**
+     * Sends a UDS request and waits for response.
+     */
+    suspend fun sendRequest(request: UDSRequest, timeout: Long = 5000L): Result<UDSResponse>
+    
+    /**
+     * Sends raw bytes and waits for response.
+     */
+    suspend fun sendRaw(data: ByteArray, timeout: Long = 5000L): Result<UDSResponse>
+    
+    /**
+     * Changes diagnostic session.
+     */
+    suspend fun startSession(session: UDSSession): Result<UDSResponse.Positive>
+    
+    /**
+     * Performs security access.
+     */
+    suspend fun securityAccess(
+        level: Int,
+        seedKeyCalculator: (ByteArray) -> ByteArray
+    ): Result<Boolean>
+    
+    /**
+     * Reads data by identifier.
+     */
+    suspend fun readDataByIdentifier(vararg dids: Int): Result<Map<Int, ByteArray>>
+    
+    /**
+     * Writes data by identifier.
+     */
+    suspend fun writeDataByIdentifier(did: Int, data: ByteArray): Result<Unit>
+    
+    /**
+     * Reads VIN.
+     */
+    suspend fun readVIN(): Result<String>
+    
+    /**
+     * Reads DTCs.
+     */
+    suspend fun readDTCs(type: DTCReadType = DTCReadType.ALL_STORED): Result<List<UDSDtc>>
+    
+    /**
+     * Clears DTCs.
+     */
+    suspend fun clearDTCs(groupOfDTC: Int = 0xFFFFFF): Result<Unit>
+    
+    /**
+     * Reads memory by address.
+     */
+    suspend fun readMemory(address: Long, size: Int): Result<ByteArray>
+    
+    /**
+     * Executes routine.
+     */
+    suspend fun startRoutine(routineId: Int, optionRecord: ByteArray = byteArrayOf()): Result<ByteArray>
+    suspend fun stopRoutine(routineId: Int): Result<ByteArray>
+    suspend fun requestRoutineResults(routineId: Int): Result<ByteArray>
+    
+    /**
+     * Controls I/O.
+     */
+    suspend fun ioControl(
+        did: Int,
+        controlParam: IOControlParameter,
+        controlState: ByteArray = byteArrayOf()
+    ): Result<ByteArray>
+    
+    /**
+     * Sends tester present to keep session alive.
+     */
+    suspend fun sendTesterPresent(): Result<Unit>
+    
+    /**
+     * Starts tester present heartbeat.
+     */
+    fun startTesterPresentHeartbeat(intervalMs: Long = 2000L)
+    fun stopTesterPresentHeartbeat()
+    
+    /**
+     * Resets to default session.
+     */
+    suspend fun resetToDefaultSession(): Result<Unit>
+    
+    /**
+     * ECU reset.
+     */
+    suspend fun ecuReset(resetType: ECUResetType): Result<Unit>
+}
+
+enum class DTCReadType(val subFunction: Int) {
+    ALL_STORED(0x02),           // reportDTCByStatusMask
+    PENDING(0x07),              // reportPendingDTC
+    CONFIRMED(0x0A),            // reportSupportedDTC
+    SNAPSHOT_BY_DTC(0x04),      // reportDTCSnapshotByDTCNumber
+    EXTENDED_DATA(0x06)         // reportDTCExtendedDataRecordByDTCNumber
+}
+
+enum class IOControlParameter(val value: Int) {
+    RETURN_CONTROL_TO_ECU(0x00),
+    RESET_TO_DEFAULT(0x01),
+    FREEZE_CURRENT_STATE(0x02),
+    SHORT_TERM_ADJUSTMENT(0x03)
+}
+
+enum class ECUResetType(val value: Int) {
+    HARD_RESET(0x01),
+    KEY_OFF_ON_RESET(0x02),
+    SOFT_RESET(0x03),
+    ENABLE_RAPID_POWER_SHUTDOWN(0x04),
+    DISABLE_RAPID_POWER_SHUTDOWN(0x05)
+}
+
+/**
+ * UDS DTC representation
+ */
+data class UDSDtc(
+    val dtcHighByte: Int,
+    val dtcMiddleByte: Int,
+    val dtcLowByte: Int,
+    val statusMask: Int
+) {
+    val dtcNumber: Int get() = (dtcHighByte shl 16) or (dtcMiddleByte shl 8) or dtcLowByte
+    val dtcCode: String get() = String.format("%02X%02X%02X", dtcHighByte, dtcMiddleByte, dtcLowByte)
+    
+    // Status bits
+    val testFailed: Boolean get() = (statusMask and 0x01) != 0
+    val testFailedThisOperationCycle: Boolean get() = (statusMask and 0x02) != 0
+    val pendingDTC: Boolean get() = (statusMask and 0x04) != 0
+    val confirmedDTC: Boolean get() = (statusMask and 0x08) != 0
+    val testNotCompletedSinceLastClear: Boolean get() = (statusMask and 0x10) != 0
+    val testFailedSinceLastClear: Boolean get() = (statusMask and 0x20) != 0
+    val testNotCompletedThisOperationCycle: Boolean get() = (statusMask and 0x40) != 0
+    val warningIndicatorRequested: Boolean get() = (statusMask and 0x80) != 0
+}
+
+/**
+ * UDS Protocol implementation
+ */
+class UDSProtocolImpl @Inject constructor(
+    private val obdDataSource: OBDDataSource,
+    private val dispatchers: CoroutineDispatchers
+) : UDSProtocol {
+    
+    private val _currentSession = MutableStateFlow(UDSSession.DEFAULT)
+    override val currentSession: StateFlow<UDSSession> = _currentSession.asStateFlow()
+    
+    private val _isSecurityUnlocked = MutableStateFlow(false)
+    override val isSecurityUnlocked: StateFlow<Boolean> = _isSecurityUnlocked.asStateFlow()
+    
+    override var targetAddress: Int = 0x7E0  // Default OBD functional address
+    
+    private var testerPresentJob: Job? = null
+    private val scope = CoroutineScope(dispatchers.io + SupervisorJob())
+    
+    private val responsePendingHandler = ResponsePendingHandler()
+    
+    // Full implementation with:
+    // - Session management
+    // - Security access with seed-key
+    // - Response pending (NRC 0x78) handling
+    // - Tester present heartbeat
+    // - Multi-frame response handling via ISO-TP
+    // - Timeout and retry logic
+    
+    override suspend fun sendRequest(request: UDSRequest, timeout: Long): Result<UDSResponse> {
+        return withContext(dispatchers.io) {
+            try {
+                val requestBytes = request.toByteArray()
+                
+                // Send via OBD data source
+                val responseResult = obdDataSource.sendUDSRequest(
+                    targetAddress,
+                    requestBytes,
+                    timeout
+                )
+                
+                when (responseResult) {
+                    is Result.Success -> {
+                        val response = UDSResponse.parse(responseResult.data)
+                        
+                        // Handle response pending
+                        if (response is UDSResponse.Negative && response.isResponsePending) {
+                            handleResponsePending(request, timeout)
+                        } else {
+                            Result.Success(response)
+                        }
+                    }
+                    is Result.Error -> responseResult
+                    else -> Result.Error(ProtocolException("Unexpected result type"))
+                }
+            } catch (e: Exception) {
+                Result.Error(ProtocolException("UDS request failed: ${e.message}", e))
+            }
+        }
+    }
+    
+    private suspend fun handleResponsePending(
+        originalRequest: UDSRequest,
+        timeout: Long,
+        maxWaitTime: Long = 30_000L
+    ): Result<UDSResponse> {
+        val startTime = System.currentTimeMillis()
+        
+        while (System.currentTimeMillis() - startTime < maxWaitTime) {
+            delay(100)  // Wait before checking
+            
+            val responseResult = obdDataSource.receiveResponse(timeout)
+            when (responseResult) {
+                is Result.Success -> {
+                    val response = UDSResponse.parse(responseResult.data)
+                    if (response is UDSResponse.Negative && response.isResponsePending) {
+                        continue  // Keep waiting
+                    }
+                    return Result.Success(response)
+                }
+                is Result.Error -> return responseResult
+                else -> continue
+            }
+        }
+        
+        return Result.Error(TimeoutException("Response pending timeout"))
+    }
+    
+    override suspend fun startSession(session: UDSSession): Result<UDSResponse.Positive> {
+        val request = UDSRequest.diagnosticSessionControl(session)
+        return when (val result = sendRequest(request)) {
+            is Result.Success -> {
+                when (val response = result.data) {
+                    is UDSResponse.Positive -> {
+                        _currentSession.value = session
+                        Result.Success(response)
+                    }
+                    is UDSResponse.Negative -> {
+                        Result.Error(ProtocolException(
+                            "Session change rejected: ${response.nrc?.description ?: "NRC ${response.nrcCode}"}"
+                        ))
+                    }
+                    else -> Result.Error(ProtocolException("Unexpected response"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(ProtocolException("Unexpected result"))
+        }
+    }
+    
+    override suspend fun securityAccess(
+        level: Int,
+        seedKeyCalculator: (ByteArray) -> ByteArray
+    ): Result<Boolean> {
+        // Step 1: Request seed
+        val seedRequest = UDSRequest.securityAccessRequestSeed(level)
+        val seedResult = sendRequest(seedRequest)
+        
+        when (seedResult) {
+            is Result.Success -> {
+                val seedResponse = seedResult.data
+                if (seedResponse !is UDSResponse.Positive) {
+                    return Result.Error(ProtocolException("Seed request rejected"))
+                }
+                
+                val seed = seedResponse.data.drop(1).toByteArray()  // Skip sub-function
+                
+                // Check if already unlocked (zero seed)
+                if (seed.all { it == 0.toByte() }) {
+                    _isSecurityUnlocked.value = true
+                    return Result.Success(true)
+                }
+                
+                // Step 2: Calculate and send key
+                val key = seedKeyCalculator(seed)
+                val keyRequest = UDSRequest.securityAccessSendKey(level, key)
+                val keyResult = sendRequest(keyRequest)
+                
+                when (keyResult) {
+                    is Result.Success -> {
+                        val keyResponse = keyResult.data
+                        if (keyResponse is UDSResponse.Positive) {
+                            _isSecurityUnlocked.value = true
+                            return Result.Success(true)
+                        } else if (keyResponse is UDSResponse.Negative) {
+                            _isSecurityUnlocked.value = false
+                            return Result.Error(ProtocolException(
+                                "Security access denied: ${keyResponse.nrc?.description}"
+                            ))
+                        }
+                    }
+                    is Result.Error -> return keyResult
+                    else -> {}
+                }
+            }
+            is Result.Error -> return seedResult
+            else -> {}
+        }
+        
+        return Result.Error(ProtocolException("Security access failed"))
+    }
+    
+    override suspend fun readDataByIdentifier(vararg dids: Int): Result<Map<Int, ByteArray>> {
+        val request = UDSRequest.readDataByIdentifier(*dids)
+        return when (val result = sendRequest(request)) {
+            is Result.Success -> {
+                when (val response = result.data) {
+                    is UDSResponse.Positive -> {
+                        val dataMap = parseReadDataResponse(response.data, dids.toList())
+                        Result.Success(dataMap)
+                    }
+                    is UDSResponse.Negative -> {
+                        Result.Error(ProtocolException("Read failed: ${response.nrc?.description}"))
+                    }
+                    else -> Result.Error(ProtocolException("Unexpected response"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(ProtocolException("Unexpected result"))
+        }
+    }
+    
+    private fun parseReadDataResponse(data: ByteArray, requestedDids: List<Int>): Map<Int, ByteArray> {
+        val result = mutableMapOf<Int, ByteArray>()
+        var index = 0
+        
+        while (index + 2 <= data.size) {
+            val did = ((data[index].toInt() and 0xFF) shl 8) or (data[index + 1].toInt() and 0xFF)
+            index += 2
+            
+            // Find next DID or end of data
+            var endIndex = data.size
+            for (nextOffset in index + 2 until data.size - 1 step 1) {
+                val potentialDid = ((data[nextOffset].toInt() and 0xFF) shl 8) or 
+                                   (data[nextOffset + 1].toInt() and 0xFF)
+                if (requestedDids.contains(potentialDid)) {
+                    endIndex = nextOffset
+                    break
+                }
+            }
+            
+            result[did] = data.copyOfRange(index, endIndex)
+            index = endIndex
+        }
+        
+        return result
+    }
+    
+    override suspend fun readVIN(): Result<String> {
+        return when (val result = readDataByIdentifier(UDSDataIdentifier.VIN)) {
+            is Result.Success -> {
+                val vinData = result.data[UDSDataIdentifier.VIN]
+                if (vinData != null && vinData.size >= 17) {
+                    Result.Success(String(vinData.takeLast(17).toByteArray(), Charsets.US_ASCII))
+                } else {
+                    Result.Error(ProtocolException("Invalid VIN data"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(ProtocolException("Failed to read VIN"))
+        }
+    }
+    
+    override suspend fun readDTCs(type: DTCReadType): Result<List<UDSDtc>> {
+        val request = UDSRequest.readDTCInformation(
+            type.subFunction,
+            byteArrayOf(0xFF.toByte())  // Status mask: all
+        )
+        
+        return when (val result = sendRequest(request)) {
+            is Result.Success -> {
+                when (val response = result.data) {
+                    is UDSResponse.Positive -> {
+                        val dtcs = parseDTCResponse(response.data)
+                        Result.Success(dtcs)
+                    }
+                    is UDSResponse.Negative -> {
+                        Result.Error(ProtocolException("Read DTCs failed: ${response.nrc?.description}"))
+                    }
+                    else -> Result.Error(ProtocolException("Unexpected response"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(ProtocolException("Failed to read DTCs"))
+        }
+    }
+    
+    private fun parseDTCResponse(data: ByteArray): List<UDSDtc> {
+        val dtcs = mutableListOf<UDSDtc>()
+        
+        if (data.size < 3) return dtcs
+        
+        // Skip sub-function and availability status mask
+        var index = 2
+        
+        while (index + 4 <= data.size) {
+            val highByte = data[index].toInt() and 0xFF
+            val middleByte = data[index + 1].toInt() and 0xFF
+            val lowByte = data[index + 2].toInt() and 0xFF
+            val status = data[index + 3].toInt() and 0xFF
+            
+            dtcs.add(UDSDtc(highByte, middleByte, lowByte, status))
+            index += 4
+        }
+        
+        return dtcs
+    }
+    
+    override suspend fun clearDTCs(groupOfDTC: Int): Result<Unit> {
+        val request = UDSRequest.clearDiagnosticInformation(groupOfDTC)
+        return when (val result = sendRequest(request, timeout = 10_000L)) {
+            is Result.Success -> {
+                when (result.data) {
+                    is UDSResponse.Positive -> Result.Success(Unit)
+                    is UDSResponse.Negative -> {
+                        val neg = result.data as UDSResponse.Negative
+                        Result.Error(ProtocolException("Clear DTCs failed: ${neg.nrc?.description}"))
+                    }
+                    else -> Result.Error(ProtocolException("Unexpected response"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(ProtocolException("Failed to clear DTCs"))
+        }
+    }
+    
+    override fun startTesterPresentHeartbeat(intervalMs: Long) {
+        stopTesterPresentHeartbeat()
+        testerPresentJob = scope.launch {
+            while (isActive) {
+                delay(intervalMs)
+                try {
+                    sendTesterPresent()
+                } catch (e: Exception) {
+                    // Log but continue
+                }
+            }
+        }
+    }
+    
+    override fun stopTesterPresentHeartbeat() {
+        testerPresentJob?.cancel()
+        testerPresentJob = null
+    }
+    
+    override suspend fun sendTesterPresent(): Result<Unit> {
+        val request = UDSRequest.testerPresent(suppressResponse = true)
+        return when (sendRequest(request, timeout = 1000L)) {
+            is Result.Success -> Result.Success(Unit)
+            is Result.Error -> Result.Success(Unit)  // Suppress response, so OK
+            else -> Result.Success(Unit)
+        }
+    }
+    
+    // ... Additional method implementations ...
+}
+
+/**
+ * Response pending handler
+ */
+class ResponsePendingHandler {
+    private var pendingResponses = mutableListOf<UDSResponse.Negative>()
+    
+    fun addPending(response: UDSResponse.Negative) {
+        if (response.isResponsePending) {
+            pendingResponses.add(response)
+        }
+    }
+    
+    fun clear() {
+        pendingResponses.clear()
+    }
+}
+```
+
+---
+
+## FILE 8: OBDDataSource.kt (Device Data Source)
+
+Location: `data/src/main/java/com/spacetec/data/datasource/device/OBDDataSource.kt`
+
+```kotlin
+/**
+ * Data source for OBD device communication.
+ * 
+ * Provides abstraction over scanner communication for sending OBD/UDS requests
+ * and receiving responses. Handles protocol formatting and response parsing.
+ */
+```
+
+Requirements:
+
+```kotlin
+// ═══════════════════════════════════════════════════════════════════════════
+// OBD DATA SOURCE
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * OBD request configuration
+ */
+data class OBDRequestConfig(
+    val timeout: Long = 5000L,
+    val retries: Int = 2,
+    val expectMultiFrame: Boolean = false,
+    val waitForAllResponses: Boolean = false,
+    val responseWaitTime: Long = 100L
+)
+
+/**
+ * OBD response data
+ */
+data class OBDResponseData(
+    val rawResponse: String,
+    val bytes: ByteArray,
+    val ecuAddress: Int?,
+    val timestamp: Long = System.currentTimeMillis(),
+    val isMultiFrame: Boolean = false
+) {
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+        other as OBDResponseData
+        return bytes.contentEquals(other.bytes)
+    }
+    
+    override fun hashCode(): Int = bytes.contentHashCode()
+}
+
+/**
+ * OBD data source interface
+ */
+interface OBDDataSource {
+    
+    /** Whether source is connected and ready */
+    val isReady: StateFlow<Boolean>
+    
+    /** Last communication error */
+    val lastError: StateFlow<Throwable?>
+    
+    /**
+     * Initializes the data source with scanner connection.
+     */
+    suspend fun initialize(connection: ScannerConnection): Result<Unit>
+    
+    /**
+     * Sends OBD Mode/PID request.
+     * 
+     * @param mode OBD mode (01-0A)
+     * @param pid PID to request
+     * @param config Request configuration
+     * @return Response data or error
+     */
+    suspend fun sendOBDRequest(
+        mode: Int,
+        pid: Int,
+        config: OBDRequestConfig = OBDRequestConfig()
+    ): Result<OBDResponseData>
+    
+    /**
+     * Sends OBD request with multiple PIDs.
+     */
+    suspend fun sendOBDRequest(
+        mode: Int,
+        pids: List<Int>,
+        config: OBDRequestConfig = OBDRequestConfig()
+    ): Result<List<OBDResponseData>>
+    
+    /**
+     * Sends UDS request to specific ECU.
+     * 
+     * @param ecuAddress Target ECU address
+     * @param data UDS request bytes
+     * @param timeout Response timeout
+     * @return Response bytes or error
+     */
+    suspend fun sendUDSRequest(
+        ecuAddress: Int,
+        data: ByteArray,
+        timeout: Long = 5000L
+    ): Result<ByteArray>
+    
+    /**
+     * Sends UDS request and receives all responses (for broadcast).
+     */
+    suspend fun sendUDSRequestBroadcast(
+        data: ByteArray,
+        timeout: Long = 5000L
+    ): Result<List<Pair<Int, ByteArray>>>  // List of (ECU address, response)
+    
+    /**
+     * Receives response (for response pending handling).
+     */
+    suspend fun receiveResponse(timeout: Long = 5000L): Result<ByteArray>
+    
+    /**
+     * Sends raw AT command.
+     */
+    suspend fun sendATCommand(command: String, timeout: Long = 2000L): Result<String>
+    
+    /**
+     * Sets ECU header for subsequent requests.
+     */
+    suspend fun setHeader(header: Int, extended: Boolean = false): Result<Unit>
+    
+    /**
+     * Sets receive filter for specific ECU.
+     */
+    suspend fun setReceiveFilter(ecuAddress: Int?): Result<Unit>
+    
+    /**
+     * Configures flow control for ISO-TP.
+     */
+    suspend fun configureFlowControl(
+        header: Int,
+        data: ByteArray,
+        mode: Int = 0
+    ): Result<Unit>
+    
+    /**
+     * Reads supported PIDs for mode 01.
+     */
+    suspend fun readSupportedPIDs(): Result<Set<Int>>
+    
+    /**
+     * Reads stored DTCs (Mode 03).
+     */
+    suspend fun readStoredDTCs(): Result<List<String>>
+    
+    /**
+     * Reads pending DTCs (Mode 07).
+     */
+    suspend fun readPendingDTCs(): Result<List<String>>
+    
+    /**
+     * Clears DTCs (Mode 04).
+     */
+    suspend fun clearDTCs(): Result<Unit>
+    
+    /**
+     * Reads vehicle info (Mode 09).
+     */
+    suspend fun readVehicleInfo(infoType: Int): Result<ByteArray>
+    
+    /**
+     * Reads VIN.
+     */
+    suspend fun readVIN(): Result<String>
+    
+    /**
+     * Reads multiple PIDs in batch.
+     */
+    suspend fun readPIDBatch(pids: List<Int>): Flow<Pair<Int, OBDResponseData>>
+    
+    /**
+     * Starts continuous PID reading.
+     */
+    fun startContinuousReading(
+        pids: List<Int>,
+        intervalMs: Long = 100L
+    ): Flow<Map<Int, OBDResponseData>>
+    
+    /**
+     * Closes the data source.
+     */
+    suspend fun close()
+}
+
+/**
+ * OBD data source implementation
+ */
+class OBDDataSourceImpl @Inject constructor(
+    private val elm327CommandHandler: ELM327CommandHandler,
+    private val dispatchers: CoroutineDispatchers
+) : OBDDataSource {
+    
+    private var connection: ScannerConnection? = null
+    private val connectionMutex = Mutex()
+    
+    private val _isReady = MutableStateFlow(false)
+    override val isReady: StateFlow<Boolean> = _isReady.asStateFlow()
+    
+    private val _lastError = MutableStateFlow<Throwable?>(null)
+    override val lastError: StateFlow<Throwable?> = _lastError.asStateFlow()
+    
+    private var currentHeader: Int? = null
+    private var currentProtocol: ProtocolType = ProtocolType.AUTO
+    
+    override suspend fun initialize(connection: ScannerConnection): Result<Unit> {
+        return connectionMutex.withLock {
+            try {
+                this.connection = connection
+                _isReady.value = true
+                _lastError.value = null
+                Result.Success(Unit)
+            } catch (e: Exception) {
+                _isReady.value = false
+                _lastError.value = e
+                Result.Error(e)
+            }
+        }
+    }
+    
+    override suspend fun sendOBDRequest(
+        mode: Int,
+        pid: Int,
+        config: OBDRequestConfig
+    ): Result<OBDResponseData> = withContext(dispatchers.io) {
+        connectionMutex.withLock {
+            val conn = connection ?: return@withContext Result.Error(
+                ConnectionException("Not connected")
+            )
+            
+            val command = ELM327Commands.requestPID(mode, pid)
+            
+            retry(config.retries) {
+                val result = conn.sendAndReceive(command, config.timeout)
+                
+                when (result) {
+                    is Result.Success -> {
+                        parseOBDResponse(result.data)
+                    }
+                    is Result.Error -> result
+                    else -> Result.Error(CommunicationException("Unexpected result"))
+                }
+            }
+        }
+    }
+    
+    override suspend fun sendUDSRequest(
+        ecuAddress: Int,
+        data: ByteArray,
+        timeout: Long
+    ): Result<ByteArray> = withContext(dispatchers.io) {
+        connectionMutex.withLock {
+            val conn = connection ?: return@withContext Result.Error(
+                ConnectionException("Not connected")
+            )
+            
+            // Set header if different from current
+            if (currentHeader != ecuAddress) {
+                val headerResult = setHeaderInternal(conn, ecuAddress)
+                if (headerResult is Result.Error) return@withContext headerResult
+                currentHeader = ecuAddress
+            }
+            
+            // Convert bytes to hex command
+            val hexCommand = data.toHexSpaced()
+            
+            // Send and receive
+            val result = conn.sendAndReceive(hexCommand, timeout)
+            
+            when (result) {
+                is Result.Success -> {
+                    val parsed = elm327CommandHandler.parseOBDResponse(result.data)
+                    when (parsed) {
+                        is Result.Success -> Result.Success(parsed.data)
+                        is Result.Error -> parsed
+                        else -> Result.Error(ProtocolException("Parse failed"))
+                    }
+                }
+                is Result.Error -> result
+                else -> Result.Error(CommunicationException("Unexpected result"))
+            }
+        }
+    }
+    
+    private suspend fun setHeaderInternal(
+        conn: ScannerConnection,
+        header: Int
+    ): Result<Unit> {
+        val command = ELM327Commands.setHeader(header)
+        val result = conn.sendAndReceive(command, 1000L)
+        
+        return when (result) {
+            is Result.Success -> {
+                if (result.data.contains("OK", ignoreCase = true)) {
+                    Result.Success(Unit)
+                } else {
+                    Result.Error(ProtocolException("Failed to set header"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(CommunicationException("Unexpected result"))
+        }
+    }
+    
+    override suspend fun sendATCommand(command: String, timeout: Long): Result<String> {
+        return withContext(dispatchers.io) {
+            connectionMutex.withLock {
+                val conn = connection ?: return@withContext Result.Error(
+                    ConnectionException("Not connected")
+                )
+                conn.sendAndReceive(command, timeout)
+            }
+        }
+    }
+    
+    override suspend fun setHeader(header: Int, extended: Boolean): Result<Unit> {
+        return withContext(dispatchers.io) {
+            connectionMutex.withLock {
+                val conn = connection ?: return@withContext Result.Error(
+                    ConnectionException("Not connected")
+                )
+                
+                val result = setHeaderInternal(conn, header)
+                if (result is Result.Success) {
+                    currentHeader = header
+                }
+                result
+            }
+        }
+    }
+    
+    override suspend fun readSupportedPIDs(): Result<Set<Int>> {
+        val allPIDs = mutableSetOf<Int>()
+        
+        // Read PID support ranges
+        val ranges = listOf(
+            ELM327Commands.SUPPORTED_PIDS_01_20 to 0x00,
+            ELM327Commands.SUPPORTED_PIDS_21_40 to 0x20,
+            ELM327Commands.SUPPORTED_PIDS_41_60 to 0x40,
+            ELM327Commands.SUPPORTED_PIDS_61_80 to 0x60
+        )
+        
+        for ((command, startPID) in ranges) {
+            val result = sendATCommand(command, 5000L)
+            when (result) {
+                is Result.Success -> {
+                    val parsed = elm327CommandHandler.parseOBDResponse(result.data)
+                    if (parsed is Result.Success) {
+                        val pids = elm327CommandHandler.parseSupportedPIDs(parsed.data, startPID)
+                        allPIDs.addAll(pids)
+                        
+                        // Check if next range is supported
+                        if (!pids.contains(startPID + 0x20)) {
+                            break
+                        }
+                    }
+                }
+                else -> break
+            }
+        }
+        
+        return Result.Success(allPIDs)
+    }
+    
+    override suspend fun readStoredDTCs(): Result<List<String>> {
+        val result = sendATCommand(ELM327Commands.READ_STORED_DTCS, 5000L)
+        return when (result) {
+            is Result.Success -> {
+                val parsed = elm327CommandHandler.parseOBDResponse(result.data)
+                when (parsed) {
+                    is Result.Success -> {
+                        val dtcs = elm327CommandHandler.parseDTCs(parsed.data)
+                        Result.Success(dtcs)
+                    }
+                    is Result.Error -> parsed
+                    else -> Result.Error(ProtocolException("Failed to parse DTCs"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(CommunicationException("Unexpected result"))
+        }
+    }
+    
+    override suspend fun readPendingDTCs(): Result<List<String>> {
+        val result = sendATCommand(ELM327Commands.READ_PENDING_DTCS, 5000L)
+        return when (result) {
+            is Result.Success -> {
+                val parsed = elm327CommandHandler.parseOBDResponse(result.data)
+                when (parsed) {
+                    is Result.Success -> {
+                        val dtcs = elm327CommandHandler.parseDTCs(parsed.data)
+                        Result.Success(dtcs)
+                    }
+                    is Result.Error -> parsed
+                    else -> Result.Error(ProtocolException("Failed to parse DTCs"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(CommunicationException("Unexpected result"))
+        }
+    }
+    
+    override suspend fun clearDTCs(): Result<Unit> {
+        val result = sendATCommand(ELM327Commands.CLEAR_DTCS, 10000L)
+        return when (result) {
+            is Result.Success -> {
+                if (result.data.contains("44") || result.data.contains("OK", ignoreCase = true)) {
+                    Result.Success(Unit)
+                } else {
+                    Result.Error(ProtocolException("Failed to clear DTCs: ${result.data}"))
+                }
+            }
+            is Result.Error -> result
+            else -> Result.Error(CommunicationException("Unexpected result"))
+        }
+    }
+    
+    override suspend fun readVIN(): Result<String> {
+        val result = sendATCommand(ELM327Commands.GET_VIN, 5000L)
+        return when (result) {
+            is Result.Success -> {
+                parseVINResponse(result.data)
+            }
+            is Result.Error -> result
+            else -> Result.Error(CommunicationException("Unexpected result"))
+        }
+    }
+    
+    private fun parseVINResponse(response: String): Result<String> {
+        // VIN comes as multi-line ISO-TP response
+        val lines = response.split("\r", "\n").filter { 
+            it.isNotBlank() && !it.startsWith(">") 
+        }
+        
+        if (lines.isEmpty()) {
+            return Result.Error(ProtocolException("No VIN data"))
+        }
+        
+        // Parse ISO-TP frames and extract VIN
+        val vinBytes = mutableListOf<Byte>()
+        
+        for (line in lines) {
+            val parsed = elm327CommandHandler.parseOBDResponse(line)
+            if (parsed is Result.Success) {
+                val bytes = parsed.data
+                // Skip mode/PID bytes and extract data
+                if (bytes.isNotEmpty()) {
+                    // First frame: skip 49 02 01 (mode response, PID, count)
+                    // Consecutive frames: skip sequence number
+                    val dataStart = when {
+                        bytes[0].toInt() and 0xFF == 0x49 -> 3
+                        else -> 1
+                    }
+                    if (dataStart < bytes.size) {
+                        vinBytes.addAll(bytes.drop(dataStart))
+                    }
+                }
+            }
+        }
+        
+        // VIN is 17 characters
+        if (vinBytes.size < 17) {
+            return Result.Error(ProtocolException("VIN too short: ${vinBytes.size}"))
+        }
+        
+        val vin = String(vinBytes.take(17).toByteArray(), Charsets.US_ASCII)
+            .filter { it.isLetterOrDigit() }
+        
+        return if (vin.length == 17) {
+            Result.Success(vin)
+        } else {
+            Result.Error(ProtocolException("Invalid VIN: $vin"))
+        }
+    }
+    
+    override fun startContinuousReading(
+        pids: List<Int>,
+        intervalMs: Long
+    ): Flow<Map<Int, OBDResponseData>> = flow {
+        while (currentCoroutineContext().isActive) {
+            val results = mutableMapOf<Int, OBDResponseData>()
+            
+            for (pid in pids) {
+                val result = sendOBDRequest(0x01, pid)
+                if (result is Result.Success) {
+                    results[pid] = result.data
+                }
+            }
+            
+            emit(results)
+            delay(intervalMs)
+        }
+    }.flowOn(dispatchers.io)
+    
+    override suspend fun close() {
+        connectionMutex.withLock {
+            connection = null
+            _isReady.value = false
+        }
+    }
+    
+    private fun parseOBDResponse(response: String): Result<OBDResponseData> {
+        // Check for errors
+        if (ELM327Commands.ResponsePatterns.ERROR.containsMatchIn(response)) {
+            return Result.Error(ProtocolException("OBD error: $response"))
+        }
+        
+        val parsed = elm327CommandHandler.parseOBDResponse(response)
+        return when (parsed) {
+            is Result.Success -> {
+                Result.Success(OBDResponseData(
+                    rawResponse = response,
+                    bytes = parsed.data,
+                    ecuAddress = extractECUAddress(response)
+                ))
+            }
+            is Result.Error -> parsed
+            else -> Result.Error(ProtocolException("Parse failed"))
+        }
+    }
+    
+    private fun extractECUAddress(response: String): Int? {
+        // If headers are enabled, first bytes are ECU address
+        // Format: "7E8 04 41 0C 1A F8"
+        val parts = response.trim().split(" ")
+        if (parts.size >= 2 && parts[0].length == 3) {
+            return parts[0].toIntOrNull(16)
+        }
+        return null
+    }
+    
+    private suspend fun <T> retry(
+        times: Int,
+        block: suspend () -> Result<T>
+    ): Result<T> {
+        var lastError: Result.Error? = null
+        repeat(times) {
+            when (val result = block()) {
+                is Result.Success -> return result
+                is Result.Error -> lastError = result
+                else -> {}
+            }
+            delay(100)
+        }
+        return lastError ?: Result.Error(CommunicationException("Retry failed"))
+    }
+    
+    override suspend fun receiveResponse(timeout: Long): Result<ByteArray> {
+        return withContext(dispatchers.io) {
+            connectionMutex.withLock {
+                val conn = connection ?: return@withContext Result.Error(
+                    ConnectionException("Not connected")
+                )
+                
+                when (val result = conn.readUntil(">", timeout)) {
+                    is Result.Success -> {
+                        val parsed = elm327CommandHandler.parseOBDResponse(result.data)
+                        when (parsed) {
+                            is Result.Success -> Result.Success(parsed.data)
+                            is Result.Error -> parsed
+                            else -> Result.Error(ProtocolException("Parse failed"))
+                        }
+                    }
+                    is Result.Error -> result
+                    else -> Result.Error(CommunicationException("Unexpected result"))
+                }
+            }
+        }
+    }
+    
+    // Additional implementations...
+}
+```
+
+---
+
+## FILE 9: VehicleRepositoryImpl.kt (Repository Implementation)
+
+Location: `data/src/main/java/com/spacetec/data/repository/VehicleRepositoryImpl.kt`
+
+```kotlin
+/**
+ * Vehicle repository implementation.
+ * 
+ * Coordinates between local database, remote data sources, and device
+ * communication to provide vehicle data and operations.
+ */
+```
+
+Requirements:
+
+```kotlin
+// ═══════════════════════════════════════════════════════════════════════════
+// VEHICLE REPOSITORY IMPLEMENTATION
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Vehicle repository interface (from domain layer)
+ */
+interface VehicleRepository {
+    
+    /** Currently connected vehicle */
+    val connectedVehicle: StateFlow<Vehicle?>
+    
+    /** Connection state */
+    val connectionState: StateFlow<VehicleConnectionState>
+    
+    /** All saved vehicles */
+    val savedVehicles: Flow<List<VehicleSummary>>
+    
+    /**
+     * Connects to a vehicle via scanner.
+     */
+    suspend fun connectToVehicle(scanner: Scanner): Result<Vehicle>
+    
+    /**
+     * Disconnects from current vehicle.
+     */
+    suspend fun disconnectFromVehicle()
+    
+    /**
+     * Identifies connected vehicle.
+     */
+    suspend fun identifyVehicle(): Result<Vehicle>
+    
+    /**
+     * Gets vehicle by ID.
+     */
+    suspend fun getVehicle(id: String): Vehicle?
+    
+    /**
+     * Gets vehicle by VIN.
+     */
+    suspend fun getVehicleByVIN(vin: String): Vehicle?
+    
+    /**
+     * Saves vehicle.
+     */
+    suspend fun saveVehicle(vehicle: Vehicle): Result<Vehicle>
+    
+    /**
+     * Deletes vehicle.
+     */
+    suspend fun deleteVehicle(id: String): Result<Unit>
+    
+    /**
+     * Gets vehicle capabilities.
+     */
+    suspend fun getVehicleCapabilities(): Result<VehicleCapabilities>
+    
+    /**
+     * Reads VIN from vehicle.
+     */
+    suspend fun readVIN(): Result<VIN>
+    
+    /**
+     * Gets vehicle brands.
+     */
+    suspend fun getVehicleBrands(): List<VehicleBrand>
+    
+    /**
+     * Gets vehicle models for brand.
+     */
+    suspend fun getVehicleModels(brandId: String): List<VehicleModel>
+    
+    /**
+     * Decodes VIN to get vehicle info.
+     */
+    suspend fun decodeVIN(vin: String): Result<VehicleInfo>
+    
+    /**
+     * Scans for ECUs.
+     */
+    suspend fun scanECUs(): Result<List<VehicleECU>>
+    
+    /**
+     * Updates vehicle with scanned info.
+     */
+    suspend fun updateVehicleInfo(vehicle: Vehicle): Result<Vehicle>
+}
+
+/**
+ * Vehicle info from VIN decoding
+ */
+data class VehicleInfo(
+    val vin: VIN,
+    val brand: VehicleBrand?,
+    val model: VehicleModel?,
+    val year: Int?,
+    val engineCode: String?,
+    val fuelType: FuelType?,
+    val transmissionType: TransmissionType?
+)
+
+/**
+ * Vehicle repository implementation
+ */
+class VehicleRepositoryImpl @Inject constructor(
+    private val vehicleLocalDataSource: VehicleLocalDataSource,
+    private val vehicleRemoteDataSource: VehicleRemoteDataSource,
+    private val obdDataSource: OBDDataSource,
+    private val scannerManager: ScannerManager,
+    private val vehicleDao: VehicleDao,
+    private val vehicleMapper: VehicleMapper,
+    private val vinDecoder: VINDecoderService,
+    private val dispatchers: CoroutineDispatchers
+) : VehicleRepository {
+    
+    private val _connectedVehicle = MutableStateFlow<Vehicle?>(null)
+    override val connectedVehicle: StateFlow<Vehicle?> = _connectedVehicle.asStateFlow()
+    
+    private val _connectionState = MutableStateFlow(VehicleConnectionState.DISCONNECTED)
+    override val connectionState: StateFlow<VehicleConnectionState> = _connectionState.asStateFlow()
+    
+    override val savedVehicles: Flow<List<VehicleSummary>> = vehicleDao
+        .getAllVehicles()
+        .map { entities -> entities.map { vehicleMapper.entityToSummary(it) } }
+        .flowOn(dispatchers.io)
+    
+    private val scope = CoroutineScope(dispatchers.io + SupervisorJob())
+    
+    override suspend fun connectToVehicle(scanner: Scanner): Result<Vehicle> {
+        return withContext(dispatchers.io) {
+            try {
+                _connectionState.value = VehicleConnectionState.CONNECTING
+                
+                // Connect scanner
+                val scannerResult = scannerManager.connect(scanner)
+                if (scannerResult is Result.Error) {
+                    _connectionState.value = VehicleConnectionState.ERROR
+                    return@withContext scannerResult
+                }
+                
+                val initResult = scannerResult as Result.Success
+                
+                // Initialize OBD data source
+                val connection = scannerManager.getConnection()
+                    ?: return@withContext Result.Error(ConnectionException("No connection"))
+                
+                obdDataSource.initialize(connection)
+                
+                _connectionState.value = VehicleConnectionState.INITIALIZING
+                
+                // Create initial vehicle
+                val protocol = initResult.data.detectedProtocol
+                val vehicle = Vehicle(
+                    id = UUID.randomUUID().toString(),
+                    vin = null,
+                    brand = null,
+                    model = null,
+                    variant = null,
+                    year = null,
+                    displayName = "Connected Vehicle",
+                    licensePlate = null,
+                    mileage = null,
+                    lastDiagnosticDate = null,
+                    capabilities = null,
+                    ecuList = emptyList(),
+                    detectedProtocol = protocol,
+                    connectionState = VehicleConnectionState.INITIALIZING
+                )
+                
+                _connectedVehicle.value = vehicle
+                
+                // Identify vehicle
+                _connectionState.value = VehicleConnectionState.IDENTIFYING
+                val identifiedVehicle = identifyVehicleInternal(vehicle)
+                
+                _connectedVehicle.value = identifiedVehicle
+                _connectionState.value = VehicleConnectionState.CONNECTED
+                
+                Result.Success(identifiedVehicle)
+                
+            } catch (e: Exception) {
+                _connectionState.value = VehicleConnectionState.ERROR
+                _connectedVehicle.value = null
+                Result.Error(ConnectionException("Failed to connect: ${e.message}", e))
+            }
+        }
+    }
+    
+    override suspend fun disconnectFromVehicle() {
+        withContext(dispatchers.io) {
+            try {
+                // Save vehicle if identified
+                _connectedVehicle.value?.let { vehicle ->
+                    if (vehicle.hasVIN) {
+                        saveVehicle(vehicle.copy(
+                            connectionState = VehicleConnectionState.DISCONNECTED,
+                            lastDiagnosticDate = System.currentTimeMillis()
+                        ))
+                    }
+                }
+                
+                obdDataSource.close()
+                scannerManager.disconnect()
+                
+            } finally {
+                _connectedVehicle.value = null
+                _connectionState.value = VehicleConnectionState.DISCONNECTED
+            }
+        }
+    }
+    
+    override suspend fun identifyVehicle(): Result<Vehicle> {
+        val currentVehicle = _connectedVehicle.value
+            ?: return Result.Error(ConnectionException("No vehicle connected"))
+        
+        return try {
+            val identifiedVehicle = identifyVehicleInternal(currentVehicle)
+            _connectedVehicle.value = identifiedVehicle
+            Result.Success(identifiedVehicle)
+        } catch (e: Exception) {
+            Result.Error(e)
+        }
+    }
+    
+    private suspend fun identifyVehicleInternal(vehicle: Vehicle): Vehicle {
+        var updatedVehicle = vehicle
+        
+        // Read VIN
+        val vinResult = readVIN()
+        if (vinResult is Result.Success) {
+            updatedVehicle = updatedVehicle.copy(vin = vinResult.data)
+            
+            // Decode VIN
+            val decodeResult = decodeVIN(vinResult.data.raw)
+            if (decodeResult is Result.Success) {
+                val info = decodeResult.data
+                updatedVehicle = updatedVehicle.copy(
+                    brand = info.brand,
+                    model = info.model,
+                    year = info.year,
+                    displayName = buildDisplayName(info)
+                )
+            }
+        }
+        
+        // Get capabilities
+        val capsResult = getVehicleCapabilities()
+        if (capsResult is Result.Success) {
+            updatedVehicle = updatedVehicle.copy(
+                capabilities = capsResult.data,
+                ecuList = capsResult.data.ecuList
+            )
+        }
+        
+        return updatedVehicle.copy(connectionState = VehicleConnectionState.CONNECTED)
+    }
+    
+    private fun buildDisplayName(info: VehicleInfo): String {
+        return buildString {
+            info.year?.let { append("$it ") }
+            info.brand?.let { append("${it.displayName} ") }
+            info.model?.let { append(it.name) }
+        }.trim().ifEmpty { "Unknown Vehicle" }
+    }
+    
+    override suspend fun getVehicle(id: String): Vehicle? {
+        return withContext(dispatchers.io) {
+            vehicleDao.getVehicleById(id)?.let { vehicleMapper.entityToDomain(it) }
+        }
+    }
+    
+    override suspend fun getVehicleByVIN(vin: String): Vehicle? {
+        return withContext(dispatchers.io) {
+            vehicleDao.getVehicleByVIN(vin)?.let { vehicleMapper.entityToDomain(it) }
+        }
+    }
+    
+    override suspend fun saveVehicle(vehicle: Vehicle): Result<Vehicle> {
+        return withContext(dispatchers.io) {
+            try {
+                val entity = vehicleMapper.domainToEntity(vehicle)
+                vehicleDao.insertOrUpdate(entity)
+                Result.Success(vehicle)
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+    
+    override suspend fun deleteVehicle(id: String): Result<Unit> {
+        return withContext(dispatchers.io) {
+            try {
+                vehicleDao.deleteById(id)
+                Result.Success(Unit)
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+    
+    override suspend fun getVehicleCapabilities(): Result<VehicleCapabilities> {
+        return withContext(dispatchers.io) {
+            try {
+                // Read supported PIDs
+                val pidsResult = obdDataSource.readSupportedPIDs()
+                val supportedPIDs = if (pidsResult is Result.Success) pidsResult.data else emptySet()
+                
+                // Determine supported features based on PIDs
+                val capabilities = VehicleCapabilities(
+                    supportedPIDs = supportedPIDs,
+                    supportedDTCTypes = determineSupportedDTCTypes(),
+                    supportedMonitors = determineSupportedMonitors(supportedPIDs),
+                    supportsFreezeFrame = true,  // Mode 02 is mandatory
+                    supportsOxygenSensorTest = supportedPIDs.any { it in 0x14..0x1B },
+                    supportsComponentTest = true,  // Mode 06
+                    supportsVehicleInfo = checkMode09Support(),
+                    supportsPermanentDTCs = checkMode0ASupport(),
+                    ecuList = scanECUsInternal(),
+                    detectedProtocol = _connectedVehicle.value?.detectedProtocol
+                        ?: DetectedProtocol(ProtocolType.UNKNOWN, "Unknown", true, 500000, 3)
+                )
+                
+                Result.Success(capabilities)
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+    
+    private suspend fun determineSupportedDTCTypes(): Set<DTCType> {
+        val types = mutableSetOf<DTCType>()
+        
+        // Mode 03 - stored DTCs (always supported)
+        types.add(DTCType.STORED)
+        
+        // Mode 07 - pending DTCs
+        types.add(DTCType.PENDING)
+        
+        // Mode 0A - permanent DTCs (check if supported)
+        if (checkMode0ASupport()) {
+            types.add(DTCType.PERMANENT)
+        }
+        
+        return types
+    }
+    
+    private fun determineSupportedMonitors(supportedPIDs: Set<Int>): Set<MonitorType> {
+        val monitors = mutableSetOf<MonitorType>()
+        
+        // Check PID 01 for monitor status
+        if (0x01 in supportedPIDs) {
+            // Monitor support is in PID 01 response
+            monitors.add(MonitorType.MISFIRE)
+            monitors.add(MonitorType.FUEL_SYSTEM)
+            monitors.add(MonitorType.COMPREHENSIVE_COMPONENT)
+        }
+        
+        // Add more based on PID availability
+        if (0x41 in supportedPIDs) {
+            monitors.add(MonitorType.CATALYST)
+            monitors.add(MonitorType.EVAP_SYSTEM)
+            monitors.add(MonitorType.OXYGEN_SENSOR)
+            monitors.add(MonitorType.OXYGEN_SENSOR_HEATER)
+            monitors.add(MonitorType.EGR_VVT)
+        }
+        
+        return monitors
+    }
+    
+    private suspend fun checkMode09Support(): Boolean {
+        return try {
+            val result = obdDataSource.sendATCommand("0900", 2000L)
+            result is Result.Success && !result.data.contains("NO DATA", ignoreCase = true)
+        } catch (e: Exception) {
+            false
+        }
+    }
+    
+    private suspend fun checkMode0ASupport(): Boolean {
+        return try {
+            val result = obdDataSource.sendATCommand("0A", 2000L)
+            result is Result.Success && !result.data.contains("NO DATA", ignoreCase = true)
+        } catch (e: Exception) {
+            false
+        }
+    }
+    
+    override suspend fun readVIN(): Result<VIN> {
+        return withContext(dispatchers.io) {
+            val vinResult = obdDataSource.readVIN()
+            
+            when (vinResult) {
+                is Result.Success -> {
+                    val vin = VIN.parse(vinResult.data)
+                    if (vin != null) {
+                        Result.Success(vin)
+                    } else {
+                        Result.Error(ProtocolException("Failed to parse VIN"))
+                    }
+                }
+                is Result.Error -> vinResult
+                else -> Result.Error(ProtocolException("Unexpected result"))
+            }
+        }
+    }
+    
+    override suspend fun getVehicleBrands(): List<VehicleBrand> {
+        return withContext(dispatchers.io) {
+            vehicleLocalDataSource.getAllBrands()
+        }
+    }
+    
+    override suspend fun getVehicleModels(brandId: String): List<VehicleModel> {
+        return withContext(dispatchers.io) {
+            vehicleLocalDataSource.getModelsForBrand(brandId)
+        }
+    }
+    
+    override suspend fun decodeVIN(vin: String): Result<VehicleInfo> {
+        return withContext(dispatchers.io) {
+            try {
+                val vinObj = VIN.parse(vin)
+                    ?: return@withContext Result.Error(IllegalArgumentException("Invalid VIN"))
+                
+                // Try local decode first
+                var info = vinDecoder.decodeLocally(vinObj)
+                
+                // If incomplete, try remote
+                if (info.brand == null || info.model == null) {
+                    val remoteResult = vehicleRemoteDataSource.decodeVIN(vin)
+                    if (remoteResult is Result.Success) {
+                        info = remoteResult.data
+                    }
+                }
+                
+                Result.Success(info)
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+    
+    override suspend fun scanECUs(): Result<List<VehicleECU>> {
+        return withContext(dispatchers.io) {
+            try {
+                val ecus = scanECUsInternal()
+                Result.Success(ecus)
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+    
+    private suspend fun scanECUsInternal(): List<VehicleECU> {
+        val ecus = mutableListOf<VehicleECU>()
+        
+        // Standard OBD addresses to scan
+        val standardAddresses = listOf(
+            0x7E0 to "Engine/PCM",
+            0x7E1 to "Transmission",
+            0x7E2 to "ABS/ESP",
+            0x7E3 to "Airbag",
+            0x7E4 to "Body Control",
+            0x7E5 to "Climate",
+            0x7E6 to "Gateway",
+            0x7E7 to "Instrument Cluster"
+        )
+        
+        for ((address, name) in standardAddresses) {
+            try {
+                // Send tester present to check if ECU responds
+                obdDataSource.setHeader(address)
+                val result = obdDataSource.sendATCommand("3E00", 500L)
+                
+                if (result is Result.Success && 
+                    !result.data.contains("NO DATA", ignoreCase = true) &&
+                    !result.data.contains("ERROR", ignoreCase = true)) {
+                    
+                    ecus.add(VehicleECU(
+                        address = address,
+                        name = name,
+                        type = determineECUType(address),
+                        manufacturer = null,
+                        partNumber = null,
+                        softwareVersion = null,
+                        hardwareVersion = null,
+                        isResponding = true
+                    ))
+                }
+            } catch (e: Exception) {
+                // ECU not responding, skip
+            }
+        }
+        
+        return ecus
+    }
+    
+    private fun determineECUType(address: Int): ECUType {
+        return when (address) {
+            0x7E0 -> ECUType.ENGINE
+            0x7E1 -> ECUType.TRANSMISSION
+            0x7E2 -> ECUType.ABS
+            0x7E3 -> ECUType.AIRBAG
+            0x7E4 -> ECUType.BODY
+            0x7E5 -> ECUType.HVAC
+            0x7E6 -> ECUType.GATEWAY
+            0x7E7 -> ECUType.INSTRUMENT_CLUSTER
+            else -> ECUType.GENERIC
+        }
+    }
+    
+    override suspend fun updateVehicleInfo(vehicle: Vehicle): Result<Vehicle> {
+        return withContext(dispatchers.io) {
+            try {
+                val updatedVehicle = vehicle.copy(updatedAt = System.currentTimeMillis())
+                saveVehicle(updatedVehicle)
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+}
+
+/**
+ * VIN decoder service
+ */
+interface VINDecoderService {
+    fun decodeLocally(vin: VIN): VehicleInfo
+}
+
+/**
+ * Vehicle mapper
+ */
+class VehicleMapper @Inject constructor() {
+    
+    fun entityToDomain(entity: VehicleEntity): Vehicle {
+        return Vehicle(
+            id = entity.id,
+            vin = entity.vin?.let { VIN.parse(it) },
+            brand = entity.brandId?.let { VehicleBrand(it, entity.brandName ?: "", entity.brandName ?: "", null, SupportLevel.UNKNOWN) },
+            model = null,  // Would need full mapping
+            variant = null,
+            year = entity.year,
+            displayName = entity.displayName,
+            licensePlate = entity.licensePlate,
+            mileage = entity.mileage,
+            lastDiagnosticDate = entity.lastDiagnosticDate,
+            capabilities = null,
+            ecuList = emptyList(),
+            detectedProtocol = null,
+            connectionState = VehicleConnectionState.DISCONNECTED,
+            createdAt = entity.createdAt,
+            updatedAt = entity.updatedAt
+        )
+    }
+    
+    fun domainToEntity(vehicle: Vehicle): VehicleEntity {
+        return VehicleEntity(
+            id = vehicle.id,
+            vin = vehicle.vin?.raw,
+            brandId = vehicle.brand?.id,
+            brandName = vehicle.brand?.displayName,
+            modelId = vehicle.model?.id,
+            modelName = vehicle.model?.name,
+            year = vehicle.year,
+            displayName = vehicle.displayName,
+            licensePlate = vehicle.licensePlate,
+            mileage = vehicle.mileage,
+            lastDiagnosticDate = vehicle.lastDiagnosticDate,
+            createdAt = vehicle.createdAt,
+            updatedAt = vehicle.updatedAt
+        )
+    }
+    
+    fun entityToSummary(entity: VehicleEntity): VehicleSummary {
+        return VehicleSummary(
+            id = entity.id,
+            displayName = entity.displayName,
+            vin = entity.vin,
+            brandName = entity.brandName,
+            modelName = entity.modelName,
+            year = entity.year,
+            lastDiagnosticDate = entity.lastDiagnosticDate,
+            hasDTCs = false  // Would need to check
+        )
+    }
+}
+
+/**
+ * Vehicle entity for database
+ */
+@Entity(tableName = "vehicles")
+data class VehicleEntity(
+    @PrimaryKey val id: String,
+    val vin: String?,
+    val brandId: String?,
+    val brandName: String?,
+    val modelId: String?,
+    val modelName: String?,
+    val year: Int?,
+    val displayName: String,
+    val licensePlate: String?,
+    val mileage: Int?,
+    val lastDiagnosticDate: Long?,
+    val createdAt: Long,
+    val updatedAt: Long
+)
+```
+
+---
+
+## FILE 10: ConnectToVehicleUseCase.kt (Use Case)
+
+Location: `domain/src/main/java/com/spacetec/domain/usecases/connection/ConnectToVehicleUseCase.kt`
+
+```kotlin
+/**
+ * Use case for connecting to a vehicle.
+ * 
+ * Orchestrates the complete vehicle connection flow including
+ * scanner connection, protocol detection, and vehicle identification.
+ */
+```
+
+Requirements:
+
+```kotlin
+// ═══════════════════════════════════════════════════════════════════════════
+// CONNECT TO VEHICLE USE CASE
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * Connection result data
+ */
+data class VehicleConnectionResult(
+    val vehicle: Vehicle,
+    val scanner: Scanner,
+    val protocol: DetectedProtocol,
+    val capabilities: VehicleCapabilities,
+    val connectionTime: Long
+)
+
+/**
+ * Connection progress events
+ */
+sealed class ConnectionProgress {
+    object Starting : ConnectionProgress()
+    object DiscoveringScanner : ConnectionProgress()
+    data class ConnectingToScanner(val scanner: Scanner) : ConnectionProgress()
+    object InitializingScanner : ConnectionProgress()
+    object DetectingProtocol : ConnectionProgress()
+    data class ProtocolDetected(val protocol: DetectedProtocol) : ConnectionProgress()
+    object ReadingVIN : ConnectionProgress()
+    object IdentifyingVehicle : ConnectionProgress()
+    object ScanningECUs : ConnectionProgress()
+    object ReadingCapabilities : ConnectionProgress()
+    data class Connected(val result: VehicleConnectionResult) : ConnectionProgress()
+    data class Error(val exception: Throwable, val stage: String) : ConnectionProgress()
+}
+
+/**
+ * Connection options
+ */
+data class VehicleConnectionOptions(
+    val scanner: Scanner? = null,                    // If null, use last connected or discover
+    val autoIdentify: Boolean = true,
+    val scanECUs: Boolean = true,
+    val readCapabilities: Boolean = true,
+    val timeout: Long = 30_000L,
+    val retryOnFailure: Boolean = true,
+    val maxRetries: Int = 2
+)
+
+/**
+ * Connect to vehicle use case
+ */
+interface ConnectToVehicleUseCase {
+    /**
+     * Connects to vehicle with progress updates.
+     */
+    operator fun invoke(options: VehicleConnectionOptions = VehicleConnectionOptions()): Flow<ConnectionProgress>
+    
+    /**
+     * Connects to vehicle with specific scanner.
+     */
+    suspend fun connectWithScanner(scanner: Scanner): Result<VehicleConnectionResult>
+    
+    /**
+     * Quick connect - uses last scanner/vehicle.
+     */
+    suspend fun quickConnect(): Result<VehicleConnectionResult>
+    
+    /**
+     * Cancels ongoing connection.
+     */
+    suspend fun cancel()
+}
+
+/**
+ * Connect to vehicle use case implementation
+ */
+class ConnectToVehicleUseCaseImpl @Inject constructor(
+    private val vehicleRepository: VehicleRepository,
+    private val scannerManager: ScannerManager,
+    private val scannerPreferences: ScannerPreferencesDataStore,
+    private val dispatchers: CoroutineDispatchers
+) : ConnectToVehicleUseCase {
+    
+    private var currentJob: Job? = null
+    private val scope = CoroutineScope(dispatchers.io + SupervisorJob())
+    
+    override fun invoke(options: VehicleConnectionOptions): Flow<ConnectionProgress> = channelFlow {
+        currentJob = coroutineContext.job
+        
+        try {
+            send(ConnectionProgress.Starting)
+            val startTime = System.currentTimeMillis()
+            
+            // Determine scanner to use
+            val scanner = options.scanner ?: getScanner()
+            
+            if (scanner == null) {
+                send(ConnectionProgress.Error(
+                    ConnectionException("No scanner available"),
+                    "scanner_selection"
+                ))
+                return@channelFlow
+            }
+            
+            // Connect to scanner
+            send(ConnectionProgress.ConnectingToScanner(scanner))
+            
+            val scannerResult = withTimeoutOrNull(options.timeout) {
+                scannerManager.connect(scanner)
+            }
+            
+            if (scannerResult == null) {
+                send(ConnectionProgress.Error(
+                    TimeoutException("Scanner connection timed out"),
+                    "scanner_connection"
+                ))
+                return@channelFlow
+            }
+            
+            if (scannerResult is Result.Error) {
+                if (options.retryOnFailure) {
+                    // Retry logic
+                    val retryResult = retryConnection(scanner, options.maxRetries)
+                    if (retryResult is Result.Error) {
+                        send(ConnectionProgress.Error(retryResult.exception, "scanner_connection"))
+                        return@channelFlow
+                    }
+                } else {
+                    send(ConnectionProgress.Error(scannerResult.exception, "scanner_connection"))
+                    return@channelFlow
+                }
+            }
+            
+            val initResult = (scannerResult as Result.Success).data
+            
+            // Initialize and detect protocol
+            send(ConnectionProgress.InitializingScanner)
+            
+            send(ConnectionProgress.DetectingProtocol)
+            val protocol = initResult.detectedProtocol
+            if (protocol != null) {
+                send(ConnectionProgress.ProtocolDetected(protocol))
+            }
+            
+            // Connect to vehicle
+            val vehicleResult = vehicleRepository.connectToVehicle(scanner)
+            
+            if (vehicleResult is Result.Error) {
+                send(ConnectionProgress.Error(vehicleResult.exception, "vehicle_connection"))
+                return@channelFlow
+            }
+            
+            var vehicle = (vehicleResult as Result.Success).data
+            
+            // Identify vehicle
+            if (options.autoIdentify) {
+                send(ConnectionProgress.ReadingVIN)
+                
+                val vinResult = vehicleRepository.readVIN()
+                if (vinResult is Result.Success) {
+                    send(ConnectionProgress.IdentifyingVehicle)
+                    val identifyResult = vehicleRepository.identifyVehicle()
+                    if (identifyResult is Result.Success) {
+                        vehicle = identifyResult.data
+                    }
+                }
+            }
+            
+            // Scan ECUs
+            if (options.scanECUs) {
+                send(ConnectionProgress.ScanningECUs)
+                val ecuResult = vehicleRepository.scanECUs()
+                if (ecuResult is Result.Success) {
+                    vehicle = vehicle.copy(ecuList = ecuResult.data)
+                }
+            }
+            
+            // Read capabilities
+            var capabilities: VehicleCapabilities? = null
+            if (options.readCapabilities) {
+                send(ConnectionProgress.ReadingCapabilities)
+                val capsResult = vehicleRepository.getVehicleCapabilities()
+                if (capsResult is Result.Success) {
+                    capabilities = capsResult.data
+                    vehicle = vehicle.copy(capabilities = capabilities)
+                }
+            }
+            
+            // Build result
+            val connectionTime = System.currentTimeMillis() - startTime
+            val result = VehicleConnectionResult(
+                vehicle = vehicle,
+                scanner = scanner.copy(state = ScannerState.CONNECTED),
+                protocol = protocol ?: DetectedProtocol(
+                    ProtocolType.UNKNOWN, "Unknown", true, 500000, 3
+                ),
+                capabilities = capabilities ?: VehicleCapabilities(
+                    supportedPIDs = emptySet(),
+                    supportedDTCTypes = emptySet(),
+                    supportedMonitors = emptySet(),
+                    supportsFreezeFrame = false,
+                    supportsOxygenSensorTest = false,
+                    supportsComponentTest = false,
+                    supportsVehicleInfo = false,
+                    supportsPermanentDTCs = false,
+                    ecuList = vehicle.ecuList,
+                    detectedProtocol = protocol ?: DetectedProtocol(
+                        ProtocolType.UNKNOWN, "Unknown", true, 500000, 3
+                    )
+                ),
+                connectionTime = connectionTime
+            )
+            
+            // Save last connected
+            saveLastConnected(scanner, vehicle)
+            
+            send(ConnectionProgress.Connected(result))
+            
+        } catch (e: CancellationException) {
+            // Cancelled, clean up
+            try {
+                scannerManager.disconnect()
+            } catch (_: Exception) {}
+            throw e
+        } catch (e: Exception) {
+            send(ConnectionProgress.Error(e, "unknown"))
+        }
+    }.flowOn(dispatchers.io)
+    
+    override suspend fun connectWithScanner(scanner: Scanner): Result<VehicleConnectionResult> {
+        return withContext(dispatchers.io) {
+            try {
+                val options = VehicleConnectionOptions(scanner = scanner)
+                var result: VehicleConnectionResult? = null
+                var error: Throwable? = null
+                
+                invoke(options).collect { progress ->
+                    when (progress) {
+                        is ConnectionProgress.Connected -> result = progress.result
+                        is ConnectionProgress.Error -> error = progress.exception
+                        else -> {}
+                    }
+                }
+                
+                if (result != null) {
+                    Result.Success(result!!)
+                } else {
+                    Result.Error(error ?: ConnectionException("Connection failed"))
+                }
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+    
+    override suspend fun quickConnect(): Result<VehicleConnectionResult> {
+        return withContext(dispatchers.io) {
+            try {
+                // Get last connected scanner
+                val lastScanner = scannerPreferences.getLastConnectedScanner()
+                    ?: return@withContext Result.Error(
+                        ConnectionException("No previous scanner found")
+                    )
+                
+                connectWithScanner(lastScanner)
+            } catch (e: Exception) {
+                Result.Error(e)
+            }
+        }
+    }
+    
+    override suspend fun cancel() {
+        currentJob?.cancel()
+        try {
+            scannerManager.disconnect()
+        } catch (_: Exception) {}
+    }
+    
+    private suspend fun getScanner(): Scanner? {
+        // Try last connected first
+        val lastScanner = scannerPreferences.getLastConnectedScanner()
+        if (lastScanner != null) {
+            return lastScanner
+        }
+        
+        // Try paired devices
+        val pairedScanners = scannerManager.getPairedScanners()
+        if (pairedScanners.isNotEmpty()) {
+            return pairedScanners.first()
+        }
+        
+        // Would need to discover
+        return null
+    }
+    
+    private suspend fun retryConnection(
+        scanner: Scanner,
+        maxRetries: Int
+    ): Result<ScannerInitResult> {
+        var lastError: Throwable? = null
+        
+        repeat(maxRetries) { attempt ->
+            delay((attempt + 1) * 1000L)  // Increasing delay
+            
+            val result = scannerManager.connect(scanner)
+            if (result is Result.Success) {
+                return result
+            }
+            lastError = (result as Result.Error).exception
+        }
+        
+        return Result.Error(lastError ?: ConnectionException("Retry failed"))
+    }
+    
+    private suspend fun saveLastConnected(scanner: Scanner, vehicle: Vehicle) {
+        try {
+            scannerPreferences.saveLastConnectedScanner(scanner)
+            if (vehicle.hasVIN) {
+                vehicleRepository.saveVehicle(vehicle)
+            }
+        } catch (_: Exception) {
+            // Ignore save errors
+        }
+    }
+}
+
+/**
+ * Disconnect from vehicle use case
+ */
+interface DisconnectFromVehicleUseCase {
+    suspend operator fun invoke(): Result<Unit>
+}
+
+class DisconnectFromVehicleUseCaseImpl @Inject constructor(
+    private val vehicleRepository: VehicleRepository,
+    private val scannerManager: ScannerManager
+) : DisconnectFromVehicleUseCase {
+    
+    override suspend fun invoke(): Result<Unit> {
+        return try {
+            vehicleRepository.disconnectFromVehicle()
+            scannerManager.disconnect()
+            Result.Success(Unit)
+        } catch (e: Exception) {
+            Result.Error(e)
+        }
+    }
+}
+
+/**
+ * Auto detect protocol use case
+ */
+interface AutoDetectProtocolUseCase {
+    suspend operator fun invoke(): Result<DetectedProtocol>
+}
+
+class AutoDetectProtocolUseCaseImpl @Inject constructor(
+    private val scannerManager: ScannerManager
+) : AutoDetectProtocolUseCase {
+    
+    override suspend fun invoke(): Result<DetectedProtocol> {
+        return try {
+            scannerManager.detectProtocol()
+        } catch (e: Exception) {
+            Result.Error(e)
+        }
+    }
+}
+
+/**
+ * Get scanner list use case
+ */
+interface GetScannerListUseCase {
+    suspend operator fun invoke(): List<Scanner>
+    fun discover(options: DiscoveryOptions = DiscoveryOptions()): Flow<DiscoveredScanner>
+}
+
+class GetScannerListUseCaseImpl @Inject constructor(
+    private val scannerManager: ScannerManager
+) : GetScannerListUseCase {
+    
+    override suspend fun invoke(): List<Scanner> {
+        return scannerManager.getPairedScanners()
+    }
+    
+    override fun discover(options: DiscoveryOptions): Flow<DiscoveredScanner> {
+        return scannerManager.startDiscovery(options)
+    }
+}
+
+/**
+ * Pair scanner use case
+ */
+interface PairScannerUseCase {
+    suspend operator fun invoke(scanner: Scanner): Result<Scanner>
+}
+
+class PairScannerUseCaseImpl @Inject constructor(
+    private val scannerManager: ScannerManager,
+    private val scannerPreferences: ScannerPreferencesDataStore
+) : PairScannerUseCase {
+    
+    override suspend fun invoke(scanner: Scanner): Result<Scanner> {
+        return try {
+            // Connect to verify
+            val result = scannerManager.connect(scanner)
+            if (result is Result.Error) {
+                return result
+            }
+            
+            // Disconnect after verification
+            scannerManager.disconnect()
+            
+            // Save as paired
+            val pairedScanner = scanner.copy(isPaired = true)
+            scannerPreferences.addPairedScanner(pairedScanner)
+            
+            Result.Success(pairedScanner)
+        } catch (e: Exception) {
+            Result.Error(e)
+        }
+    }
+}
+```
+
+---
+
+## NON-FUNCTIONAL REQUIREMENTS
+
+### Performance Requirements:
+- Scanner discovery must complete within 10 seconds
+- Connection establishment must complete within 15 seconds
+- Protocol detection must complete within 10 seconds
+- Command response time must be under 500ms for simple commands
+- Live data refresh rate must support up to 10 PIDs at 10Hz
+
+### Reliability Requirements:
+- Automatic reconnection on connection loss
+- Graceful degradation when features are unsupported
+- Proper cleanup on disconnect
+- Thread-safe operations for concurrent access
+
+### Code Quality Requirements:
+- Full KDoc documentation for all public APIs
+- Unit test coverage for all business logic
+- Integration test coverage for communication flows
+- Proper error handling with descriptive messages
+
+### Security Requirements:
+- No sensitive data logging in production
+- Secure storage of scanner credentials
+- Input validation for all external data
+
+---
+
+## OUTPUT FORMAT
+
+Generate each file completely with:
+
+1. **Full package declaration and imports**
+2. **Complete KDoc documentation** for all classes and public methods
+3. **All interface definitions** with complete method signatures
+4. **All implementation code** with proper error handling
+5. **All data classes and enums** with documentation
+6. **Extension functions** where applicable
+7. **Companion objects** with factory methods
+
+Generate files in this order:
+1. `Scanner.kt`
+2. `Vehicle.kt`
+3. `ScannerConnection.kt`
+4. `ScannerManager.kt`
+5. `BluetoothConnection.kt`
+6. `ELM327Commands.kt`
+7. `UDSProtocol.kt`
+8. `OBDDataSource.kt`
+9. `VehicleRepositoryImpl.kt`
+10. `ConnectToVehicleUseCase.kt`
+
+---
+
+## GENERATION INSTRUCTIONS
+
+**For each file, respond with:**
+
+```
+═══════════════════════════════════════════════════════════════════════════
+FILE: [filename]
+PATH: [full path]
+═══════════════════════════════════════════════════════════════════════════
+
+[Complete file content]
+
+═══════════════════════════════════════════════════════════════════════════
+```
+
+After generating all files, provide a summary of:
+- Key integration points between files
+- Configuration requirements
+- Testing recommendations
+- Known limitations
+
+---
+
+**Begin generating File 1: Scanner.kt**

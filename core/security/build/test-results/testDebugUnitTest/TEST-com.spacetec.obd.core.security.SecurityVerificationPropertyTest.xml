@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.spacetec.obd.core.security.SecurityVerificationPropertyTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-12-25T22:56:32" hostname="pop-os" time="7.785">
+  <properties/>
+  <testcase name="Property 17.1: Scanner verification should correctly identify authentic devices" classname="com.spacetec.obd.core.security.SecurityVerificationPropertyTest" time="5.704"/>
+  <testcase name="Property 17.2: Data integrity verification should detect corruption consistently" classname="com.spacetec.obd.core.security.SecurityVerificationPropertyTest" time="0.848"/>
+  <testcase name="Property 17.3: Data integrity verification should detect tampering" classname="com.spacetec.obd.core.security.SecurityVerificationPropertyTest" time="0.861"/>
+  <testcase name="Property 17.4: Tampering detection should identify data modifications" classname="com.spacetec.obd.core.security.SecurityVerificationPropertyTest" time="0.147"/>
+  <testcase name="Property 17.5: Integrity metadata should be consistent and verifiable" classname="com.spacetec.obd.core.security.SecurityVerificationPropertyTest" time="0.135"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

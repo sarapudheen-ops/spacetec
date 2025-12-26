@@ -1,0 +1,1507 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "dfd0beab16d2d0d4140cf40302fa15e6",
+    "entities": [
+      {
+        "tableName": "dtc_codes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`code` TEXT NOT NULL, `type` TEXT NOT NULL, `sub_type` TEXT NOT NULL, `category` TEXT NOT NULL, `manufacturer` TEXT, `description` TEXT NOT NULL, `detailed_description` TEXT NOT NULL, `consumer_description` TEXT NOT NULL, `severity` TEXT NOT NULL, `emissions_related` INTEGER NOT NULL, `safety_related` INTEGER NOT NULL, `mil_status` INTEGER NOT NULL, `possible_causes` TEXT NOT NULL, `possible_symptoms` TEXT NOT NULL, `affected_systems` TEXT NOT NULL, `related_codes` TEXT NOT NULL, `repair_difficulty` TEXT NOT NULL, `estimated_repair_time_minutes` INTEGER NOT NULL, `estimated_cost_min` REAL, `estimated_cost_max` REAL, `technical_notes` TEXT, `required_tools` TEXT NOT NULL, `safety_warnings` TEXT NOT NULL, `driving_recommendations` TEXT, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, `version` INTEGER NOT NULL, `source` TEXT NOT NULL, `confidence_level` REAL NOT NULL, `is_active` INTEGER NOT NULL, PRIMARY KEY(`code`))",
+        "fields": [
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "subType",
+            "columnName": "sub_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manufacturer",
+            "columnName": "manufacturer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "detailedDescription",
+            "columnName": "detailed_description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "consumerDescription",
+            "columnName": "consumer_description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "severity",
+            "columnName": "severity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "emissionsRelated",
+            "columnName": "emissions_related",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "safetyRelated",
+            "columnName": "safety_related",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "milStatus",
+            "columnName": "mil_status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "possibleCauses",
+            "columnName": "possible_causes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "possibleSymptoms",
+            "columnName": "possible_symptoms",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "affectedSystems",
+            "columnName": "affected_systems",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relatedCodes",
+            "columnName": "related_codes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repairDifficulty",
+            "columnName": "repair_difficulty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estimatedRepairTimeMinutes",
+            "columnName": "estimated_repair_time_minutes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estimatedCostMin",
+            "columnName": "estimated_cost_min",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estimatedCostMax",
+            "columnName": "estimated_cost_max",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "technicalNotes",
+            "columnName": "technical_notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "requiredTools",
+            "columnName": "required_tools",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "safetyWarnings",
+            "columnName": "safety_warnings",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "drivingRecommendations",
+            "columnName": "driving_recommendations",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidenceLevel",
+            "columnName": "confidence_level",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "is_active",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "code"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_dtc_codes_code",
+            "unique": true,
+            "columnNames": [
+              "code"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_dtc_codes_code` ON `${TABLE_NAME}` (`code`)"
+          },
+          {
+            "name": "index_dtc_codes_type",
+            "unique": false,
+            "columnNames": [
+              "type"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_dtc_codes_type` ON `${TABLE_NAME}` (`type`)"
+          },
+          {
+            "name": "index_dtc_codes_severity",
+            "unique": false,
+            "columnNames": [
+              "severity"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_dtc_codes_severity` ON `${TABLE_NAME}` (`severity`)"
+          },
+          {
+            "name": "index_dtc_codes_manufacturer",
+            "unique": false,
+            "columnNames": [
+              "manufacturer"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_dtc_codes_manufacturer` ON `${TABLE_NAME}` (`manufacturer`)"
+          },
+          {
+            "name": "index_dtc_codes_category",
+            "unique": false,
+            "columnNames": [
+              "category"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_dtc_codes_category` ON `${TABLE_NAME}` (`category`)"
+          },
+          {
+            "name": "index_dtc_codes_emissions_related",
+            "unique": false,
+            "columnNames": [
+              "emissions_related"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_dtc_codes_emissions_related` ON `${TABLE_NAME}` (`emissions_related`)"
+          },
+          {
+            "name": "index_dtc_codes_safety_related",
+            "unique": false,
+            "columnNames": [
+              "safety_related"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_dtc_codes_safety_related` ON `${TABLE_NAME}` (`safety_related`)"
+          },
+          {
+            "name": "index_dtc_codes_mil_status",
+            "unique": false,
+            "columnNames": [
+              "mil_status"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_dtc_codes_mil_status` ON `${TABLE_NAME}` (`mil_status`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "repair_procedures",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `dtc_code` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `steps` TEXT NOT NULL, `difficulty` TEXT NOT NULL, `estimated_time_minutes` INTEGER NOT NULL, `required_tools` TEXT NOT NULL, `required_parts` TEXT NOT NULL, `success_rate` REAL NOT NULL, `labor_cost_min` REAL, `labor_cost_max` REAL, `parts_cost_min` REAL, `parts_cost_max` REAL, `manufacturer` TEXT, `model_years` TEXT, `engine_types` TEXT NOT NULL, `safety_precautions` TEXT NOT NULL, `special_notes` TEXT, `warranty_implications` TEXT, `times_used` INTEGER NOT NULL, `successful_repairs` INTEGER NOT NULL, `failed_repairs` INTEGER NOT NULL, `average_completion_time` INTEGER, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, `version` INTEGER NOT NULL, `source` TEXT NOT NULL, `is_active` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`dtc_code`) REFERENCES `dtc_codes`(`code`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtcCode",
+            "columnName": "dtc_code",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "steps",
+            "columnName": "steps",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "difficulty",
+            "columnName": "difficulty",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estimatedTimeMinutes",
+            "columnName": "estimated_time_minutes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requiredTools",
+            "columnName": "required_tools",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "requiredParts",
+            "columnName": "required_parts",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "successRate",
+            "columnName": "success_rate",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "laborCostMin",
+            "columnName": "labor_cost_min",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "laborCostMax",
+            "columnName": "labor_cost_max",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "partsCostMin",
+            "columnName": "parts_cost_min",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "partsCostMax",
+            "columnName": "parts_cost_max",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "manufacturer",
+            "columnName": "manufacturer",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "modelYears",
+            "columnName": "model_years",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engineTypes",
+            "columnName": "engine_types",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "safetyPrecautions",
+            "columnName": "safety_precautions",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "specialNotes",
+            "columnName": "special_notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "warrantyImplications",
+            "columnName": "warranty_implications",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timesUsed",
+            "columnName": "times_used",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "successfulRepairs",
+            "columnName": "successful_repairs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "failedRepairs",
+            "columnName": "failed_repairs",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "averageCompletionTime",
+            "columnName": "average_completion_time",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "is_active",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_repair_procedures_dtc_code",
+            "unique": false,
+            "columnNames": [
+              "dtc_code"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_repair_procedures_dtc_code` ON `${TABLE_NAME}` (`dtc_code`)"
+          },
+          {
+            "name": "index_repair_procedures_difficulty",
+            "unique": false,
+            "columnNames": [
+              "difficulty"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_repair_procedures_difficulty` ON `${TABLE_NAME}` (`difficulty`)"
+          },
+          {
+            "name": "index_repair_procedures_success_rate",
+            "unique": false,
+            "columnNames": [
+              "success_rate"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_repair_procedures_success_rate` ON `${TABLE_NAME}` (`success_rate`)"
+          },
+          {
+            "name": "index_repair_procedures_estimated_time_minutes",
+            "unique": false,
+            "columnNames": [
+              "estimated_time_minutes"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_repair_procedures_estimated_time_minutes` ON `${TABLE_NAME}` (`estimated_time_minutes`)"
+          },
+          {
+            "name": "index_repair_procedures_is_active",
+            "unique": false,
+            "columnNames": [
+              "is_active"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_repair_procedures_is_active` ON `${TABLE_NAME}` (`is_active`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "dtc_codes",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "dtc_code"
+            ],
+            "referencedColumns": [
+              "code"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "technical_service_bulletins",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `manufacturer` TEXT NOT NULL, `bulletin_number` TEXT NOT NULL, `title` TEXT NOT NULL, `description` TEXT NOT NULL, `detailed_content` TEXT NOT NULL, `applicable_vehicles` TEXT NOT NULL, `applicable_dtc_codes` TEXT NOT NULL, `publish_date` TEXT NOT NULL, `effective_date` TEXT, `supersedes` TEXT NOT NULL, `category` TEXT NOT NULL, `severity` TEXT NOT NULL, `repair_procedure` TEXT NOT NULL, `parts_required` TEXT NOT NULL, `labor_time_hours` REAL, `warranty_extension` INTEGER NOT NULL, `warranty_details` TEXT, `recall_related` INTEGER NOT NULL, `recall_number` TEXT, `attachments` TEXT NOT NULL, `special_tools` TEXT NOT NULL, `training_required` INTEGER NOT NULL, `certification_level` TEXT, `view_count` INTEGER NOT NULL, `success_rate` REAL, `average_repair_time` REAL, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, `version` INTEGER NOT NULL, `source_url` TEXT, `is_active` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "manufacturer",
+            "columnName": "manufacturer",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bulletinNumber",
+            "columnName": "bulletin_number",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "detailedContent",
+            "columnName": "detailed_content",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "applicableVehicles",
+            "columnName": "applicable_vehicles",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "applicableDtcCodes",
+            "columnName": "applicable_dtc_codes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "publishDate",
+            "columnName": "publish_date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "effectiveDate",
+            "columnName": "effective_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "supersedes",
+            "columnName": "supersedes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "severity",
+            "columnName": "severity",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repairProcedure",
+            "columnName": "repair_procedure",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "partsRequired",
+            "columnName": "parts_required",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "laborTimeHours",
+            "columnName": "labor_time_hours",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "warrantyExtension",
+            "columnName": "warranty_extension",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "warrantyDetails",
+            "columnName": "warranty_details",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "recallRelated",
+            "columnName": "recall_related",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recallNumber",
+            "columnName": "recall_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "attachments",
+            "columnName": "attachments",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "specialTools",
+            "columnName": "special_tools",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trainingRequired",
+            "columnName": "training_required",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "certificationLevel",
+            "columnName": "certification_level",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "viewCount",
+            "columnName": "view_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "successRate",
+            "columnName": "success_rate",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "averageRepairTime",
+            "columnName": "average_repair_time",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceUrl",
+            "columnName": "source_url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "is_active",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_technical_service_bulletins_manufacturer",
+            "unique": false,
+            "columnNames": [
+              "manufacturer"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_technical_service_bulletins_manufacturer` ON `${TABLE_NAME}` (`manufacturer`)"
+          },
+          {
+            "name": "index_technical_service_bulletins_bulletin_number",
+            "unique": true,
+            "columnNames": [
+              "bulletin_number"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_technical_service_bulletins_bulletin_number` ON `${TABLE_NAME}` (`bulletin_number`)"
+          },
+          {
+            "name": "index_technical_service_bulletins_category",
+            "unique": false,
+            "columnNames": [
+              "category"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_technical_service_bulletins_category` ON `${TABLE_NAME}` (`category`)"
+          },
+          {
+            "name": "index_technical_service_bulletins_severity",
+            "unique": false,
+            "columnNames": [
+              "severity"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_technical_service_bulletins_severity` ON `${TABLE_NAME}` (`severity`)"
+          },
+          {
+            "name": "index_technical_service_bulletins_publish_date",
+            "unique": false,
+            "columnNames": [
+              "publish_date"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_technical_service_bulletins_publish_date` ON `${TABLE_NAME}` (`publish_date`)"
+          },
+          {
+            "name": "index_technical_service_bulletins_is_active",
+            "unique": false,
+            "columnNames": [
+              "is_active"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_technical_service_bulletins_is_active` ON `${TABLE_NAME}` (`is_active`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "diagnostic_sessions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `session_number` TEXT NOT NULL, `vehicle_id` TEXT NOT NULL, `customer_id` TEXT, `technician_id` TEXT, `shop_id` TEXT, `session_start` TEXT NOT NULL, `session_end` TEXT, `total_duration_minutes` INTEGER, `diagnostic_duration_minutes` INTEGER, `repair_duration_minutes` INTEGER, `session_type` TEXT NOT NULL, `session_status` TEXT NOT NULL, `complaint_description` TEXT, `symptoms_reported` TEXT NOT NULL, `dtcs_found` TEXT NOT NULL, `dtcs_cleared` TEXT NOT NULL, `pending_dtcs` TEXT NOT NULL, `permanent_dtcs` TEXT NOT NULL, `root_cause_identified` INTEGER NOT NULL, `root_cause_description` TEXT, `diagnostic_confidence` REAL, `repairs_performed` TEXT NOT NULL, `parts_replaced` TEXT NOT NULL, `repair_procedures_used` TEXT NOT NULL, `tsbs_referenced` TEXT NOT NULL, `labor_cost` REAL, `parts_cost` REAL, `total_cost` REAL, `warranty_work` INTEGER NOT NULL, `warranty_claim_number` TEXT, `repair_successful` INTEGER, `customer_satisfaction` INTEGER, `follow_up_required` INTEGER NOT NULL, `follow_up_date` TEXT, `notes` TEXT, `scanner_used` TEXT, `tools_used` TEXT NOT NULL, `software_version` TEXT, `mileage` INTEGER, `engine_hours` REAL, `ambient_temperature` REAL, `test_conditions` TEXT, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, `version` INTEGER NOT NULL, `sync_status` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionNumber",
+            "columnName": "session_number",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleId",
+            "columnName": "vehicle_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "customerId",
+            "columnName": "customer_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "technicianId",
+            "columnName": "technician_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shopId",
+            "columnName": "shop_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sessionStart",
+            "columnName": "session_start",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionEnd",
+            "columnName": "session_end",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "totalDurationMinutes",
+            "columnName": "total_duration_minutes",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "diagnosticDurationMinutes",
+            "columnName": "diagnostic_duration_minutes",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "repairDurationMinutes",
+            "columnName": "repair_duration_minutes",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sessionType",
+            "columnName": "session_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sessionStatus",
+            "columnName": "session_status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "complaintDescription",
+            "columnName": "complaint_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "symptomsReported",
+            "columnName": "symptoms_reported",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtcsFound",
+            "columnName": "dtcs_found",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dtcsCleared",
+            "columnName": "dtcs_cleared",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pendingDtcs",
+            "columnName": "pending_dtcs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "permanentDtcs",
+            "columnName": "permanent_dtcs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rootCauseIdentified",
+            "columnName": "root_cause_identified",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rootCauseDescription",
+            "columnName": "root_cause_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "diagnosticConfidence",
+            "columnName": "diagnostic_confidence",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "repairsPerformed",
+            "columnName": "repairs_performed",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "partsReplaced",
+            "columnName": "parts_replaced",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repairProceduresUsed",
+            "columnName": "repair_procedures_used",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tsbsReferenced",
+            "columnName": "tsbs_referenced",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "laborCost",
+            "columnName": "labor_cost",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "partsCost",
+            "columnName": "parts_cost",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "totalCost",
+            "columnName": "total_cost",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "warrantyWork",
+            "columnName": "warranty_work",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "warrantyClaimNumber",
+            "columnName": "warranty_claim_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "repairSuccessful",
+            "columnName": "repair_successful",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "customerSatisfaction",
+            "columnName": "customer_satisfaction",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "followUpRequired",
+            "columnName": "follow_up_required",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "followUpDate",
+            "columnName": "follow_up_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "scannerUsed",
+            "columnName": "scanner_used",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "toolsUsed",
+            "columnName": "tools_used",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "softwareVersion",
+            "columnName": "software_version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mileage",
+            "columnName": "mileage",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engineHours",
+            "columnName": "engine_hours",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ambientTemperature",
+            "columnName": "ambient_temperature",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "testConditions",
+            "columnName": "test_conditions",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "syncStatus",
+            "columnName": "sync_status",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_diagnostic_sessions_vehicle_id",
+            "unique": false,
+            "columnNames": [
+              "vehicle_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_sessions_vehicle_id` ON `${TABLE_NAME}` (`vehicle_id`)"
+          },
+          {
+            "name": "index_diagnostic_sessions_technician_id",
+            "unique": false,
+            "columnNames": [
+              "technician_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_sessions_technician_id` ON `${TABLE_NAME}` (`technician_id`)"
+          },
+          {
+            "name": "index_diagnostic_sessions_session_start",
+            "unique": false,
+            "columnNames": [
+              "session_start"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_sessions_session_start` ON `${TABLE_NAME}` (`session_start`)"
+          },
+          {
+            "name": "index_diagnostic_sessions_session_status",
+            "unique": false,
+            "columnNames": [
+              "session_status"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_sessions_session_status` ON `${TABLE_NAME}` (`session_status`)"
+          },
+          {
+            "name": "index_diagnostic_sessions_shop_id",
+            "unique": false,
+            "columnNames": [
+              "shop_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_sessions_shop_id` ON `${TABLE_NAME}` (`shop_id`)"
+          },
+          {
+            "name": "index_diagnostic_sessions_customer_id",
+            "unique": false,
+            "columnNames": [
+              "customer_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_diagnostic_sessions_customer_id` ON `${TABLE_NAME}` (`customer_id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "vehicles",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `vin` TEXT, `make` TEXT NOT NULL, `model` TEXT NOT NULL, `year` INTEGER NOT NULL, `engine_type` TEXT, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vin",
+            "columnName": "vin",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "make",
+            "columnName": "make",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "model",
+            "columnName": "model",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "year",
+            "columnName": "year",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "engineType",
+            "columnName": "engine_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "scanners",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `type` TEXT NOT NULL, `address` TEXT NOT NULL, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "ecus",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `address` TEXT NOT NULL, `vehicle_id` TEXT NOT NULL, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleId",
+            "columnName": "vehicle_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "coding_data",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `ecu_id` TEXT NOT NULL, `parameter_name` TEXT NOT NULL, `value` TEXT NOT NULL, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ecuId",
+            "columnName": "ecu_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "parameterName",
+            "columnName": "parameter_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "keys",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `vehicle_id` TEXT NOT NULL, `key_type` TEXT NOT NULL, `key_data` TEXT NOT NULL, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleId",
+            "columnName": "vehicle_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "keyType",
+            "columnName": "key_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "keyData",
+            "columnName": "key_data",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "live_data_logs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `vehicle_id` TEXT NOT NULL, `parameter_name` TEXT NOT NULL, `value` TEXT NOT NULL, `unit` TEXT, `timestamp` TEXT NOT NULL, `created_at` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vehicleId",
+            "columnName": "vehicle_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "parameterName",
+            "columnName": "parameter_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unit",
+            "columnName": "unit",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timestamp",
+            "columnName": "timestamp",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "adaptations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `ecu_id` TEXT NOT NULL, `channel_name` TEXT NOT NULL, `value` TEXT NOT NULL, `created_at` TEXT NOT NULL, `updated_at` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ecuId",
+            "columnName": "ecu_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "channelName",
+            "columnName": "channel_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'dfd0beab16d2d0d4140cf40302fa15e6')"
+    ]
+  }
+}

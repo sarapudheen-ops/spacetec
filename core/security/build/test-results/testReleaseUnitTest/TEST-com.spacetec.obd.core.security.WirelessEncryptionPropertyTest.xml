@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.spacetec.obd.core.security.WirelessEncryptionPropertyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-12-25T22:58:04" hostname="pop-os" time="3.627">
+  <properties/>
+  <testcase name="Property 18.1: Encryption initiation should succeed for supported connection types" classname="com.spacetec.obd.core.security.WirelessEncryptionPropertyTest" time="0.293"/>
+  <testcase name="Property 18.2: Encryption round-trip should preserve data integrity" classname="com.spacetec.obd.core.security.WirelessEncryptionPropertyTest" time="1.796"/>
+  <testcase name="Property 18.3: Encryption should fail for unsupported connection types" classname="com.spacetec.obd.core.security.WirelessEncryptionPropertyTest" time="0.093"/>
+  <testcase name="Property 18.4: Key exchange should generate consistent shared secrets" classname="com.spacetec.obd.core.security.WirelessEncryptionPropertyTest" time="0.065"/>
+  <testcase name="Property 18.5: Encryption sessions should have proper lifecycle management" classname="com.spacetec.obd.core.security.WirelessEncryptionPropertyTest" time="0.273"/>
+  <testcase name="Property 18.6: Encryption should handle empty and large data correctly" classname="com.spacetec.obd.core.security.WirelessEncryptionPropertyTest" time="1.056"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

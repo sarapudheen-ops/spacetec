@@ -1,0 +1,499 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:2:1-37:12
+MERGED from [:features:dashboard] /home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:features:connection] /home/yungblud/Desktop/SpaceTec/features/connection/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:features:dtc] /home/yungblud/Desktop/SpaceTec/features/dtc/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:features:livedata] /home/yungblud/Desktop/SpaceTec/features/livedata/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:features:reports] /home/yungblud/Desktop/SpaceTec/features/reports/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:core:ui] /home/yungblud/Desktop/SpaceTec/core/ui/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /home/yungblud/.gradle/caches/transforms-3/7e3c4a464a509b748df8d8830418319d/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /home/yungblud/.gradle/caches/transforms-3/a15dc925543efbec98c3d3983d2b1421/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.7.6] /home/yungblud/.gradle/caches/transforms-3/b4c575b94ec34edcfb27fb7341d0559a/transformed/navigation-common-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /home/yungblud/.gradle/caches/transforms-3/4cc4bf2874433ae7d4c393637401914e/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /home/yungblud/.gradle/caches/transforms-3/b338d6c4ea58e1944d4a15d964fc33d9/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /home/yungblud/.gradle/caches/transforms-3/1180470a1f20495ef1269ca909fbca91/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /home/yungblud/.gradle/caches/transforms-3/d3838ee62a8e15b5e766840a1177f5cb/transformed/jetified-navigation-compose-2.7.6/AndroidManifest.xml:2:1-7:12
+MERGED from [:core:logging] /home/yungblud/Desktop/SpaceTec/core/logging/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:core:security] /home/yungblud/Desktop/SpaceTec/core/security/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.dagger:hilt-android:2.50] /home/yungblud/.gradle/caches/transforms-3/bfe41206634b71701b063d87a93dc5ee/transformed/jetified-hilt-android-2.50/AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.fragment:fragment:1.5.1] /home/yungblud/.gradle/caches/transforms-3/39176d78b3cd65e0f3887204ac815553/transformed/fragment-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.2] /home/yungblud/.gradle/caches/transforms-3/489c9bf7605fb57ae54f4cb7308678d5/transformed/jetified-activity-1.8.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] /home/yungblud/.gradle/caches/transforms-3/49160770aba783189a141530700f00bf/transformed/jetified-activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3-window-size-class:1.1.2] /home/yungblud/.gradle/caches/transforms-3/7e845b7c458d7a7df3ca9b5b53396337/transformed/jetified-material3-window-size-class-1.1.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material3:material3:1.1.2] /home/yungblud/.gradle/caches/transforms-3/b79586bede04d29dc871a4206eaeef2e/transformed/jetified-material3-1.1.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity-compose:1.8.2] /home/yungblud/.gradle/caches/transforms-3/9994aed0e0c1391dde7f5d3c020a3db8/transformed/jetified-activity-compose-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [:core:domain] /home/yungblud/Desktop/SpaceTec/core/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:core:datastore] /home/yungblud/Desktop/SpaceTec/core/datastore/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:core:network] /home/yungblud/Desktop/SpaceTec/core/network/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:core:common] /home/yungblud/Desktop/SpaceTec/core/common/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose:2.5.0] /home/yungblud/.gradle/caches/transforms-3/552c759a0da44815c26bd8a8fe0f7111/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /home/yungblud/.gradle/caches/transforms-3/1e9f3b5e146cce566103dfa05d179242/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/a9ca8befda9f9be3476ff471dcced94c/transformed/jetified-material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/fec0783d41d80d6c226e5d2dd9c816f8/transformed/jetified-material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/e20224ecdcf557974839804a3a6ef57d/transformed/jetified-material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/e963e9653648cc7a7e0393c2f1640e2f/transformed/jetified-material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/15153738db3c1f3d9614b7358ecd7b51/transformed/jetified-foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/45bae8d48c04574896f4fd225281bddf/transformed/jetified-foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8b6dd307b387a2e001e3b280e947ae2b/transformed/jetified-animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/b37ebd8b30ff0a7d228e292b2bdc592f/transformed/jetified-animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-graphics-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/7a2b4d1b1551df9491f6113654ae804c/transformed/jetified-animation-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.5.0] /home/yungblud/.gradle/caches/transforms-3/f6206fff2db1ca27f07292a25b432ad5/transformed/jetified-coil-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.5.0] /home/yungblud/.gradle/caches/transforms-3/77acc14f979d61b51244ab06f3199124/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/yungblud/.gradle/caches/transforms-3/2ea0697eb6c6a7ecf75c607f47d2eabb/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.12.0] /home/yungblud/.gradle/caches/transforms-3/92b8f6eb98e522158d43111b77c93ded/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.loader:loader:1.0.0] /home/yungblud/.gradle/caches/transforms-3/b082ad4e46ea7171a43f418f591ed55e/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/yungblud/.gradle/caches/transforms-3/01985ad178bba8ae148b385be725e35f/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1127d113e5beddb2d2249d1eb55d0cc3/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/37fd364b2451e16cbe726f905a595705/transformed/jetified-ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/b3f79cdacfdfbb354d3742dbceb260eb/transformed/jetified-ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/d7a2c2e4121c32bb9ffadf7714031ee8/transformed/jetified-ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/baad46373421ab87b413c727fd0212d0/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/714a899947d5ee0ab5cc3f9d95b0cb75/transformed/jetified-ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/46357fa0b940ec8d9404247ed1450d51/transformed/jetified-ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.autofill:autofill:1.0.0] /home/yungblud/.gradle/caches/transforms-3/e547ea90fb2042d77886a70e6bdae25f/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /home/yungblud/.gradle/caches/transforms-3/9a684b8da0b6af87241966cfc9ee2478/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/yungblud/.gradle/caches/transforms-3/5a1acfc01071b38ccc29da4796b59c94/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/yungblud/.gradle/caches/transforms-3/3d4a4e84e38061da80b032673dbf0df7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/yungblud/.gradle/caches/transforms-3/536fd2a4e2f4575a7cdf8033072b00bf/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1f8fcee6e6a0e85f626a43fbe484ea11/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1ed32d166555f3fa8ec8f58f4a640fb2/transformed/jetified-runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-livedata:1.6.0] /home/yungblud/.gradle/caches/transforms-3/908edf951faf7fcd5610b3f1adcefab3/transformed/jetified-runtime-livedata-1.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/ed1a97d60fbef97d247e960453d0efd2/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/yungblud/.gradle/caches/transforms-3/ed462f93e3c4581b9e0b26cec1a0c543/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/yungblud/.gradle/caches/transforms-3/72ae92590148e745daccca01d721949d/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/yungblud/.gradle/caches/transforms-3/75fc69b95f41605b6f2538091a0dd803/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/yungblud/.gradle/caches/transforms-3/19a74ac01bc393c30116a1fcd59c67f4/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/yungblud/.gradle/caches/transforms-3/5c7c4de7909443256a5ac0dc45a64967/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/yungblud/.gradle/caches/transforms-3/6e9b1ccfb636e5c72f02a9667e1ef04c/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/yungblud/.gradle/caches/transforms-3/88cade1f1e41bd6aab647859730e6c23/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/a77aea522c7b1f90f3993e3c503c0493/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] /home/yungblud/.gradle/caches/transforms-3/090492257161d8edd3c928aab44342f6/transformed/jetified-lifecycle-viewmodel-compose-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/60944d6f95419b005e98d489402dfc10/transformed/jetified-lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose:2.7.0] /home/yungblud/.gradle/caches/transforms-3/498805a82f67e735b5ddc5f8e4b6fe44/transformed/jetified-lifecycle-runtime-compose-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /home/yungblud/.gradle/caches/transforms-3/9990d0ba33e3e4c62fecfc6a704c604a/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.ui:ui-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/102c62cdf19cb041c76e9779da5e6826/transformed/jetified-ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /home/yungblud/.gradle/caches/transforms-3/4d0a83cfe9773e636db3e3c919628625/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.datastore:datastore:1.0.0] /home/yungblud/.gradle/caches/transforms-3/90b96e45869f3cf11103672e53c52551/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.jakewharton.timber:timber:5.0.1] /home/yungblud/.gradle/caches/transforms-3/2fa706a8bc6a49c44cee0c412b110721/transformed/jetified-timber-5.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /home/yungblud/.gradle/caches/transforms-3/d5116f8faed31dad83ce72a60b932f4f/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/yungblud/.gradle/caches/transforms-3/3804faa520053e39be86a2bb16ca1dc5/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/yungblud/.gradle/caches/transforms-3/fc0d11200a95a7a179e8335523a4c3d8/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/yungblud/.gradle/caches/transforms-3/e5234640e7ed03af58f6d261148cd7df/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /home/yungblud/.gradle/caches/transforms-3/d24a62090249673dbee71cdecba3a9b1/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/yungblud/.gradle/caches/transforms-3/81cc4b74244365b4ea2232b4a2b0d23b/transformed/exifinterface-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.50] /home/yungblud/.gradle/caches/transforms-3/840092b28790e42424ba23c773f4d32e/transformed/jetified-dagger-lint-aar-2.50/AndroidManifest.xml:16:1-19:12
+	package
+		INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.BLUETOOTH
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:5:5-95
+	android:maxSdkVersion
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:5:66-92
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:5:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:6:5-101
+	android:maxSdkVersion
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:6:72-98
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:6:22-71
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:7:5-120
+	android:usesPermissionFlags
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:7:71-117
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:7:22-70
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:8:5-76
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:8:22-73
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:11:5-79
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:12:22-78
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:15:5-77
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:15:22-74
+uses-feature#android.hardware.bluetooth
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:17:5-88
+	android:required
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:17:61-85
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:17:19-60
+application
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:19:5-35:19
+INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:19:5-35:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.jakewharton.timber:timber:5.0.1] /home/yungblud/.gradle/caches/transforms-3/2fa706a8bc6a49c44cee0c412b110721/transformed/jetified-timber-5.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.jakewharton.timber:timber:5.0.1] /home/yungblud/.gradle/caches/transforms-3/2fa706a8bc6a49c44cee0c412b110721/transformed/jetified-timber-5.0.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/yungblud/.gradle/caches/transforms-3/fc0d11200a95a7a179e8335523a4c3d8/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/yungblud/.gradle/caches/transforms-3/fc0d11200a95a7a179e8335523a4c3d8/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:22:9-35
+	android:label
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:21:9-33
+	android:allowBackup
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:20:9-35
+	android:theme
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:23:9-46
+activity#com.spacetec.obd.MainActivity
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:25:9-33:20
+	android:exported
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:27:13-36
+	android:theme
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:28:13-50
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:26:13-57
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:29:13-32:29
+action#android.intent.action.MAIN
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:30:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:31:17-77
+	android:name
+		ADDED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml:31:27-74
+uses-sdk
+INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+MERGED from [:features:dashboard] /home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:dashboard] /home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:connection] /home/yungblud/Desktop/SpaceTec/features/connection/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:connection] /home/yungblud/Desktop/SpaceTec/features/connection/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:dtc] /home/yungblud/Desktop/SpaceTec/features/dtc/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:dtc] /home/yungblud/Desktop/SpaceTec/features/dtc/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:livedata] /home/yungblud/Desktop/SpaceTec/features/livedata/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:livedata] /home/yungblud/Desktop/SpaceTec/features/livedata/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:reports] /home/yungblud/Desktop/SpaceTec/features/reports/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:features:reports] /home/yungblud/Desktop/SpaceTec/features/reports/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:ui] /home/yungblud/Desktop/SpaceTec/core/ui/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:ui] /home/yungblud/Desktop/SpaceTec/core/ui/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /home/yungblud/.gradle/caches/transforms-3/7e3c4a464a509b748df8d8830418319d/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.1.0] /home/yungblud/.gradle/caches/transforms-3/7e3c4a464a509b748df8d8830418319d/transformed/jetified-hilt-navigation-compose-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /home/yungblud/.gradle/caches/transforms-3/a15dc925543efbec98c3d3983d2b1421/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.1.0] /home/yungblud/.gradle/caches/transforms-3/a15dc925543efbec98c3d3983d2b1421/transformed/jetified-hilt-navigation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.6] /home/yungblud/.gradle/caches/transforms-3/b4c575b94ec34edcfb27fb7341d0559a/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.6] /home/yungblud/.gradle/caches/transforms-3/b4c575b94ec34edcfb27fb7341d0559a/transformed/navigation-common-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /home/yungblud/.gradle/caches/transforms-3/4cc4bf2874433ae7d4c393637401914e/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.6] /home/yungblud/.gradle/caches/transforms-3/4cc4bf2874433ae7d4c393637401914e/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /home/yungblud/.gradle/caches/transforms-3/b338d6c4ea58e1944d4a15d964fc33d9/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.6] /home/yungblud/.gradle/caches/transforms-3/b338d6c4ea58e1944d4a15d964fc33d9/transformed/navigation-common-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /home/yungblud/.gradle/caches/transforms-3/1180470a1f20495ef1269ca909fbca91/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.6] /home/yungblud/.gradle/caches/transforms-3/1180470a1f20495ef1269ca909fbca91/transformed/navigation-runtime-ktx-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /home/yungblud/.gradle/caches/transforms-3/d3838ee62a8e15b5e766840a1177f5cb/transformed/jetified-navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.6] /home/yungblud/.gradle/caches/transforms-3/d3838ee62a8e15b5e766840a1177f5cb/transformed/jetified-navigation-compose-2.7.6/AndroidManifest.xml:5:5-44
+MERGED from [:core:logging] /home/yungblud/Desktop/SpaceTec/core/logging/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:logging] /home/yungblud/Desktop/SpaceTec/core/logging/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:security] /home/yungblud/Desktop/SpaceTec/core/security/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:security] /home/yungblud/Desktop/SpaceTec/core/security/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [com.google.dagger:hilt-android:2.50] /home/yungblud/.gradle/caches/transforms-3/bfe41206634b71701b063d87a93dc5ee/transformed/jetified-hilt-android-2.50/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.50] /home/yungblud/.gradle/caches/transforms-3/bfe41206634b71701b063d87a93dc5ee/transformed/jetified-hilt-android-2.50/AndroidManifest.xml:18:3-42
+MERGED from [androidx.fragment:fragment:1.5.1] /home/yungblud/.gradle/caches/transforms-3/39176d78b3cd65e0f3887204ac815553/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] /home/yungblud/.gradle/caches/transforms-3/39176d78b3cd65e0f3887204ac815553/transformed/fragment-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.2] /home/yungblud/.gradle/caches/transforms-3/489c9bf7605fb57ae54f4cb7308678d5/transformed/jetified-activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] /home/yungblud/.gradle/caches/transforms-3/489c9bf7605fb57ae54f4cb7308678d5/transformed/jetified-activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /home/yungblud/.gradle/caches/transforms-3/49160770aba783189a141530700f00bf/transformed/jetified-activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /home/yungblud/.gradle/caches/transforms-3/49160770aba783189a141530700f00bf/transformed/jetified-activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3-window-size-class:1.1.2] /home/yungblud/.gradle/caches/transforms-3/7e845b7c458d7a7df3ca9b5b53396337/transformed/jetified-material3-window-size-class-1.1.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-window-size-class:1.1.2] /home/yungblud/.gradle/caches/transforms-3/7e845b7c458d7a7df3ca9b5b53396337/transformed/jetified-material3-window-size-class-1.1.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3:1.1.2] /home/yungblud/.gradle/caches/transforms-3/b79586bede04d29dc871a4206eaeef2e/transformed/jetified-material3-1.1.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3:1.1.2] /home/yungblud/.gradle/caches/transforms-3/b79586bede04d29dc871a4206eaeef2e/transformed/jetified-material3-1.1.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /home/yungblud/.gradle/caches/transforms-3/9994aed0e0c1391dde7f5d3c020a3db8/transformed/jetified-activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] /home/yungblud/.gradle/caches/transforms-3/9994aed0e0c1391dde7f5d3c020a3db8/transformed/jetified-activity-compose-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [:core:domain] /home/yungblud/Desktop/SpaceTec/core/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:domain] /home/yungblud/Desktop/SpaceTec/core/domain/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:datastore] /home/yungblud/Desktop/SpaceTec/core/datastore/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:datastore] /home/yungblud/Desktop/SpaceTec/core/datastore/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:network] /home/yungblud/Desktop/SpaceTec/core/network/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:network] /home/yungblud/Desktop/SpaceTec/core/network/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:common] /home/yungblud/Desktop/SpaceTec/core/common/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:core:common] /home/yungblud/Desktop/SpaceTec/core/common/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.5.0] /home/yungblud/.gradle/caches/transforms-3/552c759a0da44815c26bd8a8fe0f7111/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.5.0] /home/yungblud/.gradle/caches/transforms-3/552c759a0da44815c26bd8a8fe0f7111/transformed/jetified-coil-compose-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /home/yungblud/.gradle/caches/transforms-3/1e9f3b5e146cce566103dfa05d179242/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] /home/yungblud/.gradle/caches/transforms-3/1e9f3b5e146cce566103dfa05d179242/transformed/jetified-coil-compose-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/a9ca8befda9f9be3476ff471dcced94c/transformed/jetified-material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/a9ca8befda9f9be3476ff471dcced94c/transformed/jetified-material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/fec0783d41d80d6c226e5d2dd9c816f8/transformed/jetified-material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/fec0783d41d80d6c226e5d2dd9c816f8/transformed/jetified-material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/e20224ecdcf557974839804a3a6ef57d/transformed/jetified-material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/e20224ecdcf557974839804a3a6ef57d/transformed/jetified-material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/e963e9653648cc7a7e0393c2f1640e2f/transformed/jetified-material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/e963e9653648cc7a7e0393c2f1640e2f/transformed/jetified-material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/15153738db3c1f3d9614b7358ecd7b51/transformed/jetified-foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/15153738db3c1f3d9614b7358ecd7b51/transformed/jetified-foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/45bae8d48c04574896f4fd225281bddf/transformed/jetified-foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/45bae8d48c04574896f4fd225281bddf/transformed/jetified-foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8b6dd307b387a2e001e3b280e947ae2b/transformed/jetified-animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8b6dd307b387a2e001e3b280e947ae2b/transformed/jetified-animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/b37ebd8b30ff0a7d228e292b2bdc592f/transformed/jetified-animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/b37ebd8b30ff0a7d228e292b2bdc592f/transformed/jetified-animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-graphics-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/7a2b4d1b1551df9491f6113654ae804c/transformed/jetified-animation-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-graphics-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/7a2b4d1b1551df9491f6113654ae804c/transformed/jetified-animation-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.5.0] /home/yungblud/.gradle/caches/transforms-3/f6206fff2db1ca27f07292a25b432ad5/transformed/jetified-coil-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.5.0] /home/yungblud/.gradle/caches/transforms-3/f6206fff2db1ca27f07292a25b432ad5/transformed/jetified-coil-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] /home/yungblud/.gradle/caches/transforms-3/77acc14f979d61b51244ab06f3199124/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] /home/yungblud/.gradle/caches/transforms-3/77acc14f979d61b51244ab06f3199124/transformed/jetified-coil-base-2.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/yungblud/.gradle/caches/transforms-3/2ea0697eb6c6a7ecf75c607f47d2eabb/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /home/yungblud/.gradle/caches/transforms-3/2ea0697eb6c6a7ecf75c607f47d2eabb/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.12.0] /home/yungblud/.gradle/caches/transforms-3/92b8f6eb98e522158d43111b77c93ded/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /home/yungblud/.gradle/caches/transforms-3/92b8f6eb98e522158d43111b77c93ded/transformed/jetified-core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] /home/yungblud/.gradle/caches/transforms-3/b082ad4e46ea7171a43f418f591ed55e/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/yungblud/.gradle/caches/transforms-3/b082ad4e46ea7171a43f418f591ed55e/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/yungblud/.gradle/caches/transforms-3/01985ad178bba8ae148b385be725e35f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/yungblud/.gradle/caches/transforms-3/01985ad178bba8ae148b385be725e35f/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1127d113e5beddb2d2249d1eb55d0cc3/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1127d113e5beddb2d2249d1eb55d0cc3/transformed/jetified-ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/37fd364b2451e16cbe726f905a595705/transformed/jetified-ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/37fd364b2451e16cbe726f905a595705/transformed/jetified-ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/b3f79cdacfdfbb354d3742dbceb260eb/transformed/jetified-ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/b3f79cdacfdfbb354d3742dbceb260eb/transformed/jetified-ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/d7a2c2e4121c32bb9ffadf7714031ee8/transformed/jetified-ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/d7a2c2e4121c32bb9ffadf7714031ee8/transformed/jetified-ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/baad46373421ab87b413c727fd0212d0/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/baad46373421ab87b413c727fd0212d0/transformed/jetified-ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/714a899947d5ee0ab5cc3f9d95b0cb75/transformed/jetified-ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/714a899947d5ee0ab5cc3f9d95b0cb75/transformed/jetified-ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/46357fa0b940ec8d9404247ed1450d51/transformed/jetified-ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/46357fa0b940ec8d9404247ed1450d51/transformed/jetified-ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /home/yungblud/.gradle/caches/transforms-3/e547ea90fb2042d77886a70e6bdae25f/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /home/yungblud/.gradle/caches/transforms-3/e547ea90fb2042d77886a70e6bdae25f/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /home/yungblud/.gradle/caches/transforms-3/9a684b8da0b6af87241966cfc9ee2478/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/yungblud/.gradle/caches/transforms-3/9a684b8da0b6af87241966cfc9ee2478/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/yungblud/.gradle/caches/transforms-3/5a1acfc01071b38ccc29da4796b59c94/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/yungblud/.gradle/caches/transforms-3/5a1acfc01071b38ccc29da4796b59c94/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/yungblud/.gradle/caches/transforms-3/3d4a4e84e38061da80b032673dbf0df7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/yungblud/.gradle/caches/transforms-3/3d4a4e84e38061da80b032673dbf0df7/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/yungblud/.gradle/caches/transforms-3/536fd2a4e2f4575a7cdf8033072b00bf/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/yungblud/.gradle/caches/transforms-3/536fd2a4e2f4575a7cdf8033072b00bf/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1f8fcee6e6a0e85f626a43fbe484ea11/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1f8fcee6e6a0e85f626a43fbe484ea11/transformed/jetified-runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1ed32d166555f3fa8ec8f58f4a640fb2/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/1ed32d166555f3fa8ec8f58f4a640fb2/transformed/jetified-runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-livedata:1.6.0] /home/yungblud/.gradle/caches/transforms-3/908edf951faf7fcd5610b3f1adcefab3/transformed/jetified-runtime-livedata-1.6.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-livedata:1.6.0] /home/yungblud/.gradle/caches/transforms-3/908edf951faf7fcd5610b3f1adcefab3/transformed/jetified-runtime-livedata-1.6.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/ed1a97d60fbef97d247e960453d0efd2/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/ed1a97d60fbef97d247e960453d0efd2/transformed/jetified-lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/yungblud/.gradle/caches/transforms-3/ed462f93e3c4581b9e0b26cec1a0c543/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /home/yungblud/.gradle/caches/transforms-3/ed462f93e3c4581b9e0b26cec1a0c543/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/yungblud/.gradle/caches/transforms-3/72ae92590148e745daccca01d721949d/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /home/yungblud/.gradle/caches/transforms-3/72ae92590148e745daccca01d721949d/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/yungblud/.gradle/caches/transforms-3/75fc69b95f41605b6f2538091a0dd803/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /home/yungblud/.gradle/caches/transforms-3/75fc69b95f41605b6f2538091a0dd803/transformed/jetified-savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/yungblud/.gradle/caches/transforms-3/19a74ac01bc393c30116a1fcd59c67f4/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/yungblud/.gradle/caches/transforms-3/19a74ac01bc393c30116a1fcd59c67f4/transformed/jetified-savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/yungblud/.gradle/caches/transforms-3/5c7c4de7909443256a5ac0dc45a64967/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /home/yungblud/.gradle/caches/transforms-3/5c7c4de7909443256a5ac0dc45a64967/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/yungblud/.gradle/caches/transforms-3/6e9b1ccfb636e5c72f02a9667e1ef04c/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /home/yungblud/.gradle/caches/transforms-3/6e9b1ccfb636e5c72f02a9667e1ef04c/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/yungblud/.gradle/caches/transforms-3/88cade1f1e41bd6aab647859730e6c23/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /home/yungblud/.gradle/caches/transforms-3/88cade1f1e41bd6aab647859730e6c23/transformed/jetified-lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/a77aea522c7b1f90f3993e3c503c0493/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/a77aea522c7b1f90f3993e3c503c0493/transformed/jetified-lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] /home/yungblud/.gradle/caches/transforms-3/090492257161d8edd3c928aab44342f6/transformed/jetified-lifecycle-viewmodel-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] /home/yungblud/.gradle/caches/transforms-3/090492257161d8edd3c928aab44342f6/transformed/jetified-lifecycle-viewmodel-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/60944d6f95419b005e98d489402dfc10/transformed/jetified-lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /home/yungblud/.gradle/caches/transforms-3/60944d6f95419b005e98d489402dfc10/transformed/jetified-lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose:2.7.0] /home/yungblud/.gradle/caches/transforms-3/498805a82f67e735b5ddc5f8e4b6fe44/transformed/jetified-lifecycle-runtime-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose:2.7.0] /home/yungblud/.gradle/caches/transforms-3/498805a82f67e735b5ddc5f8e4b6fe44/transformed/jetified-lifecycle-runtime-compose-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /home/yungblud/.gradle/caches/transforms-3/9990d0ba33e3e4c62fecfc6a704c604a/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /home/yungblud/.gradle/caches/transforms-3/9990d0ba33e3e4c62fecfc6a704c604a/transformed/jetified-accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/102c62cdf19cb041c76e9779da5e6826/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/102c62cdf19cb041c76e9779da5e6826/transformed/jetified-ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /home/yungblud/.gradle/caches/transforms-3/4d0a83cfe9773e636db3e3c919628625/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore-preferences:1.0.0] /home/yungblud/.gradle/caches/transforms-3/4d0a83cfe9773e636db3e3c919628625/transformed/jetified-datastore-preferences-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] /home/yungblud/.gradle/caches/transforms-3/90b96e45869f3cf11103672e53c52551/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0] /home/yungblud/.gradle/caches/transforms-3/90b96e45869f3cf11103672e53c52551/transformed/jetified-datastore-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.jakewharton.timber:timber:5.0.1] /home/yungblud/.gradle/caches/transforms-3/2fa706a8bc6a49c44cee0c412b110721/transformed/jetified-timber-5.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton.timber:timber:5.0.1] /home/yungblud/.gradle/caches/transforms-3/2fa706a8bc6a49c44cee0c412b110721/transformed/jetified-timber-5.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /home/yungblud/.gradle/caches/transforms-3/d5116f8faed31dad83ce72a60b932f4f/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.1] /home/yungblud/.gradle/caches/transforms-3/d5116f8faed31dad83ce72a60b932f4f/transformed/jetified-annotation-experimental-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/yungblud/.gradle/caches/transforms-3/3804faa520053e39be86a2bb16ca1dc5/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/yungblud/.gradle/caches/transforms-3/3804faa520053e39be86a2bb16ca1dc5/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/yungblud/.gradle/caches/transforms-3/fc0d11200a95a7a179e8335523a4c3d8/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/yungblud/.gradle/caches/transforms-3/fc0d11200a95a7a179e8335523a4c3d8/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/yungblud/.gradle/caches/transforms-3/e5234640e7ed03af58f6d261148cd7df/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/yungblud/.gradle/caches/transforms-3/e5234640e7ed03af58f6d261148cd7df/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/yungblud/.gradle/caches/transforms-3/d24a62090249673dbee71cdecba3a9b1/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /home/yungblud/.gradle/caches/transforms-3/d24a62090249673dbee71cdecba3a9b1/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/yungblud/.gradle/caches/transforms-3/81cc4b74244365b4ea2232b4a2b0d23b/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] /home/yungblud/.gradle/caches/transforms-3/81cc4b74244365b4ea2232b4a2b0d23b/transformed/exifinterface-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-lint-aar:2.50] /home/yungblud/.gradle/caches/transforms-3/840092b28790e42424ba23c773f4d32e/transformed/jetified-dagger-lint-aar-2.50/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.50] /home/yungblud/.gradle/caches/transforms-3/840092b28790e42424ba23c773f4d32e/transformed/jetified-dagger-lint-aar-2.50/AndroidManifest.xml:18:3-42
+	android:targetSdkVersion
+		INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/yungblud/Desktop/SpaceTec/app/src/main/AndroidManifest.xml
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.0] /home/yungblud/.gradle/caches/transforms-3/293e8831062b3c2be2552d6641f7c199/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.spacetec.obd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.spacetec.obd.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.0] /home/yungblud/.gradle/caches/transforms-3/8c1a937b2b2876679955e887aa9ca6e5/transformed/jetified-ui-test-manifest-1.6.0/AndroidManifest.xml:24:13-63
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92

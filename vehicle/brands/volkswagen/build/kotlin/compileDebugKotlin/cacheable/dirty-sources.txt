@@ -1,0 +1,7 @@
+/home/yungblud/Desktop/SpaceTec/vehicle/brands/volkswagen/src/main/java/com/spacetec/vehicle/brands/volkswagen/service/OBDConnectionService.kt
+/home/yungblud/Desktop/SpaceTec/vehicle/brands/volkswagen/src/main/java/com/spacetec/vehicle/brands/volkswagen/elm327/ELM327ProtocolHandler.kt
+/home/yungblud/Desktop/SpaceTec/vehicle/brands/volkswagen/src/main/java/com/spacetec/vehicle/brands/volkswagen/ui/DeviceListAdapter.kt
+/home/yungblud/Desktop/SpaceTec/vehicle/brands/volkswagen/src/main/java/com/spacetec/vehicle/brands/volkswagen/elm327/ELM327Connection.kt
+/home/yungblud/Desktop/SpaceTec/vehicle/brands/volkswagen/src/main/java/com/spacetec/vehicle/brands/volkswagen/bluetooth/BluetoothDeviceManager.kt
+/home/yungblud/Desktop/SpaceTec/vehicle/brands/volkswagen/src/main/java/com/spacetec/vehicle/brands/volkswagen/bluetooth/BluetoothPermissionManager.kt
+/home/yungblud/Desktop/SpaceTec/vehicle/brands/volkswagen/src/main/java/com/spacetec/vehicle/brands/volkswagen/vw/VWProtocolManager.kt

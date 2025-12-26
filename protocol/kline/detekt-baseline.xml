@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyKtFile:KWP1281Protocol.kt$.KWP1281Protocol.kt</ID>
+    <ID>EmptyKtFile:KWP2000Protocol.kt$.KWP2000Protocol.kt</ID>
+    <ID>EmptyKtFile:VPWProtocol.kt$.VPWProtocol.kt</ID>
+    <ID>MagicNumber:KLineProtocol.kt$KLineProtocol$100</ID>
+    <ID>MagicNumber:KLineProtocol.kt$KLineProtocol$300</ID>
+    <ID>MagicNumber:KLineProtocol.kt$KWP2000Protocol$4</ID>
+    <ID>WildcardImport:KLineProtocol.kt$import com.spacetec.protocol.core.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

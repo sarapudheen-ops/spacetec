@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:BluetoothDiscovery.kt$BluetoothDiscoveryManager$existing == null || (rssi != Short.MIN_VALUE.toInt() &amp;&amp; (existing.signalStrength == null || rssi &gt; existing.signalStrength))</ID>
+    <ID>ComplexCondition:BluetoothDiscoveryPropertyTest.kt$BluetoothDiscoveryPropertyTest$deviceName.uppercase().contains("OBDLINK") || deviceName.uppercase().contains("ELM327") || deviceName.uppercase().contains("VEEPEAK") || deviceName.uppercase().contains("CARISTA") || deviceName.uppercase().contains("BLUEDRIVER")</ID>
+    <ID>EmptyKtFile:BluetoothScanner.kt$.BluetoothScanner.kt</ID>
+    <ID>FunctionOnlyReturningConstant:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$private fun isBluetoothLEAddress(address: String): Boolean</ID>
+    <ID>ImplicitDefaultLocale:BluetoothDiscoveryPropertyTest.kt$BluetoothDiscoveryPropertyTest$String.format("%02X", (0..255).random())</ID>
+    <ID>ImplicitDefaultLocale:BluetoothDiscoveryPropertyTest.kt$BluetoothDiscoveryPropertyTest$String.format("AA:BB:CC:DD:EE:%02X", index)</ID>
+    <ID>InvalidPackageDeclaration:BluetoothClassicConfig.kt$package com.spacetec.obd.scanner.bluetooth.classic</ID>
+    <ID>InvalidPackageDeclaration:BluetoothClassicConnection.kt$package com.spacetec.obd.scanner.bluetooth.classic</ID>
+    <ID>InvalidPackageDeclaration:BluetoothConnectionModule.kt$package com.spacetec.obd.scanner.bluetooth.di</ID>
+    <ID>InvalidPackageDeclaration:BluetoothDiscovery.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>InvalidPackageDeclaration:BluetoothDiscoveryPropertyTest.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>InvalidPackageDeclaration:BluetoothLEConfig.kt$package com.spacetec.obd.scanner.bluetooth.ble</ID>
+    <ID>InvalidPackageDeclaration:BluetoothLEConnection.kt$package com.spacetec.obd.scanner.bluetooth.ble</ID>
+    <ID>InvalidPackageDeclaration:BluetoothProtocolAdapter.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>InvalidPackageDeclaration:BluetoothScanner.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>InvalidPackageDeclaration:BluetoothScannerDiscovery.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>InvalidPackageDeclaration:BluetoothScannerFactory.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>InvalidPackageDeclaration:BluetoothScannerModule.kt$package com.spacetec.obd.scanner.bluetooth.di</ID>
+    <ID>InvalidPackageDeclaration:CommandRetryPropertyTest.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>InvalidPackageDeclaration:ProtocolTransparencyPropertyTest.kt$package com.spacetec.obd.scanner.bluetooth</ID>
+    <ID>LongMethod:BluetoothLEConnection.kt$BluetoothLEConnection$@SuppressLint("MissingPermission") override suspend fun doConnect( address: String, config: ConnectionConfig ): ConnectionInfo</ID>
+    <ID>LoopWithTooManyJumpStatements:BluetoothClassicConnection.kt$BluetoothClassicConnection$while</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$10</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$20</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$50</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$500</ID>
+    <ID>MagicNumber:BluetoothClassicConnection.kt$BluetoothClassicConnection$100</ID>
+    <ID>MagicNumber:BluetoothClassicConnection.kt$BluetoothClassicConnection$50</ID>
+    <ID>MagicNumber:BluetoothLEConnection.kt$BluetoothLEConnection$100</ID>
+    <ID>MagicNumber:BluetoothScanner.kt$BluetoothScanner$10</ID>
+    <ID>MagicNumber:BluetoothScanner.kt$BluetoothScanner$1024</ID>
+    <ID>MatchingDeclarationName:BluetoothDiscovery.kt$BluetoothDiscoveryManager : BluetoothScannerManager</ID>
+    <ID>MaxLineLength:CommandRetryPropertyTest.kt$CommandRetryPropertyTest$"Property 5: Command Retry on Timeout - Commands should retry exactly the configured number of times before failing"</ID>
+    <ID>NestedBlockDepth:BLEConnection.kt$BLEConnection.&lt;no name provided&gt;$override fun onServicesDiscovered(gatt: BluetoothGatt, status: Int)</ID>
+    <ID>NestedBlockDepth:BluetoothDiscovery.kt$BluetoothDiscoveryManager$@SuppressLint("MissingPermission") private fun emitPairedDevices( options: DiscoveryOptions, onDiscovered: (DiscoveredScanner) -&gt; Unit )</ID>
+    <ID>NestedBlockDepth:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$suspend fun connect( address: String, autoDetectProtocol: Boolean = true ): Result&lt;Unit&gt;</ID>
+    <ID>NewLineAtEndOfFile:BLEConnection.kt$com.spacetec.scanner.bluetooth.BLEConnection.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothConnectionModule.kt$com.spacetec.obd.scanner.bluetooth.di.BluetoothConnectionModule.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothProtocolAdapter.kt$com.spacetec.obd.scanner.bluetooth.BluetoothProtocolAdapter.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothScanner.kt$com.spacetec.obd.scanner.bluetooth.BluetoothScanner.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothScannerDiscovery.kt$com.spacetec.obd.scanner.bluetooth.BluetoothScannerDiscovery.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothScannerFactory.kt$com.spacetec.obd.scanner.bluetooth.BluetoothScannerFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothScannerModule.kt$com.spacetec.obd.scanner.bluetooth.di.BluetoothScannerModule.kt</ID>
+    <ID>ReturnCount:BluetoothLEConnection.kt$BluetoothLEConnection$private fun findOBDService(gatt: BluetoothGatt): BluetoothGattService?</ID>
+    <ID>ReturnCount:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$private suspend fun detectProtocolType(connection: ScannerConnection): ProtocolTypeDetectionResult</ID>
+    <ID>ReturnCount:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$suspend fun connect( address: String, autoDetectProtocol: Boolean = true ): Result&lt;Unit&gt;</ID>
+    <ID>ReturnCount:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery$@SuppressLint("MissingPermission") override suspend fun getKnownDevices(): AppResult&lt;List&lt;ScannerDevice&gt;&gt;</ID>
+    <ID>ReturnCount:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery$@SuppressLint("MissingPermission") override suspend fun startScan(config: ScanConfig): AppResult&lt;Unit&gt;</ID>
+    <ID>ReturnCount:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery$@SuppressLint("MissingPermission") private fun BluetoothDevice.toScannerDevice( isPaired: Boolean = false, rssi: Int = 0 ): ScannerDevice?</ID>
+    <ID>ReturnCount:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery$private fun matchesConfig(device: ScannerDevice, config: ScanConfig): Boolean</ID>
+    <ID>SwallowedException:BluetoothClassicConnection.kt$BluetoothClassicConnection$e2: Exception</ID>
+    <ID>SwallowedException:BluetoothClassicConnection.kt$BluetoothClassicConnection$e: Exception</ID>
+    <ID>SwallowedException:BluetoothClassicConnection.kt$BluetoothClassicConnection$e: IOException</ID>
+    <ID>SwallowedException:BluetoothClassicConnection.kt$BluetoothClassicConnection$e: SecurityException</ID>
+    <ID>SwallowedException:BluetoothDiscovery.kt$BluetoothDiscoveryManager$e: SecurityException</ID>
+    <ID>SwallowedException:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$e: Exception</ID>
+    <ID>SwallowedException:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery$e: IllegalArgumentException</ID>
+    <ID>SwallowedException:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery$e: SecurityException</ID>
+    <ID>TooGenericExceptionCaught:BluetoothClassicConnection.kt$BluetoothClassicConnection$e2: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothClassicConnection.kt$BluetoothClassicConnection$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothLEConnection.kt$BluetoothLEConnection$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothScanner.kt$BluetoothScanner$e2: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothScanner.kt$BluetoothScanner$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery$e: Exception</ID>
+    <ID>TooGenericExceptionThrown:ProtocolTransparencyPropertyTest.kt$ProtocolTransparencyPropertyTest.MockProtocolConnection$throw Exception("Not connected")</ID>
+    <ID>TooManyFunctions:BluetoothClassicConnection.kt$BluetoothClassicConnection : BaseScannerConnection</ID>
+    <ID>TooManyFunctions:BluetoothDiscovery.kt$BluetoothDiscoveryManager : BluetoothScannerManager</ID>
+    <ID>TooManyFunctions:BluetoothLEConnection.kt$BluetoothLEConnection : BaseScannerConnection</ID>
+    <ID>TooManyFunctions:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter</ID>
+    <ID>TooManyFunctions:BluetoothScannerDiscovery.kt$BluetoothScannerDiscovery : ScannerDiscovery</ID>
+    <ID>UnusedParameter:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$address: String</ID>
+    <ID>UnusedPrivateProperty:BluetoothClassicConnection.kt$BluetoothClassicConnection$private val readBuffer = ByteArray(BluetoothClassicConstants.READ_BUFFER_SIZE)</ID>
+    <ID>UnusedPrivateProperty:BluetoothDiscoveryPropertyTest.kt$BluetoothDiscoveryPropertyTest$val bleMatches = options.filterByType == null || options.filterByType == ScannerConnectionType.BLUETOOTH_LE</ID>
+    <ID>UnusedPrivateProperty:BluetoothDiscoveryPropertyTest.kt$BluetoothDiscoveryPropertyTest$val classicMatches = options.filterByType == null || options.filterByType == ScannerConnectionType.BLUETOOTH_CLASSIC</ID>
+    <ID>UnusedPrivateProperty:BluetoothDiscoveryPropertyTest.kt$BluetoothDiscoveryPropertyTest$val deviceTypeArb = Arb.enum&lt;ScannerDeviceType&gt;()</ID>
+    <ID>UnusedPrivateProperty:BluetoothDiscoveryPropertyTest.kt$BluetoothDiscoveryPropertyTest$val macAddressArb = Arb.string(17, Codepoint.alphanumeric()).map { // Generate valid MAC address format (0..5).joinToString(":") { String.format("%02X", (0..255).random()) } }</ID>
+    <ID>UnusedPrivateProperty:BluetoothProtocolAdapter.kt$BluetoothProtocolAdapter$private val dispatcher: CoroutineDispatcher = Dispatchers.IO</ID>
+    <ID>UnusedPrivateProperty:ProtocolTransparencyPropertyTest.kt$ProtocolTransparencyPropertyTest$val addressArb = Arb.element( "AA:BB:CC:DD:EE:FF", // Bluetooth MAC "192.168.0.10:35000", // WiFi IP:port "/dev/ttyUSB0" // USB path )</ID>
+    <ID>WildcardImport:BluetoothDiscoveryPropertyTest.kt$import io.kotest.property.arbitrary.*</ID>
+    <ID>WildcardImport:CommandRetryPropertyTest.kt$import io.kotest.property.arbitrary.*</ID>
+    <ID>WildcardImport:ProtocolTransparencyPropertyTest.kt$import io.kotest.property.arbitrary.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

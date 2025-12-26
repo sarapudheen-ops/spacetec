@@ -1,0 +1,10 @@
+ninja: Entering directory `/home/yungblud/Desktop/SpaceTec/j2534/.cxx/RelWithDebInfo/1e2b175c/x86_64'
+[1/2] Building CXX object CMakeFiles/spacetec_j2534.dir/j2534_native.cpp.o
+FAILED: CMakeFiles/spacetec_j2534.dir/j2534_native.cpp.o 
+/home/yungblud/android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --sysroot=/home/yungblud/android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dspacetec_j2534_EXPORTS -I/home/yungblud/Desktop/SpaceTec/j2534/src/main/jni -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O2 -g -DNDEBUG -fPIC -std=gnu++17 -MD -MT CMakeFiles/spacetec_j2534.dir/j2534_native.cpp.o -MF CMakeFiles/spacetec_j2534.dir/j2534_native.cpp.o.d -o CMakeFiles/spacetec_j2534.dir/j2534_native.cpp.o -c /home/yungblud/Desktop/SpaceTec/j2534/src/main/jni/j2534_native.cpp
+In file included from /home/yungblud/Desktop/SpaceTec/j2534/src/main/jni/j2534_native.cpp:8:
+/home/yungblud/Desktop/SpaceTec/j2534/src/main/jni/j2534_native.h:12:10: fatal error: 'windows.h' file not found
+#include <windows.h>
+         ^~~~~~~~~~~
+1 error generated.
+ninja: build stopped: subcommand failed.

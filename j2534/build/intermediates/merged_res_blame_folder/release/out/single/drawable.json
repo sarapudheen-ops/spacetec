@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/notification_bg.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/ic_call_answer_video.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/ic_call_answer_video.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/ic_call_decline_low.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/ic_call_decline_low.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/ic_call_answer_video_low.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/ic_call_answer_video_low.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/ic_call_answer_low.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/ic_call_answer_low.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/notification_icon_background.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/notification_tile_bg.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/ic_call_answer.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/ic_call_answer.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/notification_bg_low.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "com.spacetec.j2534-merged_res-15:/drawable/ic_call_decline.xml",
+        "source": "com.spacetec.j2534-core-1.15.0-6:/drawable/ic_call_decline.xml"
+    }
+]

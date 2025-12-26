@@ -1,0 +1,16 @@
+com.spacetec.obd.core.domain-jetified-profileinstaller-1.3.0-0 /home/yungblud/.gradle/caches/transforms-3/19a9efe192e187d5c7efc2a7251474ea/transformed/jetified-profileinstaller-1.3.0/res
+com.spacetec.obd.core.domain-core-1.12.0-1 /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/res
+com.spacetec.obd.core.domain-jetified-annotation-experimental-1.3.0-2 /home/yungblud/.gradle/caches/transforms-3/55c6b018bb0020ff63fc2d464a884d4a/transformed/jetified-annotation-experimental-1.3.0/res
+com.spacetec.obd.core.domain-jetified-lifecycle-runtime-ktx-2.7.0-3 /home/yungblud/.gradle/caches/transforms-3/60944d6f95419b005e98d489402dfc10/transformed/jetified-lifecycle-runtime-ktx-2.7.0/res
+com.spacetec.obd.core.domain-lifecycle-runtime-2.7.0-4 /home/yungblud/.gradle/caches/transforms-3/6e9b1ccfb636e5c72f02a9667e1ef04c/transformed/lifecycle-runtime-2.7.0/res
+com.spacetec.obd.core.domain-jetified-core-ktx-1.12.0-5 /home/yungblud/.gradle/caches/transforms-3/92b8f6eb98e522158d43111b77c93ded/transformed/jetified-core-ktx-1.12.0/res
+com.spacetec.obd.core.domain-jetified-startup-runtime-1.1.1-6 /home/yungblud/.gradle/caches/transforms-3/ad8ee0247fadc6530397e9ed2d7b16f5/transformed/jetified-startup-runtime-1.1.1/res
+com.spacetec.obd.core.domain-core-runtime-2.2.0-7 /home/yungblud/.gradle/caches/transforms-3/e5234640e7ed03af58f6d261148cd7df/transformed/core-runtime-2.2.0/res
+com.spacetec.obd.core.domain-packaged_res-8 /home/yungblud/Desktop/SpaceTec/core/common/build/intermediates/packaged_res/release
+com.spacetec.obd.core.domain-pngs-9 /home/yungblud/Desktop/SpaceTec/core/domain/build/generated/res/pngs/release
+com.spacetec.obd.core.domain-resValues-10 /home/yungblud/Desktop/SpaceTec/core/domain/build/generated/res/resValues/release
+com.spacetec.obd.core.domain-mergeReleaseResources-11 /home/yungblud/Desktop/SpaceTec/core/domain/build/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.spacetec.obd.core.domain-mergeReleaseResources-12 /home/yungblud/Desktop/SpaceTec/core/domain/build/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.spacetec.obd.core.domain-merged_res-13 /home/yungblud/Desktop/SpaceTec/core/domain/build/intermediates/merged_res/release
+com.spacetec.obd.core.domain-main-14 /home/yungblud/Desktop/SpaceTec/core/domain/src/main/res
+com.spacetec.obd.core.domain-release-15 /home/yungblud/Desktop/SpaceTec/core/domain/src/release/res

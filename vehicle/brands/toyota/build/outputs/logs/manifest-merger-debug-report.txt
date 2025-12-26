@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml:2:13-83
+INJECTED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml:2:13-83
+	package
+		INJECTED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml
+	xmlns:android
+		ADDED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml:2:23-81
+uses-sdk
+INJECTED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml reason: use-sdk injection requested
+INJECTED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml
+INJECTED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml
+	android:targetSdkVersion
+		INJECTED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml
+	android:minSdkVersion
+		INJECTED from /home/yungblud/Desktop/SpaceTec/vehicle/brands/toyota/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest1583611308899115112.xml

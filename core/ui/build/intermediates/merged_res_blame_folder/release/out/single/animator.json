@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.spacetec.obd.core.ui-merged_res-60:/animator/fragment_open_enter.xml",
+        "source": "com.spacetec.obd.core.ui-fragment-1.5.1-10:/animator/fragment_open_enter.xml"
+    },
+    {
+        "merged": "com.spacetec.obd.core.ui-merged_res-60:/animator/fragment_open_exit.xml",
+        "source": "com.spacetec.obd.core.ui-fragment-1.5.1-10:/animator/fragment_open_exit.xml"
+    },
+    {
+        "merged": "com.spacetec.obd.core.ui-merged_res-60:/animator/fragment_fade_exit.xml",
+        "source": "com.spacetec.obd.core.ui-fragment-1.5.1-10:/animator/fragment_fade_exit.xml"
+    },
+    {
+        "merged": "com.spacetec.obd.core.ui-merged_res-60:/animator/fragment_close_exit.xml",
+        "source": "com.spacetec.obd.core.ui-fragment-1.5.1-10:/animator/fragment_close_exit.xml"
+    },
+    {
+        "merged": "com.spacetec.obd.core.ui-merged_res-60:/animator/fragment_fade_enter.xml",
+        "source": "com.spacetec.obd.core.ui-fragment-1.5.1-10:/animator/fragment_fade_enter.xml"
+    },
+    {
+        "merged": "com.spacetec.obd.core.ui-merged_res-60:/animator/fragment_close_enter.xml",
+        "source": "com.spacetec.obd.core.ui-fragment-1.5.1-10:/animator/fragment_close_enter.xml"
+    }
+]

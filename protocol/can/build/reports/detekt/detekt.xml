@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="4.3">
+<file name="/home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPProtocol.kt">
+	<error line="50" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="104" column="22" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="168" column="18" severity="warning" message="The caught exception is too generic. Prefer catching specific exceptions to the case that is currently handled." source="detekt.TooGenericExceptionCaught" />
+	<error line="104" column="22" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="168" column="18" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="124" column="69" severity="warning" message="String.format(&quot;0x%02X&quot;, nrc) uses implicitly default locale for string formatting." source="detekt.ImplicitDefaultLocale" />
+	<error line="173" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPProtocol.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="40" column="19" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="43" column="19" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="46" column="19" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="61" column="42" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="79" column="42" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="102" column="44" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="115" column="54" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="115" column="64" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="145" column="37" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="145" column="45" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="146" column="34" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="147" column="64" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="148" column="51" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="149" column="35" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="156" column="49" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="157" column="45" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="157" column="55" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="167" column="44" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="28" column="17" severity="warning" message="Private property `reassembler` is unused." source="detekt.UnusedPrivateProperty" />
+	<error line="147" column="21" severity="warning" message="Private property `requestedService` is unused." source="detekt.UnusedPrivateProperty" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPFrameHandler.kt">
+	<error line="48" column="13" severity="warning" message="Exception is a too generic Exception. Prefer throwing specific exceptions that indicate a specific error case." source="detekt.TooGenericExceptionThrown" />
+	<error line="20" column="17" severity="warning" message="Function sendMultiFrameMessage has 3 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="125" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPFrameHandler.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="39" column="15" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="55" column="23" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="61" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="64" column="46" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="64" column="52" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="102" column="61" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="12" column="17" severity="warning" message="Private property `reassembler` is unused." source="detekt.UnusedPrivateProperty" />
+	<error line="58" column="17" severity="warning" message="Private property `cfResponse` is unused." source="detekt.UnusedPrivateProperty" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/CANFrame.kt">
+	<error line="44" column="22" severity="warning" message="The caught exception is swallowed. The original exception could be lost." source="detekt.SwallowedException" />
+	<error line="30" column="91" severity="warning" message="String.format(&quot;0x%02X&quot;, it) uses implicitly default locale for string formatting." source="detekt.ImplicitDefaultLocale" />
+	<error line="49" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/CANFrame.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="30" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="19" column="30" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="30" column="51" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/CANMessage.kt">
+	<error line="22" column="99" severity="warning" message="String.format(&quot;%02X&quot;, it) uses implicitly default locale for string formatting." source="detekt.ImplicitDefaultLocale" />
+	<error line="22" column="199" severity="warning" message="String.format(&quot;0x%02X&quot;, negativeResponseCode) uses implicitly default locale for string formatting." source="detekt.ImplicitDefaultLocale" />
+	<error line="24" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/CANMessage.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="22" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="22" column="61" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/CANFilter.kt">
+	<error line="49" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/CANFilter.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="34" column="40" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="34" column="56" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPReassembler.kt">
+	<error line="21" column="9" severity="warning" message="Function processFrame has 11 return statements which exceeds the limit of 2." source="detekt.ReturnCount" />
+	<error line="125" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPReassembler.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="24" column="40" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="25" column="34" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="37" column="34" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="40" column="56" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="41" column="51" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="44" column="67" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="75" column="57" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="78" column="13" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPSegmenter.kt">
+	<error line="110" column="2" severity="warning" message="The file /home/yungblud/Desktop/SpaceTec/protocol/can/src/main/java/com/spacetec/protocol/can/isotp/ISOTPSegmenter.kt is not ending with a new line." source="detekt.NewLineAtEndOfFile" />
+	<error line="19" column="26" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="25" column="33" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="28" column="44" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="31" column="24" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="31" column="33" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="31" column="57" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="33" column="50" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="34" column="58" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="39" column="26" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="43" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="44" column="40" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="47" column="31" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="47" column="70" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="53" column="57" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="58" column="44" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="63" column="51" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="63" column="59" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="64" column="28" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="64" column="51" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="64" column="59" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="65" column="28" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="65" column="51" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="65" column="58" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="66" column="28" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="66" column="50" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="69" column="44" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="70" column="55" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="79" column="39" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="80" column="40" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="82" column="31" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="82" column="70" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="88" column="57" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="102" column="31" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+	<error line="106" column="15" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+</checkstyle>

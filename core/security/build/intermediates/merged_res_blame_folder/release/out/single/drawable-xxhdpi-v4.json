@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.spacetec.obd.core.security-merged_res-20:/drawable-xxhdpi-v4/ic_call_decline_low.png",
+        "source": "com.spacetec.obd.core.security-core-1.12.0-4:/drawable-xxhdpi-v4/ic_call_decline_low.png"
+    },
+    {
+        "merged": "com.spacetec.obd.core.security-merged_res-20:/drawable-xxhdpi-v4/ic_call_decline.png",
+        "source": "com.spacetec.obd.core.security-core-1.12.0-4:/drawable-xxhdpi-v4/ic_call_decline.png"
+    },
+    {
+        "merged": "com.spacetec.obd.core.security-merged_res-20:/drawable-xxhdpi-v4/ic_call_answer_video.png",
+        "source": "com.spacetec.obd.core.security-core-1.12.0-4:/drawable-xxhdpi-v4/ic_call_answer_video.png"
+    },
+    {
+        "merged": "com.spacetec.obd.core.security-merged_res-20:/drawable-xxhdpi-v4/ic_call_answer_low.png",
+        "source": "com.spacetec.obd.core.security-core-1.12.0-4:/drawable-xxhdpi-v4/ic_call_answer_low.png"
+    },
+    {
+        "merged": "com.spacetec.obd.core.security-merged_res-20:/drawable-xxhdpi-v4/ic_call_answer_video_low.png",
+        "source": "com.spacetec.obd.core.security-core-1.12.0-4:/drawable-xxhdpi-v4/ic_call_answer_video_low.png"
+    },
+    {
+        "merged": "com.spacetec.obd.core.security-merged_res-20:/drawable-xxhdpi-v4/ic_call_answer.png",
+        "source": "com.spacetec.obd.core.security-core-1.12.0-4:/drawable-xxhdpi-v4/ic_call_answer.png"
+    }
+]

@@ -1,0 +1,269 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:ProtocolDetector.kt$ProtocolDetector$responseStr.contains("NO DATA") || responseStr.contains("ERROR") || responseStr.contains("?") || responseStr.contains("BUS INIT")</ID>
+    <ID>ComplexCondition:ProtocolDetector.kt$ProtocolDetector$responseStr.contains("NO DATA") || responseStr.contains("UNABLE TO CONNECT") || responseStr.contains("ERROR") || responseStr.contains("?") || responseStr.contains("CAN ERROR")</ID>
+    <ID>CyclomaticComplexMethod:BaseProtocol.kt$NegativeResponseCodes$fun getDescription(nrc: Int): String</ID>
+    <ID>EmptyKtFile:MessageBuilder.kt$.MessageBuilder.kt</ID>
+    <ID>EmptyKtFile:MessageParser.kt$.MessageParser.kt</ID>
+    <ID>EmptyKtFile:MessageValidator.kt$.MessageValidator.kt</ID>
+    <ID>EmptyKtFile:OBDMessage.kt$.OBDMessage.kt</ID>
+    <ID>EmptyKtFile:ProtocolFactory.kt$.ProtocolFactory.kt</ID>
+    <ID>EmptyKtFile:ProtocolHandler.kt$.ProtocolHandler.kt</ID>
+    <ID>EmptyKtFile:ProtocolSession.kt$.ProtocolSession.kt</ID>
+    <ID>EmptyKtFile:RequestMessage.kt$.RequestMessage.kt</ID>
+    <ID>EmptyKtFile:ResponseHandler.kt$.ResponseHandler.kt</ID>
+    <ID>EmptyKtFile:TimeoutHandler.kt$.TimeoutHandler.kt</ID>
+    <ID>ForbiddenComment:BaseProtocol.kt$BaseProtocol$// TODO: Implement proper logging</ID>
+    <ID>ForbiddenComment:ProtocolManager.kt$// TODO: Add proper imports when dependencies are resolved</ID>
+    <ID>ImplicitDefaultLocale:BaseProtocol.kt$String.format("%02X", it)</ID>
+    <ID>ImplicitDefaultLocale:DiagnosticMessage.kt$DiagnosticMessage$String.format("%02X", it)</ID>
+    <ID>InstanceOfCheckForException:ProtocolDetector.kt$ProtocolDetector$e !is ProtocolException</ID>
+    <ID>LargeClass:ProtocolDetector.kt$ProtocolDetector</ID>
+    <ID>LongMethod:ProtocolDetector.kt$ProtocolDetector$fun detectProtocolWithProgress( connection: ScannerConnection, config: DetectionConfig = DetectionConfig.DEFAULT ): Flow&lt;DetectionProgress&gt;</ID>
+    <ID>LongMethod:ProtocolDetector.kt$ProtocolDetector$fun getDetectionOrder( vehicleYear: Int? = null, vehicleMake: String? = null, config: DetectionConfig = DetectionConfig.DEFAULT ): List&lt;ProtocolType&gt;</ID>
+    <ID>LoopWithTooManyJumpStatements:ProtocolDetector.kt$ProtocolDetector$for</ID>
+    <ID>MagicNumber:BaseProtocol.kt$16</ID>
+    <ID>MagicNumber:BaseProtocol.kt$BaseProtocol$0x3E</ID>
+    <ID>MagicNumber:BaseProtocol.kt$BaseProtocol$0xFF</ID>
+    <ID>MagicNumber:BaseProtocol.kt$BaseProtocol$16</ID>
+    <ID>MagicNumber:BaseProtocol.kt$NegativeResponseCodes$16</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x10</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x11</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x14</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x19</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x22</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x23</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x24</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x27</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x28</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x29</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x2A</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x2C</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x2E</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x31</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x34</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x35</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x36</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x37</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x38</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x3D</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x3E</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x83</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x84</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x85</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x86</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$0x87</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$250000</ID>
+    <ID>MagicNumber:BaseProtocol.kt$ProtocolCapabilities.Companion$500000</ID>
+    <ID>MagicNumber:BaseProtocol.kt$SessionType.EXTENDED$0x03</ID>
+    <ID>MagicNumber:BaseProtocol.kt$SessionType.MANUFACTURER_1$0x40</ID>
+    <ID>MagicNumber:BaseProtocol.kt$SessionType.MANUFACTURER_2$0x41</ID>
+    <ID>MagicNumber:BaseProtocol.kt$SessionType.SAFETY_SYSTEM$0x04</ID>
+    <ID>MagicNumber:BaseProtocol.kt$SessionType.SUPPLIER_1$0x60</ID>
+    <ID>MagicNumber:BaseProtocol.kt$SessionType.SUPPLIER_2$0x61</ID>
+    <ID>MagicNumber:ConsecutiveFrame.kt$ConsecutiveFrame$0x20</ID>
+    <ID>MagicNumber:ConsecutiveFrame.kt$ConsecutiveFrame$15</ID>
+    <ID>MagicNumber:ConsecutiveFrame.kt$ConsecutiveFrame$4</ID>
+    <ID>MagicNumber:ConsecutiveFrame.kt$ConsecutiveFrame$7</ID>
+    <ID>MagicNumber:ConsecutiveFrame.kt$ConsecutiveFrame.Companion$0xFF</ID>
+    <ID>MagicNumber:ConsecutiveFrame.kt$ConsecutiveFrame.Companion$4</ID>
+    <ID>MagicNumber:DiagnosticMessage.kt$DiagnosticMessage$0xFF</ID>
+    <ID>MagicNumber:DiagnosticMessage.kt$DiagnosticMessage.Companion$0xFF</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame$0x10</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame$0xFF</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame$4</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame$6</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame$7</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame$8</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame.Companion$0xFF</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame.Companion$4</ID>
+    <ID>MagicNumber:FirstFrame.kt$FirstFrame.Companion$8</ID>
+    <ID>MagicNumber:FlowControlFrame.kt$FlowControlFrame$0x30</ID>
+    <ID>MagicNumber:FlowControlFrame.kt$FlowControlFrame$3</ID>
+    <ID>MagicNumber:FlowControlFrame.kt$FlowControlFrame.Companion$0x03</ID>
+    <ID>MagicNumber:FlowControlFrame.kt$FlowControlFrame.Companion$0xFF</ID>
+    <ID>MagicNumber:FlowControlFrame.kt$FlowControlFrame.Companion$3</ID>
+    <ID>MagicNumber:FlowControlFrame.kt$FlowControlFrame.Companion$4</ID>
+    <ID>MagicNumber:FrameBuilder.kt$FrameBuilder$6</ID>
+    <ID>MagicNumber:FrameBuilder.kt$FrameBuilder$7</ID>
+    <ID>MagicNumber:FrameParser.kt$FrameParser$0x03</ID>
+    <ID>MagicNumber:FrameParser.kt$FrameParser$0xFF</ID>
+    <ID>MagicNumber:FrameParser.kt$FrameParser$4</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$DetectionProgress.Testing$100</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$0x03</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$100</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$16</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$200</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$2008</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$250000</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$3</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$4</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$50</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$500000</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolDetector$8</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolType$10400</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolType$250000</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolType$41600</ID>
+    <ID>MagicNumber:ProtocolDetector.kt$ProtocolType$500000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$DTCType$0x03</ID>
+    <ID>MagicNumber:ProtocolManager.kt$DTCType$0x07</ID>
+    <ID>MagicNumber:ProtocolManager.kt$DTCType$0x0A</ID>
+    <ID>MagicNumber:ProtocolManager.kt$DTCType$0x15</ID>
+    <ID>MagicNumber:ProtocolManager.kt$DetectionProgress.Testing$100</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUInfo$16</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUInfo$4</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUResetType.DISABLE_RAPID_POWER_SHUTDOWN$0x05</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUResetType.ENABLE_RAPID_POWER_SHUTDOWN$0x04</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUResetType.SOFT_RESET$0x03</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x720</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x728</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x760</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x768</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x772</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x77A</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x7E0</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x7E1</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x7E8</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ECUType.Companion$0x7E9</ID>
+    <ID>MagicNumber:ProtocolManager.kt$IOControlParameter.SHORT_TERM_ADJUSTMENT$0x03</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x03</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x04</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x05</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x06</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x07</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x08</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x09</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x0A</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x10</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x11</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x14</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x17</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x18</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x19</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x1A</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x21</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x22</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x23</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x24</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x27</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x28</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x2A</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x2C</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x2E</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x30</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x31</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x34</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x35</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x36</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x37</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x38</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x3B</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x3D</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x3E</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x85</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x86</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$0x87</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$10400</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$250_000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$41600</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolCapabilities.Companion$500_000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError$16</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.Companion$16</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.COMMUNICATION$1000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.COMMUNICATION$1999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.CONFIGURATION$7000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.CONFIGURATION$7999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.INTERNAL$8000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.INTERNAL$8999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.NRC$3000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.NRC$3999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.PROTOCOL$2000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.PROTOCOL$2999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.SECURITY$5000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.SECURITY$5999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.STATE$6000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.STATE$6999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.TIMEOUT$4000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.TIMEOUT$4999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.UNKNOWN$9000</ID>
+    <ID>MagicNumber:ProtocolManager.kt$ProtocolError.ErrorCategory.UNKNOWN$9999</ID>
+    <ID>MagicNumber:ProtocolManager.kt$SessionType$0x80</ID>
+    <ID>MagicNumber:ProtocolManager.kt$SessionType.Companion$16</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.BMW_DS2$13</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.MERCEDES_XENTRY$14</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_14230_4_KWP_5BAUD$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_14230_4_KWP_5BAUD$3</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_14230_4_KWP_FAST$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_11BIT_500K$4</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_11BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_29BIT_500K$5</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_29BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_9141_2$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_PWM$41600</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_PWM$6</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_VPW$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_VPW$7</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_14229_4_DOIP$10</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_11BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_11BIT_500K$8</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_29BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_29BIT_500K$9</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.VAG_KWP1281$11</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.VAG_KWP2000$12</ID>
+    <ID>MagicNumber:SingleFrame.kt$SingleFrame$4</ID>
+    <ID>MagicNumber:SingleFrame.kt$SingleFrame$7</ID>
+    <ID>MagicNumber:SingleFrame.kt$SingleFrame.Companion$0xFF</ID>
+    <ID>MagicNumber:SingleFrame.kt$SingleFrame.Companion$4</ID>
+    <ID>MaxLineLength:ProtocolDetector.kt$ProtocolDetector$val response = sendTestMessage(connection, request, config.testTimeoutMs * 2) // Longer timeout for slow init</ID>
+    <ID>MaxLineLength:ProtocolManager.kt$ProtocolError.Companion$message = operation?.let { "$it: ${message ?: e.message}" } ?: (message ?: e.message ?: "Unknown error")</ID>
+    <ID>NewLineAtEndOfFile:BaseProtocol.kt$com.spacetec.protocol.core.base.BaseProtocol.kt</ID>
+    <ID>NewLineAtEndOfFile:ConsecutiveFrame.kt$com.spacetec.protocol.core.frame.ConsecutiveFrame.kt</ID>
+    <ID>NewLineAtEndOfFile:DiagnosticMessage.kt$com.spacetec.protocol.core.message.DiagnosticMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:FirstFrame.kt$com.spacetec.protocol.core.frame.FirstFrame.kt</ID>
+    <ID>NewLineAtEndOfFile:FlowControlFrame.kt$com.spacetec.protocol.core.frame.FlowControlFrame.kt</ID>
+    <ID>NewLineAtEndOfFile:Frame.kt$com.spacetec.protocol.core.frame.Frame.kt</ID>
+    <ID>NewLineAtEndOfFile:FrameBuilder.kt$com.spacetec.protocol.core.frame.FrameBuilder.kt</ID>
+    <ID>NewLineAtEndOfFile:FrameParser.kt$com.spacetec.protocol.core.frame.FrameParser.kt</ID>
+    <ID>NewLineAtEndOfFile:MessageType.kt$com.spacetec.protocol.core.message.MessageType.kt</ID>
+    <ID>NewLineAtEndOfFile:ProtocolType.kt$com.spacetec.protocol.core.base.ProtocolType.kt</ID>
+    <ID>NewLineAtEndOfFile:ResponseMessage.kt$com.spacetec.protocol.core.message.ResponseMessage.kt</ID>
+    <ID>NewLineAtEndOfFile:SingleFrame.kt$com.spacetec.protocol.core.frame.SingleFrame.kt</ID>
+    <ID>NewLineAtEndOfFile:TimingManager.kt$com.spacetec.protocol.core.timing.TimingManager.kt</ID>
+    <ID>NewLineAtEndOfFile:TimingParameters.kt$com.spacetec.protocol.core.timing.TimingParameters.kt</ID>
+    <ID>ReturnCount:ConsecutiveFrame.kt$ConsecutiveFrame.Companion$fun fromByteArray(canId: Int, raw: ByteArray): ConsecutiveFrame?</ID>
+    <ID>ReturnCount:FirstFrame.kt$FirstFrame.Companion$fun fromByteArray(canId: Int, raw: ByteArray): FirstFrame?</ID>
+    <ID>ReturnCount:FlowControlFrame.kt$FlowControlFrame.Companion$fun fromByteArray(canId: Int, raw: ByteArray): FlowControlFrame?</ID>
+    <ID>ReturnCount:FrameParser.kt$FrameParser$fun reassembleMessage(frames: List&lt;Frame&gt;): ByteArray?</ID>
+    <ID>ReturnCount:FrameParser.kt$FrameParser$private fun validateMultiFrameSequence(frames: List&lt;Frame&gt;, expectedTotalLength: Int): Boolean</ID>
+    <ID>ReturnCount:ProtocolDetector.kt$ProtocolDetector$private fun isValidJ1850Response(response: ByteArray): Boolean</ID>
+    <ID>ReturnCount:ProtocolDetector.kt$ProtocolDetector$private fun isValidJ1939Response(response: ByteArray): Boolean</ID>
+    <ID>ReturnCount:ProtocolDetector.kt$ProtocolDetector$private fun isValidKWPResponse(response: ByteArray): Boolean</ID>
+    <ID>ReturnCount:ProtocolDetector.kt$ProtocolDetector$private fun isValidOBDResponse(response: ByteArray): Boolean</ID>
+    <ID>ReturnCount:ProtocolDetector.kt$ProtocolDetector$private suspend fun executeWithRetry( maxRetries: Int, block: suspend () -&gt; Boolean ): Boolean</ID>
+    <ID>ReturnCount:SingleFrame.kt$SingleFrame.Companion$fun fromByteArray(canId: Int, raw: ByteArray): SingleFrame?</ID>
+    <ID>SwallowedException:BaseProtocol.kt$BaseProtocol$e: Exception</ID>
+    <ID>SwallowedException:BaseProtocol.kt$BaseProtocol$e: kotlinx.coroutines.TimeoutCancellationException</ID>
+    <ID>SwallowedException:ProtocolDetector.kt$ProtocolDetector$e: CancellationException</ID>
+    <ID>SwallowedException:ProtocolDetector.kt$ProtocolDetector$e: Exception</ID>
+    <ID>SwallowedException:ProtocolDetector.kt$ProtocolDetector$e: kotlinx.coroutines.TimeoutCancellationException</ID>
+    <ID>ThrowsCount:BaseProtocol.kt$BaseProtocol$protected fun validateState()</ID>
+    <ID>ThrowsCount:BaseProtocol.kt$BaseProtocol$protected suspend fun &lt;T&gt; executeWithRetry( operation: String, maxRetries: Int = _config.maxRetries, retryDelayMs: Long = _config.retryDelayMs, block: suspend () -&gt; T ): T</ID>
+    <ID>TooGenericExceptionCaught:BaseProtocol.kt$BaseProtocol$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ProtocolDetector.kt$ProtocolDetector$e: Exception</ID>
+    <ID>TooManyFunctions:BaseProtocol.kt$BaseProtocol</ID>
+    <ID>TooManyFunctions:BaseProtocol.kt$ProtocolConfig$Builder</ID>
+    <ID>TooManyFunctions:ProtocolDetector.kt$ProtocolDetector</ID>
+    <ID>TooManyFunctions:ProtocolManager.kt$ProtocolConfig$Builder</ID>
+    <ID>UnusedParameter:ProtocolDetector.kt$ProtocolDetector$canId: Int</ID>
+    <ID>UnusedPrivateProperty:ProtocolDetector.kt$ProtocolDetector$/** * Coroutine scope for detection operations. */ private val detectorScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)</ID>
+    <ID>UnusedPrivateProperty:ProtocolDetector.kt$ProtocolDetector$private val protocolFactory: ProtocolFactory</ID>
+    <ID>UnusedPrivateProperty:ProtocolDetector.kt$ProtocolDetector$private val timingManager: TimingManager</ID>
+    <ID>UnusedPrivateProperty:ProtocolDetector.kt$ProtocolDetector$val hexPattern = Regex("[0-9A-Fa-f]{2}\\s*")</ID>
+    <ID>VariableNaming:BaseProtocol.kt$BaseProtocol$/** * Current protocol configuration. */ protected var _config: ProtocolConfig = ProtocolConfig.DEFAULT</ID>
+    <ID>VariableNaming:BaseProtocol.kt$BaseProtocol$/** * Mutable backing field for protocol state. */ protected val _state = MutableStateFlow&lt;ProtocolState&gt;(ProtocolState.Uninitialized)</ID>
+    <ID>WildcardImport:ProtocolManager.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:ProtocolManager.kt$import kotlinx.coroutines.flow.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

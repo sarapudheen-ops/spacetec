@@ -1,0 +1,2462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="incidents">
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Connecting to &quot; + device.address)"
+                oldString="Log.d(TAG, &quot;Connecting to ${device.address}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Connecting to &quot; + device.address)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Connecting to &quot; + device.address)"
+                oldString="Log.d(TAG, &quot;Connecting to ${device.address}&quot;)"
+                replacement="Timber.d(&quot;Connecting to &quot; + device.address)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="70"
+            column="13"
+            startOffset="2305"
+            endLine="70"
+            endColumn="58"
+            endOffset="2350"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="73"
+            column="24"
+            startOffset="2425"
+            endLine="73"
+            endColumn="70"
+            endOffset="2471"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Connected successfully to &quot; + device.address)"
+                oldString="Log.d(TAG, &quot;Connected successfully to ${device.address}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Connected successfully to &quot; + device.address)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Connected successfully to &quot; + device.address)"
+                oldString="Log.d(TAG, &quot;Connected successfully to ${device.address}&quot;)"
+                replacement="Timber.d(&quot;Connected successfully to &quot; + device.address)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="124"
+            column="13"
+            startOffset="4193"
+            endLine="124"
+            endColumn="70"
+            endOffset="4250"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(e, &quot;Connection failed&quot;)"
+                oldString="Log.e(TAG, &quot;Connection failed&quot;, e)"
+                replacement="Timber.tag(TAG).e(e, &quot;Connection failed&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(e, &quot;Connection failed&quot;)"
+                oldString="Log.e(TAG, &quot;Connection failed&quot;, e)"
+                replacement="Timber.e(e, &quot;Connection failed&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="128"
+            column="13"
+            startOffset="4342"
+            endLine="128"
+            endColumn="47"
+            endOffset="4376"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Found TX: &quot; + txCharacteristic?.uuid + &quot;, RX: &quot; + rxCharacteristic?.uuid)"
+                oldString="Log.d(TAG, &quot;Found TX: ${txCharacteristic?.uuid}, RX: ${rxCharacteristic?.uuid}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Found TX: &quot; + txCharacteristic?.uuid + &quot;, RX: &quot; + rxCharacteristic?.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Found TX: &quot; + txCharacteristic?.uuid + &quot;, RX: &quot; + rxCharacteristic?.uuid)"
+                oldString="Log.d(TAG, &quot;Found TX: ${txCharacteristic?.uuid}, RX: ${rxCharacteristic?.uuid}&quot;)"
+                replacement="Timber.d(&quot;Found TX: &quot; + txCharacteristic?.uuid + &quot;, RX: &quot; + rxCharacteristic?.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="175"
+            column="9"
+            startOffset="6144"
+            endLine="175"
+            endColumn="89"
+            endOffset="6224"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;MTU negotiated: &quot; + gattCallback.currentMtu)"
+                oldString="Log.d(TAG, &quot;MTU negotiated: ${gattCallback.currentMtu}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;MTU negotiated: &quot; + gattCallback.currentMtu)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;MTU negotiated: &quot; + gattCallback.currentMtu)"
+                oldString="Log.d(TAG, &quot;MTU negotiated: ${gattCallback.currentMtu}&quot;)"
+                replacement="Timber.d(&quot;MTU negotiated: &quot; + gattCallback.currentMtu)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="197"
+            column="13"
+            startOffset="6915"
+            endLine="197"
+            endColumn="69"
+            endOffset="6971"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).w(e, &quot;MTU negotiation failed, using default&quot;)"
+                oldString="Log.w(TAG, &quot;MTU negotiation failed, using default&quot;, e)"
+                replacement="Timber.tag(TAG).w(e, &quot;MTU negotiation failed, using default&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.w(e, &quot;MTU negotiation failed, using default&quot;)"
+                oldString="Log.w(TAG, &quot;MTU negotiation failed, using default&quot;, e)"
+                replacement="Timber.w(e, &quot;MTU negotiation failed, using default&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="199"
+            column="13"
+            startOffset="7017"
+            endLine="199"
+            endColumn="67"
+            endOffset="7071"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Notifications enabled for &quot; + rxChar.uuid)"
+                oldString="Log.d(TAG, &quot;Notifications enabled for ${rxChar.uuid}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Notifications enabled for &quot; + rxChar.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Notifications enabled for &quot; + rxChar.uuid)"
+                oldString="Log.d(TAG, &quot;Notifications enabled for ${rxChar.uuid}&quot;)"
+                replacement="Timber.d(&quot;Notifications enabled for &quot; + rxChar.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="244"
+            column="9"
+            startOffset="8746"
+            endLine="244"
+            endColumn="63"
+            endOffset="8800"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(e, &quot;Write failed&quot;)"
+                oldString="Log.e(TAG, &quot;Write failed&quot;, e)"
+                replacement="Timber.tag(TAG).e(e, &quot;Write failed&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(e, &quot;Write failed&quot;)"
+                oldString="Log.e(TAG, &quot;Write failed&quot;, e)"
+                replacement="Timber.e(e, &quot;Write failed&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="338"
+            column="13"
+            startOffset="12307"
+            endLine="338"
+            endColumn="42"
+            endOffset="12336"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Disconnecting from &quot; + device.address)"
+                oldString="Log.d(TAG, &quot;Disconnecting from ${device.address}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Disconnecting from &quot; + device.address)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Disconnecting from &quot; + device.address)"
+                oldString="Log.d(TAG, &quot;Disconnecting from ${device.address}&quot;)"
+                replacement="Timber.d(&quot;Disconnecting from &quot; + device.address)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="353"
+            column="9"
+            startOffset="12662"
+            endLine="353"
+            endColumn="59"
+            endOffset="12712"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).w(e, &quot;Error during disconnect&quot;)"
+                oldString="Log.w(TAG, &quot;Error during disconnect&quot;, e)"
+                replacement="Timber.tag(TAG).w(e, &quot;Error during disconnect&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.w(e, &quot;Error during disconnect&quot;)"
+                oldString="Log.w(TAG, &quot;Error during disconnect&quot;, e)"
+                replacement="Timber.w(e, &quot;Error during disconnect&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEConnection.kt"
+            line="363"
+            column="13"
+            startOffset="12937"
+            endLine="363"
+            endColumn="53"
+            endOffset="12977"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onConnectionStateChange: status=&quot; + status + &quot;, newState=&quot; + newState)"
+                oldString="Log.d(TAG, &quot;onConnectionStateChange: status=$status, newState=$newState&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onConnectionStateChange: status=&quot; + status + &quot;, newState=&quot; + newState)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onConnectionStateChange: status=&quot; + status + &quot;, newState=&quot; + newState)"
+                oldString="Log.d(TAG, &quot;onConnectionStateChange: status=$status, newState=$newState&quot;)"
+                replacement="Timber.d(&quot;onConnectionStateChange: status=&quot; + status + &quot;, newState=&quot; + newState)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="53"
+            column="9"
+            startOffset="2069"
+            endLine="53"
+            endColumn="82"
+            endOffset="2142"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onServicesDiscovered: status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onServicesDiscovered: status=$status&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onServicesDiscovered: status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onServicesDiscovered: status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onServicesDiscovered: status=$status&quot;)"
+                replacement="Timber.d(&quot;onServicesDiscovered: status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="87"
+            column="9"
+            startOffset="3601"
+            endLine="87"
+            endColumn="59"
+            endOffset="3651"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onMtuChanged: mtu=&quot; + mtu + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onMtuChanged: mtu=$mtu, status=$status&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onMtuChanged: mtu=&quot; + mtu + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onMtuChanged: mtu=&quot; + mtu + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onMtuChanged: mtu=$mtu, status=$status&quot;)"
+                replacement="Timber.d(&quot;onMtuChanged: mtu=&quot; + mtu + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="100"
+            column="9"
+            startOffset="4185"
+            endLine="100"
+            endColumn="61"
+            endOffset="4237"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onCharacteristicWrite: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onCharacteristicWrite: ${characteristic.uuid}, status=$status&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onCharacteristicWrite: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onCharacteristicWrite: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onCharacteristicWrite: ${characteristic.uuid}, status=$status&quot;)"
+                replacement="Timber.d(&quot;onCharacteristicWrite: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="120"
+            column="9"
+            startOffset="4905"
+            endLine="120"
+            endColumn="84"
+            endOffset="4980"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onCharacteristicRead: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onCharacteristicRead: ${characteristic.uuid}, status=$status&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onCharacteristicRead: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onCharacteristicRead: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onCharacteristicRead: ${characteristic.uuid}, status=$status&quot;)"
+                replacement="Timber.d(&quot;onCharacteristicRead: &quot; + characteristic.uuid + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="134"
+            column="9"
+            startOffset="5396"
+            endLine="134"
+            endColumn="83"
+            endOffset="5470"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onCharacteristicChanged: &quot; + characteristic.uuid)"
+                oldString="Log.d(TAG, &quot;onCharacteristicChanged: ${characteristic.uuid}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onCharacteristicChanged: &quot; + characteristic.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onCharacteristicChanged: &quot; + characteristic.uuid)"
+                oldString="Log.d(TAG, &quot;onCharacteristicChanged: ${characteristic.uuid}&quot;)"
+                replacement="Timber.d(&quot;onCharacteristicChanged: &quot; + characteristic.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="148"
+            column="9"
+            startOffset="5937"
+            endLine="148"
+            endColumn="70"
+            endOffset="5998"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onCharacteristicChanged (API 33+): &quot; + characteristic.uuid)"
+                oldString="Log.d(TAG, &quot;onCharacteristicChanged (API 33+): ${characteristic.uuid}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onCharacteristicChanged (API 33+): &quot; + characteristic.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onCharacteristicChanged (API 33+): &quot; + characteristic.uuid)"
+                oldString="Log.d(TAG, &quot;onCharacteristicChanged (API 33+): ${characteristic.uuid}&quot;)"
+                replacement="Timber.d(&quot;onCharacteristicChanged (API 33+): &quot; + characteristic.uuid)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="160"
+            column="9"
+            startOffset="6292"
+            endLine="160"
+            endColumn="80"
+            endOffset="6363"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onDescriptorWrite: &quot; + descriptor.uuid + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onDescriptorWrite: ${descriptor.uuid}, status=$status&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onDescriptorWrite: &quot; + descriptor.uuid + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onDescriptorWrite: &quot; + descriptor.uuid + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onDescriptorWrite: ${descriptor.uuid}, status=$status&quot;)"
+                replacement="Timber.d(&quot;onDescriptorWrite: &quot; + descriptor.uuid + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="169"
+            column="9"
+            startOffset="6558"
+            endLine="169"
+            endColumn="76"
+            endOffset="6625"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;onReadRemoteRssi: rssi=&quot; + rssi + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onReadRemoteRssi: rssi=$rssi, status=$status&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;onReadRemoteRssi: rssi=&quot; + rssi + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;onReadRemoteRssi: rssi=&quot; + rssi + &quot;, status=&quot; + status)"
+                oldString="Log.d(TAG, &quot;onReadRemoteRssi: rssi=$rssi, status=$status&quot;)"
+                replacement="Timber.d(&quot;onReadRemoteRssi: rssi=&quot; + rssi + &quot;, status=&quot; + status)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/bluetooth/ble/BLEGattCallback.kt"
+            line="184"
+            column="9"
+            startOffset="7125"
+            endLine="184"
+            endColumn="67"
+            endOffset="7183"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;First frame received, expecting &quot; + expectedLength + &quot; bytes total&quot;)"
+                oldString="Log.d(TAG, &quot;First frame received, expecting $expectedLength bytes total&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;First frame received, expecting &quot; + expectedLength + &quot; bytes total&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;First frame received, expecting &quot; + expectedLength + &quot; bytes total&quot;)"
+                oldString="Log.d(TAG, &quot;First frame received, expecting $expectedLength bytes total&quot;)"
+                replacement="Timber.d(&quot;First frame received, expecting &quot; + expectedLength + &quot; bytes total&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/obd/protocol/ISOTPHandler.kt"
+            line="148"
+            column="17"
+            startOffset="5164"
+            endLine="148"
+            endColumn="90"
+            endOffset="5237"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).w(&quot;Unexpected consecutive frame, no reassembly in progress&quot;)"
+                oldString="Log.w(TAG, &quot;Unexpected consecutive frame, no reassembly in progress&quot;)"
+                replacement="Timber.tag(TAG).w(&quot;Unexpected consecutive frame, no reassembly in progress&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.w(&quot;Unexpected consecutive frame, no reassembly in progress&quot;)"
+                oldString="Log.w(TAG, &quot;Unexpected consecutive frame, no reassembly in progress&quot;)"
+                replacement="Timber.w(&quot;Unexpected consecutive frame, no reassembly in progress&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/obd/protocol/ISOTPHandler.kt"
+            line="154"
+            column="21"
+            startOffset="5436"
+            endLine="154"
+            endColumn="90"
+            endOffset="5505"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(&quot;Sequence error: expected &quot; + expectedSeq + &quot;, got &quot; + actualSequence)"
+                oldString="Log.e(TAG, &quot;Sequence error: expected $expectedSeq, got $actualSequence&quot;)"
+                replacement="Timber.tag(TAG).e(&quot;Sequence error: expected &quot; + expectedSeq + &quot;, got &quot; + actualSequence)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(&quot;Sequence error: expected &quot; + expectedSeq + &quot;, got &quot; + actualSequence)"
+                oldString="Log.e(TAG, &quot;Sequence error: expected $expectedSeq, got $actualSequence&quot;)"
+                replacement="Timber.e(&quot;Sequence error: expected &quot; + expectedSeq + &quot;, got &quot; + actualSequence)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/obd/protocol/ISOTPHandler.kt"
+            line="162"
+            column="21"
+            startOffset="5771"
+            endLine="162"
+            endColumn="93"
+            endOffset="5843"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Consecutive frame &quot; + actualSequence + &quot;, total received: &quot; + receivedData.size + &quot;/&quot; + expectedLength)"
+                oldString="Log.d(TAG, &quot;Consecutive frame $actualSequence, total received: ${receivedData.size}/$expectedLength&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Consecutive frame &quot; + actualSequence + &quot;, total received: &quot; + receivedData.size + &quot;/&quot; + expectedLength)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Consecutive frame &quot; + actualSequence + &quot;, total received: &quot; + receivedData.size + &quot;/&quot; + expectedLength)"
+                oldString="Log.d(TAG, &quot;Consecutive frame $actualSequence, total received: ${receivedData.size}/$expectedLength&quot;)"
+                replacement="Timber.d(&quot;Consecutive frame &quot; + actualSequence + &quot;, total received: &quot; + receivedData.size + &quot;/&quot; + expectedLength)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/obd/protocol/ISOTPHandler.kt"
+            line="170"
+            column="17"
+            startOffset="6064"
+            endLine="170"
+            endColumn="118"
+            endOffset="6165"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Flow control received: flag=&quot; + frame.flag + &quot;, bs=&quot; + frame.blockSize + &quot;, st=&quot; + frame.separationTime)"
+                oldString="Log.d(TAG, &quot;Flow control received: flag=${frame.flag}, bs=${frame.blockSize}, st=${frame.separationTime}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Flow control received: flag=&quot; + frame.flag + &quot;, bs=&quot; + frame.blockSize + &quot;, st=&quot; + frame.separationTime)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Flow control received: flag=&quot; + frame.flag + &quot;, bs=&quot; + frame.blockSize + &quot;, st=&quot; + frame.separationTime)"
+                oldString="Log.d(TAG, &quot;Flow control received: flag=${frame.flag}, bs=${frame.blockSize}, st=${frame.separationTime}&quot;)"
+                replacement="Timber.d(&quot;Flow control received: flag=&quot; + frame.flag + &quot;, bs=&quot; + frame.blockSize + &quot;, st=&quot; + frame.separationTime)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/obd/protocol/ISOTPHandler.kt"
+            line="182"
+            column="17"
+            startOffset="6552"
+            endLine="182"
+            endColumn="123"
+            endOffset="6658"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(&quot;Parse error: &quot; + frame.message)"
+                oldString="Log.e(TAG, &quot;Parse error: ${frame.message}&quot;)"
+                replacement="Timber.tag(TAG).e(&quot;Parse error: &quot; + frame.message)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(&quot;Parse error: &quot; + frame.message)"
+                oldString="Log.e(TAG, &quot;Parse error: ${frame.message}&quot;)"
+                replacement="Timber.e(&quot;Parse error: &quot; + frame.message)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/obd/protocol/ISOTPHandler.kt"
+            line="187"
+            column="17"
+            startOffset="6802"
+            endLine="187"
+            endColumn="60"
+            endOffset="6845"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(e, &quot;Invalid address: &quot; + requestAddress)"
+                oldString="Log.e(TAG, &quot;Invalid address: $requestAddress&quot;, e)"
+                replacement="Timber.tag(TAG).e(e, &quot;Invalid address: &quot; + requestAddress)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(e, &quot;Invalid address: &quot; + requestAddress)"
+                oldString="Log.e(TAG, &quot;Invalid address: $requestAddress&quot;, e)"
+                replacement="Timber.e(e, &quot;Invalid address: &quot; + requestAddress)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/obdreader/data/obd/protocol/MultiECUHandler.kt"
+            line="171"
+            column="13"
+            startOffset="5631"
+            endLine="171"
+            endColumn="62"
+            endOffset="5680"/>
+    </incident>
+
+    <incident
+        id="ObsoleteSdkInt"
+        severity="warning"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <fix-data conditional="true"/>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/spacetec/app/SpaceTecApplication.kt"
+            line="23"
+            column="13"
+            startOffset="581"
+            endLine="23"
+            endColumn="59"
+            endOffset="627"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(&quot;getPairedDevices error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;getPairedDevices error: ${e.message}&quot;)"
+                replacement="Timber.tag(TAG).e(&quot;getPairedDevices error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(&quot;getPairedDevices error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;getPairedDevices error: ${e.message}&quot;)"
+                replacement="Timber.e(&quot;getPairedDevices error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="49"
+            column="13"
+            startOffset="1787"
+            endLine="49"
+            endColumn="63"
+            endOffset="1837"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(e, &quot;connect error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;connect error: ${e.message}&quot;, e)"
+                replacement="Timber.tag(TAG).e(e, &quot;connect error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(e, &quot;connect error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;connect error: ${e.message}&quot;, e)"
+                replacement="Timber.e(e, &quot;connect error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="78"
+            column="13"
+            startOffset="2858"
+            endLine="78"
+            endColumn="57"
+            endOffset="2902"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Reflection succeeded on channel &quot; + channel)"
+                oldString="Log.d(TAG, &quot;Reflection succeeded on channel $channel&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Reflection succeeded on channel &quot; + channel)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Reflection succeeded on channel &quot; + channel)"
+                oldString="Log.d(TAG, &quot;Reflection succeeded on channel $channel&quot;)"
+                replacement="Timber.d(&quot;Reflection succeeded on channel &quot; + channel)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="126"
+            column="21"
+            startOffset="4675"
+            endLine="126"
+            endColumn="75"
+            endOffset="4729"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Insecure reflection succeeded&quot;)"
+                oldString="Log.d(TAG, &quot;Insecure reflection succeeded&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Insecure reflection succeeded&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Insecure reflection succeeded&quot;)"
+                oldString="Log.d(TAG, &quot;Insecure reflection succeeded&quot;)"
+                replacement="Timber.d(&quot;Insecure reflection succeeded&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="138"
+            column="17"
+            startOffset="5114"
+            endLine="138"
+            endColumn="60"
+            endOffset="5157"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Socket failed: &quot; + e.message)"
+                oldString="Log.d(TAG, &quot;Socket failed: ${e.message}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Socket failed: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Socket failed: &quot; + e.message)"
+                oldString="Log.d(TAG, &quot;Socket failed: ${e.message}&quot;)"
+                replacement="Timber.d(&quot;Socket failed: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="165"
+            column="21"
+            startOffset="5996"
+            endLine="165"
+            endColumn="62"
+            endOffset="6037"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(&quot;trySocket error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;trySocket error: ${e.message}&quot;)"
+                replacement="Timber.tag(TAG).e(&quot;trySocket error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(&quot;trySocket error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;trySocket error: ${e.message}&quot;)"
+                replacement="Timber.e(&quot;trySocket error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="171"
+            column="13"
+            startOffset="6184"
+            endLine="171"
+            endColumn="56"
+            endOffset="6227"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Auto protocol: &quot; + protocol)"
+                oldString="Log.d(TAG, &quot;Auto protocol: $protocol&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Auto protocol: &quot; + protocol)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Auto protocol: &quot; + protocol)"
+                oldString="Log.d(TAG, &quot;Auto protocol: $protocol&quot;)"
+                replacement="Timber.d(&quot;Auto protocol: &quot; + protocol)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="219"
+            column="13"
+            startOffset="7833"
+            endLine="219"
+            endColumn="51"
+            endOffset="7871"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Protocol &quot; + protocol.description + &quot; succeeded&quot;)"
+                oldString="Log.d(TAG, &quot;Protocol ${protocol.description} succeeded&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Protocol &quot; + protocol.description + &quot; succeeded&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Protocol &quot; + protocol.description + &quot; succeeded&quot;)"
+                oldString="Log.d(TAG, &quot;Protocol ${protocol.description} succeeded&quot;)"
+                replacement="Timber.d(&quot;Protocol &quot; + protocol.description + &quot; succeeded&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="236"
+            column="17"
+            startOffset="8484"
+            endLine="236"
+            endColumn="73"
+            endOffset="8540"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(&quot;Command error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;Command error: ${e.message}&quot;)"
+                replacement="Timber.tag(TAG).e(&quot;Command error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(&quot;Command error: &quot; + e.message)"
+                oldString="Log.e(TAG, &quot;Command error: ${e.message}&quot;)"
+                replacement="Timber.e(&quot;Command error: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="302"
+            column="17"
+            startOffset="10954"
+            endLine="302"
+            endColumn="58"
+            endOffset="10995"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(&quot;Failed to set protocol: &quot; + response)"
+                oldString="Log.e(TAG, &quot;Failed to set protocol: $response&quot;)"
+                replacement="Timber.tag(TAG).e(&quot;Failed to set protocol: &quot; + response)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(&quot;Failed to set protocol: &quot; + response)"
+                oldString="Log.e(TAG, &quot;Failed to set protocol: $response&quot;)"
+                replacement="Timber.e(&quot;Failed to set protocol: &quot; + response)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="365"
+            column="13"
+            startOffset="12857"
+            endLine="365"
+            endColumn="60"
+            endOffset="12904"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Protocol set to: &quot; + protocolId)"
+                oldString="Log.d(TAG, &quot;Protocol set to: $protocolId&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Protocol set to: &quot; + protocolId)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Protocol set to: &quot; + protocolId)"
+                oldString="Log.d(TAG, &quot;Protocol set to: $protocolId&quot;)"
+                replacement="Timber.d(&quot;Protocol set to: &quot; + protocolId)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="370"
+            column="9"
+            startOffset="12993"
+            endLine="370"
+            endColumn="51"
+            endOffset="13035"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(status)"
+                oldString="Log.d(TAG, status)"
+                replacement="Timber.tag(TAG).d(status)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(status)"
+                oldString="Log.d(TAG, status)"
+                replacement="Timber.d(status)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdConnection.kt"
+            line="378"
+            column="9"
+            startOffset="13221"
+            endLine="378"
+            endColumn="27"
+            endOffset="13239"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Found &quot; + allDtcs.size + &quot; DTCs&quot;)"
+                oldString="Log.d(TAG, &quot;Found ${allDtcs.size} DTCs&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Found &quot; + allDtcs.size + &quot; DTCs&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Found &quot; + allDtcs.size + &quot; DTCs&quot;)"
+                oldString="Log.d(TAG, &quot;Found ${allDtcs.size} DTCs&quot;)"
+                replacement="Timber.d(&quot;Found &quot; + allDtcs.size + &quot; DTCs&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdService.kt"
+            line="104"
+            column="9"
+            startOffset="3451"
+            endLine="104"
+            endColumn="49"
+            endOffset="3491"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).w(&quot;Failed to read PID &quot; + String.format(&quot;%02X&quot;, pid) + &quot;: &quot; + e.message)"
+                oldString="Log.w(TAG, &quot;Failed to read PID ${String.format(&quot;%02X&quot;, pid)}: ${e.message}&quot;)"
+                replacement="Timber.tag(TAG).w(&quot;Failed to read PID &quot; + String.format(&quot;%02X&quot;, pid) + &quot;: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.w(&quot;Failed to read PID &quot; + String.format(&quot;%02X&quot;, pid) + &quot;: &quot; + e.message)"
+                oldString="Log.w(TAG, &quot;Failed to read PID ${String.format(&quot;%02X&quot;, pid)}: ${e.message}&quot;)"
+                replacement="Timber.w(&quot;Failed to read PID &quot; + String.format(&quot;%02X&quot;, pid) + &quot;: &quot; + e.message)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/ObdService.kt"
+            line="194"
+            column="25"
+            startOffset="7035"
+            endLine="194"
+            endColumn="101"
+            endOffset="7111"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Supported PIDs: &quot; + result.supportedPids.size)"
+                oldString="Log.d(TAG, &quot;Supported PIDs: ${result.supportedPids.size}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Supported PIDs: &quot; + result.supportedPids.size)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Supported PIDs: &quot; + result.supportedPids.size)"
+                oldString="Log.d(TAG, &quot;Supported PIDs: ${result.supportedPids.size}&quot;)"
+                replacement="Timber.d(&quot;Supported PIDs: &quot; + result.supportedPids.size)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/VwProtocolManager.kt"
+            line="61"
+            column="13"
+            startOffset="2077"
+            endLine="61"
+            endColumn="71"
+            endOffset="2135"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;VIN: &quot; + result.vin)"
+                oldString="Log.d(TAG, &quot;VIN: ${result.vin}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;VIN: &quot; + result.vin)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;VIN: &quot; + result.vin)"
+                oldString="Log.d(TAG, &quot;VIN: ${result.vin}&quot;)"
+                replacement="Timber.d(&quot;VIN: &quot; + result.vin)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/VwProtocolManager.kt"
+            line="66"
+            column="13"
+            startOffset="2256"
+            endLine="66"
+            endColumn="45"
+            endOffset="2288"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).d(&quot;Is VW Group vehicle: &quot; + result.isVwVehicle)"
+                oldString="Log.d(TAG, &quot;Is VW Group vehicle: ${result.isVwVehicle}&quot;)"
+                replacement="Timber.tag(TAG).d(&quot;Is VW Group vehicle: &quot; + result.isVwVehicle)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.d(&quot;Is VW Group vehicle: &quot; + result.isVwVehicle)"
+                oldString="Log.d(TAG, &quot;Is VW Group vehicle: ${result.isVwVehicle}&quot;)"
+                replacement="Timber.d(&quot;Is VW Group vehicle: &quot; + result.isVwVehicle)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/VwProtocolManager.kt"
+            line="73"
+            column="21"
+            startOffset="2544"
+            endLine="73"
+            endColumn="77"
+            endOffset="2600"/>
+    </incident>
+
+    <incident
+        id="LogNotTimber"
+        severity="warning"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;">
+        <fix-alternatives>
+            <fix-replace
+                description="Replace with Timber.tag(TAG).e(e, &quot;VW initialization failed&quot;)"
+                oldString="Log.e(TAG, &quot;VW initialization failed&quot;, e)"
+                replacement="Timber.tag(TAG).e(e, &quot;VW initialization failed&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+            <fix-replace
+                description="Replace with Timber.e(e, &quot;VW initialization failed&quot;)"
+                oldString="Log.e(TAG, &quot;VW initialization failed&quot;, e)"
+                replacement="Timber.e(e, &quot;VW initialization failed&quot;)"
+                shortenNames="true"
+                reformat="value"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*2}/com/spacetec/obd/obd/VwProtocolManager.kt"
+            line="92"
+            column="13"
+            startOffset="3181"
+            endLine="92"
+            endColumn="54"
+            endOffset="3222"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 35"
+            oldString="34"
+            replacement="35"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="24"
+            column="9"
+            startOffset="590"
+            endLine="24"
+            endColumn="23"
+            endOffset="604"/>
+    </incident>
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of com.android.tools.build:gradle than 8.2.2 is available: 8.13.2">
+        <fix-replace
+            description="Change to 8.13.2"
+            family="Update versions"
+            oldString="8.2.2"
+            replacement="8.13.2"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="30"
+            column="25"
+            startOffset="1434"
+            endLine="30"
+            endColumn="32"
+            endOffset="1441"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0">
+        <fix-replace
+            description="Change to 1.17.0"
+            family="Update versions"
+            oldString="1.12.0"
+            replacement="1.17.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="42"
+            column="21"
+            startOffset="1830"
+            endLine="42"
+            endColumn="29"
+            endOffset="1838"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="40"
+            column="22"
+            startOffset="1772"
+            endLine="40"
+            endColumn="29"
+            endOffset="1779"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-ktx than 1.8.2 is available: 1.12.2">
+        <fix-replace
+            description="Change to 1.12.2"
+            family="Update versions"
+            oldString="1.8.2"
+            replacement="1.12.2"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="38"
+            column="21"
+            startOffset="1713"
+            endLine="38"
+            endColumn="28"
+            endOffset="1720"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-compose than 1.8.2 is available: 1.12.2">
+        <fix-replace
+            description="Change to 1.12.2"
+            family="Update versions"
+            oldString="1.8.2"
+            replacement="1.12.2"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="38"
+            column="21"
+            startOffset="1713"
+            endLine="38"
+            endColumn="28"
+            endOffset="1720"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.fragment:fragment-ktx than 1.6.2 is available: 1.8.9">
+        <fix-replace
+            description="Change to 1.8.9"
+            family="Update versions"
+            oldString="1.6.2"
+            replacement="1.8.9"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="43"
+            column="21"
+            startOffset="1859"
+            endLine="43"
+            endColumn="28"
+            endOffset="1866"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.annotation:annotation than 1.7.1 is available: 1.9.1">
+        <fix-replace
+            description="Change to 1.9.1"
+            family="Update versions"
+            oldString="1.7.1"
+            replacement="1.9.1"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="39"
+            column="23"
+            startOffset="1743"
+            endLine="39"
+            endColumn="30"
+            endOffset="1750"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.collection:collection-ktx than 1.4.0 is available: 1.5.0">
+        <fix-replace
+            description="Change to 1.5.0"
+            family="Update versions"
+            oldString="1.4.0"
+            replacement="1.5.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="41"
+            column="23"
+            startOffset="1802"
+            endLine="41"
+            endColumn="30"
+            endOffset="1809"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0">
+        <fix-replace
+            description="Change to 1.4.0"
+            family="Update versions"
+            oldString="1.3.2"
+            replacement="1.4.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="45"
+            column="25"
+            startOffset="1919"
+            endLine="45"
+            endColumn="32"
+            endOffset="1926"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.startup:startup-runtime than 1.1.1 is available: 1.2.0">
+        <fix-replace
+            description="Change to 1.2.0"
+            family="Update versions"
+            oldString="1.1.1"
+            replacement="1.2.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="48"
+            column="20"
+            startOffset="2006"
+            endLine="48"
+            endColumn="27"
+            endOffset="2013"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-splashscreen than 1.0.1 is available: 1.2.0">
+        <fix-replace
+            description="Change to 1.2.0"
+            family="Update versions"
+            oldString="1.0.1"
+            replacement="1.2.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="47"
+            column="25"
+            startOffset="1979"
+            endLine="47"
+            endColumn="32"
+            endOffset="1986"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.android.tools:desugar_jdk_libs than 2.0.4 is available: 2.1.5">
+        <fix-replace
+            description="Change to 2.1.5"
+            family="Update versions"
+            oldString="2.0.4"
+            replacement="2.1.5"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="233"
+            column="96"
+            startOffset="10630"
+            endLine="233"
+            endColumn="103"
+            endOffset="10637"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.window:window than 1.2.0 is available: 1.5.1">
+        <fix-replace
+            description="Change to 1.5.1"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.5.1"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="49"
+            column="19"
+            startOffset="2032"
+            endLine="49"
+            endColumn="26"
+            endOffset="2039"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.compose:compose-bom than 2024.01.00 is available: 2025.12.01">
+        <fix-replace
+            description="Change to 2025.12.01"
+            family="Update versions"
+            oldString="2024.01.00"
+            replacement="2025.12.01"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="54"
+            column="15"
+            startOffset="2231"
+            endLine="54"
+            endColumn="27"
+            endOffset="2243"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-savedstate than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-service than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-process than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-common-java8 than 2.7.0 is available: 2.10.0">
+        <fix-replace
+            description="Change to 2.10.0"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.10.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="66"
+            column="13"
+            startOffset="2621"
+            endLine="66"
+            endColumn="20"
+            endOffset="2628"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.6 is available: 2.9.6">
+        <fix-replace
+            description="Change to 2.9.6"
+            family="Update versions"
+            oldString="2.7.6"
+            replacement="2.9.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="67"
+            column="14"
+            startOffset="2642"
+            endLine="67"
+            endColumn="21"
+            endOffset="2649"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.7.6 is available: 2.9.6">
+        <fix-replace
+            description="Change to 2.9.6"
+            family="Update versions"
+            oldString="2.7.6"
+            replacement="2.9.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="67"
+            column="14"
+            startOffset="2642"
+            endLine="67"
+            endColumn="21"
+            endOffset="2649"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.7.6 is available: 2.9.6">
+        <fix-replace
+            description="Change to 2.9.6"
+            family="Update versions"
+            oldString="2.7.6"
+            replacement="2.9.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="67"
+            column="14"
+            startOffset="2642"
+            endLine="67"
+            endColumn="21"
+            endOffset="2649"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-testing than 2.7.6 is available: 2.9.6">
+        <fix-replace
+            description="Change to 2.9.6"
+            family="Update versions"
+            oldString="2.7.6"
+            replacement="2.9.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="67"
+            column="14"
+            startOffset="2642"
+            endLine="67"
+            endColumn="21"
+            endOffset="2649"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.paging:paging-runtime-ktx than 3.2.1 is available: 3.3.6">
+        <fix-replace
+            description="Change to 3.3.6"
+            family="Update versions"
+            oldString="3.2.1"
+            replacement="3.3.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="68"
+            column="10"
+            startOffset="2659"
+            endLine="68"
+            endColumn="17"
+            endOffset="2666"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.paging:paging-compose than 3.2.1 is available: 3.3.6">
+        <fix-replace
+            description="Change to 3.3.6"
+            family="Update versions"
+            oldString="3.2.1"
+            replacement="3.3.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="68"
+            column="10"
+            startOffset="2659"
+            endLine="68"
+            endColumn="17"
+            endOffset="2666"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.paging:paging-common-ktx than 3.2.1 is available: 3.3.6">
+        <fix-replace
+            description="Change to 3.3.6"
+            family="Update versions"
+            oldString="3.2.1"
+            replacement="3.3.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="68"
+            column="10"
+            startOffset="2659"
+            endLine="68"
+            endColumn="17"
+            endOffset="2666"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.paging:paging-testing than 3.2.1 is available: 3.3.6">
+        <fix-replace
+            description="Change to 3.3.6"
+            family="Update versions"
+            oldString="3.2.1"
+            replacement="3.3.6"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="68"
+            column="10"
+            startOffset="2659"
+            endLine="68"
+            endColumn="17"
+            endOffset="2666"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.work:work-runtime-ktx than 2.9.0 is available: 2.11.0">
+        <fix-replace
+            description="Change to 2.11.0"
+            family="Update versions"
+            oldString="2.9.0"
+            replacement="2.11.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="70"
+            column="8"
+            startOffset="2689"
+            endLine="70"
+            endColumn="15"
+            endOffset="2696"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.work:work-testing than 2.9.0 is available: 2.11.0">
+        <fix-replace
+            description="Change to 2.11.0"
+            family="Update versions"
+            oldString="2.9.0"
+            replacement="2.11.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="70"
+            column="8"
+            startOffset="2689"
+            endLine="70"
+            endColumn="15"
+            endOffset="2696"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.datastore:datastore-preferences than 1.0.0 is available: 1.2.0">
+        <fix-replace
+            description="Change to 1.2.0"
+            family="Update versions"
+            oldString="1.0.0"
+            replacement="1.2.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="65"
+            column="13"
+            startOffset="2601"
+            endLine="65"
+            endColumn="20"
+            endOffset="2608"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.datastore:datastore-core than 1.0.0 is available: 1.2.0">
+        <fix-replace
+            description="Change to 1.2.0"
+            family="Update versions"
+            oldString="1.0.0"
+            replacement="1.2.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="65"
+            column="13"
+            startOffset="2601"
+            endLine="65"
+            endColumn="20"
+            endOffset="2608"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="69"
+            column="8"
+            startOffset="2674"
+            endLine="69"
+            endColumn="15"
+            endOffset="2681"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="69"
+            column="8"
+            startOffset="2674"
+            endLine="69"
+            endColumn="15"
+            endOffset="2681"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="69"
+            column="8"
+            startOffset="2674"
+            endLine="69"
+            endColumn="15"
+            endOffset="2681"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-paging than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="69"
+            column="8"
+            startOffset="2674"
+            endLine="69"
+            endColumn="15"
+            endOffset="2681"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-testing than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="69"
+            column="8"
+            startOffset="2674"
+            endLine="69"
+            endColumn="15"
+            endOffset="2681"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.hilt:hilt-navigation-compose than 1.1.0 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.0"
+            replacement="1.3.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="76"
+            column="27"
+            startOffset="2919"
+            endLine="76"
+            endColumn="34"
+            endOffset="2926"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.hilt:hilt-work than 1.1.0 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.0"
+            replacement="1.3.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="76"
+            column="27"
+            startOffset="2919"
+            endLine="76"
+            endColumn="34"
+            endOffset="2926"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.hilt:hilt-compiler than 1.1.0 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.0"
+            replacement="1.3.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="76"
+            column="27"
+            startOffset="2919"
+            endLine="76"
+            endColumn="34"
+            endOffset="2926"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.security:security-crypto than 1.1.0-alpha06 is available: 1.1.0">
+        <fix-replace
+            description="Change to 1.1.0"
+            family="Update versions"
+            oldString="1.1.0-alpha06"
+            replacement="1.1.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="95"
+            column="28"
+            startOffset="3588"
+            endLine="95"
+            endColumn="43"
+            endOffset="3603"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.sqlite:sqlite-ktx than 2.4.0 is available: 2.6.2">
+        <fix-replace
+            description="Change to 2.6.2"
+            family="Update versions"
+            oldString="2.4.0"
+            replacement="2.6.2"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="103"
+            column="10"
+            startOffset="3841"
+            endLine="103"
+            endColumn="17"
+            endOffset="3848"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0">
+        <fix-replace
+            description="Change to 1.13.0"
+            family="Update versions"
+            oldString="1.11.0"
+            replacement="1.13.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="172"
+            column="12"
+            startOffset="6289"
+            endLine="172"
+            endColumn="20"
+            endOffset="6297"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:core than 1.5.0 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.5.0"
+            replacement="1.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="137"
+            column="22"
+            startOffset="5137"
+            endLine="137"
+            endColumn="29"
+            endOffset="5144"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:core-ktx than 1.5.0 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.5.0"
+            replacement="1.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="137"
+            column="22"
+            startOffset="5137"
+            endLine="137"
+            endColumn="29"
+            endOffset="5144"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:runner than 1.5.2 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.5.2"
+            replacement="1.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="141"
+            column="24"
+            startOffset="5265"
+            endLine="141"
+            endColumn="31"
+            endOffset="5272"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test:rules than 1.5.0 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.5.0"
+            replacement="1.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="140"
+            column="23"
+            startOffset="5234"
+            endLine="140"
+            endColumn="30"
+            endOffset="5241"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="139"
+            column="27"
+            startOffset="5204"
+            endLine="139"
+            endColumn="34"
+            endOffset="5211"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit-ktx than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="139"
+            column="27"
+            startOffset="5204"
+            endLine="139"
+            endColumn="34"
+            endOffset="5211"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="138"
+            column="26"
+            startOffset="5170"
+            endLine="138"
+            endColumn="33"
+            endOffset="5177"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-contrib than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="138"
+            column="26"
+            startOffset="5170"
+            endLine="138"
+            endColumn="33"
+            endOffset="5177"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-intents than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="138"
+            column="26"
+            startOffset="5170"
+            endLine="138"
+            endColumn="33"
+            endOffset="5177"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-idling-resource than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="138"
+            column="26"
+            startOffset="5170"
+            endLine="138"
+            endColumn="33"
+            endOffset="5177"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.benchmark:benchmark-macro-junit4 than 1.2.2 is available: 1.4.1">
+        <fix-replace
+            description="Change to 1.4.1"
+            family="Update versions"
+            oldString="1.2.2"
+            replacement="1.4.1"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="165"
+            column="22"
+            startOffset="6030"
+            endLine="165"
+            endColumn="29"
+            endOffset="6037"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.profileinstaller:profileinstaller than 1.3.1 is available: 1.4.1">
+        <fix-replace
+            description="Change to 1.4.1"
+            family="Update versions"
+            oldString="1.3.1"
+            replacement="1.4.1"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="166"
+            column="29"
+            startOffset="6066"
+            endLine="166"
+            endColumn="36"
+            endOffset="6073"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.tracing:tracing-ktx than 1.2.0 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.2.0"
+            replacement="1.3.0"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="167"
+            column="20"
+            startOffset="6093"
+            endLine="167"
+            endColumn="27"
+            endOffset="6100"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.android.application than 8.2.2 is available: 8.13.2">
+        <fix-replace
+            description="Change to 8.13.2"
+            family="Update versions"
+            oldString="8.2.2"
+            replacement="8.13.2"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="30"
+            column="25"
+            startOffset="1434"
+            endLine="30"
+            endColumn="32"
+            endOffset="1441"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.android.library than 8.2.2 is available: 8.13.2">
+        <fix-replace
+            description="Change to 8.13.2"
+            family="Update versions"
+            oldString="8.2.2"
+            replacement="8.13.2"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="30"
+            column="25"
+            startOffset="1434"
+            endLine="30"
+            endColumn="32"
+            endOffset="1441"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room than 2.6.1 is available: 2.8.4">
+        <fix-replace
+            description="Change to 2.8.4"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.8.4"/>
+        <location
+            file="$HOME/Desktop/SpaceTec/gradle/libs.versions.toml"
+            line="69"
+            column="8"
+            startOffset="2674"
+            endLine="69"
+            endColumn="15"
+            endOffset="2681"/>
+    </incident>
+
+</incidents>

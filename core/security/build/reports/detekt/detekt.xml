@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="4.3">
+<file name="/home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/SecurityManager.kt">
+	<error line="26" column="73" severity="warning" message="This expression contains a magic number. Consider defining it to a well named constant." source="detekt.MagicNumber" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/encryption/KeyStoreManager.kt">
+	<error line="50" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="72" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="90" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="134" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="151" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+	<error line="168" column="1" severity="warning" message="Line detected, which is longer than the defined maximum line length in the code style." source="detekt.MaxLineLength" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/core/security/src/test/java/com/spacetec/core/security/SecurityVerificationPropertyTest.kt">
+	<error line="239" column="13" severity="warning" message="Private function `calculateExpectedTrustLevel` is unused." source="detekt.UnusedPrivateMember" />
+</file>
+</checkstyle>

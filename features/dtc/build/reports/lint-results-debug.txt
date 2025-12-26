@@ -1,0 +1,29 @@
+/home/yungblud/Desktop/SpaceTec/features/dtc: Warning: Issue InvalidPackage was configured with severity warning in dtc, but was not enabled (or was disabled) in library common [CannotEnableHidden]
+/home/yungblud/Desktop/SpaceTec/features/dtc: Warning: Issue InvalidPackage was configured with severity warning in dtc, but was not enabled (or was disabled) in library domain [CannotEnableHidden]
+
+   Explanation for issues of type "CannotEnableHidden":
+   Any issues that are specifically disabled in a library cannot be re-enabled
+   in a dependent project. To fix this you need to also enable the issue in
+   the library project.
+
+   (This also applies for issues that are off by default; they cannot just be
+   enabled in a dependent project; they must also be enabled in all the
+   libraries the project depends on.)
+
+/home/yungblud/Desktop/SpaceTec/core/ui/src/main/kotlin/com/spacetec/automotive/core/ui/component/DtcCard.kt:75: Warning: Modifier parameter should be the first optional parameter [ModifierParameter from androidx.compose.ui]
+    modifier: Modifier = Modifier,
+    ~~~~~~~~
+
+   Explanation for issues of type "ModifierParameter":
+   The first (or only) Modifier parameter in a Composable function should
+   follow the following rules:
+   - Be named modifier
+   - Have a type of Modifier
+   - Either have no default value, or have a default value of Modifier
+   - If optional, be the first optional parameter in the parameter list
+
+   Vendor: Jetpack Compose
+   Identifier: androidx.compose.ui
+   Feedback: https://issuetracker.google.com/issues/new?component=612128
+
+0 errors, 3 warnings

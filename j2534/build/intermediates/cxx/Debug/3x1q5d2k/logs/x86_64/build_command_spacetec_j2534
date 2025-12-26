@@ -1,0 +1,4 @@
+/home/yungblud/android/sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /home/yungblud/Desktop/SpaceTec/j2534/.cxx/Debug/3x1q5d2k/x86_64 \
+  spacetec_j2534

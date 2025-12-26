@@ -1,0 +1,13 @@
+# Detekt configuration for SpaceTec
+#
+# We currently use detekt as a reporting tool, but we don't want it to hard-fail
+# the full Gradle `build` because the project is still being brought into
+# compliance with the default rule set.
+#
+# When the codebase is cleaned up, lower `maxIssues` and/or introduce a baseline.
+
+build:
+  maxIssues: 10000
+
+config:
+  validation: true

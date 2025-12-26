@@ -1,0 +1,2 @@
+CyclomaticComplexMethod - 87/15 - [readFreezeFrame] at /home/yungblud/Desktop/SpaceTec/protocol/obd/src/main/kotlin/com/spacetec/automotive/protocol/obd/ObdProtocol.kt:342:17 - Signature=ObdProtocol.kt$ObdProtocol$suspend fun readFreezeFrame(frameNumber: Int = 0): AppResult<FreezeFrame>
+NestedBlockDepth - 4/4 - [readFreezeFrame] at /home/yungblud/Desktop/SpaceTec/protocol/obd/src/main/kotlin/com/spacetec/automotive/protocol/obd/ObdProtocol.kt:342:17 - Signature=ObdProtocol.kt$ObdProtocol$suspend fun readFreezeFrame(frameNumber: Int = 0): AppResult<FreezeFrame>

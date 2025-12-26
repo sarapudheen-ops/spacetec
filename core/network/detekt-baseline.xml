@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyKtFile:AuthInterceptor.kt$.AuthInterceptor.kt</ID>
+    <ID>EmptyKtFile:CacheInterceptor.kt$.CacheInterceptor.kt</ID>
+    <ID>EmptyKtFile:DTCDatabaseApi.kt$.DTCDatabaseApi.kt</ID>
+    <ID>EmptyKtFile:ErrorInterceptor.kt$.ErrorInterceptor.kt</ID>
+    <ID>EmptyKtFile:LicenseApi.kt$.LicenseApi.kt</ID>
+    <ID>EmptyKtFile:LoggingInterceptor.kt$.LoggingInterceptor.kt</ID>
+    <ID>EmptyKtFile:NetworkMonitor.kt$.NetworkMonitor.kt</ID>
+    <ID>EmptyKtFile:UpdateApi.kt$.UpdateApi.kt</ID>
+    <ID>EmptyKtFile:VehicleDataApi.kt$.VehicleDataApi.kt</ID>
+    <ID>NewLineAtEndOfFile:SpaceTecApi.kt$com.spacetec.core.network.SpaceTecApi.kt</ID>
+    <ID>WildcardImport:SpaceTecApi.kt$import retrofit2.http.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyKtFile:DiagnosticPreferencesDataStore.kt$.DiagnosticPreferencesDataStore.kt</ID>
+    <ID>EmptyKtFile:ScannerPreferencesDataStore.kt$.ScannerPreferencesDataStore.kt</ID>
+    <ID>EmptyKtFile:SecurityDataStore.kt$.SecurityDataStore.kt</ID>
+    <ID>EmptyKtFile:UserPreferencesDataStore.kt$.UserPreferencesDataStore.kt</ID>
+    <ID>MagicNumber:SpaceTecDataStore.kt$SpaceTecDataStore$30</ID>
+    <ID>MagicNumber:SpaceTecPreferences.kt$SpaceTecPreferences$30</ID>
+    <ID>MagicNumber:SpaceTecPreferences.kt$SpaceTecPreferences$500</ID>
+    <ID>WildcardImport:SpaceTecDataStore.kt$import androidx.datastore.preferences.core.*</ID>
+    <ID>WildcardImport:SpaceTecPreferences.kt$import androidx.datastore.preferences.core.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,14 @@
+com.spacetec.vehicle.brands.volkswagen
+id connectButton
+id coolantText
+id deviceAddress
+id deviceListView
+id deviceName
+id readDTCButton
+id rpmText
+id scanButton
+id speedText
+id statusText
+id voltageText
+layout activity_vw_diagnostics
+layout item_device

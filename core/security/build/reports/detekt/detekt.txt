@@ -1,0 +1,8 @@
+MagicNumber - [<anonymous>] at /home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/SecurityManager.kt:26:73 - Signature=SecurityManager.kt$SecurityManager$256
+MaxLineLength - [storeKey] at /home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/encryption/KeyStoreManager.kt:50:1 - Signature=KeyStoreManager.kt$KeyStoreManager$if
+MaxLineLength - [getKey] at /home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/encryption/KeyStoreManager.kt:72:1 - Signature=KeyStoreManager.kt$KeyStoreManager$if
+MaxLineLength - [deleteKey] at /home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/encryption/KeyStoreManager.kt:90:1 - Signature=KeyStoreManager.kt$KeyStoreManager$if
+MaxLineLength - [keyExists] at /home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/encryption/KeyStoreManager.kt:134:1 - Signature=KeyStoreManager.kt$KeyStoreManager$if
+MaxLineLength - [listKeys] at /home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/encryption/KeyStoreManager.kt:151:1 - Signature=KeyStoreManager.kt$KeyStoreManager$if
+MaxLineLength - [clearAllKeys] at /home/yungblud/Desktop/SpaceTec/core/security/src/main/java/com/spacetec/core/security/encryption/KeyStoreManager.kt:168:1 - Signature=KeyStoreManager.kt$KeyStoreManager$if
+UnusedPrivateMember - [calculateExpectedTrustLevel] at /home/yungblud/Desktop/SpaceTec/core/security/src/test/java/com/spacetec/core/security/SecurityVerificationPropertyTest.kt:239:13 - Signature=SecurityVerificationPropertyTest.kt$private fun calculateExpectedTrustLevel(deviceInfo: ScannerDeviceInfo): TrustLevel

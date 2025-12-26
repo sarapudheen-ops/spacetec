@@ -1,0 +1,122 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.spacetec.features.dashboard.test" >
+4
+5    <uses-sdk
+5-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:5:5-74
+6        android:minSdkVersion="26"
+6-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:5:15-41
+7        android:targetSdkVersion="26" />
+7-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:5:42-71
+8
+9    <instrumentation
+9-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:11:5-13:86
+10        android:name="android.test.InstrumentationTestRunner"
+10-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:11:22-75
+11        android:label="Tests for com.spacetec.features.dashboard.test"
+11-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:13:22-84
+12        android:targetPackage="com.spacetec.features.dashboard.test" />
+12-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:12:22-82
+13
+14    <permission
+14-->[androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+15        android:name="com.spacetec.features.dashboard.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.spacetec.features.dashboard.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:7:5-9:19
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.12.0] /home/yungblud/.gradle/caches/transforms-3/4ff1ac0ad4c92d8169414088f380964e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+22        android:debuggable="true" >
+22-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:7:18-43
+23        <uses-library android:name="android.test.runner" />
+23-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:8:9-60
+23-->/home/yungblud/Desktop/SpaceTec/features/dashboard/build/intermediates/tmp/manifest/test/release/tempFile1ProcessTestManifest6129962740072463246.xml:8:23-57
+24
+25        <provider
+25-->[androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+26            android:name="androidx.startup.InitializationProvider"
+26-->[androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:25:13-67
+27            android:authorities="com.spacetec.features.dashboard.test.androidx-startup"
+27-->[androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:26:13-68
+28            android:exported="false" >
+28-->[androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:27:13-37
+29            <meta-data
+29-->[androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+30                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+30-->[androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:30:17-75
+31                android:value="androidx.startup" />
+31-->[androidx.emoji2:emoji2:1.3.0] /home/yungblud/.gradle/caches/transforms-3/54a5d33d8ee3e94d6d7df87d4dec4ae1/transformed/jetified-emoji2-1.3.0/AndroidManifest.xml:31:17-49
+32            <meta-data
+32-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+33                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+33-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+34                android:value="androidx.startup" />
+34-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/yungblud/.gradle/caches/transforms-3/7874ce5631d6c38a311d3fc0ed2fc380/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+35            <meta-data
+35-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+36                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+36-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+37                android:value="androidx.startup" />
+37-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+38        </provider>
+39
+40        <uses-library
+40-->[androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+41            android:name="androidx.window.extensions"
+41-->[androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+42            android:required="false" />
+42-->[androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+43        <uses-library
+43-->[androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+44            android:name="androidx.window.sidecar"
+44-->[androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+45            android:required="false" />
+45-->[androidx.window:window:1.0.0] /home/yungblud/.gradle/caches/transforms-3/cb00be0293e81be7bfde41011b88a53e/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+46
+47        <receiver
+47-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+48            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+48-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+49            android:directBootAware="false"
+49-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+50            android:enabled="true"
+50-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+51            android:exported="true"
+51-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+52            android:permission="android.permission.DUMP" >
+52-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+53            <intent-filter>
+53-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+54                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+54-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+54-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+55            </intent-filter>
+56            <intent-filter>
+56-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+57                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+57-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+57-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+58            </intent-filter>
+59            <intent-filter>
+59-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+60                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+60-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+60-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+61            </intent-filter>
+62            <intent-filter>
+62-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+63                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+63-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+63-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/yungblud/.gradle/caches/transforms-3/21dca9d519dd973f2cde4a56a693024b/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+64            </intent-filter>
+65        </receiver>
+66    </application>
+67
+68</manifest>

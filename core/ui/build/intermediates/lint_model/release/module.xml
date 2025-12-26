@@ -1,0 +1,31 @@
+<lint-module
+    format="1"
+    dir="/home/yungblud/Desktop/SpaceTec/core/ui"
+    name=":core:ui"
+    type="LIBRARY"
+    maven="com.spacetec.automotive:ui:"
+    agpVersion="8.2.2"
+    buildFolder="build"
+    bootClassPath="/home/yungblud/android/sdk/platforms/android-34/android.jar:/home/yungblud/android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34">
+  <lintOptions
+      checkDependencies="true"
+      disable="MissingTranslation,ObsoleteLintCustomCheck"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true">
+    <severities>
+      <severity
+        id="InvalidPackage"
+        severity="WARNING" />
+      <severity
+        id="MissingTranslation"
+        severity="IGNORE" />
+      <severity
+        id="ObsoleteLintCustomCheck"
+        severity="IGNORE" />
+    </severities>
+  </lintOptions>
+  <variant name="release"/>
+</lint-module>

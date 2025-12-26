@@ -1,0 +1,7 @@
+com.spacetec.features.maintenance.BuildConfig
+com.spacetec.features.maintenance.R
+com.spacetec.features.maintenance.BuildConfig: boolean DEBUG
+com.spacetec.features.maintenance.BuildConfig: java.lang.String BUILD_TYPE
+com.spacetec.features.maintenance.BuildConfig: java.lang.String LIBRARY_PACKAGE_NAME
+com.spacetec.features.maintenance.R: R()
+com.spacetec.features.maintenance.BuildConfig: BuildConfig()

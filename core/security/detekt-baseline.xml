@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>DestructuringDeclarationWithTooManyEntries:WirelessEncryptionPropertyTest.kt$WirelessEncryptionPropertyTest$(connectionId, connectionType, capabilities, data)</ID>
+    <ID>EmptyKtFile:BiometricAuthenticator.kt$.BiometricAuthenticator.kt</ID>
+    <ID>EmptyKtFile:DebugDetector.kt$.DebugDetector.kt</ID>
+    <ID>EmptyKtFile:FeatureUnlocker.kt$.FeatureUnlocker.kt</ID>
+    <ID>EmptyKtFile:IntegrityChecker.kt$.IntegrityChecker.kt</ID>
+    <ID>EmptyKtFile:LicenseManager.kt$.LicenseManager.kt</ID>
+    <ID>EmptyKtFile:LicenseValidator.kt$.LicenseValidator.kt</ID>
+    <ID>EmptyKtFile:PinAuthenticator.kt$.PinAuthenticator.kt</ID>
+    <ID>EmptyKtFile:RSAEncryption.kt$.RSAEncryption.kt</ID>
+    <ID>EmptyKtFile:RootDetector.kt$.RootDetector.kt</ID>
+    <ID>EmptyKtFile:SessionManager.kt$.SessionManager.kt</ID>
+    <ID>EmptyKtFile:SubscriptionManager.kt$.SubscriptionManager.kt</ID>
+    <ID>InvalidPackageDeclaration:AESEncryption.kt$package com.spacetec.obd.core.security.encryption</ID>
+    <ID>InvalidPackageDeclaration:DataIntegrityManager.kt$package com.spacetec.obd.core.security.integrity</ID>
+    <ID>InvalidPackageDeclaration:KeyStoreManager.kt$package com.spacetec.obd.core.security.encryption</ID>
+    <ID>InvalidPackageDeclaration:ScannerSecurityManager.kt$package com.spacetec.obd.core.security.scanner</ID>
+    <ID>InvalidPackageDeclaration:ScannerSecurityManagerImpl.kt$package com.spacetec.obd.core.security.scanner</ID>
+    <ID>InvalidPackageDeclaration:SecurityModule.kt$package com.spacetec.obd.core.security.di</ID>
+    <ID>InvalidPackageDeclaration:SecurityVerificationPropertyTest.kt$package com.spacetec.obd.core.security</ID>
+    <ID>InvalidPackageDeclaration:SecurityViolationHandler.kt$package com.spacetec.obd.core.security.violation</ID>
+    <ID>InvalidPackageDeclaration:SecurityViolationResponsePropertyTest.kt$package com.spacetec.obd.core.security</ID>
+    <ID>InvalidPackageDeclaration:WirelessEncryptionManager.kt$package com.spacetec.obd.core.security.wireless</ID>
+    <ID>InvalidPackageDeclaration:WirelessEncryptionPropertyTest.kt$package com.spacetec.obd.core.security</ID>
+    <ID>MagicNumber:DataIntegrityManager.kt$DataIntegrityManager$0xFF</ID>
+    <ID>MagicNumber:DataIntegrityManager.kt$DataIntegrityManager$16</ID>
+    <ID>MagicNumber:DataIntegrityManager.kt$DataIntegrityManager$256</ID>
+    <ID>MagicNumber:DataIntegrityManager.kt$DataIntegrityManager$3</ID>
+    <ID>MagicNumber:KeyStoreManager.kt$KeyStoreManager$256</ID>
+    <ID>MagicNumber:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$15</ID>
+    <ID>MagicNumber:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$20</ID>
+    <ID>MagicNumber:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$30</ID>
+    <ID>MagicNumber:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$40</ID>
+    <ID>MagicNumber:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$60</ID>
+    <ID>MagicNumber:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$80</ID>
+    <ID>MagicNumber:SecurityManager.kt$SecurityManager$12</ID>
+    <ID>MagicNumber:WirelessEncryptionManager.kt$WirelessEncryptionManager$128</ID>
+    <ID>MagicNumber:WirelessEncryptionManager.kt$WirelessEncryptionManager$256</ID>
+    <ID>MagicNumber:WirelessEncryptionManager.kt$WirelessEncryptionManager$32</ID>
+    <ID>MaxLineLength:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$override suspend</ID>
+    <ID>MaxLineLength:SecurityManager.kt$SecurityManager$KeyGenParameterSpec.Builder(KEYSTORE_ALIAS, KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT)</ID>
+    <ID>MaxLineLength:SecurityVerificationPropertyTest.kt$SecurityVerificationPropertyTest$val verifyResult = integrityManager.verifyIntegrity(tamperedData, originalChecksum, ChecksumAlgorithm.SHA256)</ID>
+    <ID>MaxLineLength:WirelessEncryptionPropertyTest.kt$WirelessEncryptionPropertyTest$coEvery { mockAESEncryption.decrypt(data.reversedArray(), any(), any()) } returns Result.Success(data)</ID>
+    <ID>MaxLineLength:WirelessEncryptionPropertyTest.kt$WirelessEncryptionPropertyTest$coEvery { mockAESEncryption.encrypt(any(), any()) } returns Result.Success(data + byteArrayOf(0xFF.toByte()))</ID>
+    <ID>MaxLineLength:WirelessEncryptionPropertyTest.kt$WirelessEncryptionPropertyTest$val decryptResult = encryptionManager.decryptData(connectionId, encryptedData, ByteArray(12) { it.toByte() })</ID>
+    <ID>NestedBlockDepth:DataIntegrityManager.kt$DataIntegrityManager$private fun detectRepeatingPatterns(data: ByteArray): List&lt;RepeatingPattern&gt;</ID>
+    <ID>NewLineAtEndOfFile:AESEncryption.kt$com.spacetec.obd.core.security.encryption.AESEncryption.kt</ID>
+    <ID>NewLineAtEndOfFile:DataIntegrityManager.kt$com.spacetec.obd.core.security.integrity.DataIntegrityManager.kt</ID>
+    <ID>NewLineAtEndOfFile:KeyStoreManager.kt$com.spacetec.obd.core.security.encryption.KeyStoreManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerSecurityManager.kt$com.spacetec.obd.core.security.scanner.ScannerSecurityManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerSecurityManagerImpl.kt$com.spacetec.obd.core.security.scanner.ScannerSecurityManagerImpl.kt</ID>
+    <ID>NewLineAtEndOfFile:SecurityModule.kt$com.spacetec.obd.core.security.di.SecurityModule.kt</ID>
+    <ID>NewLineAtEndOfFile:SecurityVerificationPropertyTest.kt$com.spacetec.obd.core.security.SecurityVerificationPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:SecurityViolationHandler.kt$com.spacetec.obd.core.security.violation.SecurityViolationHandler.kt</ID>
+    <ID>NewLineAtEndOfFile:SecurityViolationResponsePropertyTest.kt$com.spacetec.obd.core.security.SecurityViolationResponsePropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:WirelessEncryptionManager.kt$com.spacetec.obd.core.security.wireless.WirelessEncryptionManager.kt</ID>
+    <ID>NewLineAtEndOfFile:WirelessEncryptionPropertyTest.kt$com.spacetec.obd.core.security.WirelessEncryptionPropertyTest.kt</ID>
+    <ID>ReturnCount:AESEncryption.kt$AESEncryption$suspend fun decrypt(encryptedData: ByteArray, keyId: String, iv: ByteArray?): Result&lt;ByteArray, Throwable&gt;</ID>
+    <ID>ReturnCount:DataIntegrityManager.kt$DataIntegrityManager$suspend fun createIntegrityMetadata(data: ByteArray): Result&lt;IntegrityMetadata, Throwable&gt;</ID>
+    <ID>ReturnCount:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$override suspend fun decryptData( encryptedData: EncryptedData, connectionType: String ): Result&lt;ByteArray, Throwable&gt;</ID>
+    <ID>ReturnCount:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$override suspend fun detectTampering( originalData: ByteArray, receivedData: ByteArray ): Result&lt;TamperingDetectionResult, Throwable&gt;</ID>
+    <ID>ReturnCount:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$override suspend fun encryptData( data: ByteArray, connectionType: String ): Result&lt;EncryptedData, Throwable&gt;</ID>
+    <ID>ReturnCount:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$override suspend fun verifyScanner( deviceAddress: String, deviceInfo: ScannerDeviceInfo ): Result&lt;ScannerAuthenticationResult, Throwable&gt;</ID>
+    <ID>ReturnCount:WirelessEncryptionManager.kt$WirelessEncryptionManager$suspend fun decryptData( connectionId: String, encryptedData: ByteArray, iv: ByteArray? ): Result&lt;ByteArray, Throwable&gt;</ID>
+    <ID>ReturnCount:WirelessEncryptionManager.kt$WirelessEncryptionManager$suspend fun encryptData(connectionId: String, data: ByteArray): Result&lt;ByteArray, Throwable&gt;</ID>
+    <ID>SwallowedException:KeyStoreManager.kt$KeyStoreManager$e: Exception</ID>
+    <ID>SwallowedException:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$e: CertificateExpiredException</ID>
+    <ID>SwallowedException:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$e: CertificateNotYetValidException</ID>
+    <ID>SwallowedException:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:AESEncryption.kt$AESEncryption$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:DataIntegrityManager.kt$DataIntegrityManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:KeyStoreManager.kt$KeyStoreManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:WirelessEncryptionManager.kt$WirelessEncryptionManager$e: Exception</ID>
+    <ID>TooManyFunctions:KeyStoreManager.kt$KeyStoreManager</ID>
+    <ID>TooManyFunctions:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl : ScannerSecurityManager</ID>
+    <ID>TooManyFunctions:SecurityViolationHandler.kt$SecurityViolationHandler</ID>
+    <ID>UnusedParameter:KeyStoreManager.kt$KeyStoreManager$key: SecretKey</ID>
+    <ID>UnusedParameter:WirelessEncryptionManager.kt$WirelessEncryptionManager$connectionId: String</ID>
+    <ID>UnusedParameter:WirelessEncryptionManager.kt$WirelessEncryptionManager$remotePublicKey: ByteArray</ID>
+    <ID>UnusedPrivateProperty:ScannerSecurityManagerImpl.kt$ScannerSecurityManagerImpl$private val keyStoreManager: KeyStoreManager</ID>
+    <ID>UnusedPrivateProperty:SecurityVerificationPropertyTest.kt$SecurityVerificationPropertyTest$val mockDataIntegrityManager = mockk&lt;DataIntegrityManager&gt;()</ID>
+  </CurrentIssues>
+</SmellBaseline>

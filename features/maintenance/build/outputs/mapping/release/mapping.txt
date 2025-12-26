@@ -1,0 +1,8 @@
+# compiler: R8
+# compiler_version: 8.2.47
+# common_typos_disable
+# {"id":"com.android.tools.r8.mapping","version":"2.2"}
+# pg_map_id: a522a42
+# pg_map_hash: SHA-256 a522a42c2e055433e4a30c45209af0b3b7dd3d66c7f72e81c617bdba717bab98
+com.spacetec.features.maintenance.BuildConfig -> com.spacetec.features.maintenance.BuildConfig:
+# {"id":"sourceFile","fileName":"BuildConfig.java"}

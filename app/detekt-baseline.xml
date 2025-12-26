@@ -1,0 +1,683 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:DTCParser.kt$DTCParser$byte1 != null &amp;&amp; byte2 != null &amp;&amp; (byte1 != 0 || byte2 != 0)</ID>
+    <ID>ComplexCondition:ObdConnection.kt$ObdConnection$upper.contains("NO DATA") || upper.contains("UNABLE") || upper.contains("ERROR") || upper.contains("?") || upper.contains("CAN ERROR") || upper.contains("BUS ERROR")</ID>
+    <ID>ComplexCondition:VINDecodingScreen.kt$decodedInfo == null &amp;&amp; vin.isNotEmpty() &amp;&amp; vin.length == 17 &amp;&amp; !isDecoding</ID>
+    <ID>CyclomaticComplexMethod:DashboardScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DashboardScreen( obdService: ObdService, onNavigate: (String) -&gt; Unit )</ID>
+    <ID>CyclomaticComplexMethod:DtcDetailScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DtcDetailScreen( dtcCode: String, obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>CyclomaticComplexMethod:DtcDetailScreen.kt$private fun getSubsystemDesc(code: String): String</ID>
+    <ID>CyclomaticComplexMethod:DtcListScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DtcListScreen( obdService: ObdService, onBack: () -&gt; Unit, onDtcClick: (String) -&gt; Unit )</ID>
+    <ID>CyclomaticComplexMethod:ObdCommands.kt$ObdCommands$private fun decodeDtc(hex: String): String?</ID>
+    <ID>CyclomaticComplexMethod:ProtocolDetector.kt$ProtocolDetector$fun parseProtocolDescription(response: String): OBDProtocolType?</ID>
+    <ID>CyclomaticComplexMethod:ProtocolSelectionScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ProtocolSelectionScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>CyclomaticComplexMethod:ReadinessScreen.kt$@Composable fun MonitorCard(name: String, result: ObdService.TestResult)</ID>
+    <ID>CyclomaticComplexMethod:ReadinessScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ReadinessScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>CyclomaticComplexMethod:VINDecodingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun VINDecodingScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>CyclomaticComplexMethod:VINDecodingScreen.kt$fun decodeEngine(engineCode: Char): String</ID>
+    <ID>CyclomaticComplexMethod:VINDecodingScreen.kt$fun decodePlant(plantCode: Char): String</ID>
+    <ID>CyclomaticComplexMethod:VINDecodingScreen.kt$fun decodeWMI(wmi: String): WMIInfo</ID>
+    <ID>EmptyCatchBlock:ObdConnection.kt$ObdConnection${ }</ID>
+    <ID>EmptyCatchBlock:VwProtocolManager.kt$VwProtocolManager${ }</ID>
+    <ID>FunctionNaming:BidirectionalControlsScreen.kt$@Composable fun ActuatorTestCard( test: ActuatorTest, isActive: Boolean, onToggle: (Boolean) -&gt; Unit, enabled: Boolean = true )</ID>
+    <ID>FunctionNaming:BidirectionalControlsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun BidirectionalControlsScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:ConnectionScreen.kt$@SuppressLint("MissingPermission") @OptIn(ExperimentalMaterial3Api::class) @Composable fun ConnectionScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:DashboardScreen.kt$@Composable fun InfoRow(label: String, value: String)</ID>
+    <ID>FunctionNaming:DashboardScreen.kt$@Composable fun QuickActionCard( icon: ImageVector, title: String, subtitle: String, color: Color, onClick: () -&gt; Unit, enabled: Boolean = true )</ID>
+    <ID>FunctionNaming:DashboardScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DashboardScreen( obdService: ObdService, onNavigate: (String) -&gt; Unit )</ID>
+    <ID>FunctionNaming:DtcDetailScreen.kt$@Composable private fun CodeBreakdownRow(code: String, label: String, description: String)</ID>
+    <ID>FunctionNaming:DtcDetailScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DtcDetailScreen( dtcCode: String, obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:DtcListScreen.kt$@Composable fun DtcCard(dtc: DtcDecoder.DtcInfo, onClick: () -&gt; Unit)</ID>
+    <ID>FunctionNaming:DtcListScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DtcListScreen( obdService: ObdService, onBack: () -&gt; Unit, onDtcClick: (String) -&gt; Unit )</ID>
+    <ID>FunctionNaming:EcuProgrammingScreen.kt$@Composable fun EcuCard( ecu: EcuInfo, isSelected: Boolean, onClick: () -&gt; Unit, onProgramClick: () -&gt; Unit, onReadClick: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:EcuProgrammingScreen.kt$@Composable fun EcuCodingDialog( onDismiss: () -&gt; Unit, onConfirm: (String) -&gt; Unit, currentCoding: String )</ID>
+    <ID>FunctionNaming:EcuProgrammingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun EcuProgrammingScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:KeyProgrammingScreen.kt$@Composable fun AddKeyDialog( onDismiss: () -&gt; Unit, onConfirm: (String) -&gt; Unit )</ID>
+    <ID>FunctionNaming:KeyProgrammingScreen.kt$@Composable fun ProgrammingStep(step: Int, description: String)</ID>
+    <ID>FunctionNaming:KeyProgrammingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun KeyProgrammingScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:LiveDataScreen.kt$@Composable fun LiveDataGridCard(value: ObdService.LiveDataValue)</ID>
+    <ID>FunctionNaming:LiveDataScreen.kt$@Composable fun LiveDataListCard(value: ObdService.LiveDataValue)</ID>
+    <ID>FunctionNaming:LiveDataScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun LiveDataScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:MainActivity.kt$@Composable fun SpaceTecApp()</ID>
+    <ID>FunctionNaming:MaintenanceFunctionsScreen.kt$@Composable fun MaintenanceFunctionCard( function: MaintenanceFunction, onExecute: () -&gt; Unit, enabled: Boolean = true )</ID>
+    <ID>FunctionNaming:MaintenanceFunctionsScreen.kt$@Composable fun ResetConfirmationDialog( onDismiss: () -&gt; Unit, onConfirm: () -&gt; Unit, operationName: String )</ID>
+    <ID>FunctionNaming:MaintenanceFunctionsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun MaintenanceFunctionsScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:ProtocolSelectionScreen.kt$@Composable fun ProtocolChangeDialog( onDismiss: () -&gt; Unit, onConfirm: () -&gt; Unit, protocolName: String )</ID>
+    <ID>FunctionNaming:ProtocolSelectionScreen.kt$@Composable fun ProtocolInfoItem(title: String, description: String, details: String)</ID>
+    <ID>FunctionNaming:ProtocolSelectionScreen.kt$@Composable fun ProtocolOption( protocol: Protocol, isSelected: Boolean, onClick: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:ProtocolSelectionScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ProtocolSelectionScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:ReadinessScreen.kt$@Composable fun MonitorCard(name: String, result: ObdService.TestResult)</ID>
+    <ID>FunctionNaming:ReadinessScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ReadinessScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:SettingsScreen.kt$@Composable private fun ClickableSetting( icon: ImageVector, title: String, subtitle: String, onClick: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:SettingsScreen.kt$@Composable private fun SettingsSection(title: String, content: @Composable ColumnScope.() -&gt; Unit)</ID>
+    <ID>FunctionNaming:SettingsScreen.kt$@Composable private fun SwitchSetting( icon: ImageVector, title: String, subtitle: String, checked: Boolean, onCheckedChange: (Boolean) -&gt; Unit )</ID>
+    <ID>FunctionNaming:SettingsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun SettingsScreen( onBackClick: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:SettingsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun SettingsScreen(onBack: () -&gt; Unit)</ID>
+    <ID>FunctionNaming:SettingsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable private fun SettingsItem( title: String, description: String, icon: androidx.compose.ui.graphics.vector.ImageVector, trailing: @Composable (() -&gt; Unit)? = null, onClick: (() -&gt; Unit)? = null )</ID>
+    <ID>FunctionNaming:SpaceTecNavigation.kt$@Composable fun SpaceTecNavigation( navController: NavHostController )</ID>
+    <ID>FunctionNaming:Theme.kt$@Composable fun SpaceTecTheme( darkTheme: Boolean = false, content: @Composable () -&gt; Unit )</ID>
+    <ID>FunctionNaming:VINDecodingScreen.kt$@Composable fun VinBreakdownRow(title: String, value: String, description: String)</ID>
+    <ID>FunctionNaming:VINDecodingScreen.kt$@Composable fun VinInputDialog( currentVin: String, onConfirm: (String) -&gt; Unit, onDismiss: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:VINDecodingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun VINDecodingScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:VehicleReportsScreen.kt$@Composable fun ReportCard( report: VehicleReport, onClick: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:VehicleReportsScreen.kt$@Composable fun ReportDetailDialog( report: VehicleReport, onDismiss: () -&gt; Unit, onExport: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:VehicleReportsScreen.kt$@Composable fun ReportTemplateCard( template: VehicleReport, onUse: () -&gt; Unit )</ID>
+    <ID>FunctionNaming:VehicleReportsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun VehicleReportsScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>ImplicitDefaultLocale:FreezeFrameParser.kt$FreezeFrameParser$String.format("%02X %02X %02X", MODE_FREEZE_FRAME, pid, frameNumber)</ID>
+    <ID>ImplicitDefaultLocale:MultiECUHandler.kt$MultiECUHandler$String.format("%03X", addr + RESPONSE_OFFSET)</ID>
+    <ID>ImplicitDefaultLocale:ObdService.kt$ObdService$String.format("%02X", pid)</ID>
+    <ID>ImplicitDefaultLocale:ObdService.kt$ObdService$String.format("01%02X", pid)</ID>
+    <ID>ImplicitDefaultLocale:ObdService.kt$ObdService$String.format("02%02X%02X", pid, frameNumber)</ID>
+    <ID>ImplicitDefaultLocale:ObdService.kt$ObdService$String.format("41%02X", pid)</ID>
+    <ID>ImplicitDefaultLocale:VehicleInfoParser.kt$VehicleInfoParser$String.format("09 %02X", infoType)</ID>
+    <ID>ImplicitDefaultLocale:VwProtocolManager.kt$VwProtocolManager$String.format("%02X", (index + 1) * 0x20)</ID>
+    <ID>ImplicitDefaultLocale:VwProtocolManager.kt$VwProtocolManager$String.format("%02X", baseOffset + i + 1)</ID>
+    <ID>LongMethod:BidirectionalControlsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun BidirectionalControlsScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:ConnectionScreen.kt$@SuppressLint("MissingPermission") @OptIn(ExperimentalMaterial3Api::class) @Composable fun ConnectionScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:DashboardScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DashboardScreen( obdService: ObdService, onNavigate: (String) -&gt; Unit )</ID>
+    <ID>LongMethod:DtcDetailScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DtcDetailScreen( dtcCode: String, obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:DtcListScreen.kt$@Composable fun DtcCard(dtc: DtcDecoder.DtcInfo, onClick: () -&gt; Unit)</ID>
+    <ID>LongMethod:DtcListScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun DtcListScreen( obdService: ObdService, onBack: () -&gt; Unit, onDtcClick: (String) -&gt; Unit )</ID>
+    <ID>LongMethod:EcuProgrammingScreen.kt$@Composable fun EcuCard( ecu: EcuInfo, isSelected: Boolean, onClick: () -&gt; Unit, onProgramClick: () -&gt; Unit, onReadClick: () -&gt; Unit )</ID>
+    <ID>LongMethod:EcuProgrammingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun EcuProgrammingScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:KeyProgrammingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun KeyProgrammingScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:LiveDataScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun LiveDataScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:MainActivity.kt$@Composable fun SpaceTecApp()</ID>
+    <ID>LongMethod:MaintenanceFunctionsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun MaintenanceFunctionsScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:ProtocolSelectionScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ProtocolSelectionScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:ReadinessScreen.kt$@Composable fun MonitorCard(name: String, result: ObdService.TestResult)</ID>
+    <ID>LongMethod:ReadinessScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ReadinessScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:SettingsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun SettingsScreen( onBackClick: () -&gt; Unit )</ID>
+    <ID>LongMethod:SettingsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun SettingsScreen(onBack: () -&gt; Unit)</ID>
+    <ID>LongMethod:SpaceTecNavigation.kt$@Composable fun SpaceTecNavigation( navController: NavHostController )</ID>
+    <ID>LongMethod:VINDecodingScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun VINDecodingScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongMethod:VehicleReportsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun VehicleReportsScreen( obdService: ObdService, onBack: () -&gt; Unit )</ID>
+    <ID>LongParameterList:DashboardScreen.kt$( icon: ImageVector, title: String, subtitle: String, color: Color, onClick: () -&gt; Unit, enabled: Boolean = true )</ID>
+    <ID>LoopWithTooManyJumpStatements:ELM327Protocol.kt$ELM327Protocol$for</ID>
+    <ID>LoopWithTooManyJumpStatements:VwProtocolManager.kt$VwProtocolManager$for</ID>
+    <ID>MagicNumber:ATCommand.kt$ATCommand.Companion$16</ID>
+    <ID>MagicNumber:ATCommand.kt$ATCommand.RESET$1000</ID>
+    <ID>MagicNumber:ATCommand.kt$ATCommand.WARM_START$500</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$10</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$100</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$20</ID>
+    <ID>MagicNumber:BLEConnection.kt$BLEConnection$3</ID>
+    <ID>MagicNumber:BLEDevice.kt$BLEDevice$50</ID>
+    <ID>MagicNumber:BLEDevice.kt$BLEDevice$60</ID>
+    <ID>MagicNumber:BLEDevice.kt$BLEDevice$70</ID>
+    <ID>MagicNumber:BLEDevice.kt$BLEDevice$80</ID>
+    <ID>MagicNumber:BLEDevice.kt$BLEDevice.SignalStrength.EXCELLENT$4</ID>
+    <ID>MagicNumber:BLEDevice.kt$BLEDevice.SignalStrength.GOOD$3</ID>
+    <ID>MagicNumber:BidirectionalControlsScreen.kt$1000</ID>
+    <ID>MagicNumber:BidirectionalControlsScreen.kt$500</ID>
+    <ID>MagicNumber:BidirectionalControlsScreen.kt$800</ID>
+    <ID>MagicNumber:BluetoothClassicConnection.kt$BluetoothClassicConnection$10</ID>
+    <ID>MagicNumber:BluetoothClassicConnection.kt$BluetoothClassicConnection$100</ID>
+    <ID>MagicNumber:BluetoothClassicConnection.kt$BluetoothClassicConnection$1024</ID>
+    <ID>MagicNumber:BluetoothClassicManager.kt$BluetoothClassicManager$1000</ID>
+    <ID>MagicNumber:ByteArrayUtils.kt$ByteArrayUtils$0xFF</ID>
+    <ID>MagicNumber:ByteArrayUtils.kt$ByteArrayUtils$8</ID>
+    <ID>MagicNumber:Color.kt$0xFF00695C</ID>
+    <ID>MagicNumber:Color.kt$0xFF00897B</ID>
+    <ID>MagicNumber:Color.kt$0xFF0D47A1</ID>
+    <ID>MagicNumber:Color.kt$0xFF1565C0</ID>
+    <ID>MagicNumber:Color.kt$0xFF1976D2</ID>
+    <ID>MagicNumber:Color.kt$0xFF388E3C</ID>
+    <ID>MagicNumber:Color.kt$0xFF42A5F5</ID>
+    <ID>MagicNumber:Color.kt$0xFF757575</ID>
+    <ID>MagicNumber:Color.kt$0xFFD32F2F</ID>
+    <ID>MagicNumber:Color.kt$0xFFE0E0E0</ID>
+    <ID>MagicNumber:Color.kt$0xFFF57C00</ID>
+    <ID>MagicNumber:Color.kt$0xFFF5F5F5</ID>
+    <ID>MagicNumber:Color.kt$0xFFFBC02D</ID>
+    <ID>MagicNumber:Color.kt$0xFFFFFFFF</ID>
+    <ID>MagicNumber:DTC.kt$DTC$3</ID>
+    <ID>MagicNumber:DTC.kt$DTC$4</ID>
+    <ID>MagicNumber:DTC.kt$DTC$5</ID>
+    <ID>MagicNumber:DTC.kt$DTC$6</ID>
+    <ID>MagicNumber:DTC.kt$DTC$7</ID>
+    <ID>MagicNumber:DTC.kt$DTC$8</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$0x43</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$0x47</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$0x4A</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$0xA</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$0xB</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$0xC</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$0xE</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$13</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$16</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$3</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$4</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$5</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$6</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$7</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$8</ID>
+    <ID>MagicNumber:DTCParser.kt$DTCParser$9</ID>
+    <ID>MagicNumber:DiagnosticService.kt$DiagnosticService$30_000</ID>
+    <ID>MagicNumber:DiagnosticService.kt$DiagnosticService$4</ID>
+    <ID>MagicNumber:DtcDecoder.kt$DtcDecoder$0x03</ID>
+    <ID>MagicNumber:DtcDecoder.kt$DtcDecoder$127</ID>
+    <ID>MagicNumber:DtcDecoder.kt$DtcDecoder$16</ID>
+    <ID>MagicNumber:DtcDecoder.kt$DtcDecoder$3</ID>
+    <ID>MagicNumber:DtcDecoder.kt$DtcDecoder$4</ID>
+    <ID>MagicNumber:DtcDecoder.kt$DtcDecoder$6</ID>
+    <ID>MagicNumber:DtcDetailScreen.kt$0xFFFF9800</ID>
+    <ID>MagicNumber:DtcDetailScreen.kt$3</ID>
+    <ID>MagicNumber:DtcDetailScreen.kt$4</ID>
+    <ID>MagicNumber:DtcDetailScreen.kt$5</ID>
+    <ID>MagicNumber:DtcDetailScreen.kt$6</ID>
+    <ID>MagicNumber:DtcDetailScreen.kt$7</ID>
+    <ID>MagicNumber:DtcDetailScreen.kt$8</ID>
+    <ID>MagicNumber:DtcListScreen.kt$0xFFFF9800</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0x20</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0x40</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0x60</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0x80</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0xA0</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0xC0</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0xE0</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$0xFF</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$16</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$2000</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$4</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$5000</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$6</ID>
+    <ID>MagicNumber:ELM327Protocol.kt$ELM327Protocol$8</ID>
+    <ID>MagicNumber:EcuProgrammingScreen.kt$1500</ID>
+    <ID>MagicNumber:EcuProgrammingScreen.kt$2000</ID>
+    <ID>MagicNumber:EcuProgrammingScreen.kt$3000</ID>
+    <ID>MagicNumber:FreezeFrameParser.kt$FreezeFrameParser$0xB</ID>
+    <ID>MagicNumber:FreezeFrameParser.kt$FreezeFrameParser$16</ID>
+    <ID>MagicNumber:FreezeFrameParser.kt$FreezeFrameParser$3</ID>
+    <ID>MagicNumber:FreezeFrameParser.kt$FreezeFrameParser$4</ID>
+    <ID>MagicNumber:FreezeFrameParser.kt$FreezeFrameParser$7</ID>
+    <ID>MagicNumber:FreezeFrameParser.kt$FreezeFrameParser$8</ID>
+    <ID>MagicNumber:HexUtils.kt$HexUtils$16</ID>
+    <ID>MagicNumber:ISOTPFrame.kt$ISOTPFrame.Companion$0xFF</ID>
+    <ID>MagicNumber:ISOTPFrame.kt$ISOTPFrame.Companion$3</ID>
+    <ID>MagicNumber:ISOTPFrame.kt$ISOTPFrame.Companion$4</ID>
+    <ID>MagicNumber:ISOTPHandler.kt$ISOTPHandler$0xF0</ID>
+    <ID>MagicNumber:ISOTPHandler.kt$ISOTPHandler$0xFF</ID>
+    <ID>MagicNumber:ISOTPHandler.kt$ISOTPHandler$16</ID>
+    <ID>MagicNumber:ISOTPHandler.kt$ISOTPHandler$3</ID>
+    <ID>MagicNumber:ISOTPHandler.kt$ISOTPHandler$7</ID>
+    <ID>MagicNumber:ISOTPHandler.kt$ISOTPHandler$8</ID>
+    <ID>MagicNumber:KeyProgrammingScreen.kt$1000</ID>
+    <ID>MagicNumber:KeyProgrammingScreen.kt$20</ID>
+    <ID>MagicNumber:KeyProgrammingScreen.kt$2000</ID>
+    <ID>MagicNumber:KeyProgrammingScreen.kt$3</ID>
+    <ID>MagicNumber:KeyProgrammingScreen.kt$3000</ID>
+    <ID>MagicNumber:KeyProgrammingScreen.kt$4</ID>
+    <ID>MagicNumber:KeyProgrammingScreen.kt$9999</ID>
+    <ID>MagicNumber:LiveDataScreen.kt$100</ID>
+    <ID>MagicNumber:LiveDataScreen.kt$20</ID>
+    <ID>MagicNumber:LiveDataScreen.kt$4000</ID>
+    <ID>MagicNumber:LiveDataScreen.kt$6000</ID>
+    <ID>MagicNumber:LiveDataScreen.kt$90</ID>
+    <ID>MagicNumber:MaintenanceFunctionsScreen.kt$2500</ID>
+    <ID>MagicNumber:Mode01Commands.kt$Mode01Commands.SupportedPIDs$16</ID>
+    <ID>MagicNumber:MultiECUHandler.kt$MultiECUHandler$16</ID>
+    <ID>MagicNumber:OBDCommand.kt$OBDCommand$0x40</ID>
+    <ID>MagicNumber:OBDCommand.kt$OBDCommand$16</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.ISO_14230_4_KWP_5BAUD$4</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.ISO_14230_4_KWP_FAST$5</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.ISO_15765_4_CAN_11BIT_250K$8</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.ISO_15765_4_CAN_11BIT_500K$6</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.ISO_15765_4_CAN_29BIT_250K$9</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.ISO_15765_4_CAN_29BIT_500K$7</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.ISO_9141_2$3</ID>
+    <ID>MagicNumber:OBDProtocolType.kt$OBDProtocolType.SAE_J1939_CAN$10</ID>
+    <ID>MagicNumber:ObdCommands.kt$ObdCommands$100</ID>
+    <ID>MagicNumber:ObdCommands.kt$ObdCommands$100f</ID>
+    <ID>MagicNumber:ObdCommands.kt$ObdCommands$16</ID>
+    <ID>MagicNumber:ObdCommands.kt$ObdCommands$255</ID>
+    <ID>MagicNumber:ObdCommands.kt$ObdCommands$256</ID>
+    <ID>MagicNumber:ObdCommands.kt$ObdCommands$4</ID>
+    <ID>MagicNumber:ObdCommands.kt$ObdCommands$40</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$10</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$1000</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$1500</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$20</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$2000</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$3</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$30</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$4</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$5</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$500</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$5000</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$6</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$7</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$8</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection$9</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection.Protocol.CAN_11BIT_250K$8</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection.Protocol.CAN_11BIT_500K$6</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection.Protocol.CAN_29BIT_250K$9</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection.Protocol.CAN_29BIT_500K$7</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection.Protocol.ISO_9141$3</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection.Protocol.KWP_5BAUD$4</ID>
+    <ID>MagicNumber:ObdConnection.kt$ObdConnection.Protocol.KWP_FAST$5</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x04</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x05</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x06</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x07</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x08</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x0C</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x0E</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x10</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x11</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x20</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x40</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x42</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x46</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$0x80</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$12</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$16</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$200</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$4</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$6</ID>
+    <ID>MagicNumber:ObdService.kt$ObdService$8</ID>
+    <ID>MagicNumber:PIDDefinition.kt$PollingPriority.CRITICAL$200</ID>
+    <ID>MagicNumber:PIDDefinition.kt$PollingPriority.HIGH$500</ID>
+    <ID>MagicNumber:PIDDefinition.kt$PollingPriority.LOW$2000</ID>
+    <ID>MagicNumber:PIDDefinition.kt$PollingPriority.STANDARD$1000</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$0.05</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$0xFF</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$100.0</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$1000.0</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$125.0</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$128</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$128.0</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$255.0</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$256</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$3.0</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$4.0</ID>
+    <ID>MagicNumber:PIDFormulas.kt$PIDFormulas$40.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x04</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x05</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x06</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x07</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x0A</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x0B</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x0C</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x0E</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x10</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x11</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$0x40</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$100.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$16</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$16383.75</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$215.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$255.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$4</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$40.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$63.5</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$64.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$655.35</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$65535.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$765.0</ID>
+    <ID>MagicNumber:PIDParser.kt$PIDParser$99.2</ID>
+    <ID>MagicNumber:PIDResponse.kt$PIDResponse$100</ID>
+    <ID>MagicNumber:ProtocolSelectionScreen.kt$2000</ID>
+    <ID>MagicNumber:ResponseParser.kt$ResponseParser$100</ID>
+    <ID>MagicNumber:ResponseParser.kt$ResponseParser$16</ID>
+    <ID>MagicNumber:ResponseParser.kt$ResponseParser$17</ID>
+    <ID>MagicNumber:Theme.kt$0xFF121212</ID>
+    <ID>MagicNumber:Theme.kt$0xFF1E1E1E</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$10</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$11</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$17</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2010</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2011</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2012</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2013</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2014</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2015</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2016</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2017</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2018</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2019</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2020</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2021</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2022</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2023</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2024</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2025</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2026</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2027</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2028</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2029</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$2030</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$3</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$8</ID>
+    <ID>MagicNumber:VINDecodingScreen.kt$9</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$10</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$11</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$126</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$16</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$17</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$3</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$32</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$4</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$5</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$6</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$7</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$8</ID>
+    <ID>MagicNumber:VehicleInfoParser.kt$VehicleInfoParser$9</ID>
+    <ID>MagicNumber:VehicleReportsScreen.kt$1000</ID>
+    <ID>MagicNumber:VehicleReportsScreen.kt$1500</ID>
+    <ID>MagicNumber:VehicleReportsScreen.kt$2000</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$0x20</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$0x7E</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$100</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$11</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$16</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$17</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$3</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$32</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$4</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$7</ID>
+    <ID>MagicNumber:VwProtocolManager.kt$VwProtocolManager$8</ID>
+    <ID>MatchingDeclarationName:RecoveryStrategy.kt$RecoveryAction</ID>
+    <ID>MaxLineLength:BidirectionalControlsScreen.kt$.</ID>
+    <ID>MaxLineLength:DiagnosticService.kt$DiagnosticService$private</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"B0001" to DtcInfo("B0001", DtcSystem.BODY, "Driver Frontal Stage 1 Deployment Control", DtcSeverity.CRITICAL, listOf("Airbag system fault", "Wiring", "Airbag module"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"B1000" to DtcInfo("B1000", DtcSystem.BODY, "ECU Malfunction", DtcSeverity.HIGH, listOf("Module fault", "Software issue", "Power supply"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"C0035" to DtcInfo("C0035", DtcSystem.CHASSIS, "Left Front Wheel Speed Sensor Circuit", DtcSeverity.MEDIUM, listOf("Faulty wheel speed sensor", "Wiring", "Tone ring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"C0040" to DtcInfo("C0040", DtcSystem.CHASSIS, "Right Front Wheel Speed Sensor Circuit", DtcSeverity.MEDIUM, listOf("Faulty wheel speed sensor", "Wiring", "Tone ring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"C0045" to DtcInfo("C0045", DtcSystem.CHASSIS, "Left Rear Wheel Speed Sensor Circuit", DtcSeverity.MEDIUM, listOf("Faulty wheel speed sensor", "Wiring", "Tone ring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"C0050" to DtcInfo("C0050", DtcSystem.CHASSIS, "Right Rear Wheel Speed Sensor Circuit", DtcSeverity.MEDIUM, listOf("Faulty wheel speed sensor", "Wiring", "Tone ring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0016" to DtcInfo("P0016", DtcSystem.POWERTRAIN, "Crankshaft/Camshaft Position Correlation Bank 1 Sensor A", DtcSeverity.HIGH, listOf("Timing chain stretched", "VVT solenoid", "Sensor issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0017" to DtcInfo("P0017", DtcSystem.POWERTRAIN, "Crankshaft/Camshaft Position Correlation Bank 1 Sensor B", DtcSeverity.HIGH, listOf("Timing chain stretched", "VVT solenoid", "Sensor issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0100" to DtcInfo("P0100", DtcSystem.POWERTRAIN, "Mass Air Flow Circuit Malfunction", DtcSeverity.MEDIUM, listOf("Faulty MAF sensor", "Wiring issues", "Air leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0101" to DtcInfo("P0101", DtcSystem.POWERTRAIN, "Mass Air Flow Circuit Range/Performance", DtcSeverity.MEDIUM, listOf("Dirty MAF sensor", "Air filter clogged", "Vacuum leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0102" to DtcInfo("P0102", DtcSystem.POWERTRAIN, "Mass Air Flow Circuit Low Input", DtcSeverity.MEDIUM, listOf("Faulty MAF sensor", "Open circuit", "Low voltage"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0103" to DtcInfo("P0103", DtcSystem.POWERTRAIN, "Mass Air Flow Circuit High Input", DtcSeverity.MEDIUM, listOf("Faulty MAF sensor", "Short circuit", "High voltage"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0110" to DtcInfo("P0110", DtcSystem.POWERTRAIN, "Intake Air Temperature Circuit Malfunction", DtcSeverity.LOW, listOf("Faulty IAT sensor", "Wiring issues"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0115" to DtcInfo("P0115", DtcSystem.POWERTRAIN, "Engine Coolant Temperature Circuit Malfunction", DtcSeverity.MEDIUM, listOf("Faulty ECT sensor", "Wiring issues"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0120" to DtcInfo("P0120", DtcSystem.POWERTRAIN, "Throttle Position Sensor Circuit Malfunction", DtcSeverity.HIGH, listOf("Faulty TPS", "Wiring issues", "ECM fault"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0130" to DtcInfo("P0130", DtcSystem.POWERTRAIN, "O2 Sensor Circuit Malfunction (Bank 1 Sensor 1)", DtcSeverity.MEDIUM, listOf("Faulty O2 sensor", "Wiring issues", "Exhaust leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0131" to DtcInfo("P0131", DtcSystem.POWERTRAIN, "O2 Sensor Circuit Low Voltage (Bank 1 Sensor 1)", DtcSeverity.MEDIUM, listOf("Lean condition", "Faulty O2 sensor", "Vacuum leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0132" to DtcInfo("P0132", DtcSystem.POWERTRAIN, "O2 Sensor Circuit High Voltage (Bank 1 Sensor 1)", DtcSeverity.MEDIUM, listOf("Rich condition", "Faulty O2 sensor", "Fuel pressure high"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0133" to DtcInfo("P0133", DtcSystem.POWERTRAIN, "O2 Sensor Circuit Slow Response (Bank 1 Sensor 1)", DtcSeverity.MEDIUM, listOf("Aging O2 sensor", "Exhaust leak", "Fuel contamination"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0171" to DtcInfo("P0171", DtcSystem.POWERTRAIN, "System Too Lean (Bank 1)", DtcSeverity.MEDIUM, listOf("Vacuum leak", "Faulty MAF", "Low fuel pressure", "Injector issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0172" to DtcInfo("P0172", DtcSystem.POWERTRAIN, "System Too Rich (Bank 1)", DtcSeverity.MEDIUM, listOf("Faulty O2 sensor", "High fuel pressure", "Leaking injector"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0174" to DtcInfo("P0174", DtcSystem.POWERTRAIN, "System Too Lean (Bank 2)", DtcSeverity.MEDIUM, listOf("Vacuum leak", "Faulty MAF", "Low fuel pressure"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0175" to DtcInfo("P0175", DtcSystem.POWERTRAIN, "System Too Rich (Bank 2)", DtcSeverity.MEDIUM, listOf("Faulty O2 sensor", "High fuel pressure", "Leaking injector"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0300" to DtcInfo("P0300", DtcSystem.POWERTRAIN, "Random/Multiple Cylinder Misfire Detected", DtcSeverity.HIGH, listOf("Spark plugs", "Ignition coils", "Fuel injectors", "Vacuum leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0301" to DtcInfo("P0301", DtcSystem.POWERTRAIN, "Cylinder 1 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #1", "Ignition coil #1", "Injector #1"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0302" to DtcInfo("P0302", DtcSystem.POWERTRAIN, "Cylinder 2 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #2", "Ignition coil #2", "Injector #2"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0303" to DtcInfo("P0303", DtcSystem.POWERTRAIN, "Cylinder 3 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #3", "Ignition coil #3", "Injector #3"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0304" to DtcInfo("P0304", DtcSystem.POWERTRAIN, "Cylinder 4 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #4", "Ignition coil #4", "Injector #4"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0305" to DtcInfo("P0305", DtcSystem.POWERTRAIN, "Cylinder 5 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #5", "Ignition coil #5", "Injector #5"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0306" to DtcInfo("P0306", DtcSystem.POWERTRAIN, "Cylinder 6 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #6", "Ignition coil #6", "Injector #6"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0307" to DtcInfo("P0307", DtcSystem.POWERTRAIN, "Cylinder 7 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #7", "Ignition coil #7", "Injector #7"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0308" to DtcInfo("P0308", DtcSystem.POWERTRAIN, "Cylinder 8 Misfire Detected", DtcSeverity.HIGH, listOf("Spark plug #8", "Ignition coil #8", "Injector #8"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0325" to DtcInfo("P0325", DtcSystem.POWERTRAIN, "Knock Sensor 1 Circuit Malfunction", DtcSeverity.MEDIUM, listOf("Faulty knock sensor", "Wiring issues", "Engine knock"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0335" to DtcInfo("P0335", DtcSystem.POWERTRAIN, "Crankshaft Position Sensor Circuit Malfunction", DtcSeverity.CRITICAL, listOf("Faulty CKP sensor", "Wiring issues", "Timing belt/chain"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0340" to DtcInfo("P0340", DtcSystem.POWERTRAIN, "Camshaft Position Sensor Circuit Malfunction", DtcSeverity.HIGH, listOf("Faulty CMP sensor", "Wiring issues", "Timing issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0400" to DtcInfo("P0400", DtcSystem.POWERTRAIN, "Exhaust Gas Recirculation Flow Malfunction", DtcSeverity.MEDIUM, listOf("Clogged EGR valve", "Carbon buildup", "Vacuum leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0401" to DtcInfo("P0401", DtcSystem.POWERTRAIN, "Exhaust Gas Recirculation Flow Insufficient", DtcSeverity.MEDIUM, listOf("Clogged EGR passages", "Faulty EGR valve", "Vacuum issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0420" to DtcInfo("P0420", DtcSystem.POWERTRAIN, "Catalyst System Efficiency Below Threshold (Bank 1)", DtcSeverity.MEDIUM, listOf("Failing catalytic converter", "O2 sensor issue", "Exhaust leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0430" to DtcInfo("P0430", DtcSystem.POWERTRAIN, "Catalyst System Efficiency Below Threshold (Bank 2)", DtcSeverity.MEDIUM, listOf("Failing catalytic converter", "O2 sensor issue", "Exhaust leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0440" to DtcInfo("P0440", DtcSystem.POWERTRAIN, "Evaporative Emission Control System Malfunction", DtcSeverity.LOW, listOf("Loose gas cap", "EVAP leak", "Purge valve"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0442" to DtcInfo("P0442", DtcSystem.POWERTRAIN, "Evaporative Emission Control System Leak Detected (Small)", DtcSeverity.LOW, listOf("Loose gas cap", "Small EVAP leak", "Hose crack"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0446" to DtcInfo("P0446", DtcSystem.POWERTRAIN, "Evaporative Emission Control System Vent Control Circuit", DtcSeverity.LOW, listOf("Faulty vent valve", "Wiring issues", "Blocked vent"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0455" to DtcInfo("P0455", DtcSystem.POWERTRAIN, "Evaporative Emission Control System Leak Detected (Large)", DtcSeverity.LOW, listOf("Missing gas cap", "Large EVAP leak", "Disconnected hose"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0500" to DtcInfo("P0500", DtcSystem.POWERTRAIN, "Vehicle Speed Sensor Malfunction", DtcSeverity.MEDIUM, listOf("Faulty VSS", "Wiring issues", "Speedometer issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0505" to DtcInfo("P0505", DtcSystem.POWERTRAIN, "Idle Control System Malfunction", DtcSeverity.MEDIUM, listOf("Faulty IAC valve", "Vacuum leak", "Throttle body dirty"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0506" to DtcInfo("P0506", DtcSystem.POWERTRAIN, "Idle Control System RPM Lower Than Expected", DtcSeverity.LOW, listOf("Vacuum leak", "Dirty throttle body", "IAC issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0507" to DtcInfo("P0507", DtcSystem.POWERTRAIN, "Idle Control System RPM Higher Than Expected", DtcSeverity.LOW, listOf("Vacuum leak", "IAC issue", "Air leak"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0700" to DtcInfo("P0700", DtcSystem.POWERTRAIN, "Transmission Control System Malfunction", DtcSeverity.HIGH, listOf("TCM fault", "Wiring issues", "Transmission issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0715" to DtcInfo("P0715", DtcSystem.POWERTRAIN, "Input/Turbine Speed Sensor Circuit Malfunction", DtcSeverity.HIGH, listOf("Faulty speed sensor", "Wiring issues", "Transmission issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0720" to DtcInfo("P0720", DtcSystem.POWERTRAIN, "Output Speed Sensor Circuit Malfunction", DtcSeverity.HIGH, listOf("Faulty speed sensor", "Wiring issues", "Transmission issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0730" to DtcInfo("P0730", DtcSystem.POWERTRAIN, "Incorrect Gear Ratio", DtcSeverity.HIGH, listOf("Low transmission fluid", "Worn clutches", "Solenoid issue"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P0741" to DtcInfo("P0741", DtcSystem.POWERTRAIN, "Torque Converter Clutch Circuit Performance", DtcSeverity.MEDIUM, listOf("Faulty TCC solenoid", "Wiring issues", "Valve body"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P2015" to DtcInfo("P2015", DtcSystem.POWERTRAIN, "Intake Manifold Runner Position Sensor/Switch Circuit Bank 1", DtcSeverity.MEDIUM, listOf("Intake manifold flap motor", "Wiring", "Carbon buildup"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P2187" to DtcInfo("P2187", DtcSystem.POWERTRAIN, "System Too Lean at Idle Bank 1", DtcSeverity.MEDIUM, listOf("Vacuum leak", "PCV valve", "Intake gasket"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P2188" to DtcInfo("P2188", DtcSystem.POWERTRAIN, "System Too Rich at Idle Bank 1", DtcSeverity.MEDIUM, listOf("Leaking injector", "Fuel pressure regulator", "EVAP purge"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"P2279" to DtcInfo("P2279", DtcSystem.POWERTRAIN, "Intake Air System Leak", DtcSeverity.MEDIUM, listOf("Intake hose crack", "Throttle body gasket", "PCV system"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"U0100" to DtcInfo("U0100", DtcSystem.NETWORK, "Lost Communication With ECM/PCM", DtcSeverity.CRITICAL, listOf("ECM fault", "CAN bus issue", "Wiring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"U0101" to DtcInfo("U0101", DtcSystem.NETWORK, "Lost Communication With TCM", DtcSeverity.HIGH, listOf("TCM fault", "CAN bus issue", "Wiring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"U0121" to DtcInfo("U0121", DtcSystem.NETWORK, "Lost Communication With ABS", DtcSeverity.HIGH, listOf("ABS module fault", "CAN bus issue", "Wiring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$"U0140" to DtcInfo("U0140", DtcSystem.NETWORK, "Lost Communication With BCM", DtcSeverity.MEDIUM, listOf("BCM fault", "CAN bus issue", "Wiring"))</ID>
+    <ID>MaxLineLength:DtcDecoder.kt$DtcDecoder$return "$system$digit1${digit2.toString(16).uppercase()}${digit3.toString(16).uppercase()}${digit4.toString(16).uppercase()}"</ID>
+    <ID>MaxLineLength:DtcListScreen.kt$Text("This will clear all stored DTCs and reset monitors. The MIL (Check Engine Light) will turn off. Are you sure?")</ID>
+    <ID>MaxLineLength:ELM327Protocol.kt$ELM327Protocol$?:</ID>
+    <ID>MaxLineLength:EcuProgrammingScreen.kt$"ECU programming can damage your vehicle if done incorrectly. Only proceed if you know what you're doing."</ID>
+    <ID>MaxLineLength:EcuProgrammingScreen.kt$.</ID>
+    <ID>MaxLineLength:FreezeFrameParser.kt$FreezeFrameParser$return "$category${codeDigit1}${codeDigit2.toString(16).uppercase()}${codeDigit3.toString(16).uppercase()}${codeDigit4.toString(16).uppercase()}"</ID>
+    <ID>MaxLineLength:ISOTPFrame.kt$ISOTPFrame.Companion$totalLength = if (frameType == FrameType.FIRST) ((pci and 0x0F) shl 8) or (data.getOrNull(1)?.toInt() ?: 0) else 0</ID>
+    <ID>MaxLineLength:ISOTPHandler.kt$ISOTPHandler$Log.d(TAG, "Flow control received: flag=${frame.flag}, bs=${frame.blockSize}, st=${frame.separationTime}")</ID>
+    <ID>MaxLineLength:KeyProgrammingScreen.kt$"Key programming is a critical operation that can lock you out of your vehicle. Ensure you have a working key before proceeding."</ID>
+    <ID>MaxLineLength:KeyProgrammingScreen.kt$Text("You MUST have a working key or programming tool to regain access to the vehicle.", color = StatusActive)</ID>
+    <ID>MaxLineLength:MaintenanceFunctionsScreen.kt$"Maintenance functions can affect vehicle operation. Follow manufacturer procedures carefully."</ID>
+    <ID>MaxLineLength:Mode01Commands.kt$Mode01Commands.SupportedPIDs$description = "PIDs supported in range ${pidRange.toString(16).uppercase()}-${(pidRange + 0x1F).toString(16).uppercase()}"</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x04 to PIDDefinition(0x04, "Calculated Engine Load", "Load", "Calculated engine load value", 1, PIDFormulas.CALCULATED_ENGINE_LOAD, "%", 0.0, 100.0, PIDCategory.ENGINE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x05 to PIDDefinition(0x05, "Engine Coolant Temperature", "Coolant", "Engine coolant temperature", 1, PIDFormulas.ENGINE_COOLANT_TEMP, "°C", -40.0, 215.0, PIDCategory.TEMPERATURE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x06 to PIDDefinition(0x06, "Short Term Fuel Trim - Bank 1", "STFT B1", "Short term fuel trim - Bank 1", 1, PIDFormulas.SHORT_TERM_FUEL_TRIM_B1, "%", -100.0, 99.2, PIDCategory.FUEL)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x07 to PIDDefinition(0x07, "Long Term Fuel Trim - Bank 1", "LTFT B1", "Long term fuel trim - Bank 1", 1, PIDFormulas.LONG_TERM_FUEL_TRIM_B1, "%", -100.0, 99.2, PIDCategory.FUEL)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x0A to PIDDefinition(0x0A, "Fuel Pressure", "Fuel Pres", "Fuel pressure gauge", 1, PIDFormulas.FUEL_PRESSURE, "kPa", 0.0, 765.0, PIDCategory.FUEL)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x0B to PIDDefinition(0x0B, "Intake Manifold Pressure", "MAP", "Intake manifold absolute pressure", 1, PIDFormulas.INTAKE_MANIFOLD_PRESSURE, "kPa", 0.0, 255.0, PIDCategory.ENGINE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x0C to PIDDefinition(0x0C, "Engine RPM", "RPM", "Engine speed in rotations per minute", 2, PIDFormulas.ENGINE_RPM, "rpm", 0.0, 16383.75, PIDCategory.ENGINE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x0D to PIDDefinition(0x0D, "Vehicle Speed", "Speed", "Current vehicle speed", 1, PIDFormulas.VEHICLE_SPEED, "km/h", 0.0, 255.0, PIDCategory.SPEED)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x0E to PIDDefinition(0x0E, "Timing Advance", "Timing", "Timing advance relative to TDC", 1, PIDFormulas.TIMING_ADVANCE, "°", -64.0, 63.5, PIDCategory.ENGINE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x0F to PIDDefinition(0x0F, "Intake Air Temperature", "IAT", "Intake air temperature", 1, PIDFormulas.INTAKE_AIR_TEMP, "°C", -40.0, 215.0, PIDCategory.TEMPERATURE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x10 to PIDDefinition(0x10, "MAF Air Flow Rate", "MAF", "Mass air flow sensor rate", 2, PIDFormulas.MAF_AIR_FLOW, "g/s", 0.0, 655.35, PIDCategory.ENGINE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x11 to PIDDefinition(0x11, "Throttle Position", "Throttle", "Throttle position", 1, PIDFormulas.THROTTLE_POSITION, "%", 0.0, 100.0, PIDCategory.ENGINE)</ID>
+    <ID>MaxLineLength:PIDParser.kt$PIDParser$0x1F to PIDDefinition(0x1F, "Run Time Since Engine Start", "Run Time", "Time since engine start", 2, PIDFormulas.RUN_TIME, "s", 0.0, 65535.0, PIDCategory.ENGINE)</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x04 to PidDefinition(0x04, "Calculated Engine Load", "LOAD", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x05 to PidDefinition(0x05, "Engine Coolant Temperature", "COOLANT", "°C", -40.0, 215.0, 1) { d -&gt; d[0].toUByte().toDouble() + BYTE_MINUS_40 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x06 to PidDefinition(0x06, "Short Term Fuel Trim Bank 1", "STFT1", "%", -100.0, 99.2, 1) { d -&gt; (d[0].toUByte().toDouble() - 128.0) * BYTE_MINUS_128_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x07 to PidDefinition(0x07, "Long Term Fuel Trim Bank 1", "LTFT1", "%", -100.0, 99.2, 1) { d -&gt; (d[0].toUByte().toDouble() - 128.0) * BYTE_MINUS_128_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x08 to PidDefinition(0x08, "Short Term Fuel Trim Bank 2", "STFT2", "%", -100.0, 99.2, 1) { d -&gt; (d[0].toUByte().toDouble() - 128.0) * BYTE_MINUS_128_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x09 to PidDefinition(0x09, "Long Term Fuel Trim Bank 2", "LTFT2", "%", -100.0, 99.2, 1) { d -&gt; (d[0].toUByte().toDouble() - 128.0) * BYTE_MINUS_128_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x0A to PidDefinition(0x0A, "Fuel Pressure", "FUEL_PRES", "kPa", 0.0, 765.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_MUL_3 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x0B to PidDefinition(0x0B, "Intake Manifold Pressure", "MAP", "kPa", 0.0, BYTE_TO_255_RANGE, 1) { d -&gt; d[0].toUByte().toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x0C to PidDefinition(0x0C, "Engine RPM", "RPM", "rpm", 0.0, 16383.75, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) / TWO_BYTE_DIV_4 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x0D to PidDefinition(0x0D, "Vehicle Speed", "SPEED", "km/h", 0.0, BYTE_TO_255_RANGE, 1) { d -&gt; d[0].toUByte().toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x0E to PidDefinition(0x0E, "Timing Advance", "TIMING", "°", -64.0, 63.5, 1) { d -&gt; d[0].toUByte().toDouble() / 2.0 - 64.0 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x0F to PidDefinition(0x0F, "Intake Air Temperature", "IAT", "°C", -40.0, 215.0, 1) { d -&gt; d[0].toUByte().toDouble() + BYTE_MINUS_40 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x10 to PidDefinition(0x10, "MAF Air Flow Rate", "MAF", "g/s", 0.0, 655.35, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) / TWO_BYTE_DIV_100 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x11 to PidDefinition(0x11, "Throttle Position", "TPS", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x1C to PidDefinition(0x1C, "OBD Standard", "OBD_STD", "", 0.0, BYTE_TO_255_RANGE, 1) { d -&gt; d[0].toUByte().toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x1F to PidDefinition(0x1F, "Run Time Since Start", "RUNTIME", "sec", 0.0, 65535.0, 2) { d -&gt; (d[0].toUByte().toInt() * 256 + d[1].toUByte().toInt()).toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x21 to PidDefinition(0x21, "Distance with MIL On", "DIST_MIL", "km", 0.0, 65535.0, 2) { d -&gt; (d[0].toUByte().toInt() * 256 + d[1].toUByte().toInt()).toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x22 to PidDefinition(0x22, "Fuel Rail Pressure", "FRP", "kPa", 0.0, 5177.265, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) * TWO_BYTE_MUL_0_079 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x23 to PidDefinition(0x23, "Fuel Rail Gauge Pressure", "FRPD", "kPa", 0.0, 655350.0, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) * TWO_BYTE_MUL_10 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x2C to PidDefinition(0x2C, "Commanded EGR", "EGR_CMD", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x2D to PidDefinition(0x2D, "EGR Error", "EGR_ERR", "%", -100.0, 99.2, 1) { d -&gt; (d[0].toUByte().toDouble() - 128.0) * BYTE_MINUS_128_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x2E to PidDefinition(0x2E, "Commanded Evaporative Purge", "EVAP_CMD", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x2F to PidDefinition(0x2F, "Fuel Tank Level", "FUEL_LVL", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x30 to PidDefinition(0x30, "Warm-ups Since Codes Cleared", "WARMUPS", "", 0.0, BYTE_TO_255_RANGE, 1) { d -&gt; d[0].toUByte().toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x31 to PidDefinition(0x31, "Distance Since Codes Cleared", "DIST_CLR", "km", 0.0, 65535.0, 2) { d -&gt; (d[0].toUByte().toInt() * 256 + d[1].toUByte().toInt()).toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x32 to PidDefinition(0x32, "Evap System Vapor Pressure", "EVAP_VP", "Pa", TWO_BYTE_MINUS_32768_DIV_4, 8191.75, 2) { d -&gt; ((d[0].toInt() * 256 + d[1].toUByte().toInt()) - 32768) / TWO_BYTE_DIV_4_MINUS_32768 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x33 to PidDefinition(0x33, "Barometric Pressure", "BARO", "kPa", 0.0, BYTE_TO_255_RANGE, 1) { d -&gt; d[0].toUByte().toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x42 to PidDefinition(0x42, "Control Module Voltage", "VPWR", "V", 0.0, 65.535, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) / TWO_BYTE_DIV_1000 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x43 to PidDefinition(0x43, "Absolute Load Value", "ABS_LOAD", "%", 0.0, 25700.0, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x44 to PidDefinition(0x44, "Commanded Air-Fuel Ratio", "AFR_CMD", "", 0.0, 2.0, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) * TWO_BYTE_DIV_65536_MUL_2 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x45 to PidDefinition(0x45, "Relative Throttle Position", "REL_TPS", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x46 to PidDefinition(0x46, "Ambient Air Temperature", "AAT", "°C", -40.0, 215.0, 1) { d -&gt; d[0].toUByte().toDouble() + BYTE_MINUS_40 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x47 to PidDefinition(0x47, "Absolute Throttle Position B", "TPS_B", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x48 to PidDefinition(0x48, "Absolute Throttle Position C", "TPS_C", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x49 to PidDefinition(0x49, "Accelerator Pedal Position D", "APP_D", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x4A to PidDefinition(0x4A, "Accelerator Pedal Position E", "APP_E", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x4B to PidDefinition(0x4B, "Accelerator Pedal Position F", "APP_F", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x4C to PidDefinition(0x4C, "Commanded Throttle Actuator", "TAC_CMD", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x4D to PidDefinition(0x4D, "Time Run with MIL On", "MIL_TIME", "min", 0.0, 65535.0, 2) { d -&gt; (d[0].toUByte().toInt() * 256 + d[1].toUByte().toInt()).toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x4E to PidDefinition(0x4E, "Time Since Codes Cleared", "CLR_TIME", "min", 0.0, 65535.0, 2) { d -&gt; (d[0].toUByte().toInt() * 256 + d[1].toUByte().toInt()).toDouble() }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x52 to PidDefinition(0x52, "Ethanol Fuel %", "ETHANOL", "%", 0.0, 100.0, 1) { d -&gt; d[0].toUByte().toDouble() * BYTE_TO_PERCENT }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x5C to PidDefinition(0x5C, "Engine Oil Temperature", "OIL_TEMP", "°C", -40.0, 210.0, 1) { d -&gt; d[0].toUByte().toDouble() + BYTE_MINUS_40 }</ID>
+    <ID>MaxLineLength:PidDecoder.kt$PidDecoder$0x5E to PidDefinition(0x5E, "Engine Fuel Rate", "FUEL_RATE", "L/h", 0.0, 3276.75, 2) { d -&gt; ((d[0].toUByte().toInt() * 256) + d[1].toUByte().toInt()) / TWO_BYTE_DIV_20 }</ID>
+    <ID>MaxLineLength:ReadinessScreen.kt$if (monitorStatus?.milOn == true) "ON - ${monitorStatus?.dtcCount ?: 0} DTCs" else "OFF"</ID>
+    <ID>MaxLineLength:ReadinessScreen.kt$progress = if (totalAvailable &gt; 0) totalComplete.toFloat() / totalAvailable else 0f.toFloat()</ID>
+    <ID>MaxLineLength:VINDecodingScreen.kt$VinBreakdownRow("Vehicle Descriptor Section (VDS)", vin.substring(3, 8), "Vehicle attributes")</ID>
+    <ID>NestedBlockDepth:ObdCommands.kt$ObdCommands$fun parseDtcs(response: String): List&lt;String&gt;</ID>
+    <ID>NestedBlockDepth:ObdConnection.kt$ObdConnection$private suspend fun readResponseWithTimeout(timeout: Long): String</ID>
+    <ID>NestedBlockDepth:ObdService.kt$ObdService$suspend fun getFreezeFrame(frameNumber: Int = 0): Map&lt;String, LiveDataValue&gt;?</ID>
+    <ID>NestedBlockDepth:VehicleInfoParser.kt$VehicleInfoParser$private fun hexToAscii(hex: String): String</ID>
+    <ID>NewLineAtEndOfFile:BidirectionalControlsScreen.kt$com.spacetec.obd.ui.screens.BidirectionalControlsScreen.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothClassicConnection.kt$com.obdreader.data.bluetooth.classic.BluetoothClassicConnection.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothClassicManager.kt$com.obdreader.data.bluetooth.classic.BluetoothClassicManager.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothManager.kt$com.obdreader.data.bluetooth.BluetoothManager.kt</ID>
+    <ID>NewLineAtEndOfFile:BluetoothModule.kt$com.obdreader.di.BluetoothModule.kt</ID>
+    <ID>NewLineAtEndOfFile:DashboardScreen.kt$com.spacetec.obd.ui.screens.DashboardScreen.kt</ID>
+    <ID>NewLineAtEndOfFile:EcuProgrammingScreen.kt$com.spacetec.obd.ui.screens.EcuProgrammingScreen.kt</ID>
+    <ID>NewLineAtEndOfFile:KeyProgrammingScreen.kt$com.spacetec.obd.ui.screens.KeyProgrammingScreen.kt</ID>
+    <ID>NewLineAtEndOfFile:MaintenanceFunctionsScreen.kt$com.spacetec.obd.ui.screens.MaintenanceFunctionsScreen.kt</ID>
+    <ID>NewLineAtEndOfFile:PidDecoder.kt$com.spacetec.obd.obd.PidDecoder.kt</ID>
+    <ID>NewLineAtEndOfFile:ProtocolSelectionScreen.kt$com.spacetec.obd.ui.screens.ProtocolSelectionScreen.kt</ID>
+    <ID>NewLineAtEndOfFile:Screen.kt$com.spacetec.obd.ui.navigation.Screen.kt</ID>
+    <ID>NewLineAtEndOfFile:VINDecodingScreen.kt$com.spacetec.obd.ui.screens.VINDecodingScreen.kt</ID>
+    <ID>NewLineAtEndOfFile:VehicleReportsScreen.kt$com.spacetec.obd.ui.screens.VehicleReportsScreen.kt</ID>
+    <ID>ReturnCount:BLEConnection.kt$BLEConnection$@SuppressLint("MissingPermission") override suspend fun connect(): Result&lt;Unit&gt;</ID>
+    <ID>ReturnCount:BLEConnection.kt$BLEConnection$@SuppressLint("MissingPermission") private fun setupCharacteristics(gatt: BluetoothGatt): Result&lt;Unit&gt;</ID>
+    <ID>ReturnCount:BLEConnection.kt$BLEConnection$@SuppressLint("MissingPermission") private suspend fun enableNotifications(): Result&lt;Unit&gt;</ID>
+    <ID>ReturnCount:BLEConnection.kt$BLEConnection$override suspend fun send(data: ByteArray): Result&lt;Unit&gt;</ID>
+    <ID>ReturnCount:BluetoothClassicConnection.kt$BluetoothClassicConnection$@SuppressLint("MissingPermission") private fun createCompatibleSocket(device: BluetoothDevice): BluetoothSocket?</ID>
+    <ID>ReturnCount:BluetoothClassicManager.kt$BluetoothClassicManager$@SuppressLint("MissingPermission") fun startClassicDiscovery(): Result&lt;Unit&gt;</ID>
+    <ID>ReturnCount:BluetoothClassicManager.kt$BluetoothClassicManager$@SuppressLint("MissingPermission") override suspend fun connectClassic(device: BluetoothDevice): Result&lt;BluetoothConnection&gt;</ID>
+    <ID>ReturnCount:ELM327Protocol.kt$ELM327Protocol$override suspend fun readPIDs(mode: Int, pids: List&lt;Int&gt;): Result&lt;List&lt;PIDResponse&gt;&gt;</ID>
+    <ID>ReturnCount:ISOTPFrame.kt$ISOTPFrame.Companion$fun parse(data: ByteArray): ISOTPFrame?</ID>
+    <ID>ReturnCount:ISOTPHandler.kt$ISOTPHandler$fun processFrame(frame: ISOTPFrame): ByteArray?</ID>
+    <ID>ReturnCount:ISOTPHandler.kt$ISOTPHandler$private fun parseFirstFrame(data: ByteArray): ISOTPFrame</ID>
+    <ID>ReturnCount:ISOTPHandler.kt$ISOTPHandler$private fun parseSingleFrame(data: ByteArray): ISOTPFrame</ID>
+    <ID>ReturnCount:ObdCommands.kt$ObdCommands$private fun decodeDtc(hex: String): String?</ID>
+    <ID>ReturnCount:ObdCommands.kt$ObdCommands$private fun parseResponse(response: String, expectedBytes: Int): List&lt;Int&gt;?</ID>
+    <ID>ReturnCount:ObdConnection.kt$ObdConnection$private suspend fun detectProtocol(): Boolean</ID>
+    <ID>ReturnCount:ObdConnection.kt$ObdConnection$private suspend fun initializeElm327(): Boolean</ID>
+    <ID>ReturnCount:ObdConnection.kt$ObdConnection$private suspend fun tryAllConnectionStrategies(device: BluetoothDevice): Boolean</ID>
+    <ID>ReturnCount:ObdConnection.kt$ObdConnection$private suspend fun tryReflectionConnection(device: BluetoothDevice): Boolean</ID>
+    <ID>ReturnCount:ObdConnection.kt$ObdConnection$suspend fun setProtocol(protocolId: String): Boolean</ID>
+    <ID>ReturnCount:ObdService.kt$ObdService$suspend fun getMonitorStatus(): MonitorStatus?</ID>
+    <ID>ReturnCount:ObdService.kt$ObdService$suspend fun readPid(pid: Int): PidDecoder.PidValue?</ID>
+    <ID>ReturnCount:PIDParser.kt$PIDParser$fun parse(mode: Int, pid: Int, rawResponse: String): PIDResponse?</ID>
+    <ID>ReturnCount:PidDecoder.kt$PidDecoder$fun decode(pid: Int, data: ByteArray): PidValue?</ID>
+    <ID>ReturnCount:VehicleInfoParser.kt$VehicleInfoParser$fun isValidVIN(vin: String): Boolean</ID>
+    <ID>ReturnCount:VehicleInfoParser.kt$VehicleInfoParser$private fun findManufacturer(wmi: String): String?</ID>
+    <ID>ReturnCount:VwProtocolManager.kt$VwProtocolManager$private fun parseSupportedPidsBitmap(response: String, baseOffset: Int): List&lt;String&gt;</ID>
+    <ID>SwallowedException:BLEScanner.kt$BLEScanner$e: Exception</ID>
+    <ID>SwallowedException:ELM327Protocol.kt$ELM327Protocol$e: TimeoutCancellationException</ID>
+    <ID>SwallowedException:ObdConnection.kt$ObdConnection$e: Exception</ID>
+    <ID>SwallowedException:PIDParser.kt$PIDParser$e: Exception</ID>
+    <ID>SwallowedException:VehicleInfoParser.kt$VehicleInfoParser$e: Exception</ID>
+    <ID>SwallowedException:VwProtocolManager.kt$VwProtocolManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BLEConnection.kt$BLEConnection$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BLEScanner.kt$BLEScanner$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothClassicConnection.kt$BluetoothClassicConnection$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothClassicManager.kt$BluetoothClassicManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:BluetoothLEManager.kt$BluetoothLEManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ELM327Protocol.kt$ELM327Protocol$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MultiECUHandler.kt$MultiECUHandler$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ObdConnection.kt$ObdConnection$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ObdService.kt$ObdService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:PIDParser.kt$PIDParser$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:VehicleInfoParser.kt$VehicleInfoParser$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:VwProtocolManager.kt$VwProtocolManager$e: Exception</ID>
+    <ID>TooManyFunctions:BLEConnection.kt$BLEConnection : BluetoothConnection</ID>
+    <ID>TooManyFunctions:BLEGattCallback.kt$BLEGattCallback : BluetoothGattCallback</ID>
+    <ID>TooManyFunctions:BluetoothClassicManager.kt$BluetoothClassicManager : BluetoothDeviceManager</ID>
+    <ID>TooManyFunctions:BluetoothLEManager.kt$BluetoothLEManager : BluetoothDeviceManager</ID>
+    <ID>TooManyFunctions:BluetoothManager.kt$BluetoothManager : BluetoothDeviceManager</ID>
+    <ID>TooManyFunctions:ELM327Protocol.kt$ELM327Protocol : OBDProtocol</ID>
+    <ID>TooManyFunctions:OBDProtocol.kt$OBDProtocol</ID>
+    <ID>TooManyFunctions:ObdCommands.kt$ObdCommands</ID>
+    <ID>TooManyFunctions:ObdConnection.kt$ObdConnection</ID>
+    <ID>TooManyFunctions:ObdService.kt$ObdService</ID>
+    <ID>TooManyFunctions:VINDecodingScreen.kt$com.spacetec.obd.ui.screens.VINDecodingScreen.kt</ID>
+    <ID>TooManyFunctions:VehicleInfoParser.kt$VehicleInfoParser</ID>
+    <ID>TooManyFunctions:VwProtocolManager.kt$VwProtocolManager</ID>
+    <ID>UnusedPrivateMember:DiagnosticService.kt$DiagnosticService$private fun checkForNewDTCs(data: ByteArray)</ID>
+    <ID>UnusedPrivateProperty:BLEConnection.kt$BLEConnection$private var pendingWriteCount = 0</ID>
+    <ID>UnusedPrivateProperty:BluetoothClassicManager.kt$BluetoothClassicManager$// Channel for discovered devices private val discoveryChannel = Channel&lt;List&lt;BluetoothDevice&gt;&gt;( capacity = 100, onBufferOverflow = BufferOverflow.DROP_OLDEST )</ID>
+    <ID>UnusedPrivateProperty:ConnectionScreen.kt$val context = LocalContext.current</ID>
+    <ID>UnusedPrivateProperty:ELM327Protocol.kt$ELM327Protocol$private val isoTPReassembler = ISOTPReassembler()</ID>
+    <ID>UnusedPrivateProperty:KeyProgrammingScreen.kt$var newKeyId by remember { mutableStateOf("") }</ID>
+    <ID>UnusedPrivateProperty:ObdConnection.kt$ObdConnection$val resetResponse = sendCommandWithTimeout("ATZ", 2000)</ID>
+    <ID>UnusedPrivateProperty:PidDecoder.kt$PidDecoder$private const val BYTE_DIV_2_MINUS_64 = 0.5</ID>
+    <ID>UnusedPrivateProperty:PidDecoder.kt$PidDecoder$private const val BYTE_TO_256_BASE = 256.0</ID>
+    <ID>UnusedPrivateProperty:VINDecodingScreen.kt$val serial = vin.substring(11)</ID>
+    <ID>UnusedPrivateProperty:VehicleInfoParser.kt$VehicleInfoParser.Companion$private const val TAG = "VehicleInfoParser"</ID>
+    <ID>VariableNaming:VwProtocolManager.kt$VwProtocolManager$// VW Group World Manufacturer Identifiers private val VW_GROUP_WMI = setOf( "WVW", "WV1", "WV2", "WV3", // Volkswagen "WAU", "WUA", // Audi "WP0", "WP1", // Porsche "TRU", "3VW", // VW Mexico/USA "9BW", // VW Brazil "VSS", // SEAT "TMB", // Skoda "WBS", "WBA", // BMW (for comparison) "WDB", "WDC", "WDD" // Mercedes (for comparison) )</ID>
+    <ID>WildcardImport:BidirectionalControlsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:BidirectionalControlsScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:BidirectionalControlsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:BidirectionalControlsScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:BidirectionalControlsScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:ConnectionScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:DashboardScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:DiagnosticService.kt$import android.app.*</ID>
+    <ID>WildcardImport:DiagnosticService.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:DtcDetailScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DtcDetailScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:DtcDetailScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DtcDetailScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:DtcDetailScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:DtcListScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:DtcListScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:DtcListScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:DtcListScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:DtcListScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:ELM327Protocol.kt$import com.obdreader.domain.model.*</ID>
+    <ID>WildcardImport:ELM327Protocol.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:EcuProgrammingScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:EcuProgrammingScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:EcuProgrammingScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:EcuProgrammingScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:EcuProgrammingScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:KeyProgrammingScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:KeyProgrammingScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:KeyProgrammingScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:KeyProgrammingScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:KeyProgrammingScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:LiveDataScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:MainActivity.kt$import com.spacetec.obd.ui.screens.*</ID>
+    <ID>WildcardImport:MaintenanceFunctionsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:MaintenanceFunctionsScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:MaintenanceFunctionsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:MaintenanceFunctionsScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:MaintenanceFunctionsScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:ObdConnection.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:ObdConnection.kt$import kotlinx.coroutines.flow.*</ID>
+    <ID>WildcardImport:ObdService.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:ObdService.kt$import kotlinx.coroutines.flow.*</ID>
+    <ID>WildcardImport:ProtocolSelectionScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:ProtocolSelectionScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:ProtocolSelectionScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:ProtocolSelectionScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:ProtocolSelectionScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:ReadinessScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:ReadinessScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:ReadinessScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:ReadinessScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:ReadinessScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:SettingsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:SettingsScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:SettingsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:SettingsScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:SettingsScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:Theme.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:VINDecodingScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:VINDecodingScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:VINDecodingScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:VINDecodingScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:VINDecodingScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+    <ID>WildcardImport:VehicleReportsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:VehicleReportsScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:VehicleReportsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:VehicleReportsScreen.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:VehicleReportsScreen.kt$import com.spacetec.obd.ui.theme.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

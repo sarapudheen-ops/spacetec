@@ -1,0 +1,2 @@
+com.spacetec.obd.core.ui.R
+com.spacetec.obd.core.ui.R: R()

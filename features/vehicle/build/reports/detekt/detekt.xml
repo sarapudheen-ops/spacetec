@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="4.3">
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/VehicleUiState.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/VehicleUiState.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/VehicleFeature.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/VehicleFeature.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/VehicleViewModel.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/VehicleViewModel.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINInputScreen.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINInputScreen.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINDecoderViewModel.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINDecoderViewModel.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINInputViewModel.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINInputViewModel.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINDecoderScreen.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/vin/VINDecoderScreen.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/ModelSelectionScreen.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/ModelSelectionScreen.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/BrandSelectionViewModel.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/BrandSelectionViewModel.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/BrandSelectionScreen.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/BrandSelectionScreen.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+<file name="/home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/ModelSelectionViewModel.kt">
+	<error line="-1" column="0" severity="warning" message="The empty Kotlin file /home/yungblud/Desktop/SpaceTec/features/vehicle/src/main/java/com/spacetec/features/vehicle/brand/ModelSelectionViewModel.kt can be removed." source="detekt.EmptyKtFile" />
+</file>
+</checkstyle>

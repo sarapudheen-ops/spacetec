@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.spacetec.core.logging.ComprehensiveLoggingPropertyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-12-25T23:20:52" hostname="pop-os" time="0.108">
+  <properties/>
+  <testcase name="Property 13 - Context information should be preserved and accessible in all log formats" classname="com.spacetec.core.logging.ComprehensiveLoggingPropertyTest" time="0.044"/>
+  <testcase name="Property 13 - Diagnostic mode should capture raw communication data with complete metadata" classname="com.spacetec.core.logging.ComprehensiveLoggingPropertyTest" time="0.061"/>
+  <testcase name="Property 13 - All connection operations should be logged with complete information including timestamps and context" classname="com.spacetec.core.logging.ComprehensiveLoggingPropertyTest" time="0.001"/>
+  <testcase name="Property 13 - Large messages should be truncated appropriately while preserving essential information" classname="com.spacetec.core.logging.ComprehensiveLoggingPropertyTest" time="0.001"/>
+  <testcase name="Property 13 - Error logging should include complete error context including stack traces and system state" classname="com.spacetec.core.logging.ComprehensiveLoggingPropertyTest" time="0.001"/>
+  <testcase name="Property 13 - Log entries should be filterable and configurable based on level" classname="com.spacetec.core.logging.ComprehensiveLoggingPropertyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

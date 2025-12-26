@@ -1,0 +1,180 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>CyclomaticComplexMethod:DtcEnums.kt$DtcCategory.Companion$fun fromDtcCode(code: String): DtcCategory</ID>
+    <ID>CyclomaticComplexMethod:Scanner.kt$ProtocolType.Companion$fun fromDescription(description: String): ProtocolType</ID>
+    <ID>CyclomaticComplexMethod:Scanner.kt$Scanner.Companion$fun detectDeviceType(name: String): ScannerDeviceType</ID>
+    <ID>CyclomaticComplexMethod:Vehicle.kt$EcuFunctionalGroup.Companion$fun fromName(ecuName: String): EcuFunctionalGroup</ID>
+    <ID>EmptyKtFile:ConnectionState.kt$.ConnectionState.kt</ID>
+    <ID>EmptyKtFile:ConnectionType.kt$.ConnectionType.kt</ID>
+    <ID>EmptyKtFile:ScannerCapabilities.kt$.ScannerCapabilities.kt</ID>
+    <ID>EmptyKtFile:ScannerInfo.kt$.ScannerInfo.kt</ID>
+    <ID>EmptyKtFile:ScannerType.kt$.ScannerType.kt</ID>
+    <ID>InvalidPackageDeclaration:DiagnosticSession.kt$package com.spacetec.obd.core.domain.model.diagnostic</ID>
+    <ID>InvalidPackageDeclaration:DtcCode.kt$package com.spacetec.obd.core.domain.model.dtc</ID>
+    <ID>InvalidPackageDeclaration:DtcDefinition.kt$package com.spacetec.obd.core.domain.model.dtc</ID>
+    <ID>InvalidPackageDeclaration:DtcEnums.kt$package com.spacetec.obd.core.domain.model.dtc</ID>
+    <ID>InvalidPackageDeclaration:DtcRepository.kt$package com.spacetec.obd.core.domain.repository</ID>
+    <ID>InvalidPackageDeclaration:FreezeFrame.kt$package com.spacetec.obd.core.domain.model.dtc</ID>
+    <ID>InvalidPackageDeclaration:Scanner.kt$package com.spacetec.obd.core.domain.models.scanner</ID>
+    <ID>InvalidPackageDeclaration:Vehicle.kt$package com.spacetec.obd.core.domain.model.vehicle</ID>
+    <ID>InvalidPackageDeclaration:VinDecoder.kt$package com.spacetec.obd.core.domain.model.vehicle</ID>
+    <ID>LoopWithTooManyJumpStatements:DiagnosticUseCases.kt$DtcParsers$while</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$DtcParsers$0x03</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$DtcParsers$16</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$DtcParsers$4</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$DtcParsers$6</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$0x04</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$0x05</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$0x0C</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$0x11</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$16</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$2.55f</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$256</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$4</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$40</ID>
+    <ID>MagicNumber:DiagnosticUseCases.kt$ReadLiveDataUseCase$4f</ID>
+    <ID>MagicNumber:DtcEnums.kt$DtcCategory.Companion$3</ID>
+    <ID>MagicNumber:DtcEnums.kt$DtcCategory.Companion$4</ID>
+    <ID>MagicNumber:DtcEnums.kt$DtcCategory.Companion$5</ID>
+    <ID>MagicNumber:DtcEnums.kt$DtcCategory.Companion$6</ID>
+    <ID>MagicNumber:DtcEnums.kt$DtcCategory.Companion$7</ID>
+    <ID>MagicNumber:DtcEnums.kt$DtcCategory.Companion$8</ID>
+    <ID>MagicNumber:DtcEnums.kt$DtcCategory.Companion$9</ID>
+    <ID>MagicNumber:Protocol.kt$SessionType.EXTENDED$0x03</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.BMW_DS2$13</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.MERCEDES_XENTRY$14</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_14230_4_KWP_5BAUD$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_14230_4_KWP_5BAUD$3</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_14230_4_KWP_FAST$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_11BIT_500K$4</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_11BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_29BIT_500K$5</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_15765_4_CAN_29BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_ISO_9141_2$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_PWM$41600</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_PWM$6</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_VPW$10400</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.OBD_II_J1850_VPW$7</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_14229_4_DOIP$10</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_11BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_11BIT_500K$8</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_29BIT_500K$500000</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.UDS_ISO_15765_4_CAN_29BIT_500K$9</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.VAG_KWP1281$11</ID>
+    <ID>MagicNumber:ProtocolType.kt$ProtocolType.VAG_KWP2000$12</ID>
+    <ID>MagicNumber:Scanner.kt$12</ID>
+    <ID>MagicNumber:Scanner.kt$65535</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType$10400</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType$16</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType$250000</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType$41600</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType$500000</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.ISO_14230_4_KWP_5BAUD$4</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.ISO_14230_4_KWP_FAST$5</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.ISO_15765_4_CAN_11BIT_250K$8</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.ISO_15765_4_CAN_11BIT_500K$6</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.ISO_15765_4_CAN_29BIT_250K$9</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.ISO_15765_4_CAN_29BIT_500K$7</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.ISO_9141_2$3</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.SAE_J1939_CAN$10</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.USER_CAN_1$11</ID>
+    <ID>MagicNumber:Scanner.kt$ProtocolType.USER_CAN_2$12</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner$100</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner$20</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner$40</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner$50</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner$60</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner$80</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner.Companion$0x0403</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner.Companion$0x067B</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner.Companion$0x10C4</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner.Companion$0x1A86</ID>
+    <ID>MagicNumber:Scanner.kt$Scanner.Companion$0x6015</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType$4</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.BLUEDRIVER$4</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.CARISTA$4</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.ELM327$4</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.OBDLINK_EX$5</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.OBDLINK_LX$4</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.OBDLINK_MX$5</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.STN1110$5</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.STN2120$5</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.VEEPEAK$3</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerDeviceType.VGATE_ICAR$3</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerInfo$11.5f</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerInfo$12.0f</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerInfo$12.6f</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerInfo$13.5f</ID>
+    <ID>MagicNumber:Scanner.kt$ScannerInfo$14.7f</ID>
+    <ID>MagicNumber:Vehicle.kt$GenericVehicle$0x03</ID>
+    <ID>MagicNumber:Vehicle.kt$GenericVehicle$10</ID>
+    <ID>MagicNumber:Vehicle.kt$GenericVehicle$16</ID>
+    <ID>MagicNumber:Vehicle.kt$GenericVehicle$2010</ID>
+    <ID>MagicNumber:Vehicle.kt$GenericVehicle$34</ID>
+    <ID>MagicNumber:Vehicle.kt$GenericVehicle$4</ID>
+    <ID>MagicNumber:Vehicle.kt$GenericVehicle$9</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$10</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$11</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$17</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2001</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2002</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2003</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2004</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2005</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2006</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2007</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2008</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2009</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2010</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2011</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2012</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2013</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2014</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2015</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2016</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2017</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2018</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2019</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2020</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2021</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2022</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2023</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2024</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2025</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2026</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2027</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2028</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2029</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$2030</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$3</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$4</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$5</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$6</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$7</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$8</ID>
+    <ID>MagicNumber:VinDecoder.kt$VinDecoder$9</ID>
+    <ID>NewLineAtEndOfFile:BluetoothRepository.kt$com.spacetec.domain.repository.BluetoothRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:DiagnosticSession.kt$com.spacetec.obd.core.domain.model.diagnostic.DiagnosticSession.kt</ID>
+    <ID>NewLineAtEndOfFile:DtcCode.kt$com.spacetec.obd.core.domain.model.dtc.DtcCode.kt</ID>
+    <ID>NewLineAtEndOfFile:DtcDefinition.kt$com.spacetec.obd.core.domain.model.dtc.DtcDefinition.kt</ID>
+    <ID>NewLineAtEndOfFile:DtcEnums.kt$com.spacetec.obd.core.domain.model.dtc.DtcEnums.kt</ID>
+    <ID>NewLineAtEndOfFile:DtcRepository.kt$com.spacetec.obd.core.domain.repository.DtcRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:FreezeFrame.kt$com.spacetec.obd.core.domain.model.dtc.FreezeFrame.kt</ID>
+    <ID>NewLineAtEndOfFile:Protocol.kt$com.spacetec.core.domain.protocol.Protocol.kt</ID>
+    <ID>NewLineAtEndOfFile:ProtocolType.kt$com.spacetec.core.domain.protocol.ProtocolType.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerConnection.kt$com.spacetec.core.domain.scanner.ScannerConnection.kt</ID>
+    <ID>NewLineAtEndOfFile:Vehicle.kt$com.spacetec.obd.core.domain.model.Vehicle.kt</ID>
+    <ID>NewLineAtEndOfFile:Vehicle.kt$com.spacetec.obd.core.domain.model.vehicle.Vehicle.kt</ID>
+    <ID>NewLineAtEndOfFile:VinDecoder.kt$com.spacetec.obd.core.domain.model.vehicle.VinDecoder.kt</ID>
+    <ID>ReturnCount:DtcEnums.kt$DtcCategory.Companion$fun fromDtcCode(code: String): DtcCategory</ID>
+    <ID>ReturnCount:Scanner.kt$ScannerInfo.Companion$private fun parseVersionResponse(response: String): Pair&lt;ScannerDeviceType, String&gt;</ID>
+    <ID>ReturnCount:Scanner.kt$private fun isValidIpAddress(address: String): Boolean</ID>
+    <ID>ReturnCount:VinDecoder.kt$VinDecoder$fun isValidVin(vin: String): Boolean</ID>
+    <ID>ReturnCount:VinDecoder.kt$VinDecoder$private fun findMake(wmi: String): String</ID>
+    <ID>TooManyFunctions:BluetoothRepository.kt$BluetoothDeviceManager</ID>
+    <ID>TooManyFunctions:DtcRepository.kt$DtcRepository</ID>
+    <ID>TooManyFunctions:Scanner.kt$com.spacetec.obd.core.domain.models.scanner.Scanner.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ForbiddenComment:ReportsViewModel.kt$ReportsViewModel$// TODO: Implement actual export functionality</ID>
+    <ID>ForbiddenComment:ReportsViewModel.kt$ReportsViewModel$// TODO: Implement export all functionality</ID>
+    <ID>FunctionNaming:ReportsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ReportsScreen( onBackClick: () -&gt; Unit, viewModel: ReportsViewModel = hiltViewModel() )</ID>
+    <ID>FunctionNaming:ReportsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable private fun ReportItem( report: ReportItem, onExport: () -&gt; Unit, onDelete: () -&gt; Unit )</ID>
+    <ID>LongMethod:ReportsScreen.kt$@OptIn(ExperimentalMaterial3Api::class) @Composable fun ReportsScreen( onBackClick: () -&gt; Unit, viewModel: ReportsViewModel = hiltViewModel() )</ID>
+    <ID>SwallowedException:ReportsViewModel.kt$ReportsViewModel$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ReportsViewModel.kt$ReportsViewModel$e: Exception</ID>
+    <ID>UnusedParameter:ReportsViewModel.kt$ReportsViewModel$reportId: String</ID>
+    <ID>WildcardImport:ReportsScreen.kt$import androidx.compose.foundation.layout.*</ID>
+    <ID>WildcardImport:ReportsScreen.kt$import androidx.compose.material.icons.filled.*</ID>
+    <ID>WildcardImport:ReportsScreen.kt$import androidx.compose.material3.*</ID>
+    <ID>WildcardImport:ReportsScreen.kt$import androidx.compose.runtime.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

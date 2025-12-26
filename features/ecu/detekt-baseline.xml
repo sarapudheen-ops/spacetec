@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyKtFile:ECUFeature.kt$.ECUFeature.kt</ID>
+    <ID>EmptyKtFile:ECUFlashScreen.kt$.ECUFlashScreen.kt</ID>
+    <ID>EmptyKtFile:ECUFlashViewModel.kt$.ECUFlashViewModel.kt</ID>
+    <ID>EmptyKtFile:ECUListScreen.kt$.ECUListScreen.kt</ID>
+    <ID>EmptyKtFile:ECUListViewModel.kt$.ECUListViewModel.kt</ID>
+    <ID>EmptyKtFile:ECUScanScreen.kt$.ECUScanScreen.kt</ID>
+    <ID>EmptyKtFile:ECUScanViewModel.kt$.ECUScanViewModel.kt</ID>
+    <ID>EmptyKtFile:ECUScreen.kt$.ECUScreen.kt</ID>
+    <ID>EmptyKtFile:ECUUiState.kt$.ECUUiState.kt</ID>
+    <ID>EmptyKtFile:ECUViewModel.kt$.ECUViewModel.kt</ID>
+    <ID>EmptyKtFile:FlashService.kt$.FlashService.kt</ID>
+  </CurrentIssues>
+</SmellBaseline>

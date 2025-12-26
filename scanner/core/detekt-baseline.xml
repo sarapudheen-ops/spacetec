@@ -1,0 +1,333 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>ComplexCondition:ScannerConnectionIntegrationTest.kt$ScannerConnectionIntegrationTest$event is StateEvent.ConnectionError || event is StateEvent.RecoveryAttempt || event is StateEvent.RecoverySuccess || event is StateEvent.RecoveryFailed</ID>
+    <ID>CyclomaticComplexMethod:Elm327Adapter.kt$Elm327Adapter$override suspend fun initializeVehicle(protocolConfig: ProtocolConfig): AppResult&lt;Protocol&gt;</ID>
+    <ID>CyclomaticComplexMethod:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$private fun calculateConfidence( protocol: ProtocolType, vehicleInfo: VehicleInfo?, responseTime: Long ): Float</ID>
+    <ID>CyclomaticComplexMethod:ProtocolDetectionPropertyTest.kt$MockProtocolConnection$override suspend fun sendAndReceive( command: String, timeout: Long, terminator: String ): Result&lt;String&gt;</ID>
+    <ID>CyclomaticComplexMethod:ScannerConfigurationManager.kt$ScannerConfigurationManager$fun migrateConfiguration(oldConfig: Map&lt;String, Any&gt;): ScannerConfig</ID>
+    <ID>CyclomaticComplexMethod:ScannerConnection.kt$BaseScannerConnection$protected open fun categorizeError(error: Throwable): Boolean</ID>
+    <ID>EmptyFunctionBlock:AutomaticInitializationPropertyTest.kt$MockScannerConnection${}</ID>
+    <ID>EmptyFunctionBlock:ProtocolDetectionPropertyTest.kt$MockProtocolConnection${}</ID>
+    <ID>EmptyKtFile:ScannerConfig.kt$.ScannerConfig.kt</ID>
+    <ID>ImplicitDefaultLocale:ConnectionResourceManager.kt$ResourceUsage$String.format("%.1f", memoryIncreaseMB)</ID>
+    <ID>ImplicitDefaultLocale:ConnectionResourceManager.kt$ResourceUsage$String.format("%.1f", memoryUsageMB)</ID>
+    <ID>ImplicitDefaultLocale:ScannerConnection.kt$BaseScannerConnection$String.format("%.1f", currentStats.errorRate)</ID>
+    <ID>ImplicitDefaultLocale:ScannerConnection.kt$ConnectionStatistics$String.format("%.1f", errorRate)</ID>
+    <ID>InvalidPackageDeclaration:AutomaticInitializationPropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ConfigurationPersistencePropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ConnectionPool.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ConnectionResourceManager.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ConnectionStateManager.kt$package com.spacetec.obd.scanner.core.state</ID>
+    <ID>InvalidPackageDeclaration:ConnectionStateRepository.kt$package com.spacetec.obd.scanner.core.state</ID>
+    <ID>InvalidPackageDeclaration:ConnectionStateTransitionPropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:Elm327Adapter.kt$package com.spacetec.obd.scanner.core.elm327</ID>
+    <ID>InvalidPackageDeclaration:Elm327Commands.kt$package com.spacetec.obd.scanner.core.elm327</ID>
+    <ID>InvalidPackageDeclaration:EnhancedScannerManager.kt$package com.spacetec.obd.scanner.core.state</ID>
+    <ID>InvalidPackageDeclaration:ErrorCategorizationPropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:IntegrationTestSuite.kt$package com.spacetec.obd.scanner.core.integration</ID>
+    <ID>InvalidPackageDeclaration:InterfaceConsistencyPropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:LoggingDiagnosticsTest.kt$package com.spacetec.obd.scanner.core.integration</ID>
+    <ID>InvalidPackageDeclaration:MockConnectionPropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:MockScannerConnection.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:PerformanceMonitoringPropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:PerformanceValidationTest.kt$package com.spacetec.obd.scanner.core.integration</ID>
+    <ID>InvalidPackageDeclaration:ProtocolDetectionEngine.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ProtocolDetectionPropertyTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:Scanner.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerConfigurationManager.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerConnection.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerConnectionFactory.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerConnectionIntegrationTest.kt$package com.spacetec.obd.scanner.core.integration</ID>
+    <ID>InvalidPackageDeclaration:ScannerDevice.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerDiscovery.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerInitializer.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerManager.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ScannerProtocolAdapter.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:SecurityComplianceTest.kt$package com.spacetec.obd.scanner.core.integration</ID>
+    <ID>InvalidPackageDeclaration:SimpleConnectionTest.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:StateModels.kt$package com.spacetec.obd.scanner.core.state</ID>
+    <ID>InvalidPackageDeclaration:StateSynchronizer.kt$package com.spacetec.obd.scanner.core.state</ID>
+    <ID>InvalidPackageDeclaration:UnifiedScannerManager.kt$package com.spacetec.obd.scanner.core</ID>
+    <ID>InvalidPackageDeclaration:ValidationReport.kt$package com.spacetec.obd.scanner.core.integration</ID>
+    <ID>LongMethod:AutomaticInitializationPropertyTest.kt$MockScannerConnection$override suspend fun sendAndReceive( command: String, timeout: Long, terminator: String ): Result&lt;String&gt;</ID>
+    <ID>LongMethod:ScannerInitializer.kt$ScannerInitializer$suspend fun initialize( address: String, config: ScannerConfig = ScannerConfig.DEFAULT, vehicleInfo: VehicleInfo? = null ): Result&lt;InitializationResult&gt;</ID>
+    <ID>LongMethod:ValidationReport.kt$ValidationReport$fun generateReport(): String</ID>
+    <ID>MagicNumber:ConnectionPool.kt$ScannerConnectionPool$1000L</ID>
+    <ID>MagicNumber:ConnectionPool.kt$ScannerConnectionPool$5</ID>
+    <ID>MagicNumber:ConnectionPool.kt$ScannerConnectionPool$60</ID>
+    <ID>MagicNumber:ConnectionPool.kt$ScannerConnectionPool$60_000L</ID>
+    <ID>MagicNumber:ConnectionPool.kt$ScannerConnectionPool.Companion$1000L</ID>
+    <ID>MagicNumber:ConnectionPool.kt$ScannerConnectionPool.Companion$5</ID>
+    <ID>MagicNumber:ConnectionPool.kt$ScannerConnectionPool.Companion$60</ID>
+    <ID>MagicNumber:ConnectionResourceManager.kt$ConnectionResourceInfo$1000L</ID>
+    <ID>MagicNumber:ConnectionResourceManager.kt$ConnectionResourceInfo$5</ID>
+    <ID>MagicNumber:ConnectionResourceManager.kt$ConnectionResourceInfo$60</ID>
+    <ID>MagicNumber:ConnectionResourceManager.kt$ConnectionResourceManager$0.8</ID>
+    <ID>MagicNumber:ConnectionResourceManager.kt$ResourceUsage$1024f</ID>
+    <ID>MagicNumber:ConnectionStateManager.kt$ConnectionStateManager$0.6</ID>
+    <ID>MagicNumber:ConnectionStateManager.kt$ConnectionStateManager$0.8</ID>
+    <ID>MagicNumber:ConnectionStateManager.kt$ConnectionStateManager$3</ID>
+    <ID>MagicNumber:ConnectionStateManager.kt$ConnectionStateManager$5000</ID>
+    <ID>MagicNumber:ConnectionStateManager.kt$ConnectionStateManager$60_000</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$10</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$100</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$3</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$4</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$5</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$500</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$6</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$7</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$8</ID>
+    <ID>MagicNumber:Elm327Adapter.kt$Elm327Adapter$9</ID>
+    <ID>MagicNumber:Elm327Commands.kt$Elm327Commands$0xFF</ID>
+    <ID>MagicNumber:Elm327Commands.kt$Elm327Commands$255</ID>
+    <ID>MagicNumber:Elm327Commands.kt$Elm327Commands$8</ID>
+    <ID>MagicNumber:EnhancedScannerManager.kt$EnhancedScannerManager$20</ID>
+    <ID>MagicNumber:EnhancedScannerManager.kt$EnhancedScannerManager$40</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$0.1f</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$0.2f</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$0.3f</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$0.5f</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$1000</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$2000</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$2008</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$3000</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionResult$0.5f</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$ProtocolDetectionResult$0.8f</ID>
+    <ID>MagicNumber:ProtocolDetectionEngine.kt$VehicleInfo$2008</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$0.4f</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$0.6f</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$0.8f</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$1.5f</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$10</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$1000</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$115200</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$3.0f</ID>
+    <ID>MagicNumber:ScannerConfigurationManager.kt$ScannerConfigurationManager$9600</ID>
+    <ID>MagicNumber:ScannerConnection.kt$BaseScannerConnection$10</ID>
+    <ID>MagicNumber:ScannerConnection.kt$BaseScannerConnection$100</ID>
+    <ID>MagicNumber:ScannerConnection.kt$BaseScannerConnection$10000</ID>
+    <ID>MagicNumber:ScannerConnection.kt$BaseScannerConnection$20.0f</ID>
+    <ID>MagicNumber:ScannerConnection.kt$BaseScannerConnection$5</ID>
+    <ID>MagicNumber:ScannerConnection.kt$BaseScannerConnection$5000</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionConfig$5</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionInfo$1000</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionInfo$60</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$100</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$1000</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$100f</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$1_000</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$1_000.0</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$1_000_000</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$1_000_000.0</ID>
+    <ID>MagicNumber:ScannerConnection.kt$ConnectionStatistics$30_000</ID>
+    <ID>MagicNumber:ScannerConnectionFactory.kt$ScannerConnectionFactory$255</ID>
+    <ID>MagicNumber:ScannerConnectionFactory.kt$ScannerConnectionFactory$3</ID>
+    <ID>MagicNumber:ScannerConnectionFactory.kt$ScannerConnectionFactory$65535</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$100</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$20</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$3600_000</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$40</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$50</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$60</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$604800_000</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$60_000</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$70</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$80</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$86400_000</ID>
+    <ID>MagicNumber:ScannerDevice.kt$ScannerDevice$90</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScanConfig$100</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$0x0403</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$0x04D8</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$0x067B</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$0x10C4</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$0x1A86</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$0xEA60</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$0xFF</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$1000</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$10000</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$16</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$254</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$35000</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$35001</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$35002</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$35003</ID>
+    <ID>MagicNumber:ScannerDiscovery.kt$ScannerDiscoveryService$8</ID>
+    <ID>MagicNumber:ScannerManager.kt$ScannerManager$1000</ID>
+    <ID>MagicNumber:ScannerManager.kt$ScannerManager$2000</ID>
+    <ID>MagicNumber:ScannerManager.kt$ScannerManager$500</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$10</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$100</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$1000</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$15</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$20</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$2000</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$25</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$30</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$40</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$5</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$5000</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$60</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$70</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$80</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionQuality$90</ID>
+    <ID>MagicNumber:StateModels.kt$ConnectionStateInfo$60_000</ID>
+    <ID>MagicNumber:StateModels.kt$GlobalConnectionState$100</ID>
+    <ID>MagicNumber:StateSynchronizer.kt$StateSynchronizer$0.8</ID>
+    <ID>MagicNumber:StateSynchronizer.kt$StateSynchronizer$3</ID>
+    <ID>MagicNumber:StateSynchronizer.kt$StateSynchronizer$4</ID>
+    <ID>MagicNumber:StateSynchronizer.kt$StateSynchronizer$5</ID>
+    <ID>MagicNumber:UnifiedScannerManager.kt$UnifiedScannerManager$3</ID>
+    <ID>MaxLineLength:AutomaticInitializationPropertyTest.kt$AutomaticInitializationPropertyTest$"Property 8: For any scanner model, the system should send appropriate initialization commands based on the scanner's capabilities and firmware version"</ID>
+    <ID>MaxLineLength:ConfigurationPersistencePropertyTest.kt$ConfigurationPersistencePropertyTest$"Property 10: For any successfully detected scanner capabilities, the configuration should be stored and reused for future connections to the same scanner"</ID>
+    <ID>MaxLineLength:ConfigurationPersistencePropertyTest.kt$ConfigurationPersistencePropertyTest$loadedConfig.detectedCapabilities shouldBe testData.initializationResult.detectedCapabilities.map { it.name }.toSet()</ID>
+    <ID>MaxLineLength:ConfigurationPersistencePropertyTest.kt$MockConfigurationStorage$Result.Error(com.spacetec.core.common.exceptions.ConfigurationException("Exists check failed: ${e.message}", e))</ID>
+    <ID>MaxLineLength:ConfigurationPersistencePropertyTest.kt$firmwareVersion = if (rs.random.nextBoolean()) "v${rs.random.nextInt(1, 5)}.${rs.random.nextInt(0, 10)}" else null</ID>
+    <ID>MaxLineLength:ConfigurationPersistencePropertyTest.kt$hardwareVersion = if (rs.random.nextBoolean()) "hw${rs.random.nextInt(1, 3)}.${rs.random.nextInt(0, 5)}" else null</ID>
+    <ID>MaxLineLength:ConnectionStateManager.kt$ConnectionStateManager$_stateEvents.emit(StateEvent.ConnectionConflict(scannerId, activeConnections.map { it.connectionId }))</ID>
+    <ID>MaxLineLength:ConnectionStateManager.kt$ConnectionStateManager$private suspend</ID>
+    <ID>MaxLineLength:ConnectionStateTransitionPropertyTest.kt$ConnectionStateTransitionPropertyTest$"Property 3: Automatic Reconnection with Exponential Backoff - Connection loss should trigger exactly the configured number of reconnection attempts with exponential backoff"</ID>
+    <ID>MaxLineLength:EnhancedScannerManager.kt$EnhancedScannerManager$override suspend</ID>
+    <ID>MaxLineLength:ErrorCategorizationPropertyTest.kt$ErrorCategorizationPropertyTest$"Property 11: Error Categorization and Recovery - Connection errors should be correctly categorized and trigger appropriate recovery actions"</ID>
+    <ID>MaxLineLength:PerformanceMonitoringPropertyTest.kt$PerformanceMonitoringPropertyTest$finalStats.averageResponseTime shouldBe (finalStats.averageResponseTime &lt;= finalStats.maxResponseTime)</ID>
+    <ID>MaxLineLength:PerformanceMonitoringPropertyTest.kt$PerformanceMonitoringPropertyTest$stats.averageResponseTime shouldBe (stats.averageResponseTime in stats.minResponseTime..stats.maxResponseTime)</ID>
+    <ID>MaxLineLength:ProtocolDetectionPropertyTest.kt$ProtocolDetectionPropertyTest$"Property 9: For any vehicle with a supported protocol, automatic protocol detection should succeed within the configured timeout"</ID>
+    <ID>MaxLineLength:ScannerInitializer.kt$ScannerInitializer$return@withContext Result.Error(ProtocolException("Protocol detection failed", protocolResult.exception))</ID>
+    <ID>MaxLineLength:ScannerManager.kt$ScannerManager$return@withContext Result.Error(CommunicationException("Unknown connection type for address: $address", e))</ID>
+    <ID>MaxLineLength:ScannerProtocolAdapter.kt$ScannerProtocolAdapter.Companion.&lt;no name provided&gt;$override suspend fun sendCommand(command: String, timeout: Long): String</ID>
+    <ID>MaxLineLength:StateSynchronizer.kt$StateSynchronizer$private suspend</ID>
+    <ID>MaxLineLength:StateSynchronizer.kt$StateSynchronizer$qualityImprovement = (bestAlternative.connectionQuality?.qualityScore ?: 0) - quality.qualityScore</ID>
+    <ID>NestedBlockDepth:EnhancedScannerManager.kt$EnhancedScannerManager$private suspend fun handleQualityDegradation(connectionId: String, quality: ConnectionQuality)</ID>
+    <ID>NestedBlockDepth:UnifiedScannerManager.kt$UnifiedScannerManager$suspend fun connectAuto(autoDetectProtocol: Boolean = true): Result&lt;Unit&gt;</ID>
+    <ID>NewLineAtEndOfFile:AutomaticInitializationPropertyTest.kt$com.spacetec.obd.scanner.core.AutomaticInitializationPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ConfigurationPersistencePropertyTest.kt$com.spacetec.obd.scanner.core.ConfigurationPersistencePropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionPool.kt$com.spacetec.obd.scanner.core.ConnectionPool.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionResourceManager.kt$com.spacetec.obd.scanner.core.ConnectionResourceManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionStateManager.kt$com.spacetec.obd.scanner.core.state.ConnectionStateManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionStateRepository.kt$com.spacetec.obd.scanner.core.state.ConnectionStateRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:ConnectionStateTransitionPropertyTest.kt$com.spacetec.obd.scanner.core.ConnectionStateTransitionPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:Elm327Adapter.kt$com.spacetec.obd.scanner.core.elm327.Elm327Adapter.kt</ID>
+    <ID>NewLineAtEndOfFile:Elm327Commands.kt$com.spacetec.obd.scanner.core.elm327.Elm327Commands.kt</ID>
+    <ID>NewLineAtEndOfFile:EnhancedScannerManager.kt$com.spacetec.obd.scanner.core.state.EnhancedScannerManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ErrorCategorizationPropertyTest.kt$com.spacetec.obd.scanner.core.ErrorCategorizationPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:IntegrationTestSuite.kt$com.spacetec.obd.scanner.core.integration.IntegrationTestSuite.kt</ID>
+    <ID>NewLineAtEndOfFile:InterfaceConsistencyPropertyTest.kt$com.spacetec.obd.scanner.core.InterfaceConsistencyPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:LoggingDiagnosticsTest.kt$com.spacetec.obd.scanner.core.integration.LoggingDiagnosticsTest.kt</ID>
+    <ID>NewLineAtEndOfFile:MockConnectionPropertyTest.kt$com.spacetec.obd.scanner.core.MockConnectionPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:MockScannerConnection.kt$com.spacetec.obd.scanner.core.MockScannerConnection.kt</ID>
+    <ID>NewLineAtEndOfFile:PerformanceMonitoringPropertyTest.kt$com.spacetec.obd.scanner.core.PerformanceMonitoringPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:PerformanceValidationTest.kt$com.spacetec.obd.scanner.core.integration.PerformanceValidationTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ProtocolDetectionEngine.kt$com.spacetec.obd.scanner.core.ProtocolDetectionEngine.kt</ID>
+    <ID>NewLineAtEndOfFile:ProtocolDetectionPropertyTest.kt$com.spacetec.obd.scanner.core.ProtocolDetectionPropertyTest.kt</ID>
+    <ID>NewLineAtEndOfFile:Scanner.kt$com.spacetec.obd.scanner.core.Scanner.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerConfigurationManager.kt$com.spacetec.obd.scanner.core.ScannerConfigurationManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerConnectionFactory.kt$com.spacetec.obd.scanner.core.ScannerConnectionFactory.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerConnectionIntegrationTest.kt$com.spacetec.obd.scanner.core.integration.ScannerConnectionIntegrationTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerDevice.kt$com.spacetec.obd.scanner.core.ScannerDevice.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerDiscovery.kt$com.spacetec.obd.scanner.core.ScannerDiscovery.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerInitializer.kt$com.spacetec.obd.scanner.core.ScannerInitializer.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerManager.kt$com.spacetec.obd.scanner.core.ScannerManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ScannerProtocolAdapter.kt$com.spacetec.obd.scanner.core.ScannerProtocolAdapter.kt</ID>
+    <ID>NewLineAtEndOfFile:SecurityComplianceTest.kt$com.spacetec.obd.scanner.core.integration.SecurityComplianceTest.kt</ID>
+    <ID>NewLineAtEndOfFile:SimpleConnectionTest.kt$com.spacetec.obd.scanner.core.SimpleConnectionTest.kt</ID>
+    <ID>NewLineAtEndOfFile:StateSynchronizer.kt$com.spacetec.obd.scanner.core.state.StateSynchronizer.kt</ID>
+    <ID>NewLineAtEndOfFile:UnifiedScannerManager.kt$com.spacetec.obd.scanner.core.UnifiedScannerManager.kt</ID>
+    <ID>NewLineAtEndOfFile:ValidationReport.kt$com.spacetec.obd.scanner.core.integration.ValidationReport.kt</ID>
+    <ID>ReturnCount:ConnectionStateManager.kt$ConnectionStateManager$suspend fun triggerRecovery(connectionId: String): Result&lt;Unit&gt;</ID>
+    <ID>ReturnCount:Elm327Adapter.kt$Elm327Adapter$override suspend fun connect(config: ScannerConnectionConfig): AppResult&lt;Unit&gt;</ID>
+    <ID>ReturnCount:Elm327Adapter.kt$Elm327Adapter$override suspend fun initializeVehicle(protocolConfig: ProtocolConfig): AppResult&lt;Protocol&gt;</ID>
+    <ID>ReturnCount:Elm327Adapter.kt$Elm327Adapter$private suspend fun initializeElm327(): AppResult&lt;Unit&gt;</ID>
+    <ID>ReturnCount:ProtocolDetectionPropertyTest.kt$MockProtocolConnection$override suspend fun sendAndReceive( command: String, timeout: Long, terminator: String ): Result&lt;String&gt;</ID>
+    <ID>ReturnCount:Scanner.kt$ScannerManager$suspend fun connect(type: ScannerType, device: ScannerDevice): Boolean</ID>
+    <ID>ReturnCount:ScannerConnection.kt$BaseScannerConnection$override suspend fun reconnect(): Result&lt;ConnectionInfo&gt;</ID>
+    <ID>ReturnCount:ScannerConnectionFactory.kt$ScannerConnectionFactory$private fun isUSBAddress(address: String): Boolean</ID>
+    <ID>ReturnCount:ScannerConnectionFactory.kt$ScannerConnectionFactory$private fun isWiFiAddress(address: String): Boolean</ID>
+    <ID>ReturnCount:UnifiedScannerManager.kt$UnifiedScannerManager$suspend fun connectAuto(autoDetectProtocol: Boolean = true): Result&lt;Unit&gt;</ID>
+    <ID>SwallowedException:ConnectionResourceManager.kt$ConnectionResourceManager$e: Exception</ID>
+    <ID>SwallowedException:ConnectionStateRepository.kt$FileConnectionStateRepository$e: Exception</ID>
+    <ID>SwallowedException:Elm327Adapter.kt$Elm327Adapter$e: Exception</ID>
+    <ID>SwallowedException:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$e: CancellationException</ID>
+    <ID>SwallowedException:ScannerConfigurationManager.kt$ScannerConfigurationManager$e: Exception</ID>
+    <ID>SwallowedException:ScannerConnection.kt$BaseScannerConnection$e: Exception</ID>
+    <ID>SwallowedException:ScannerConnection.kt$BaseScannerConnection$e: kotlinx.coroutines.TimeoutCancellationException</ID>
+    <ID>SwallowedException:ScannerConnectionFactory.kt$ScannerConnectionFactory$e: IllegalArgumentException</ID>
+    <ID>SwallowedException:ScannerConnectionFactory.kt$ScannerConnectionFactory.Companion$e: Exception</ID>
+    <ID>SwallowedException:ScannerDiscovery.kt$ScannerDiscoveryService$e: Exception</ID>
+    <ID>SwallowedException:ScannerInitializer.kt$ScannerInitializer$e: Exception</ID>
+    <ID>SwallowedException:ScannerManager.kt$ScannerManager$e: Exception</ID>
+    <ID>SwallowedException:ScannerProtocolAdapter.kt$ScannerProtocolAdapter$e: Exception</ID>
+    <ID>SwallowedException:UnifiedScannerManager.kt$UnifiedScannerManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConnectionResourceManager.kt$ConnectionResourceManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConnectionStateManager.kt$ConnectionStateManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ConnectionStateRepository.kt$FileConnectionStateRepository$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:Elm327Adapter.kt$Elm327Adapter$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:EnhancedScannerManager.kt$EnhancedScannerManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerConfigurationManager.kt$ScannerConfigurationManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerConnection.kt$BaseScannerConnection$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerConnection.kt$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerConnectionFactory.kt$ScannerConnectionFactory.Companion$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerDiscovery.kt$ScannerDiscoveryService$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerInitializer.kt$ScannerInitializer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerManager.kt$ScannerManager$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ScannerProtocolAdapter.kt$ScannerProtocolAdapter$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:StateSynchronizer.kt$StateSynchronizer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:UnifiedScannerManager.kt$UnifiedScannerManager$e: Exception</ID>
+    <ID>TooManyFunctions:ConnectionPool.kt$ScannerConnectionPool</ID>
+    <ID>TooManyFunctions:ConnectionResourceManager.kt$ConnectionResourceManager</ID>
+    <ID>TooManyFunctions:ConnectionStateManager.kt$ConnectionStateManager</ID>
+    <ID>TooManyFunctions:Elm327Adapter.kt$Elm327Adapter : ScannerDiagnosticTransport</ID>
+    <ID>TooManyFunctions:Elm327Commands.kt$Elm327Commands</ID>
+    <ID>TooManyFunctions:EnhancedScannerManager.kt$EnhancedScannerManager : ScannerManager</ID>
+    <ID>TooManyFunctions:ProtocolDetectionEngine.kt$ProtocolDetectionEngine</ID>
+    <ID>TooManyFunctions:ScannerConfigurationManager.kt$ScannerConfigurationManager</ID>
+    <ID>TooManyFunctions:ScannerConnection.kt$BaseScannerConnection : ScannerConnection</ID>
+    <ID>TooManyFunctions:ScannerConnection.kt$ScannerConnection : Closeable</ID>
+    <ID>TooManyFunctions:ScannerConnection.kt$com.spacetec.obd.scanner.core.ScannerConnection.kt</ID>
+    <ID>TooManyFunctions:ScannerConnectionFactory.kt$ScannerConnectionFactory</ID>
+    <ID>TooManyFunctions:ScannerDiscovery.kt$ScannerDiscoveryService</ID>
+    <ID>TooManyFunctions:ScannerManager.kt$ScannerManager</ID>
+    <ID>TooManyFunctions:ScannerProtocolAdapter.kt$ScannerProtocolAdapter</ID>
+    <ID>TooManyFunctions:StateSynchronizer.kt$StateSynchronizer</ID>
+    <ID>TooManyFunctions:UnifiedScannerManager.kt$UnifiedScannerManager</ID>
+    <ID>UnusedParameter:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$primaryResult: ProtocolDetectionResult</ID>
+    <ID>UnusedParameter:ProtocolDetectionEngine.kt$ProtocolDetectionEngine$timeout: Long = 5000L</ID>
+    <ID>UnusedParameter:ScannerConnectionFactory.kt$ScannerConnectionFactory$config: ConnectionConfig</ID>
+    <ID>UnusedParameter:ScannerDiscovery.kt$ScannerDiscoveryService$device: BluetoothDevice</ID>
+    <ID>UnusedParameter:ScannerManager.kt$ScannerManager$config: ScannerConfig</ID>
+    <ID>UnusedParameter:StateSynchronizer.kt$StateSynchronizer$fromState: ConnectionState</ID>
+    <ID>UnusedParameter:StateSynchronizer.kt$StateSynchronizer$message: String</ID>
+    <ID>UnusedParameter:StateSynchronizer.kt$StateSynchronizer$stateInfo: ConnectionStateInfo</ID>
+    <ID>UnusedPrivateProperty:ConnectionPool.kt$ScannerConnectionPool$private val connectionCounter = AtomicInteger(0)</ID>
+    <ID>UnusedPrivateProperty:EnhancedScannerManager.kt$EnhancedScannerManager$private val connectionFactory: ScannerConnectionFactory</ID>
+    <ID>UnusedPrivateProperty:MockConnectionPropertyTest.kt$MockConnectionPropertyTest$val readResult = mockConnection.read(timeout.toLong())</ID>
+    <ID>UnusedPrivateProperty:ScannerConnection.kt$BaseScannerConnection$val bytesToRead = minOf(available, buffer.size)</ID>
+    <ID>UnusedPrivateProperty:ScannerConnectionIntegrationTest.kt$ScannerConnectionIntegrationTest$val updatedInfo = enhancedScannerManager.getConnectionStateInfo(connection.connectionId)</ID>
+    <ID>UnusedPrivateProperty:UnifiedScannerManager.kt$UnifiedScannerManager$private val dispatcher: CoroutineDispatcher = Dispatchers.IO</ID>
+    <ID>UseCheckOrError:ScannerConnection.kt$throw IllegalStateException("Result is still loading")</ID>
+    <ID>UtilityClassWithPublicConstructor:IntegrationTestSuite.kt$IntegrationTestSuite</ID>
+    <ID>VariableNaming:Elm327Adapter.kt$Elm327Adapter$protected val _connectionState = MutableStateFlow&lt;ScannerConnectionState&gt;( ScannerConnectionState.Disconnected )</ID>
+    <ID>VariableNaming:Elm327Adapter.kt$Elm327Adapter$protected val _deviceInfo = MutableStateFlow&lt;ScannerDeviceInfo?&gt;(null)</ID>
+    <ID>VariableNaming:Scanner.kt$BaseScanner$protected val _devices = MutableStateFlow&lt;List&lt;ScannerDevice&gt;&gt;(emptyList())</ID>
+    <ID>VariableNaming:Scanner.kt$BaseScanner$protected val _state = MutableStateFlow&lt;ConnectionState&gt;(ConnectionState.Disconnected)</ID>
+    <ID>VariableNaming:ScannerConnection.kt$BaseScannerConnection$protected val _connectionState = MutableStateFlow&lt;ConnectionState&gt;(ConnectionState.Disconnected)</ID>
+    <ID>VariableNaming:ScannerConnection.kt$BaseScannerConnection$protected val _incomingData = MutableSharedFlow&lt;ByteArray&gt;( replay = 0, extraBufferCapacity = 64, onBufferOverflow = BufferOverflow.DROP_OLDEST )</ID>
+    <ID>WildcardImport:ConnectionPool.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:ConnectionStateTransitionPropertyTest.kt$import io.kotest.property.arbitrary.*</ID>
+    <ID>WildcardImport:ErrorCategorizationPropertyTest.kt$import io.kotest.property.arbitrary.*</ID>
+    <ID>WildcardImport:LoggingDiagnosticsTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:MockConnectionPropertyTest.kt$import io.kotest.property.arbitrary.*</ID>
+    <ID>WildcardImport:PerformanceMonitoringPropertyTest.kt$import io.kotest.property.arbitrary.*</ID>
+    <ID>WildcardImport:PerformanceValidationTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:ScannerConfigurationManager.kt$import kotlinx.serialization.*</ID>
+    <ID>WildcardImport:ScannerConnectionIntegrationTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:ScannerDiscovery.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:ScannerDiscovery.kt$import kotlinx.coroutines.flow.*</ID>
+    <ID>WildcardImport:ScannerInitializer.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:ScannerManager.kt$import kotlinx.coroutines.*</ID>
+    <ID>WildcardImport:SecurityComplianceTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:SimpleConnectionTest.kt$import org.junit.Assert.*</ID>
+  </CurrentIssues>
+</SmellBaseline>

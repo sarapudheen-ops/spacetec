@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>EmptyKtFile:CANFilter.kt$.CANFilter.kt</ID>
+    <ID>EmptyKtFile:CANFrame.kt$.CANFrame.kt</ID>
+    <ID>EmptyKtFile:CANMessage.kt$.CANMessage.kt</ID>
+    <ID>EmptyKtFile:ISOTPFrameHandler.kt$.ISOTPFrameHandler.kt</ID>
+    <ID>EmptyKtFile:ISOTPProtocol.kt$.ISOTPProtocol.kt</ID>
+    <ID>EmptyKtFile:ISOTPReassembler.kt$.ISOTPReassembler.kt</ID>
+    <ID>EmptyKtFile:ISOTPSegmenter.kt$.ISOTPSegmenter.kt</ID>
+    <ID>ImplicitDefaultLocale:CANProtocol.kt$CANProtocol$String.format("%02X", it.toInt() and 0xFF)</ID>
+    <ID>ImplicitDefaultLocale:CANProtocol.kt$CANProtocol$String.format("%03X", frame.id)</ID>
+    <ID>ImplicitDefaultLocale:CANProtocol.kt$CANProtocol$String.format("%03X", id)</ID>
+    <ID>ImplicitDefaultLocale:CANProtocol.kt$CANProtocol$String.format("%03X", mask)</ID>
+    <ID>InvalidPackageDeclaration:CANProtocol.kt$package com.spacetec.obd.protocol.can</ID>
+    <ID>MagicNumber:CANProtocol.kt$CANProtocol$0xFF</ID>
+    <ID>MagicNumber:CANProtocol.kt$CANProtocol$500000</ID>
+    <ID>WildcardImport:CANProtocol.kt$import com.spacetec.protocol.core.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
